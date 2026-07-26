@@ -1,0 +1,16 @@
+StudyNest Phase 1 — Navigation Fixes
+Date: 17 July 2026
+
+Completed:
+- Corrected Money & Finance paths from money-finance/ to money-and-finance/.
+- Corrected Measures & Mensuration paths from measures-mensuration/ to measures-and-mensuration/.
+- Updated old “Study by Level” links to the current Study by Form section.
+- Updated the old levels page buttons to the existing Form 1–4 pages.
+- Replaced missing Resources page links with the existing Worksheets page.
+- Removed one orphaned, nested legacy geometry page that was not linked from the active site.
+- Audited local HTML links, stylesheets, scripts and images across the project.
+
+Final automated audit result:
+BROKEN LOCAL LINKS: 0
+
+No lesson content or visual design was changed during this phase.

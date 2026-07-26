@@ -1,0 +1,22 @@
+
+/* StudyNest Sets visual system */
+.visual-board{margin:1.5rem 0;padding:1.25rem;border:1px solid #dbe5e2;border-radius:22px;background:linear-gradient(180deg,#fbfdfc,#f3f8f6);overflow:hidden}
+.visual-board h3{margin:0 0 .35rem;color:#234b43}.visual-caption{margin:.7rem 0 0;color:#586b67;font-size:.95rem;text-align:center}
+.venn-svg{display:block;width:100%;height:auto;max-height:430px;margin:auto}.venn-frame{fill:#fff;stroke:#526b65;stroke-width:3}.venn-circle{stroke:#2f6258;stroke-width:3}.venn-a{fill:#bfe3da;fill-opacity:.68}.venn-b{fill:#cfdcf4;fill-opacity:.68}.venn-c{fill:#f3d4b7;fill-opacity:.62}.venn-label{font:700 22px system-ui;fill:#234b43}.venn-item{font:600 18px system-ui;fill:#263b37}.venn-small{font:600 15px system-ui;fill:#526b65}.shade{fill:#4d8f80;fill-opacity:.62}.shade-soft{fill:#6c93cf;fill-opacity:.42}.unshaded{fill:#fff;fill-opacity:.92}.diagram-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin:1.2rem 0}.mini-diagram{padding:1rem;border:1px solid #dbe5e2;border-radius:18px;background:#fff}.mini-diagram h3{font-size:1rem;margin:0 0 .6rem;text-align:center}.diagram-controls{display:flex;flex-wrap:wrap;gap:.55rem;justify-content:center;margin:0 0 1rem}.diagram-controls button{border:1px solid #b8ccc7;background:#fff;color:#234b43;border-radius:999px;padding:.58rem .9rem;font:600 .92rem system-ui;cursor:pointer}.diagram-controls button:hover,.diagram-controls button.active{background:#2f6258;color:#fff;border-color:#2f6258}.diagram-note{padding:.8rem 1rem;border-radius:14px;background:#eaf4f1;color:#294c44;margin-top:.8rem}.region-label{font:700 16px system-ui;fill:#183b34}.step-strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.7rem;margin:1rem 0}.step-card{padding:.85rem;border-radius:16px;background:#fff;border:1px solid #dbe5e2}.step-card strong{display:block;color:#2f6258;margin-bottom:.25rem}
+@media(max-width:560px){.visual-board{padding:.8rem}.venn-label{font-size:18px}.venn-item{font-size:15px}.region-label{font-size:13px}}
+.op-left,.op-right,.op-overlap,.op-outside{fill-opacity:0;transition:fill-opacity .25s ease}
+
+/* Diagram readability fixes */
+.universal-board .venn-svg{max-height:470px}
+.universal-title{font-size:20px}
+.diagram-guide{stroke:#6b7f7a;stroke-width:2;stroke-dasharray:6 5}
+.guide-label{font:600 15px system-ui;fill:#425b55}
+.diagram-legend{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:.7rem;margin-top:.85rem}
+.diagram-legend>div{display:flex;align-items:flex-start;gap:.55rem;padding:.75rem .85rem;border-radius:14px;background:#fff;border:1px solid #dbe5e2;color:#344d47}
+.legend-swatch{flex:0 0 18px;width:18px;height:18px;border-radius:5px;margin-top:.12rem;border:1px solid #78908a}
+.legend-a{background:#bfe3da}.legend-outside{background:#fff}
+.subset-svg{max-height:460px}
+.diagram-controls button{transition:background-color .2s ease,color .2s ease,transform .15s ease}
+.diagram-controls button:active{transform:scale(.98)}
+.diagram-controls button:focus-visible{outline:3px solid rgba(47,98,88,.28);outline-offset:3px}
+@media(max-width:560px){.universal-title{font-size:17px}.guide-label{font-size:13px}.diagram-legend{grid-template-columns:1fr}}

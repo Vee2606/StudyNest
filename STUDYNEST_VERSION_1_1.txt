@@ -1,0 +1,15 @@
+StudyNest Version 1.1
+
+Added:
+- Statistics: 6 interactive worksheets, 120 questions
+- Probability: 6 interactive worksheets, 120 questions
+- Hints and fully worked solutions
+- Mixed multiple-choice and typed-response interactions
+- Cambridge/ZIMSEC-style mastery practice
+- Updated Study by Topic and Study by Form worksheet navigation
+
+Existing completed topics retained:
+- Real Numbers
+- Algebra
+- Graphs
+- Variation

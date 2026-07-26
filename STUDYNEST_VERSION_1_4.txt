@@ -1,0 +1,8 @@
+StudyNest Version 1.4
+
+New worksheet content:
+- Matrices: 6 interactive worksheets, 120 questions
+- Transformations: 6 interactive worksheets, 120 questions
+
+Total added: 12 worksheets and 240 questions.
+Each worksheet includes hints, worked solutions and automatic marking.

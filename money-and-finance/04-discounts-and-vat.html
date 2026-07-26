@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Calculate sale prices, tax and original values from financial information." name="description"/>
+<title>Discounts and VAT | Money &amp; Finance | StudyNest</title>
+<link href="../styles/money-finance-lessons.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="../styles/studynest-v3.css">
+
+<link rel="stylesheet" href="../studynest-3.1.css">
+<link rel="stylesheet" href="../studynest-theme.css">
+</head>
+<body>
+<div class="announcement-bar">🚀 StudyNest is growing. New lessons and worksheets are added regularly.</div>
+<header class="site-header">
+<a class="logo" href="../index.html">📚 StudyNest</a>
+<nav class="main-navigation">
+<a href="../index.html">🏠 Home</a>
+<a href="../topics.html">📘 Study by Topic</a>
+<a href="index.html">💰 Money &amp; Finance</a>
+<a href="../worksheets.html">📝 Worksheets</a>
+</nav>
+</header>
+<section class="lesson-hero">
+<div>
+<p class="lesson-label">MONEY &amp; FINANCE · LESSON 04</p>
+<h1>Discounts and VAT</h1>
+<p class="lesson-subtitle">Calculate sale prices, tax and original values from financial information.</p>
+<div class="lesson-meta">
+<span class="meta-pill">⏱️ 20–24 min</span>
+<span class="meta-pill">📘 Developing</span>
+<span class="meta-pill">💼 Real-life examples included</span>
+</div>
+</div>
+<div aria-hidden="true" class="finance-hero-art">
+<div class="finance-card">
+<div class="finance-card-top">
+<span class="finance-chip"></span>
+<span class="finance-contactless">)))</span>
+</div>
+<span class="finance-card-number">•••• 4826</span>
+<div class="finance-card-bottom">
+<span>STUDYNEST</span>
+<span>12/29</span>
+</div>
+</div>
+<div class="finance-badge finance-badge-percent">%</div>
+<div class="finance-badge finance-badge-up">↗</div>
+<div class="finance-coin coin-one">$</div>
+<div class="finance-coin coin-two">$</div>
+<div class="finance-coin coin-three">$</div>
+<div class="finance-calculator">
+<div class="calculator-screen">125.00</div>
+<span></span><span></span><span></span>
+<span></span><span></span><span></span>
+<span></span><span></span><span></span>
+</div>
+</div>
+</section>
+<main class="lesson-main">
+<section class="lesson-section">
+<h2>🎯 By the End of This Lesson...</h2>
+<ul class="objective-list">
+<li>calculate discounts from marked prices;</li>
+<li>work with successive discounts;</li>
+<li>calculate VAT and VAT-inclusive prices;</li>
+<li>find prices before VAT;</li>
+<li>interpret receipts and sale advertisements.</li>
+</ul>
+</section>
+<section class="lesson-section">
+<h2>🛒 Interactive Checkout</h2><p>Apply a discount first, then VAT. The order matters.</p>
+<div class="interactive-lab" data-lab="discount"><div class="lab-grid">
+<div class="control-group"><label for="original-price">Marked price: <span class="live-value" data-value-for="original-price"></span></label><input id="original-price" max="2000" min="10" step="10" type="range" value="400"/></div>
+<div class="control-group"><label for="discount-rate">Discount: <span class="live-value" data-value-for="discount-rate"></span>%</label><input id="discount-rate" max="70" min="0" type="range" value="20"/></div>
+<div class="control-group"><label for="vat-rate">VAT: <span class="live-value" data-value-for="vat-rate"></span>%</label><input id="vat-rate" max="30" min="0" step="0.5" type="range" value="15"/></div>
+</div><div class="result-grid"><div class="result-card"><span>Discount amount</span><strong id="discount-amount"></strong></div><div class="result-card"><span>After discount</span><strong id="after-discount"></strong></div><div class="result-card"><span>VAT amount</span><strong id="vat-amount"></strong></div><div class="result-card"><span>Final price</span><strong id="final-price"></strong></div></div>
+<div aria-live="polite" class="money-scale-visual"><h3>Price journey</h3><div class="comparison-row"><span>Marked price</span><div class="comparison-track"><i id="marked-price-bar"></i></div><strong id="marked-price-scale"></strong></div><div class="comparison-row"><span>After discount</span><div class="comparison-track"><i id="after-discount-bar"></i></div><strong id="after-discount-scale"></strong></div><div class="comparison-row"><span>Final with VAT</span><div class="comparison-track"><i id="final-price-bar"></i></div><strong id="final-price-scale"></strong></div><div class="scale-axis"><span>$0</span><span>$500</span><span>$1,000</span><span>$1,500</span><span>$2,000+</span></div></div><div class="lab-note">Use multipliers in an exam: after a 20% discount, multiply by 0.80; after adding 15% VAT, multiply by 1.15.</div></div></section>
+<section class="lesson-section">
+<div class="where-used">
+<h3>🌍 Where Will You Use This?</h3>
+<p>
+            Discounts and VAT appear on receipts, invoices, advertisements and
+            online shopping pages. Understanding them helps you check whether a
+            price is truly a bargain.
+        </p>
+</div>
+</section>
+<section class="lesson-section">
+<h2>Discounts</h2>
+<div class="math-display">Discount = Discount rate × Marked price</div>
+<div class="math-display">Sale price = Marked price − Discount</div>
+<div class="worked-example">
+<h3>A jacket marked US$80 is discounted by 25%.</h3>
+<div class="step"><span class="step-number">1</span><p>Discount = 0.25 × 80 = US$20.</p></div>
+<div class="step"><span class="step-number">2</span><p>Sale price = 80 − 20 = US$60.</p></div>
+</div>
+</section>
+<section class="lesson-section">
+<h2>Using a Multiplier</h2>
+<p>After a 25% discount, 75% of the original price remains.</p>
+<div class="math-display">Sale price = Original price × 0.75</div>
+<div class="tip-box">
+        Multiplier method is usually faster when only the final price is required.
+    </div>
+</section>
+<section class="lesson-section">
+<h2>Successive Discounts</h2>
+<div class="worked-example">
+<h3>A product receives discounts of 20% and then 10%.</h3>
+<div class="step"><span class="step-number">1</span><p>First multiplier = 0.80.</p></div>
+<div class="step"><span class="step-number">2</span><p>Second multiplier = 0.90.</p></div>
+<div class="step"><span class="step-number">3</span><p>Combined multiplier = 0.80 × 0.90 = 0.72.</p></div>
+<div class="step"><span class="step-number">4</span><p>Equivalent discount = 28%, not 30%.</p></div>
+</div>
+</section>
+<section class="lesson-section">
+<h2>VAT</h2>
+<p>
+        VAT is a tax added to the price of certain goods and services.
+    </p>
+<div class="formula-family">
+<div class="formula-card">VAT amount = VAT rate × price before VAT</div>
+<div class="formula-card">VAT-inclusive price = price before VAT × (1 + VAT rate)</div>
+</div>
+<div class="worked-example">
+<h3>A service costs US$200 before VAT. VAT is 15%.</h3>
+<div class="step"><span class="step-number">1</span><p>VAT = 0.15 × 200 = US$30.</p></div>
+<div class="step"><span class="step-number">2</span><p>Total = 200 + 30 = US$230.</p></div>
+</div>
+</section>
+<section class="lesson-section">
+<h2>Finding the Price Before VAT</h2>
+<div class="worked-example">
+<h3>A VAT-inclusive price is US$230 at 15% VAT.</h3>
+<div class="step"><span class="step-number">1</span><p>Inclusive multiplier = 1.15.</p></div>
+<div class="step"><span class="step-number">2</span><p>Price before VAT = 230 ÷ 1.15 = US$200.</p></div>
+</div>
+</section>
+<section class="lesson-section">
+<h2>Receipt Example</h2>
+<div class="receipt-card">
+<div class="receipt-line"><span>Subtotal</span><span>US$120.00</span></div>
+<div class="receipt-line"><span>Discount 10%</span><span>−US$12.00</span></div>
+<div class="receipt-line"><span>Net before VAT</span><span>US$108.00</span></div>
+<div class="receipt-line"><span>VAT 15%</span><span>+US$16.20</span></div>
+<div class="receipt-line receipt-total"><span>Total</span><span>US$124.20</span></div>
+</div>
+</section>
+<section class="lesson-section">
+<h2>💼 Money Smart Tip</h2>
+<div class="money-smart">
+<p>
+            Always check whether VAT is already included and whether a discount
+            is applied before or after tax.
+        </p>
+</div>
+</section>
+<section class="lesson-section">
+<h2>⚠️ Common Mistakes</h2>
+<div class="warning-box">
+        Do not add successive discount percentages directly. Also, do not divide
+        a VAT-inclusive price by the VAT percentage alone—divide by the full
+        multiplier such as 1.15.
+    </div>
+</section>
+<section class="lesson-section">
+<h2>Practice Questions</h2>
+<span class="level-heading">Foundation</span>
+<ol class="practice-list">
+<li>Find the sale price of US$150 after a 20% discount.</li>
+<li>Find 15% VAT on US$320.</li>
+<li>Find the VAT-inclusive price of US$480 at 15% VAT.</li>
+</ol>
+<span class="level-heading">Developing</span>
+<ol class="practice-list" start="4">
+<li>A US$250 item receives discounts of 10% then 20%. Find the final price.</li>
+<li>A VAT-inclusive amount is US$575 at 15% VAT. Find the price before VAT.</li>
+<li>A US$400 item is discounted by 12%, then VAT of 15% is added. Find the final amount.</li>
+</ol>
+<span class="level-heading">Challenge</span>
+<ol class="practice-list" start="7">
+<li>
+            After a 25% discount and then 15% VAT, an item costs US$258.75.
+            Find its original marked price.
+        </li>
+</ol>
+</section>
+<section class="lesson-section answers-section">
+<h2>✅ Check Your Work</h2>
+<details>
+<summary>Show practice answers</summary>
+<div class="answers-content">
+<ol>
+<li>US$120.</li>
+<li>US$48.</li>
+<li>US$552.</li>
+<li>250×0.90×0.80 = US$180.</li>
+<li>575÷1.15 = US$500.</li>
+<li>400×0.88×1.15 = US$404.80.</li>
+<li>
+                    Original ×0.75×1.15 = 258.75.<br/>
+                    Original = 258.75÷0.8625 = US$300.
+                </li>
+</ol>
+</div>
+</details>
+</section>
+<section class="lesson-section">
+<h2>One-Minute Summary</h2>
+<ul class="summary-list">
+<li>Discount reduces the marked price.</li>
+<li>Successive discounts use separate multipliers.</li>
+<li>VAT is added to the pre-tax price.</li>
+<li>Reverse VAT by dividing by the VAT-inclusive multiplier.</li>
+</ul>
+</section>
+<nav class="lesson-navigation">
+<a class="nav-button" href="03-profit-loss-and-markup.html">← Profit, Loss and Mark-up</a>
+<a class="nav-button" href="index.html">Topic Roadmap</a>
+<a class="nav-button primary" href="05-wages-salaries-and-commission.html">Wages, Salaries and Commission →</a>
+</nav>
+</main>
+<footer class="site-footer">
+<strong>📚 StudyNest</strong>
+<p>Helping students understand Mathematics, not memorise it.</p>
+<p>© 2026 StudyNest</p>
+</footer>
+<script src="money-finance-interactions.js"></script>
+  <script src="../script-v3.js"></script>
+
+<script src="../studynest-3.1.js" defer></script>
+</body>
+</html>

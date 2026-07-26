@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+  <title>
+   Matrices | StudyNest
+  </title>
+  <link href="../styles/matrices.css" rel="stylesheet"/>
+ 
+<style id="olevel-matrix-notation">
+.math-matrix{display:inline-grid;grid-auto-flow:row;grid-template-columns:repeat(var(--cols),auto);gap:.12rem .55rem;padding:.12rem .55rem;margin:0 .16rem;vertical-align:middle;position:relative;line-height:1.2;text-align:center;font-family:Georgia,"Times New Roman",serif}
+.math-matrix::before,.math-matrix::after{content:"";position:absolute;top:0;bottom:0;width:.32rem;border-top:1.8px solid currentColor;border-bottom:1.8px solid currentColor}
+.math-matrix::before{left:0;border-left:1.8px solid currentColor}.math-matrix::after{right:0;border-right:1.8px solid currentColor}
+.math-matrix .mcell{min-width:1.1em;padding:0 .08rem}.math-expression{display:inline-flex;align-items:center;gap:.22rem;flex-wrap:wrap}.math-name{font-family:Georgia,"Times New Roman",serif;font-style:italic}
+.matrix-live .math-matrix{font-size:1.05em;margin:.25rem}
+</style>
+
+<style id="topic-specific-index-animation">
+.matrix-hero-animation{position:relative;display:flex;align-items:center;justify-content:center;gap:10px;min-height:230px;padding:24px;color:#243b53;font-family:Georgia,"Times New Roman",serif;font-size:1.35rem}
+.matrix-hero-label{position:absolute;top:22px;left:18%;font-style:italic;font-weight:700}
+.matrix-hero-grid{display:grid;grid-template-columns:repeat(2,42px);grid-template-rows:repeat(2,42px);gap:5px;padding:10px 14px;position:relative}
+.matrix-hero-grid span,.matrix-hero-column span,.matrix-hero-result span{display:flex;align-items:center;justify-content:center;border-radius:8px;background:rgba(255,255,255,.82);border:1px solid rgba(36,59,83,.15)}
+.matrix-hero-bracket{width:12px;height:108px;border-top:3px solid currentColor;border-bottom:3px solid currentColor}
+.matrix-hero-left{border-left:3px solid currentColor;margin-right:-14px}.matrix-hero-right{border-right:3px solid currentColor;margin-left:-14px}
+.matrix-hero-column,.matrix-hero-result{display:grid;grid-template-rows:repeat(2,42px);gap:5px;padding:10px 12px;position:relative}
+.matrix-hero-column:before,.matrix-hero-column:after,.matrix-hero-result:before,.matrix-hero-result:after{content:"";position:absolute;top:3px;bottom:3px;width:9px;border-top:3px solid currentColor;border-bottom:3px solid currentColor}
+.matrix-hero-column:before,.matrix-hero-result:before{left:0;border-left:3px solid currentColor}.matrix-hero-column:after,.matrix-hero-result:after{right:0;border-right:3px solid currentColor}
+.matrix-hero-times,.matrix-hero-equals{font-size:1.6rem;font-weight:700}
+.matrix-hero-grid span:nth-child(1),.matrix-hero-grid span:nth-child(2){animation:matrixRow 4s infinite}
+.matrix-hero-column span{animation:matrixColumn 4s infinite}
+.matrix-hero-result span:first-child{animation:matrixAnswer 4s infinite}.matrix-hero-result span:last-child{animation:matrixAnswer 4s 2s infinite}
+@keyframes matrixRow{0%,15%,100%{background:rgba(255,255,255,.82);transform:scale(1)}25%,45%{background:#fff4d8;transform:scale(1.08)}}
+@keyframes matrixColumn{0%,15%,100%{background:rgba(255,255,255,.82);transform:scale(1)}25%,45%{background:#eef7f2;transform:scale(1.08)}}
+@keyframes matrixAnswer{0%,38%,100%{background:rgba(255,255,255,.82);transform:scale(1)}48%,65%{background:#f5f2ff;transform:scale(1.12)}}
+@media(max-width:700px){.matrix-hero-animation{min-height:190px;gap:6px;font-size:1rem;transform:scale(.86)}.matrix-hero-label{display:none}}
+</style>
+  <link rel="stylesheet" href="../styles/studynest-v3.css">
+
+<link rel="stylesheet" href="../studynest-3.1.css">
+<link rel="stylesheet" href="../studynest-theme.css">
+</head>
+ <body>
+  <div class="announcement-bar">
+   🚀 StudyNest is growing. New lessons and worksheets are added regularly.
+  </div>
+  <header class="site-header">
+   <a class="logo" href="../index.html">
+    📚 StudyNest
+   </a>
+   <nav class="main-navigation">
+    <a href="../index.html">
+     🏠 Home
+    </a>
+    <a href="../topics.html">
+     📘 Study by Topic
+    </a>
+    <a href="index.html">
+     ▦ Matrices
+    </a>
+    <a href="../worksheets.html">
+     📝 Worksheets
+    </a>
+   </nav>
+  </header>
+  <section class="topic-hero">
+   <div>
+    <p class="topic-label">
+     O LEVEL MATHEMATICS · MATRICES
+    </p>
+    <h1>
+     Matrices
+    </h1>
+    <p>
+     Learn to organise numerical information, perform operations and solve equations through clear entry-by-entry and row-by-column reasoning.
+    </p>
+    <a class="primary-button" href="01-introduction-to-matrices.html">
+     Start Learning
+    </a>
+   </div>
+   <div aria-hidden="true" class="matrix-hero-animation">
+     <div class="matrix-hero-label">A</div>
+     <div class="matrix-hero-bracket matrix-hero-left"></div>
+     <div class="matrix-hero-grid">
+      <span>2</span><span>1</span><span>4</span><span>3</span>
+     </div>
+     <div class="matrix-hero-bracket matrix-hero-right"></div>
+     <div class="matrix-hero-times">×</div>
+     <div class="matrix-hero-column"><span>1</span><span>2</span></div>
+     <div class="matrix-hero-equals">=</div>
+     <div class="matrix-hero-result"><span>4</span><span>10</span></div>
+    </div>
+   </section>
+  <section class="page-section">
+   <div class="section-heading">
+    <h2>
+     Matrices Learning Roadmap
+    </h2>
+    <p>
+     Move from rows and columns to multiplication, determinants, inverses and simultaneous equations.
+    </p>
+   </div>
+   <div class="lesson-grid">
+    <a class="lesson-card" href="01-introduction-to-matrices.html">
+     <div class="lesson-top">
+      <span class="lesson-number">
+       01
+      </span>
+      <span class="lesson-status">
+       Available
+      </span>
+     </div>
+     <span class="lesson-icon">
+      ▦
+     </span>
+     <h3>
+      Introduction to Matrices
+     </h3>
+     <p>
+      Understand rows, columns, entries, notation and matrix order
+     </p>
+     <span class="lesson-open-text">
+      Open Lesson →
+     </span>
+    </a>
+    <a class="lesson-card" href="02-types-of-matrices.html">
+     <div class="lesson-top">
+      <span class="lesson-number">
+       02
+      </span>
+      <span class="lesson-status">
+       Available
+      </span>
+     </div>
+     <span class="lesson-icon">
+      ▦
+     </span>
+     <h3>
+      Types of Matrices
+     </h3>
+     <p>
+      Recognise and compare the main matrix classifications
+     </p>
+     <span class="lesson-open-text">
+      Open Lesson →
+     </span>
+    </a>
+    <a class="lesson-card" href="03-matrix-addition-and-subtraction.html">
+     <div class="lesson-top">
+      <span class="lesson-number">
+       03
+      </span>
+      <span class="lesson-status">
+       Available
+      </span>
+     </div>
+     <span class="lesson-icon">
+      ▦
+     </span>
+     <h3>
+      Matrix Addition and Subtraction
+     </h3>
+     <p>
+      Combine corresponding entries without changing position
+     </p>
+     <span class="lesson-open-text">
+      Open Lesson →
+     </span>
+    </a>
+    <a class="lesson-card" href="04-scalar-multiplication.html">
+     <div class="lesson-top">
+      <span class="lesson-number">
+       04
+      </span>
+      <span class="lesson-status">
+       Available
+      </span>
+     </div>
+     <span class="lesson-icon">
+      ▦
+     </span>
+     <h3>
+      Scalar Multiplication
+     </h3>
+     <p>
+      Multiply every entry and simplify matrix expressions
+     </p>
+     <span class="lesson-open-text">
+      Open Lesson →
+     </span>
+    </a>
+    <a class="lesson-card" href="05-matrix-multiplication.html">
+     <div class="lesson-top">
+      <span class="lesson-number">
+       05
+      </span>
+      <span class="lesson-status">
+       Available
+      </span>
+     </div>
+     <span class="lesson-icon">
+      ▦
+     </span>
+     <h3>
+      Matrix Multiplication
+     </h3>
+     <p>
+      Check dimensions, then multiply row by column
+     </p>
+     <span class="lesson-open-text">
+      Open Lesson →
+     </span>
+    </a>
+    <a class="lesson-card" href="06-determinants.html">
+     <div class="lesson-top">
+      <span class="lesson-number">
+       06
+      </span>
+      <span class="lesson-status">
+       Available
+      </span>
+     </div>
+     <span class="lesson-icon">
+      ▦
+     </span>
+     <h3>
+      Determinants
+     </h3>
+     <p>
+      Use diagonal products and identify singular matrices
+     </p>
+     <span class="lesson-open-text">
+      Open Lesson →
+     </span>
+    </a>
+    <a class="lesson-card" href="07-inverse-matrices.html">
+     <div class="lesson-top">
+      <span class="lesson-number">
+       07
+      </span>
+      <span class="lesson-status">
+       Challenge
+      </span>
+     </div>
+     <span class="lesson-icon">
+      ▦
+     </span>
+     <h3>
+      Inverse Matrices
+     </h3>
+     <p>
+      Follow the swap-change-divide method and verify the result
+     </p>
+     <span class="lesson-open-text">
+      Open Lesson →
+     </span>
+    </a>
+    <a class="lesson-card" href="08-matrix-equations.html">
+     <div class="lesson-top">
+      <span class="lesson-number">
+       08
+      </span>
+      <span class="lesson-status">
+       Challenge
+      </span>
+     </div>
+     <span class="lesson-icon">
+      ▦
+     </span>
+     <h3>
+      Matrix Equations
+     </h3>
+     <p>
+      Solve AX=B while preserving multiplication order
+     </p>
+     <span class="lesson-open-text">
+      Open Lesson →
+     </span>
+    </a>
+    <a class="lesson-card" href="09-simultaneous-equations-with-matrices.html">
+     <div class="lesson-top">
+      <span class="lesson-number">
+       09
+      </span>
+      <span class="lesson-status">
+       Challenge
+      </span>
+     </div>
+     <span class="lesson-icon">
+      ▦
+     </span>
+     <h3>
+      Simultaneous Equations Using Matrices
+     </h3>
+     <p>
+      Turn two equations into AX=B and solve fully
+     </p>
+     <span class="lesson-open-text">
+      Open Lesson →
+     </span>
+    </a>
+    <a class="lesson-card" href="10-matrices-mixed-review.html">
+     <div class="lesson-top">
+      <span class="lesson-number">
+       10
+      </span>
+      <span class="lesson-status">
+       Review
+      </span>
+     </div>
+     <span class="lesson-icon">
+      ▦
+     </span>
+     <h3>
+      Matrices Mixed Review
+     </h3>
+     <p>
+      Combine all matrix skills independently
+     </p>
+     <span class="lesson-open-text">
+      Open Lesson →
+     </span>
+    </a>
+    <a class="lesson-card" href="11-matrices-final-checkpoint.html">
+     <div class="lesson-top">
+      <span class="lesson-number">
+       11
+      </span>
+      <span class="lesson-status">
+       Checkpoint
+      </span>
+     </div>
+     <span class="lesson-icon">
+      ▦
+     </span>
+     <h3>
+      Matrices Final Checkpoint
+     </h3>
+     <p>
+      Complete an exam-style assessment of the full topic
+     </p>
+     <span class="lesson-open-text">
+      Open Lesson →
+     </span>
+    </a>
+   </div>
+  </section>
+  <footer class="site-footer">
+   <strong>
+    📚 StudyNest
+   </strong>
+   <p>
+    Helping students understand Mathematics, not memorise it.
+   </p>
+   <p>
+    © 2026 StudyNest
+   </p>
+  </footer>
+   <script src="../script-v3.js"></script>
+
+<script src="../studynest-3.1.js" defer></script>
+</body>
+</html>
+

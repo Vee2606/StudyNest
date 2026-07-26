@@ -1,0 +1,31 @@
+window.STUDYNEST_WORKSHEET = {
+  kicker: "GRAPHS • WORKSHEET 04",
+  title: "Gradient and Intercepts",
+  description: "Find gradients and intercepts from equations, coordinates and straight-line graphs.",
+  level: "Core",
+  time: "25–35 minutes",
+  skills: ["Gradient from two points", "Positive and negative gradient", "Horizontal lines", "y-intercepts", "x-intercepts"],
+  note: "For y = mx + c, m is the gradient and c is the y-intercept.",
+  questions: [
+    {section:"Graphs Batch 2",skill:"Gradient",question:"State the gradient of y = 3x + 4.",answer:"3",hint:"Compare with y = mx + c.",solution:"In y = 3x + 4, m = 3, so the gradient is 3."},
+    {section:"Graphs Batch 2",skill:"Intercept",question:"State the y-intercept of y = 3x + 4.",answer:"4",hint:"The constant term is the y-intercept.",solution:"c = 4, so the graph crosses the y-axis at 4."},
+    {section:"Graphs Batch 2",skill:"Gradient",question:"State the gradient of y = -2x + 7.",answer:"-2",hint:"Read the coefficient of x.",solution:"The coefficient of x is -2, so the gradient is -2."},
+    {section:"Graphs Batch 2",skill:"Intercept",question:"State the y-intercept of y = -2x + 7.",answer:"7",hint:"Set x = 0.",solution:"When x = 0, y = 7. The y-intercept is 7."},
+    {section:"Graphs Batch 2",skill:"Gradient",question:"Find the gradient of the line through (1, 2) and (3, 6).",answer:"2",hint:"Use change in y divided by change in x.",solution:"Gradient = (6 - 2) / (3 - 1) = 4 / 2 = 2."},
+    {section:"Graphs Batch 2",skill:"Gradient",question:"Find the gradient of the line through (-2, 5) and (2, 1).",answer:"-1",hint:"Use (1 - 5) / (2 - (-2)).",solution:"Gradient = -4 / 4 = -1."},
+    {section:"Graphs Batch 2",skill:"Gradient",question:"Find the gradient of the line through (0, -3) and (4, 5).",answer:"2",hint:"Calculate the rise and run.",solution:"Gradient = (5 - (-3)) / (4 - 0) = 8 / 4 = 2."},
+    {section:"Graphs Batch 2",skill:"Horizontal lines",question:"What is the gradient of y = 6?",answer:"0",hint:"A horizontal line has no rise.",solution:"A horizontal line has gradient 0."},
+    {section:"Graphs Batch 2",skill:"Vertical lines",question:"Is the gradient of x = 4 zero or undefined?",answer:"undefined",answers:["undefined","not defined"],hint:"A vertical line has zero horizontal change.",solution:"Division by zero is not defined, so the gradient is undefined."},
+    {section:"Graphs Batch 2",skill:"Direction",question:"Does y = 5x - 1 rise or fall from left to right?",answer:"rise",answers:["rise","rises"],hint:"Its gradient is positive.",solution:"A positive gradient means the line rises from left to right."},
+    {section:"Graphs Batch 2",skill:"Direction",question:"Does y = -4x + 2 rise or fall from left to right?",answer:"fall",answers:["fall","falls"],hint:"Its gradient is negative.",solution:"A negative gradient means the line falls from left to right."},
+    {section:"Graphs Batch 2",skill:"x-intercept",question:"Find the x-intercept of y = x - 5.",answer:"5",hint:"At the x-intercept, y = 0.",solution:"0 = x - 5, so x = 5."},
+    {section:"Graphs Batch 2",skill:"x-intercept",question:"Find the x-intercept of y = 2x + 6.",answer:"-3",hint:"Set y = 0 and solve.",solution:"0 = 2x + 6, so 2x = -6 and x = -3."},
+    {section:"Graphs Batch 2",skill:"x-intercept",question:"Find the x-intercept of y = -3x + 12.",answer:"4",hint:"Set y = 0.",solution:"0 = -3x + 12, so 3x = 12 and x = 4."},
+    {section:"Graphs Batch 2",skill:"Equation",question:"A line has gradient 4 and y-intercept -2. Write its equation.",answer:"y=4x-2",answers:["y=4x-2","y = 4x - 2"],hint:"Use y = mx + c.",solution:"m = 4 and c = -2, so y = 4x - 2."},
+    {section:"Graphs Batch 2",skill:"Equation",question:"A line has gradient -1 and y-intercept 5. Write its equation.",answer:"y=-x+5",answers:["y=-x+5","y = -x + 5","y=-1x+5"],hint:"Use y = mx + c.",solution:"m = -1 and c = 5, so y = -x + 5."},
+    {section:"Graphs Batch 2",skill:"Parallel lines",question:"What is the gradient of a line parallel to y = 7x - 3?",answer:"7",hint:"Parallel lines have equal gradients.",solution:"The required gradient is 7."},
+    {section:"Graphs Batch 2",skill:"Point check",question:"Does the point (2, 7) lie on y = 3x + 1? Answer yes or no.",answer:"yes",hint:"Substitute x = 2.",solution:"3(2) + 1 = 7, so the point lies on the line."},
+    {section:"Graphs Batch 2",skill:"Point check",question:"Does the point (-1, 4) lie on y = -2x + 1? Answer yes or no.",answer:"no",hint:"Substitute x = -1.",solution:"-2(-1) + 1 = 3, not 4, so the point does not lie on the line."},
+    {section:"Graphs Batch 2",skill:"Mastery",question:"A line passes through (0, 3) and (5, 13). Write its equation.",answer:"y=2x+3",answers:["y=2x+3","y = 2x + 3"],hint:"First find the gradient, then use the point where x = 0.",solution:"Gradient = (13 - 3)/(5 - 0) = 2. The y-intercept is 3, so y = 2x + 3."}
+  ]
+};

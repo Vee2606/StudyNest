@@ -1,0 +1,17 @@
+StudyNest Version 1.2
+
+New in this release:
+- Geometry: 6 interactive worksheets, 120 questions
+- Measures & Mensuration: 6 interactive worksheets, 120 questions
+- Hints and fully worked solutions
+- Cambridge and ZIMSEC-style mastery challenges
+- Updated Study by Topic navigation
+- Updated Form 1–4 worksheet availability counts
+
+Retained from earlier versions:
+- Real Numbers
+- Algebra
+- Graphs
+- Variation
+- Statistics
+- Probability

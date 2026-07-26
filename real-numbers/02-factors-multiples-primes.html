@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Learn how to identify factors, multiples, prime numbers, composite numbers and prime factors using clear step-by-step methods." name="description"/>
+<title>Factors, Multiples and Prime Numbers | StudyNest</title>
+<link href="../styles/real-numbers-lessons.css" rel="stylesheet"/>
+<style id="studynest-real-animation-layer">
+.sn-concept-motion{margin:1.5rem auto 2rem;padding:1.25rem;border:2px solid rgba(19,48,76,.12);border-radius:22px;background:rgba(255,255,255,.88);overflow:hidden}
+.sn-concept-motion h2{margin-top:0}.sn-motion-stage{min-height:150px;display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;padding:18px;border-radius:18px;background:linear-gradient(135deg,rgba(232,246,255,.8),rgba(255,248,220,.75))}
+.sn-chip{display:inline-flex;align-items:center;justify-content:center;min-width:58px;min-height:48px;padding:10px 14px;border:2px solid #17324d;border-radius:14px;background:#fff;font-weight:800;font-size:1.1rem;box-shadow:0 5px 0 rgba(23,50,77,.12)}
+.sn-arrow{font-size:1.8rem;font-weight:900}.sn-pulse{animation:snPulse 2.4s ease-in-out infinite}.sn-slide{animation:snSlide 3s ease-in-out infinite}.sn-pop{animation:snPop 2.8s ease-in-out infinite}.sn-delay1{animation-delay:.45s}.sn-delay2{animation-delay:.9s}.sn-delay3{animation-delay:1.35s}
+.sn-line{position:relative;width:min(560px,94%);height:8px;border-radius:999px;background:#17324d;margin:42px auto 24px}.sn-line:before,.sn-line:after{content:'';position:absolute;top:-8px;width:2px;height:24px;background:#17324d}.sn-line:before{left:8%}.sn-line:after{right:8%}.sn-dot{position:absolute;top:-11px;width:30px;height:30px;border-radius:50%;background:#f5bf42;border:3px solid #17324d;animation:snTravel 4s ease-in-out infinite}
+.sn-grid{display:grid;grid-template-columns:repeat(4,54px);gap:7px}.sn-cell{width:54px;height:42px;display:grid;place-items:center;border:2px solid #17324d;border-radius:9px;background:#fff;font-weight:800}.sn-cell.active{animation:snCell 2.4s ease-in-out infinite;background:#fff4bd}
+.sn-bar{height:24px;border:2px solid #17324d;border-radius:999px;background:#fff;overflow:hidden;width:min(480px,90%)}.sn-fill{height:100%;width:0;background:#f5bf42;animation:snFill 3.5s ease-in-out infinite}
+.sn-caption{margin:.85rem 0 0;text-align:center;font-weight:700;color:#334e68}
+@keyframes snPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+@keyframes snSlide{0%,100%{transform:translateX(-18px)}50%{transform:translateX(18px)}}
+@keyframes snPop{0%,20%,100%{transform:translateY(0);opacity:.8}50%{transform:translateY(-10px);opacity:1}}
+@keyframes snTravel{0%,100%{left:7%}50%{left:86%}}
+@keyframes snCell{0%,100%{transform:scale(1);background:#fff}50%{transform:scale(1.08);background:#fff4bd}}
+@keyframes snFill{0%{width:0}55%,100%{width:75%}}
+@media (prefers-reduced-motion:reduce){.sn-concept-motion *{animation:none!important}}
+</style><style id="studynest-factor-tree-fix">
+.factor-tree-diagram{position:relative;width:min(620px,100%);height:350px;margin:1.5rem auto;padding:10px 16px;border-radius:20px;background:#f8fbfe;border:2px solid rgba(23,50,77,.12);overflow:hidden}
+.factor-tree-level{position:absolute;left:0;right:0;z-index:2;display:flex;justify-content:center;align-items:center}
+.factor-tree-root-level{top:24px}.factor-tree-middle-level{top:140px;justify-content:space-around;padding:0 105px}.factor-tree-leaf-level{top:270px;justify-content:space-between;padding:0 40px}
+.factor-node{display:grid;place-items:center;width:62px;height:62px;border-radius:50%;font-weight:900;font-size:1.15rem;background:#fff;border:3px solid #17324d;box-shadow:0 5px 0 rgba(23,50,77,.12)}
+.prime-node{background:#fff3b8;border-color:#b77b00}.composite-node{background:#e9f5ff}
+.factor-tree-lines{position:absolute;inset:0;width:100%;height:100%;z-index:1;display:block}
+.factor-tree-lines line{stroke:#17324d;stroke-width:4;stroke-linecap:round}
+@media(max-width:560px){.factor-tree-diagram{height:320px}.factor-tree-middle-level{top:125px;padding:0 55px}.factor-tree-leaf-level{top:245px;padding:0 12px}.factor-node{width:52px;height:52px}.factor-tree-lines{transform:scaleY(.91);transform-origin:top}}
+</style>  <link rel="stylesheet" href="../styles/studynest-v3.css">
+
+<link rel="stylesheet" href="../studynest-3.1.css">
+<link rel="stylesheet" href="../studynest-theme.css">
+</head>
+<body>
+<div class="announcement-bar">🚀 StudyNest is growing. New lessons and worksheets are added regularly.</div>
+<header class="site-header">
+<a class="logo" href="../index.html">📚 StudyNest</a>
+<nav class="main-navigation">
+<a href="../index.html">🏠 Home</a>
+<a href="../topics.html">📘 Study by Topic</a>
+<a href="index.html">🔢 Real Numbers</a>
+<a href="../worksheets.html">📝 Worksheets</a>
+</nav>
+</header>
+<section class="lesson-hero">
+<div>
+<p class="lesson-label">🔢 Real Numbers • Lesson 2 of 17</p>
+<h1>Factors, Multiples and Prime Numbers</h1>
+<p class="lesson-subtitle">Learn how numbers divide into one another, how multiplication creates
+        multiples, and how to recognise prime and composite numbers.</p>
+<div class="lesson-meta">
+<span class="meta-pill">🔢 Real Numbers</span>
+<span class="meta-pill">✏️ Worked examples included</span>
+<span class="meta-pill">🧠 Step-by-step learning</span>
+</div>
+</div>
+<div aria-hidden="true" class="hero-visual">
+<div class="real-number-visual">
+<div class="number-bubble bubble-pi">π</div>
+<div class="number-bubble bubble-fraction">¾</div>
+<div class="number-bubble bubble-root">√2</div>
+<div class="number-bubble bubble-negative">−8</div>
+<div class="real-set-symbol">ℝ</div>
+<div class="number-line"></div>
+<span class="number-tick tick-one"></span>
+<span class="number-tick tick-two"></span>
+<span class="number-tick tick-three"></span>
+<span class="number-tick tick-four"></span>
+<span class="number-label label-one">−2</span>
+<span class="number-label label-two">−1</span>
+<span class="number-label label-three">0</span>
+<span class="number-label label-four">1</span>
+</div>
+</div>
+</section><main class="lesson-main"><section aria-label="Animated concept demonstration" class="sn-concept-motion"><h2>🎬 See factors pair up</h2><div aria-hidden="true" class="sn-motion-stage"><span class="sn-chip sn-pop">1 × 12</span><span class="sn-chip sn-pop sn-delay1">2 × 6</span><span class="sn-chip sn-pop sn-delay2">3 × 4</span></div><p class="sn-caption">Factor pairs multiply to give the same whole number.</p></section><section class="lesson-section">
+<h2>🎯 By the end of this lesson...</h2>
+<p>You should be able to:</p>
+<ul>
+<li>Find the factors of a whole number.</li>
+<li>List multiples of a number.</li>
+<li>Explain the difference between factors and multiples.</li>
+<li>Recognise prime and composite numbers.</li>
+<li>Explain why 1 is neither prime nor composite.</li>
+<li>Write a number as a product of prime factors.</li>
+<li>Use a factor tree correctly.</li>
+</ul>
+</section><section class="lesson-section story-card">
+<h2>🤔 Think About This...</h2>
+<p>
+        Two students are asked:
+    </p>
+<div class="example-box">
+        Is 18 a factor of 6, or is 6 a factor of 18?
+    </div>
+<p>
+        One student says:
+    </p>
+<div class="math-box">
+        18 is a factor of 6.
+    </div>
+<p>
+        The other student says:
+    </p>
+<div class="math-box">
+        6 is a factor of 18.
+    </div>
+<p>
+        Which student is correct?
+    </p>
+<div class="success-box">
+        Since 18 ÷ 6 = 3 with no remainder, 6 is a factor of 18.
+    </div>
+</section><section class="lesson-section">
+<h2>1️⃣ What Is a Factor?</h2>
+<p>
+        A <strong>factor</strong> is a whole number that divides another whole
+        number exactly, leaving no remainder.
+    </p>
+<div class="math-box">
+        12 ÷ 3 = 4
+    </div>
+<p>
+        Since the division gives a whole-number answer with no remainder,
+        <strong>3 is a factor of 12</strong>.
+    </p>
+<div class="math-box">
+        12 ÷ 5 = 2 remainder 2
+    </div>
+<p>
+        Since there is a remainder, <strong>5 is not a factor of 12</strong>.
+    </p>
+<div class="tip-box">
+        💡 <strong>Factor Check:</strong><br/><br/>
+        Divide the number by the possible factor.
+        <br/><br/>
+        If the answer is a whole number with no remainder, it is a factor.
+    </div>
+</section><section class="lesson-section">
+<h2>🔍 Finding All the Factors</h2>
+<p>
+        To find all the factors of a number, look for pairs of whole numbers
+        that multiply to give that number.
+    </p>
+<div class="worked-example">
+<h3>Example 1: Find all the factors of 24</h3>
+<p>
+            Begin with 1 and test the multiplication pairs.
+        </p>
+<div class="factor-pair-grid">
+<div class="factor-pair">
+                1 × 24
+            </div>
+<div class="factor-pair">
+                2 × 12
+            </div>
+<div class="factor-pair">
+                3 × 8
+            </div>
+<div class="factor-pair">
+                4 × 6
+            </div>
+</div>
+<p>
+            Therefore:
+        </p>
+<div class="math-box">
+            Factors of 24:
+            <br/><br/>
+            1, 2, 3, 4, 6, 8, 12, 24
+        </div>
+</div>
+<div class="note-box">
+        Factors normally come in pairs because each multiplication pair gives
+        the original number.
+    </div>
+</section><section class="lesson-section">
+<h2>🧠 StudyNest Method: Finding Factors</h2>
+<div class="tip-box">
+<strong>Follow these steps:</strong>
+<br/><br/>
+<strong>Step 1:</strong>
+        Begin with 1, because 1 is a factor of every whole number.
+
+        <br/><br/>
+<strong>Step 2:</strong>
+        Test 2, 3, 4 and the following whole numbers in order.
+
+        <br/><br/>
+<strong>Step 3:</strong>
+        Write every exact division as a factor pair.
+
+        <br/><br/>
+<strong>Step 4:</strong>
+        Stop when the factor pairs begin repeating in reverse order.
+
+        <br/><br/>
+<strong>Step 5:</strong>
+        List all the factors from smallest to largest.
+
+    </div>
+</section><section class="lesson-section">
+<h2>2️⃣ What Is a Multiple?</h2>
+<p>
+        A <strong>multiple</strong> is a number produced by multiplying a given
+        number by a whole number.
+    </p>
+<p>
+        For example, the multiples of 5 begin:
+    </p>
+<div class="math-box">
+        5, 10, 15, 20, 25, 30, …
+    </div>
+<p>
+        This is because:
+    </p>
+<div class="math-box">
+        5 × 1 = 5
+    </div>
+<div class="math-box">
+        5 × 2 = 10
+    </div>
+<div class="math-box">
+        5 × 3 = 15
+    </div>
+<div class="math-box">
+        5 × 4 = 20
+    </div>
+<div class="success-box">
+        Multiples continue forever. There is no largest multiple of a number.
+    </div>
+</section><section class="lesson-section">
+<h2>🧠 StudyNest Method: Finding Multiples</h2>
+<div class="tip-box">
+<strong>Follow these steps:</strong>
+<br/><br/>
+<strong>Step 1:</strong>
+        Write the number.
+
+        <br/><br/>
+<strong>Step 2:</strong>
+        Multiply it by 1, 2, 3, 4 and so on.
+
+        <br/><br/>
+<strong>Step 3:</strong>
+        Continue until you have listed the number of multiples requested.
+
+    </div>
+<div class="worked-example">
+<h3>Example 2: Write the first six positive multiples of 7</h3>
+<div class="math-box">
+            7 × 1 = 7
+        </div>
+<div class="math-box">
+            7 × 2 = 14
+        </div>
+<div class="math-box">
+            7 × 3 = 21
+        </div>
+<div class="math-box">
+            7 × 4 = 28
+        </div>
+<div class="math-box">
+            7 × 5 = 35
+        </div>
+<div class="math-box">
+            7 × 6 = 42
+        </div>
+<div class="success-box">
+            The first six positive multiples of 7 are
+            <strong>7, 14, 21, 28, 35 and 42</strong>.
+        </div>
+</div>
+</section><section class="lesson-section">
+<h2>⚖️ Factors and Multiples: What Is the Difference?</h2>
+<div class="comparison-grid">
+<div class="comparison-card">
+<h3>Factors</h3>
+<p>
+                Factors divide into a number exactly.
+            </p>
+<div class="math-box">
+                Factors of 12:
+                <br/><br/>
+                1, 2, 3, 4, 6, 12
+            </div>
+<p>
+                A number has a limited number of factors.
+            </p>
+</div>
+<div class="comparison-card">
+<h3>Multiples</h3>
+<p>
+                Multiples are produced by multiplying a number.
+            </p>
+<div class="math-box">
+                Multiples of 12:
+                <br/><br/>
+                12, 24, 36, 48, …
+            </div>
+<p>
+                A number has infinitely many multiples.
+            </p>
+</div>
+</div>
+<div class="tip-box">
+        💡 <strong>Memory Tip:</strong><br/><br/>
+        Factors fit inside a number.
+        <br/><br/>
+        Multiples move upwards from a number.
+    </div>
+</section><section class="lesson-section">
+<h2>3️⃣ Prime Numbers</h2>
+<p>
+        A <strong>prime number</strong> is a whole number greater than 1 that
+        has exactly two positive factors:
+    </p>
+<div class="math-box">
+        1 and itself
+    </div>
+<p>
+        For example, the factors of 7 are:
+    </p>
+<div class="math-box">
+        1 and 7
+    </div>
+<p>
+        Since 7 has exactly two factors, 7 is prime.
+    </p>
+<div class="info-box">
+        The first prime numbers are:
+        <br/><br/>
+<strong>
+            2, 3, 5, 7, 11, 13, 17, 19, 23, 29, …
+        </strong>
+</div>
+</section><section class="lesson-section">
+<h2>⭐ Why Is 2 Special?</h2>
+<p>
+        The factors of 2 are:
+    </p>
+<div class="math-box">
+        1 and 2
+    </div>
+<p>
+        Therefore, 2 is prime.
+    </p>
+<div class="success-box">
+        2 is the only even prime number.
+    </div>
+<p>
+        Every other even number is divisible by 2 and therefore has more than
+        two factors.
+    </p>
+</section><section class="lesson-section">
+<h2>4️⃣ Composite Numbers</h2>
+<p>
+        A <strong>composite number</strong> is a whole number greater than 1
+        that has more than two positive factors.
+    </p>
+<p>
+        For example, the factors of 12 are:
+    </p>
+<div class="math-box">
+        1, 2, 3, 4, 6, 12
+    </div>
+<p>
+        Since 12 has more than two factors, it is composite.
+    </p>
+<table class="study-table">
+<tr>
+<th>Number</th>
+<th>Positive factors</th>
+<th>Classification</th>
+</tr>
+<tr>
+<td>7</td>
+<td>1, 7</td>
+<td>Prime</td>
+</tr>
+<tr>
+<td>12</td>
+<td>1, 2, 3, 4, 6, 12</td>
+<td>Composite</td>
+</tr>
+<tr>
+<td>19</td>
+<td>1, 19</td>
+<td>Prime</td>
+</tr>
+<tr>
+<td>20</td>
+<td>1, 2, 4, 5, 10, 20</td>
+<td>Composite</td>
+</tr>
+</table>
+</section><section class="lesson-section">
+<h2>❓ Is 1 Prime or Composite?</h2>
+<p>
+        The number 1 has only one positive factor:
+    </p>
+<div class="math-box">
+        1
+    </div>
+<p>
+        A prime number must have exactly two positive factors.
+    </p>
+<p>
+        A composite number must have more than two positive factors.
+    </p>
+<div class="warning-box">
+        Therefore, <strong>1 is neither prime nor composite</strong>.
+    </div>
+</section><section class="lesson-section">
+<h2>🧠 StudyNest Method: Prime or Composite?</h2>
+<div class="tip-box">
+<strong>Step 1:</strong>
+        Is the number greater than 1?
+
+        <br/><br/>
+
+        If not, it is neither prime nor composite.
+
+        <br/><br/>
+<strong>Step 2:</strong>
+        Find or test its factors.
+
+        <br/><br/>
+<strong>Step 3:</strong>
+        Count the factors.
+
+        <br/><br/>
+
+        Exactly two factors means the number is prime.
+
+        <br/><br/>
+
+        More than two factors means the number is composite.
+
+    </div>
+<div class="note-box">
+        Do not decide that a number is prime simply because it is odd.
+        Some odd numbers, such as 9, 15 and 21, are composite.
+    </div>
+</section><section class="lesson-section">
+<h2>5️⃣ Prime Factors</h2>
+<p>
+        A <strong>prime factor</strong> is a factor that is also a prime number.
+    </p>
+<p>
+        Consider the factors of 18:
+    </p>
+<div class="math-box">
+        1, 2, 3, 6, 9, 18
+    </div>
+<p>
+        The prime numbers in this list are 2 and 3.
+    </p>
+<div class="success-box">
+        Therefore, the prime factors of 18 are
+        <strong>2 and 3</strong>.
+    </div>
+</section><section class="lesson-section">
+<h2>🌳 Prime Factorisation</h2>
+<p>
+        Prime factorisation means writing a composite number as a product of
+        prime numbers only.
+    </p>
+<div class="worked-example">
+<h3>Example 3: Write 36 as a product of prime factors</h3>
+<div aria-label="Factor tree showing 36 split into 4 and 9, then into 2, 2, 3 and 3" class="factor-tree-diagram">
+<div class="factor-tree-level factor-tree-root-level">
+<div class="factor-node composite-node">
+            36
+        </div>
+</div>
+<div class="factor-tree-level factor-tree-middle-level">
+<div class="factor-node composite-node">
+            4
+        </div>
+<div class="factor-node composite-node">
+            9
+        </div>
+</div>
+<div class="factor-tree-level factor-tree-leaf-level">
+<div class="factor-node prime-node">
+            2
+        </div>
+<div class="factor-node prime-node">
+            2
+        </div>
+<div class="factor-node prime-node">
+            3
+        </div>
+<div class="factor-node prime-node">
+            3
+        </div>
+</div>
+<svg aria-hidden="true" class="factor-tree-lines" preserveaspectratio="none" viewbox="0 0 600 330">
+<!-- 36 to 4 and 9 -->
+<line x1="300" x2="165" y1="65" y2="145"></line>
+<line x1="300" x2="435" y1="65" y2="145"></line>
+<!-- 4 to 2 and 2 -->
+<line x1="165" x2="85" y1="190" y2="270"></line>
+<line x1="165" x2="225" y1="190" y2="270"></line>
+<!-- 9 to 3 and 3 -->
+<line x1="435" x2="375" y1="190" y2="270"></line>
+<line x1="435" x2="515" y1="190" y2="270"></line>
+</svg>
+</div>
+<p>
+            The final branches are all prime numbers.
+        </p>
+<div class="math-box">
+            36 = 2 × 2 × 3 × 3
+        </div>
+<p>
+            Using index notation:
+        </p>
+<div class="math-box">
+            36 = 2² × 3²
+        </div>
+</div>
+</section><section class="lesson-section">
+<h2>🧠 StudyNest Method: Using a Factor Tree</h2>
+<div class="tip-box">
+<strong>Step 1:</strong>
+        Split the composite number into any two factors.
+
+        <br/><br/>
+<strong>Step 2:</strong>
+        Check each factor.
+
+        <br/><br/>
+
+        If a factor is prime, circle or mark it and stop splitting it.
+
+        <br/><br/>
+
+        If it is composite, split it again.
+
+        <br/><br/>
+<strong>Step 3:</strong>
+        Continue until every final branch is prime.
+
+        <br/><br/>
+<strong>Step 4:</strong>
+        Multiply the prime factors together.
+
+        <br/><br/>
+<strong>Step 5:</strong>
+        Use powers to shorten repeated factors where appropriate.
+
+    </div>
+</section><section class="lesson-section">
+<h2>📝 More Worked Examples</h2>
+<div class="worked-example">
+<h3>Example 4: Write 60 as a product of prime factors</h3>
+<div class="math-box">
+            60 = 6 × 10
+        </div>
+<div class="math-box">
+            6 = 2 × 3
+        </div>
+<div class="math-box">
+            10 = 2 × 5
+        </div>
+<p>
+            Therefore:
+        </p>
+<div class="math-box">
+            60 = 2 × 2 × 3 × 5
+        </div>
+<div class="success-box">
+            60 = 2² × 3 × 5
+        </div>
+</div>
+<div class="worked-example">
+<h3>Example 5: Is 51 prime?</h3>
+<p>
+            Test whether 51 is divisible by smaller prime numbers.
+        </p>
+<div class="math-box">
+            5 + 1 = 6
+        </div>
+<p>
+            Since 6 is divisible by 3, 51 is divisible by 3.
+        </p>
+<div class="math-box">
+            51 ÷ 3 = 17
+        </div>
+<div class="math-box">
+            51 = 3 × 17
+        </div>
+<div class="success-box">
+            51 is composite because it has factors other than 1 and 51.
+        </div>
+</div>
+<div class="worked-example">
+<h3>Example 6: Find all the factors of 36</h3>
+<div class="math-box">
+            1 × 36
+        </div>
+<div class="math-box">
+            2 × 18
+        </div>
+<div class="math-box">
+            3 × 12
+        </div>
+<div class="math-box">
+            4 × 9
+        </div>
+<div class="math-box">
+            6 × 6
+        </div>
+<div class="success-box">
+            The factors of 36 are:
+            <br/><br/>
+            1, 2, 3, 4, 6, 9, 12, 18 and 36.
+        </div>
+</div>
+</section><section class="lesson-section">
+<h2>🔗 Looking Ahead: HCF and LCM</h2>
+<p>
+        Factors and multiples help us find two important values:
+    </p>
+<div class="definition-grid">
+<div class="definition-card">
+<h3>Highest Common Factor</h3>
+<p>
+                The largest factor shared by two or more numbers.
+            </p>
+</div>
+<div class="definition-card">
+<h3>Lowest Common Multiple</h3>
+<p>
+                The smallest positive multiple shared by two or more numbers.
+            </p>
+</div>
+</div>
+<div class="info-box">
+        We will learn the full methods for finding HCF and LCM in Lesson 3.
+    </div>
+</section><section class="lesson-section">
+<h2>⚠ Common Mistakes</h2>
+<div class="warning-box">
+<strong>Mistake 1:</strong><br/><br/>
+        Confusing factors with multiples.
+        <br/><br/>
+        Factors divide into a number. Multiples are produced by multiplication.
+    </div>
+<div class="warning-box">
+<strong>Mistake 2:</strong><br/><br/>
+        Forgetting 1 and the number itself when listing factors.
+    </div>
+<div class="warning-box">
+<strong>Mistake 3:</strong><br/><br/>
+        Saying that 1 is prime.
+        <br/><br/>
+        One has only one positive factor, so it is neither prime nor composite.
+    </div>
+<div class="warning-box">
+<strong>Mistake 4:</strong><br/><br/>
+        Thinking every odd number is prime.
+        <br/><br/>
+        For example, 9 = 3 × 3, so 9 is composite.
+    </div>
+<div class="warning-box">
+<strong>Mistake 5:</strong><br/><br/>
+        Ending a factor tree before every branch is prime.
+    </div>
+<div class="warning-box">
+<strong>Mistake 6:</strong><br/><br/>
+        Missing a factor pair when listing all the factors of a number.
+    </div>
+</section><section class="lesson-section practice-card">
+<h2>🎮 Your Turn!</h2>
+<ol>
+<li>
+            List all the factors of 18.
+        </li>
+<li>
+            List all the factors of 40.
+        </li>
+<li>
+            Write the first six positive multiples of 9.
+        </li>
+<li>
+            Write the first five positive multiples of 12.
+        </li>
+<li>
+            State whether 17 is prime or composite.
+        </li>
+<li>
+            State whether 27 is prime or composite.
+        </li>
+<li>
+            Explain why 1 is neither prime nor composite.
+        </li>
+<li>
+            Write 48 as a product of prime factors.
+        </li>
+<li>
+            Write 90 as a product of prime factors.
+        </li>
+<li>
+            Is 57 prime? Show how you know.
+        </li>
+</ol>
+<details>
+<summary>✅ Show Answers</summary>
+<ol>
+<li>
+                1, 2, 3, 6, 9, 18
+            </li>
+<li>
+                1, 2, 4, 5, 8, 10, 20, 40
+            </li>
+<li>
+                9, 18, 27, 36, 45, 54
+            </li>
+<li>
+                12, 24, 36, 48, 60
+            </li>
+<li>
+                Prime, because its only positive factors are 1 and 17.
+            </li>
+<li>
+                Composite, because 27 = 3 × 9.
+            </li>
+<li>
+                It has only one positive factor.
+            </li>
+<li>
+                48 = 2⁴ × 3
+            </li>
+<li>
+                90 = 2 × 3² × 5
+            </li>
+<li>
+                No. 57 = 3 × 19, so it is composite.
+            </li>
+</ol>
+</details>
+</section><section class="lesson-section">
+<h2>🧠 Remember This</h2>
+<div class="success-box">
+        A factor divides a number exactly.
+        <br/><br/>
+        A multiple is produced by multiplication.
+        <br/><br/>
+        A prime number has exactly two positive factors.
+        <br/><br/>
+        A composite number has more than two positive factors.
+        <br/><br/>
+        The number 1 is neither prime nor composite.
+        <br/><br/>
+        Prime factorisation ends only when every factor is prime.
+    </div>
+</section><section class="lesson-section">
+<h2>🎯 Before Moving On...</h2>
+<ul class="check-list">
+<li>✅ Can I explain the difference between a factor and a multiple?</li>
+<li>✅ Can I list all the factors of a number?</li>
+<li>✅ Can I write the first few multiples of a number?</li>
+<li>✅ Can I identify prime and composite numbers?</li>
+<li>✅ Can I explain why 1 is neither prime nor composite?</li>
+<li>✅ Can I use a factor tree?</li>
+<li>✅ Can I write a number as a product of prime factors?</li>
+</ul>
+</section><section class="lesson-section success-card">
+<h2>🎉 Well Done!</h2>
+<p>
+        You can now work confidently with factors, multiples, prime numbers and
+        prime factorisation.
+    </p>
+<div class="success-box">
+        Remember:
+        <br/><br/>
+<strong>
+            Divide to test factors → Multiply to list multiples → Count factors
+            to classify a number
+        </strong>
+</div>
+</section><section class="lesson-section">
+<h2>📈 Your Progress</h2>
+<p>
+        Lesson <strong>2 of 17</strong>
+</p>
+<div class="progress-wrap">
+<div class="progress-label">
+<span>Real Numbers Progress</span>
+<strong>12%</strong>
+</div>
+<div class="progress-bar">
+<div class="progress-fill" style="width:12%;"></div>
+</div>
+</div>
+</section><nav class="lesson-navigation">
+<a class="nav-button" href="01-types-of-numbers.html">← 01 Types Of Numbers</a>
+<a class="nav-button" href="index.html">Real Numbers Roadmap</a>
+<a class="nav-button primary" href="03-hcf-and-lcm.html">03 Hcf And Lcm →</a>
+</nav></main>
+<footer class="site-footer">
+<strong>📚 StudyNest</strong>
+<p>Helping students understand Mathematics, not memorise it.</p>
+<p>© 2026 StudyNest</p>
+</footer>  <script src="../script-v3.js"></script>
+
+<script src="../studynest-3.1.js" defer></script>
+</body>
+</html>

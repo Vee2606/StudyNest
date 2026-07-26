@@ -1,0 +1,12 @@
+STUDYNEST MASTER UPDATE
+
+This complete project was built from StudyNest(6).zip.
+
+Changes:
+- Corrected broken worksheet engine CSS/JavaScript paths.
+- Kept all existing worksheet topics and worksheet files.
+- Rebuilt Form 1, Form 2, Form 3 and Form 4 worksheet pages.
+- Grouped worksheet topics using the same Form allocation as the lesson section.
+- Updated the main Worksheets by Form page with live topic and worksheet counts.
+
+Open index.html to run the complete site.

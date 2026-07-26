@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+<title>
+   Matrix Multiplication | Matrices | StudyNest
+  </title>
+<link href="../styles/matrices-lessons.css" rel="stylesheet"/>
+<style id="studynest-matrix-interactive-styles">
+.matrix-lab{margin:2rem 0;padding:1.25rem;border:2px solid #3b2f2f;border-radius:18px;background:#fffdf8;box-shadow:4px 5px 0 rgba(59,47,47,.14)}
+.matrix-lab h2{margin-top:0}.matrix-lab-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;align-items:start}.matrix-controls{display:grid;gap:.75rem}.matrix-controls label{font-weight:700}.matrix-controls input,.matrix-controls select{width:100%;box-sizing:border-box;padding:.65rem;border:2px solid #6e6259;border-radius:10px;background:#fff;font:inherit}.matrix-btn-row{display:flex;flex-wrap:wrap;gap:.6rem}.matrix-btn{border:2px solid #3b2f2f;border-radius:12px;padding:.65rem 1rem;background:#f2dfb3;font:inherit;font-weight:700;cursor:pointer}.matrix-btn:hover,.matrix-btn:focus{background:#e7c978}.matrix-btn.active{background:#3b2f2f;color:#fff}.matrix-stage{min-height:170px;padding:1rem;border:2px dashed #9d8f81;border-radius:14px;background:rgba(255,255,255,.75);overflow:hidden}.matrix-live{margin-top:.75rem;padding:.75rem;border-left:5px solid #8a5a2b;background:#fff4d8;border-radius:8px;min-height:1.5em}.mx{display:inline-grid;gap:.35rem;padding:.55rem 1rem;margin:.25rem;position:relative;vertical-align:middle}.mx:before,.mx:after{content:"";position:absolute;top:0;bottom:0;width:8px;border-top:2px solid;border-bottom:2px solid}.mx:before{left:0;border-left:2px solid}.mx:after{right:0;border-right:2px solid}.mx.c2{grid-template-columns:repeat(2,minmax(38px,1fr))}.mx.c3{grid-template-columns:repeat(3,minmax(38px,1fr))}.mx input{width:3.2rem;padding:.35rem;text-align:center;border:1px solid #8f8174;border-radius:6px;font:inherit}.mx span{min-width:2rem;text-align:center;padding:.3rem}.mx .hit{background:#ffe08a;border-radius:6px;font-weight:800}.equation-line{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:.35rem;font-size:1.05rem}.matrix-table{width:100%;border-collapse:collapse}.matrix-table th,.matrix-table td{border:1px solid #8f8174;padding:.55rem;text-align:center}.wrap-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1rem;margin-top:1.5rem}.wrap-card{padding:1rem;border-radius:14px;border:2px solid #9d8f81;background:#fffdf8}.wrap-card h3{margin-top:0}.feedback-good{color:#176b3a;font-weight:800}.feedback-bad{color:#a12b2b;font-weight:800}
+@media(max-width:600px){.matrix-lab{padding:1rem}.matrix-lab-grid{grid-template-columns:1fr}.matrix-btn{width:100%}.mx input{width:2.7rem}.equation-line{font-size:.95rem}}
+</style>
+<style id="studynest-deep-teaching-v2">
+.deep-lesson{margin:1.5rem 0 2rem;padding:1.35rem;border:2px solid #55463d;border-radius:18px;background:#fffaf0;box-shadow:5px 6px 0 rgba(85,70,61,.12)}
+.deep-lesson h2{margin-top:0}.concept-hook{font-size:1.08rem;line-height:1.7;padding:1rem;border-left:6px solid #c58a3d;background:#fff4da;border-radius:10px}.visual-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin:1rem 0}.visual-card{border:2px solid #9c8a7c;border-radius:14px;background:white;padding:1rem;min-height:150px}.visual-card h3{margin:.1rem 0 .7rem}.visual-card p{line-height:1.55}.chalk{font-family:"Comic Sans MS","Segoe Print",cursive;font-weight:700}.matrix-v2{display:inline-grid;gap:.4rem;padding:.65rem 1.05rem;position:relative;vertical-align:middle;margin:.25rem}.matrix-v2:before,.matrix-v2:after{content:"";position:absolute;top:0;bottom:0;width:9px;border-top:2px solid #392f2a;border-bottom:2px solid #392f2a}.matrix-v2:before{left:0;border-left:2px solid #392f2a}.matrix-v2:after{right:0;border-right:2px solid #392f2a}.matrix-v2.c1{grid-template-columns:1fr}.matrix-v2.c2{grid-template-columns:repeat(2,2.3rem)}.matrix-v2.c3{grid-template-columns:repeat(3,2.3rem)}.matrix-v2 span{text-align:center;padding:.25rem;border-radius:6px}.hi-a{background:#ffe29a}.hi-b{background:#cce8ff}.hi-c{background:#d7f4d2}.hi-d{background:#ffd3d3}.diag{background:#ffe29a;font-weight:900}.arrow-row{display:flex;align-items:center;justify-content:center;gap:.5rem;flex-wrap:wrap;font-size:1.05rem}.rule-reveal{padding:1rem;border:2px dashed #a86d24;border-radius:12px;background:#fff9e9;text-align:center;font-size:1.08rem}.think-box{margin-top:1rem;padding:1rem;border-radius:12px;background:#eaf5ff;border-left:6px solid #3178a8}.teach-sequence{counter-reset:teach;display:grid;gap:.7rem}.teach-step{position:relative;padding:.8rem .8rem .8rem 3.2rem;border-radius:10px;background:#fff;border:1px solid #b7a99d}.teach-step:before{counter-increment:teach;content:counter(teach);position:absolute;left:.8rem;top:.65rem;width:1.8rem;height:1.8rem;border-radius:50%;display:grid;place-items:center;background:#4f4038;color:white;font-weight:800}.mini-table{width:100%;border-collapse:collapse}.mini-table th,.mini-table td{border:1px solid #7f7066;padding:.45rem;text-align:center}.cross-diagram{display:grid;grid-template-columns:repeat(2,3rem);gap:.45rem;justify-content:center;position:relative}.cross-diagram span{text-align:center;padding:.55rem;border-radius:7px}.cross-diagram:before,.cross-diagram:after{content:"";position:absolute;left:50%;top:50%;width:88px;height:3px;background:#9c5b35;transform-origin:center}.cross-diagram:before{transform:translate(-50%,-50%) rotate(38deg)}.cross-diagram:after{transform:translate(-50%,-50%) rotate(-38deg)}
+@media(max-width:600px){.deep-lesson{padding:1rem}.visual-grid{grid-template-columns:1fr}.matrix-v2.c3{grid-template-columns:repeat(3,2rem)}}
+</style>
+<style id="olevel-matrix-notation">
+.math-matrix{display:inline-grid;grid-auto-flow:row;grid-template-columns:repeat(var(--cols),auto);gap:.12rem .55rem;padding:.12rem .55rem;margin:0 .16rem;vertical-align:middle;position:relative;line-height:1.2;text-align:center;font-family:Georgia,"Times New Roman",serif}
+.math-matrix::before,.math-matrix::after{content:"";position:absolute;top:0;bottom:0;width:.32rem;border-top:1.8px solid currentColor;border-bottom:1.8px solid currentColor}
+.math-matrix::before{left:0;border-left:1.8px solid currentColor}.math-matrix::after{right:0;border-right:1.8px solid currentColor}
+.math-matrix .mcell{min-width:1.1em;padding:0 .08rem}.math-expression{display:inline-flex;align-items:center;gap:.22rem;flex-wrap:wrap}.math-name{font-family:Georgia,"Times New Roman",serif;font-style:italic}
+.matrix-live .math-matrix{font-size:1.05em;margin:.25rem}
+</style>
+  <link rel="stylesheet" href="../styles/studynest-v3.css">
+
+<link rel="stylesheet" href="../studynest-3.1.css">
+<link rel="stylesheet" href="../studynest-theme.css">
+</head>
+<body>
+<div class="announcement-bar">
+   🚀 StudyNest is growing. New lessons and worksheets are added regularly.
+  </div>
+<header class="site-header">
+<a class="logo" href="../index.html">
+    📚 StudyNest
+   </a>
+<nav class="main-navigation">
+<a href="../index.html">
+     🏠 Home
+    </a>
+<a href="../topics.html">
+     📘 Study by Topic
+    </a>
+<a href="index.html">
+     ▦ Matrices
+    </a>
+<a href="../worksheets.html">
+     📝 Worksheets
+    </a>
+</nav>
+</header>
+<section class="lesson-hero">
+<div>
+<p class="lesson-label">
+     MATRICES · LESSON 05
+    </p>
+<h1>
+     Matrix Multiplication
+    </h1>
+<p class="lesson-subtitle">
+     Check dimensions, then multiply row by column
+    </p>
+<div class="lesson-meta">
+<span class="meta-pill">
+      ⏱️ 30–40 min
+     </span>
+<span class="meta-pill">
+      📘 Developing
+     </span>
+<span class="meta-pill">
+      ▦ Visual steps included
+     </span>
+</div>
+</div>
+<div aria-hidden="true" class="hero-visual">
+<div class="matrix-hero-visual">
+<span class="matrix-token token-order">
+      2×3
+     </span>
+<span class="matrix-token token-det">
+      |A|
+     </span>
+<span class="matrix-token token-inverse">
+      A⁻¹
+     </span>
+<div class="hero-matrix">
+<span>
+       2
+      </span>
+<span>
+       −1
+      </span>
+<span>
+       4
+      </span>
+<span>
+       3
+      </span>
+<span>
+       5
+      </span>
+<span>
+       0
+      </span>
+</div>
+</div>
+</div>
+</section>
+<main class="lesson-main">
+<section class="deep-lesson"><h2>🌱 Matrix Multiplication: Row Meets Column</h2><p class="concept-hook">Matrix multiplication is not entry-by-entry multiplication. Each answer entry is created when one <strong>row</strong> from the first matrix meets one <strong>column</strong> from the second matrix.</p><div class="visual-grid"><article class="visual-card"><h3>First check the orders</h3><div class="rule-reveal">(m × <strong>n</strong>)(<strong>n</strong> × p) → m × p</div><p>The inside numbers must match. The outside numbers give the order of the answer.</p></article><article class="visual-card"><h3>Select Row 1 and Column 1</h3><div class="arrow-row"><span class="matrix-v2 c2"><span class="hi-a">2</span><span class="hi-a">3</span><span>4</span><span>1</span></span><strong>×</strong><span class="matrix-v2 c2"><span class="hi-b">5</span><span>2</span><span class="hi-b">1</span><span>6</span></span></div></article><article class="visual-card"><h3>Multiply matching terms</h3><div class="rule-reveal">(2 × 5) + (3 × 1)</div><p>Multiply first, then add: 10 + 3 = 13.</p></article><article class="visual-card"><h3>Place it carefully</h3><div class="arrow-row"><span>Row 1 × Column 1</span><strong>→</strong><span class="matrix-v2 c2"><span class="hi-c">13</span><span>?</span><span>?</span><span>?</span></span></div><p>Its position is determined by the row and column used.</p></article><article class="visual-card"><h3>Repeat systematically</h3><div class="teach-sequence"><div class="teach-step">Row 1 × Column 1 gives entry (1,1).</div><div class="teach-step">Row 1 × Column 2 gives entry (1,2).</div><div class="teach-step">Row 2 × Column 1 gives entry (2,1).</div><div class="teach-step">Row 2 × Column 2 gives entry (2,2).</div></div></article><article class="visual-card"><h3>Identity connection</h3><p>Using <strong>I</strong> returns the original matrix because each row-column calculation selects one entry and adds zeros.</p><div class="rule-reveal">AI = IA = A</div></article></div><div class="think-box"><strong>Common Trap:</strong> AB and BA are usually different—and sometimes only one of them is possible.</div></section><section class="lesson-section">
+<h2>
+     Compatibility
+    </h2>
+<div class="matrix-rule">
+     For (m×n)(n×p), the inner numbers must match; the product is m×p.
+    </div>
+<p>
+     (2×3)(3×4) gives 2×4. (2×3)(2×2) is impossible.
+    </p>
+</section>
+<section class="lesson-section">
+<h2>
+     Row × Column
+    </h2>
+<div class="row-column-demo">
+<div class="highlight-row">
+      [2 3]
+     </div>
+<strong>
+      ×
+     </strong>
+<div class="highlight-column">
+      [4;5]
+     </div>
+<strong>
+      =
+     </strong>
+<div class="highlight-row">
+      2×4+3×5=23
+     </div>
+</div>
+</section>
+<section class="lesson-section">
+<h2>
+     Full Example
+    </h2>
+<div class="calc-steps">
+<p>
+      <span class="math-matrix" style="--cols:2" role="math" aria-label="matrix with 2 rows and 2 columns"><span class="mcell">1</span><span class="mcell">2</span><span class="mcell">3</span><span class="mcell">4</span></span><span class="math-matrix" style="--cols:2" role="math" aria-label="matrix with 2 rows and 2 columns"><span class="mcell">5</span><span class="mcell">6</span><span class="mcell">7</span><span class="mcell">8</span></span>
+     </p>
+<p>
+      (1,1): 1×5+2×7=19
+     </p>
+<p>
+      (1,2): 1×6+2×8=22
+     </p>
+<p>
+      (2,1): 3×5+4×7=43
+     </p>
+<p>
+      (2,2): 3×6+4×8=50
+     </p>
+<p>
+      Product=<span class="math-matrix" style="--cols:2" role="math" aria-label="matrix with 2 rows and 2 columns"><span class="mcell">19</span><span class="mcell">22</span><span class="mcell">43</span><span class="mcell">50</span></span>.
+     </p>
+</div>
+<div class="common-mistake">
+     AB is generally not equal to BA.
+    </div>
+</section>
+<section class="lesson-section">
+<h2>
+     Practice
+    </h2>
+<ol class="practice-list">
+<li>
+      State the product order of (3×2)(2×5).
+     </li>
+<li>
+      Can (2×4)(3×2) be multiplied?
+     </li>
+<li>
+      Multiply <span class="math-matrix" style="--cols:2" role="math" aria-label="matrix with 2 rows and 2 columns"><span class="mcell">1</span><span class="mcell">3</span><span class="mcell">2</span><span class="mcell">4</span></span> by <span class="math-matrix" style="--cols:2" role="math" aria-label="matrix with 2 rows and 2 columns"><span class="mcell">2</span><span class="mcell">1</span><span class="mcell">5</span><span class="mcell">−1</span></span>.
+     </li>
+</ol>
+</section>
+<section class="lesson-section answers-section">
+<h2>
+     ✅ Check Your Work
+    </h2>
+<details>
+<summary>
+      Show answers and working
+     </summary>
+<div class="answers-content">
+<ol>
+<li>
+        3×5.
+       </li>
+<li>
+        No; 4≠3.
+       </li>
+<li>
+        <span class="math-matrix" style="--cols:2" role="math" aria-label="matrix with 2 rows and 2 columns"><span class="mcell">17</span><span class="mcell">−2</span><span class="mcell">24</span><span class="mcell">−2</span></span>.
+       </li>
+</ol>
+</div>
+</details>
+</section>
+<section class="matrix-lab"><h2>🧮 Row-by-Column Multiplication Visualiser</h2><p>Click an answer cell to see the row and column used.</p><div class="matrix-stage"><div class="equation-line"><div class="mx c2" id="mmA"><span data-c="0" data-r="0">1</span><span data-c="1" data-r="0">2</span><span data-c="0" data-r="1">3</span><span data-c="1" data-r="1">4</span></div>×<div class="mx c2" id="mmB"><span data-c="0" data-r="0">5</span><span data-c="1" data-r="0">6</span><span data-c="0" data-r="1">7</span><span data-c="1" data-r="1">8</span></div>=<div class="mx c2" id="mmC"><button class="matrix-btn mmCell" data-c="0" data-r="0">?</button><button class="matrix-btn mmCell" data-c="1" data-r="0">?</button><button class="matrix-btn mmCell" data-c="0" data-r="1">?</button><button class="matrix-btn mmCell" data-c="1" data-r="1">?</button></div></div><div aria-live="polite" class="matrix-live" id="mmOut">Select a product entry.</div></div></section><section class="lesson-section">
+<h2>
+     🧭 StudyNest: How to Solve Matrix Problems
+    </h2>
+<div class="matrix-solver">
+<div class="matrix-step">
+<span>
+       1
+      </span>
+<strong>
+       Inspect
+      </strong>
+      Write down the order of each matrix and notice whether it is square.
+     </div>
+<div class="matrix-step">
+<span>
+       2
+      </span>
+<strong>
+       Identify
+      </strong>
+      Decide whether the task is addition, multiplication, determinant, inverse or an equation.
+     </div>
+<div class="matrix-step">
+<span>
+       3
+      </span>
+<strong>
+       Check
+      </strong>
+      Confirm that the operation is allowed before calculating.
+     </div>
+<div class="matrix-step">
+<span>
+       4
+      </span>
+<strong>
+       Apply
+      </strong>
+      Use the correct entry-by-entry or row-by-column rule.
+     </div>
+<div class="matrix-step">
+<span>
+       5
+      </span>
+<strong>
+       Organise
+      </strong>
+      Work one entry at a time and keep its position clear.
+     </div>
+<div class="matrix-step">
+<span>
+       6
+      </span>
+<strong>
+       Simplify
+      </strong>
+      Complete the arithmetic carefully, including negative signs.
+     </div>
+<div class="matrix-step">
+<span>
+       7
+      </span>
+<strong>
+       Verify
+      </strong>
+      Check the order of the answer and test an inverse where appropriate.
+     </div>
+<div class="matrix-step">
+<span>
+       8
+      </span>
+<strong>
+       Conclude
+      </strong>
+      Present the final matrix neatly with brackets and correct notation.
+     </div>
+</div>
+</section><section class="lesson-section"><h2>📘 Remember</h2><div class="wrap-grid"><article class="wrap-card"><h3>Key idea</h3><p>AB exists when the number of columns of A equals the number of rows of B. Each product entry comes from one row times one column.</p></article><article class="wrap-card"><h3>⚠️ Common Mistakes</h3><p>Matrix multiplication is not entry-by-entry multiplication and generally AB ≠ BA.</p></article><article class="wrap-card"><h3>⭐ Exam Tips</h3><p>Write the orders first and predict the order of the answer before calculating.</p></article><article class="wrap-card"><h3>🌍 Did You Know?</h3><p>Matrix multiplication powers animations, 3D graphics and many machine-learning systems.</p></article></div></section>
+<nav class="lesson-navigation">
+<a class="nav-button" href="04-scalar-multiplication.html">
+     ← Scalar Multiplication
+    </a>
+<a class="nav-button" href="index.html">
+     Matrices Roadmap
+    </a>
+<a class="nav-button primary" href="06-determinants.html">
+     Determinants →
+    </a>
+</nav>
+</main>
+<footer class="site-footer">
+<strong>
+    📚 StudyNest
+   </strong>
+<p>
+    Helping students understand Mathematics, not memorise it.
+   </p>
+<p>
+    © 2026 StudyNest
+   </p>
+</footer>
+<script id="studynest-matrix-interactive-js">
+(()=>{const $=id=>document.getElementById(id), nums=p=>[...document.querySelectorAll(`[id^="${p}"]`)].map(x=>+x.value), fmt=n=>Number.isInteger(n)?n:(Math.round(n*1000)/1000), matrixHTML=rows=>{const cols=Math.max(...rows.map(r=>r.length));return `<span class="math-matrix" style="--cols:${cols}" role="math" aria-label="matrix with ${rows.length} rows and ${cols} columns">${rows.flat().map(v=>`<span class="mcell">${v}</span>`).join('')}</span>`};
+if($('mbBuild')){const build=()=>{let r=+$('mbRows').value,c=+$('mbCols').value,box=$('mbMatrix');box.innerHTML='';let m=document.createElement('div');m.className='mx c'+c;for(let i=0;i<r*c;i++){let b=document.createElement('button');b.type='button';b.className='matrix-btn';b.textContent=i+1;b.addEventListener('click',()=>{$('mbOut').textContent=`Entry ${i+1} is in row ${Math.floor(i/c)+1}, column ${i%c+1}. Matrix order: ${r}×${c}.`;});m.appendChild(b)}box.appendChild(m);$('mbOut').textContent=`Built a ${r}×${c} matrix with ${r*c} entries.`};$('mbBuild').addEventListener('click',build);build()}
+document.querySelectorAll('.typeCheck').forEach(b=>b.addEventListener('click',()=>{let s=$('type'+b.dataset.id),ok=s.value===b.dataset.answer;$('typeOut').innerHTML=`<span class="${ok?'feedback-good':'feedback-bad'}">${ok?'Correct!':'Try again.'}</span> ${ok?b.dataset.answer:'Inspect its rows, columns and entries.'}`}));
+if($('asCalc'))$('asCalc').addEventListener('click',()=>{let a=nums('asA'),b=nums('asB'),sub=$('asOp').value==='sub',r=a.map((v,i)=>sub?v-b[i]:v+b[i]);$('asOut').innerHTML=`Result = ${matrixHTML([[r[0],r[1]],[r[2],r[3]]])}`;});
+if($('scK')){const go=()=>{let k=+$('scK').value,a=nums('scA').map(v=>v*k);$('scVal').textContent=k;$('scOut').innerHTML=`${k}<span class="math-name">A</span> = ${matrixHTML([[a[0],a[1]],[a[2],a[3]]])}`};$('scK').addEventListener('input',go);document.querySelectorAll('[id^="scA"]').forEach(x=>x.addEventListener('input',go));go()}
+if(document.querySelector('.mmCell')){let A=[1,2,3,4],B=[5,6,7,8];document.querySelectorAll('.mmCell').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('#mmA span,#mmB span').forEach(x=>x.classList.remove('hit'));let r=+btn.dataset.r,c=+btn.dataset.c;document.querySelectorAll(`#mmA span[data-r="${r}"]`).forEach(x=>x.classList.add('hit'));document.querySelectorAll(`#mmB span[data-c="${c}"]`).forEach(x=>x.classList.add('hit'));let x=A[r*2]*B[c]+A[r*2+1]*B[2+c];btn.textContent=x;$('mmOut').textContent=`Row ${r+1} × column ${c+1}: (${A[r*2]}×${B[c]}) + (${A[r*2+1]}×${B[2+c]}) = ${x}.`}))}
+if($('dtCalc'))$('dtCalc').addEventListener('click',()=>{let[a,b,c,d]=nums('dtA'),det=a*d-b*c;$('dtOut').textContent=`det(A) = (${a}×${d}) − (${b}×${c}) = ${det}. The matrix is ${det===0?'singular':'non-singular'}.`;});
+if($('ivCalc'))$('ivCalc').addEventListener('click',()=>{let[a,b,c,d]=nums('ivA'),det=a*d-b*c;if(det===0){$('ivOut').textContent='No inverse exists because the determinant is 0.';}else{$('ivOut').innerHTML=`<span class="math-name">A</span>⁻¹ = <span class="math-expression"><span>1/${det}</span>${matrixHTML([[d,-b],[-c,a]])}<span>=</span>${matrixHTML([[fmt(d/det),fmt(-b/det)],[fmt(-c/det),fmt(a/det)]])}</span>`;}});
+if($('eqCalc'))$('eqCalc').addEventListener('click',()=>{let[a,b,c,d]=nums('eqA'),[e,f]=nums('eqB'),det=a*d-b*c;if(det===0){$('eqOut').textContent='A is singular, so this system has no unique solution.';}else{$('eqOut').innerHTML=`<span class="math-name">X</span> = ${matrixHTML([[fmt((d*e-b*f)/det)],[fmt((-c*e+a*f)/det)]])}`;}});
+if($('seCalc'))$('seCalc').addEventListener('click',()=>{const parse=s=>{let m=s.replace(/\s/g,'').match(/^([+-]?\d*)x([+-]\d*)y=([+-]?\d+)$/i);if(!m)return null;let cv=v=>v===''||v==='+'?1:v==='-'?-1:+v;return[cv(m[1]),cv(m[2]),+m[3]]};let p=parse($('se1').value),q=parse($('se2').value);if(!p||!q){$('seOut').textContent='Use a form such as 2x + y = 7.';return}let[a,b,e]=p,[c,d,f]=q,det=a*d-b*c;$('seOut').textContent=det===0?'The equations do not have a unique solution.':`x = ${fmt((d*e-b*f)/det)}, y = ${fmt((-c*e+a*f)/det)}.`;});
+if($('rvCheck'))$('rvCheck').addEventListener('click',()=>{let score=0;if($('rv1').value.replace(/\s|×/g,'x').toLowerCase()==='2x3')score++;if(+$('rv2').value===10)score++;if($('rv3').value==='Yes')score++;$('rvOut').textContent=`Score: ${score}/3. ${score===3?'Excellent matrix reasoning!':'Review the feedback and try again.'}`;});
+if($('qCheck'))$('qCheck').addEventListener('click',()=>{let score=0;if(+$('q1').value===6)score++;if(+$('q2').value===5)score++;if($('q3').value==='No')score++;if(+$('q4').value===4)score++;$('qOut').textContent=`Checkpoint score: ${score}/4. ${score===4?'Outstanding!':'Check matrix order, determinant signs and row-by-column multiplication.'}`;});
+})();
+</script>  <script src="../script-v3.js"></script>
+
+<script src="../studynest-3.1.js" defer></script>
+</body>
+</html>

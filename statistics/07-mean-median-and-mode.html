@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Calculate averages and decide which measure best represents a data set.">
+<title>Mean, Median and Mode | Statistics | StudyNest</title>
+<link rel="stylesheet" href="../styles/statistics-lessons.css">
+<link rel="stylesheet" href="../styles/statistics-interactive.css">
+  <link rel="stylesheet" href="../styles/studynest-v3.css">
+
+<link rel="stylesheet" href="../studynest-3.1.css">
+<link rel="stylesheet" href="../studynest-theme.css">
+</head>
+<body>
+
+<div class="announcement-bar">🚀 StudyNest is growing. New lessons and worksheets are added regularly.</div>
+<header class="site-header">
+    <a href="../index.html" class="logo">📚 StudyNest</a>
+    <nav class="main-navigation">
+        <a href="../index.html">🏠 Home</a>
+        <a href="../topics.html">📘 Study by Topic</a>
+        <a href="index.html">📊 Statistics</a>
+        <a href="../worksheets.html">📝 Worksheets</a>
+    </nav>
+</header>
+
+<section class="lesson-hero">
+<div>
+<p class="lesson-label">STATISTICS · LESSON 07</p>
+<h1>Mean, Median and Mode</h1>
+<p class="lesson-subtitle">Calculate averages and decide which measure best represents a data set.</p>
+<div class="lesson-meta">
+<span class="meta-pill">⏱️ 22–30 min</span>
+<span class="meta-pill">📘 Developing</span>
+<span class="meta-pill">📊 Interpretation included</span>
+</div>
+</div>
+
+<div class="hero-visual" aria-hidden="true">
+    <div class="statistics-hero-visual">
+        <span class="statistics-token token-mean">x̄</span>
+        <span class="statistics-token token-percent">%</span>
+        <span class="statistics-token token-sigma">Σ</span>
+        <div class="stat-bars"><span></span><span></span><span></span><span></span></div>
+        <div class="stat-pie"></div>
+        <div class="stat-line"><i></i><i></i><i></i></div>
+    </div>
+</div>
+
+</section>
+<main class="lesson-main">
+
+<section class="lesson-section"><h2>🎯 Learning Objectives</h2><ul class="objective-list">
+<li>calculate mean, median and mode;</li><li>order data before finding the median;</li>
+<li>recognise more than one mode or no mode;</li><li>compare the three measures;</li><li>choose the most suitable average.</li></ul></section>
+<section class="lesson-section"><h2>Three Measures</h2><div class="average-grid">
+<article class="average-card"><h3>Mean</h3><p>Sum of values ÷ number of values.</p></article>
+<article class="average-card"><h3>Median</h3><p>Middle value after ordering.</p></article>
+<article class="average-card"><h3>Mode</h3><p>Most frequent value.</p></article></div></section>
+<section class="lesson-section"><h2>Worked Example</h2>
+<p>Data: 2, 3, 3, 5, 12.</p><p>Mean=25÷5=5, median=3, mode=3.</p>
+<div class="common-mistake">The high value 12 pulls the mean upward. The median may describe the typical value better.</div></section>
+<section class="lesson-section"><h2>🔢 Mean, Median and Mode Calculator</h2><div class="stats-lab"><div class="stats-control"><label for="s7data">Enter numbers separated by commas</label><textarea id="s7data" rows="3">12, 15, 15, 18, 20, 25, 27</textarea></div><button class="stats-btn" id="s7go" type="button">Calculate</button><div class="stats-metrics"><div class="stats-metric">Mean<strong id="s7mean">—</strong></div><div class="stats-metric">Median<strong id="s7median">—</strong></div><div class="stats-metric">Mode<strong id="s7mode">—</strong></div><div class="stats-metric">Range<strong id="s7range">—</strong></div></div><div class="stats-output" id="s7sorted"></div></div></section><script>(()=>{document.querySelector('#s7go').addEventListener('click',()=>{let a=document.querySelector('#s7data').value.split(/[\s,]+/).map(Number).filter(Number.isFinite).sort((x,y)=>x-y);if(!a.length)return;let mean=a.reduce((x,y)=>x+y,0)/a.length,mid=a.length%2?a[(a.length-1)/2]:(a[a.length/2-1]+a[a.length/2])/2,c={};a.forEach(x=>c[x]=(c[x]||0)+1);let mx=Math.max(...Object.values(c)),modes=mx===1?'No mode':Object.keys(c).filter(x=>c[x]===mx).join(', ');document.querySelector('#s7mean').textContent=mean.toFixed(2).replace(/\.00$/,'');document.querySelector('#s7median').textContent=mid;document.querySelector('#s7mode').textContent=modes;document.querySelector('#s7range').textContent=a.at(-1)-a[0];document.querySelector('#s7sorted').innerHTML='<strong>Ordered data:</strong> '+a.join(', ')}) ;document.querySelector('#s7go').click()})();</script>
+<section class="lesson-section"><h2>Practice</h2><ol class="practice-list">
+<li>Find mean, median and mode of 4,6,6,7,12.</li>
+<li>Find the median of 9,2,5,7,4,8.</li>
+<li>Data are 1,2,3,4. State the mode.</li>
+<li>Which average is usually most affected by an extreme value?</li>
+<li>Explain why median income may be preferred to mean income.</li></ol></section>
+
+<section class="lesson-section answers-section">
+<h2>✅ Check Your Work</h2>
+<details>
+<summary>Show answers and working</summary>
+<div class="answers-content"><ol><li>Mean=35÷5=7, median=6, mode=6.</li><li>Ordered: 2,4,5,7,8,9. Median=(5+7)÷2=6.</li><li>There is no mode because no value repeats.</li><li>The mean.</li><li>Very high incomes can pull the mean upward; the median better represents the middle person.</li></ol></div>
+</details>
+</section>
+<section class="lesson-section"><h2>Summary</h2><ul class="summary-list"><li>Choose the average that answers the context fairly.</li><li>Always order data before finding the median.</li></ul></section>
+
+<section class="lesson-section">
+<h2>🧠 StudyNest Statistical Thinking Routine</h2>
+<div class="problem-routine">
+<div class="routine-step"><strong>1. Read</strong>What information and context have been given?</div>
+<div class="routine-step"><strong>2. Identify</strong>What type of data, table, graph or measure is involved?</div>
+<div class="routine-step"><strong>3. Choose</strong>Which method or representation answers the question best?</div>
+<div class="routine-step"><strong>4. Work</strong>Organise the calculation or construction clearly.</div>
+<div class="routine-step"><strong>5. Interpret</strong>Explain what the answer means in the original context.</div>
+<div class="routine-step"><strong>6. Check</strong>Does the result fit the data and make reasonable sense?</div>
+</div>
+</section>
+
+<nav class="lesson-navigation">
+<a class="nav-button" href="06-line-graphs-and-time-series.html">← Line Graphs</a>
+<a class="nav-button" href="index.html">Statistics Roadmap</a>
+<a class="nav-button primary" href="08-range-quartiles-and-iqr.html">Range, Quartiles and IQR →</a>
+</nav>
+</main>
+
+<footer class="site-footer">
+    <strong>📚 StudyNest</strong>
+    <p>Helping students understand Mathematics, not memorise it.</p>
+    <p>© 2026 StudyNest</p>
+</footer>
+
+  <script src="../script-v3.js"></script>
+
+<script src="../studynest-3.1.js" defer></script>
+</body>
+</html>

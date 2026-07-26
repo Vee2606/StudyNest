@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Interpret upward and downward viewing angles from horizontal lines.">
+      <title>Elevation and Depression | Geometry | StudyNest</title>
+      <link rel="stylesheet" href="../styles/geometry-lessons.css">
+      <link rel="stylesheet" href="../styles/studynest-v3.css">
+
+<link rel="stylesheet" href="../studynest-3.1.css">
+<link rel="stylesheet" href="../studynest-theme.css">
+</head>
+    <body>
+
+<div class="announcement-bar">🚀 StudyNest is growing. New lessons and worksheets are added regularly.</div>
+<header class="site-header">
+    <a href="../index.html" class="logo">📚 StudyNest</a>
+    <nav class="main-navigation">
+        <a href="../index.html">🏠 Home</a>
+        <a href="../topics.html">📘 Study by Topic</a>
+        <a href="index.html">📐 Geometry</a>
+        <a href="../worksheets.html">📝 Worksheets</a>
+    </nav>
+</header>
+
+      <section class="lesson-hero">
+        <div>
+          <p class="lesson-label">GEOMETRY · LESSON 12</p>
+          <h1>Elevation and Depression</h1>
+          <p class="lesson-subtitle">Interpret upward and downward viewing angles from horizontal lines.</p>
+          <div class="lesson-meta">
+            <span class="meta-pill">⏱️ 22–30 min</span>
+            <span class="meta-pill">📘 Developing</span>
+          </div>
+        </div>
+
+<div class="hero-visual" aria-hidden="true">
+    <div class="geometry-hero-visual">
+        <span class="geometry-token token-90">90°</span>
+        <span class="geometry-token token-180">180°</span>
+        <span class="geometry-token token-theta">θ</span>
+        <div class="hero-angle"></div>
+        <div class="hero-triangle"></div>
+    </div>
+</div>
+
+      </section>
+      <main class="lesson-main">
+
+<section class="lesson-section">
+<h2>🎯 By the End of This Lesson...</h2>
+<ul class="objective-list">
+<li>identify elevation and depression angles;</li>
+<li>draw correct horizontal reference lines;</li>
+<li>use alternate angles in diagrams;</li>
+<li>solve scale-drawing problems;</li>
+<li>interpret real-life height and distance situations.</li>
+</ul>
+</section>
+<section class="lesson-section">
+<h2>Elevation and Depression</h2>
+<div class="geometry-grid">
+<article class="geometry-card"><h3>Angle of Elevation</h3><p>Angle measured upward from a horizontal line.</p></article>
+<article class="geometry-card"><h3>Angle of Depression</h3><p>Angle measured downward from a horizontal line.</p></article>
+</div>
+<div class="geometry-rule">Because horizontal lines are parallel, an angle of depression equals the corresponding angle of elevation.</div>
+</section>
+<section class="lesson-section">
+<h2>Worked Example</h2>
+<p>From the top of a tower, the angle of depression to a car is 32°. The angle of elevation from the car to the tower top is also 32°.</p>
+</section>
+
+<section class="lesson-section">
+<h2>Try It: Elevation and Depression</h2>
+<div class="interactive-geometry">
+  <div class="interactive-controls">
+    <div class="interactive-control">
+      <label for="viewMode">Viewing situation</label>
+      <select id="viewMode">
+        <option value="elevation">Angle of elevation</option>
+        <option value="depression">Angle of depression</option>
+      </select>
+    </div>
+    <div class="interactive-control">
+      <label for="heightRange">Vertical height: <span id="heightVal">12 m</span></label>
+      <input id="heightRange" type="range" min="4" max="24" value="12">
+    </div>
+    <div class="interactive-control">
+      <label for="distanceRange">Horizontal distance: <span id="distanceVal">20 m</span></label>
+      <input id="distanceRange" type="range" min="8" max="40" value="20">
+    </div>
+  </div>
+
+  <svg class="interactive-canvas" viewBox="0 0 650 340" role="img" aria-labelledby="elevDiagramTitle elevDiagramDesc">
+    <title id="elevDiagramTitle">Interactive elevation and depression diagram</title>
+    <desc id="elevDiagramDesc">Adjust the height, distance and viewing situation to see the sight line and angle change.</desc>
+
+    <line x1="70" y1="275" x2="590" y2="275" stroke="currentColor" stroke-width="5"/>
+    <line id="towerLine" x1="500" y1="275" x2="500" y2="95" stroke="currentColor" stroke-width="8"/>
+    <line id="sightLine" x1="140" y1="275" x2="500" y2="95" stroke="#bd725f" stroke-width="5"/>
+    <line id="lowerHorizontal" x1="140" y1="275" x2="360" y2="275" stroke="#777" stroke-dasharray="8 8"/>
+    <line id="upperHorizontal" x1="500" y1="95" x2="280" y2="95" stroke="#777" stroke-dasharray="8 8"/>
+
+    <path id="angleArc" d="" fill="none" stroke="#bd725f" stroke-width="4"/>
+    <text id="angleLabel" x="185" y="250" font-size="22" fill="currentColor">31°</text>
+
+    <text id="heightLabel" x="515" y="190" font-size="18" fill="currentColor">12 m</text>
+    <text id="distanceLabel" x="300" y="305" font-size="18" fill="currentColor">20 m</text>
+    <text id="observerLabel" x="95" y="255" font-size="17" fill="currentColor">Observer</text>
+    <text id="objectLabel" x="510" y="85" font-size="17" fill="currentColor">Top</text>
+  </svg>
+
+  <div class="interactive-output" id="elevOut" aria-live="polite"></div>
+</div>
+</section>
+<script>
+(() => {
+  const mode = document.querySelector('#viewMode');
+  const height = document.querySelector('#heightRange');
+  const distance = document.querySelector('#distanceRange');
+  const heightVal = document.querySelector('#heightVal');
+  const distanceVal = document.querySelector('#distanceVal');
+  const towerLine = document.querySelector('#towerLine');
+  const sightLine = document.querySelector('#sightLine');
+  const upperHorizontal = document.querySelector('#upperHorizontal');
+  const angleArc = document.querySelector('#angleArc');
+  const angleLabel = document.querySelector('#angleLabel');
+  const heightLabel = document.querySelector('#heightLabel');
+  const distanceLabel = document.querySelector('#distanceLabel');
+  const observerLabel = document.querySelector('#observerLabel');
+  const objectLabel = document.querySelector('#objectLabel');
+  const output = document.querySelector('#elevOut');
+
+  function polarPoint(cx, cy, radius, degrees) {
+    const radians = degrees * Math.PI / 180;
+    return {
+      x: cx + radius * Math.cos(radians),
+      y: cy - radius * Math.sin(radians)
+    };
+  }
+
+  function update() {
+    const h = Number(height.value);
+    const d = Number(distance.value);
+    const angle = Math.atan(h / d) * 180 / Math.PI;
+    const angleRounded = Math.round(angle * 10) / 10;
+
+    const groundY = 275;
+    const observerX = 140;
+    const objectX = 500;
+    const topY = groundY - Math.min(190, h * 7.5);
+
+    heightVal.textContent = `${h} m`;
+    distanceVal.textContent = `${d} m`;
+    heightLabel.textContent = `${h} m`;
+    distanceLabel.textContent = `${d} m`;
+
+    towerLine.setAttribute('y2', topY);
+    upperHorizontal.setAttribute('y1', topY);
+    upperHorizontal.setAttribute('y2', topY);
+
+    if (mode.value === 'elevation') {
+      sightLine.setAttribute('x1', observerX);
+      sightLine.setAttribute('y1', groundY);
+      sightLine.setAttribute('x2', objectX);
+      sightLine.setAttribute('y2', topY);
+
+      const start = polarPoint(observerX, groundY, 48, 0);
+      const end = polarPoint(observerX, groundY, 48, angle);
+      angleArc.setAttribute('d', `M ${start.x} ${start.y} A 48 48 0 0 0 ${end.x} ${end.y}`);
+      angleLabel.setAttribute('x', observerX + 55);
+      angleLabel.setAttribute('y', groundY - 18);
+      observerLabel.textContent = 'Observer';
+      objectLabel.textContent = 'Top';
+      output.textContent = `Angle of elevation = ${angleRounded}°. The observer looks upward from the horizontal. The matching angle of depression is also ${angleRounded}°.`;
+    } else {
+      sightLine.setAttribute('x1', objectX);
+      sightLine.setAttribute('y1', topY);
+      sightLine.setAttribute('x2', observerX);
+      sightLine.setAttribute('y2', groundY);
+
+      const start = polarPoint(objectX, topY, 48, 180);
+      const end = polarPoint(objectX, topY, 48, 180 + angle);
+      angleArc.setAttribute('d', `M ${start.x} ${start.y} A 48 48 0 0 0 ${end.x} ${end.y}`);
+      angleLabel.setAttribute('x', objectX - 105);
+      angleLabel.setAttribute('y', topY + 42);
+      observerLabel.textContent = 'Object below';
+      objectLabel.textContent = 'Observer';
+      output.textContent = `Angle of depression = ${angleRounded}°. The observer looks downward from the horizontal. The matching angle of elevation is also ${angleRounded}°.`;
+    }
+
+    angleLabel.textContent = `${angleRounded}°`;
+  }
+
+  mode.addEventListener('change', update);
+  height.addEventListener('input', update);
+  distance.addEventListener('input', update);
+  update();
+})();
+</script>
+
+<section class="lesson-section">
+<h2>Practice Questions</h2>
+<ol class="practice-list">
+<li>Define angle of elevation.</li>
+<li>Define angle of depression.</li>
+<li>An angle of depression is 41°. Find the matching angle of elevation.</li>
+<li>Why are the two angles equal?</li>
+<li>State the first line you should draw when setting up such a diagram.</li>
+</ol>
+</section>
+
+    <section class="lesson-section answers-section">
+      <h2>✅ Check Your Work</h2>
+      <details><summary>Show answers and working</summary>
+        <div class="answers-content"><ol><li>An angle measured upward from the horizontal.</li><li>An angle measured downward from the horizontal.</li><li>41°.</li><li>They are alternate angles between parallel horizontal lines.</li><li>A horizontal reference line.</li></ol></div>
+      </details>
+    </section>
+
+<section class="lesson-section"><h2>One-Minute Summary</h2>
+<ul class="summary-list"><li>Both angles are measured from horizontal lines.</li><li>Elevation looks upward; depression looks downward.</li></ul></section>
+
+        <nav class="lesson-navigation">
+          <a class="nav-button" href="11-bearings.html">← Bearings</a>
+          <a class="nav-button" href="index.html">Geometry Roadmap</a>
+          <a class="nav-button primary" href="13-similarity-and-congruence.html">Similarity and Congruence →</a>
+        </nav>
+      </main>
+
+<footer class="site-footer">
+    <strong>📚 StudyNest</strong>
+    <p>Helping students understand Mathematics, not memorise it.</p>
+    <p>© 2026 StudyNest</p>
+</footer>
+
+      <script src="../script-v3.js"></script>
+
+<script src="../studynest-3.1.js" defer></script>
+</body>
+    </html>

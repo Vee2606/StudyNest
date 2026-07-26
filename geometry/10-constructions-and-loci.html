@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Use ruler and compasses to create accurate geometric constructions.">
+      <title>Constructions and Loci | Geometry | StudyNest</title>
+      <link rel="stylesheet" href="../styles/geometry-lessons.css">
+      <link rel="stylesheet" href="../styles/studynest-v3.css">
+
+<link rel="stylesheet" href="../studynest-3.1.css">
+<link rel="stylesheet" href="../studynest-theme.css">
+</head>
+    <body>
+
+<div class="announcement-bar">🚀 StudyNest is growing. New lessons and worksheets are added regularly.</div>
+<header class="site-header">
+    <a href="../index.html" class="logo">📚 StudyNest</a>
+    <nav class="main-navigation">
+        <a href="../index.html">🏠 Home</a>
+        <a href="../topics.html">📘 Study by Topic</a>
+        <a href="index.html">📐 Geometry</a>
+        <a href="../worksheets.html">📝 Worksheets</a>
+    </nav>
+</header>
+
+      <section class="lesson-hero">
+        <div>
+          <p class="lesson-label">GEOMETRY · LESSON 10</p>
+          <h1>Constructions and Loci</h1>
+          <p class="lesson-subtitle">Use ruler and compasses to create accurate geometric constructions.</p>
+          <div class="lesson-meta">
+            <span class="meta-pill">⏱️ 22–30 min</span>
+            <span class="meta-pill">📘 Developing</span>
+          </div>
+        </div>
+
+<div class="hero-visual" aria-hidden="true">
+    <div class="geometry-hero-visual">
+        <span class="geometry-token token-90">90°</span>
+        <span class="geometry-token token-180">180°</span>
+        <span class="geometry-token token-theta">θ</span>
+        <div class="hero-angle"></div>
+        <div class="hero-triangle"></div>
+    </div>
+</div>
+
+      </section>
+      <main class="lesson-main">
+
+<section class="lesson-section">
+<h2>🎯 By the End of This Lesson...</h2>
+<ul class="objective-list">
+<li>construct perpendicular and angle bisectors;</li>
+<li>construct 60°, 90° and common derived angles;</li>
+<li>construct triangles accurately;</li>
+<li>understand basic loci;</li>
+<li>use ruler and compasses correctly.</li>
+</ul>
+</section>
+<section class="lesson-section">
+<h2>Construction Rules</h2>
+<div class="geometry-rule">Keep compass arcs visible. They are part of the mathematical evidence.</div>
+</section>
+<section class="lesson-section">
+<h2>Perpendicular Bisector</h2>
+<ol>
+<li>Open compasses to more than half the segment length.</li>
+<li>Draw arcs above and below from each endpoint.</li>
+<li>Join the arc intersections.</li>
+</ol>
+</section>
+<section class="lesson-section">
+<h2>Angle Bisector</h2>
+<ol>
+<li>Draw an arc from the vertex crossing both arms.</li>
+<li>From the two crossing points, draw equal arcs that meet.</li>
+<li>Join the vertex to the new intersection.</li>
+</ol>
+</section>
+<section class="lesson-section">
+<h2>Basic Loci</h2>
+<div class="geometry-grid">
+<article class="geometry-card"><h3>Equal distance from two points</h3><p>Perpendicular bisector.</p></article>
+<article class="geometry-card"><h3>Equal distance from two intersecting lines</h3><p>Angle bisectors.</p></article>
+<article class="geometry-card"><h3>Fixed distance from a point</h3><p>Circle.</p></article>
+<article class="geometry-card"><h3>Fixed distance from a line</h3><p>Two parallel lines.</p></article>
+</div>
+</section>
+
+<section class="lesson-section">
+<h2>Try It: Explore the Main Constructions</h2>
+<div class="interactive-geometry">
+  <div class="interactive-controls">
+    <div class="interactive-control">
+      <label for="constructionType">Choose a construction</label>
+      <select id="constructionType">
+        <option value="perpBisector">Perpendicular bisector of a line segment</option>
+        <option value="angleBisector">Bisector of an angle</option>
+        <option value="angle60">Construct a 60° angle</option>
+        <option value="perpendicularPoint">Perpendicular at a point on a line</option>
+      </select>
+    </div>
+    <button type="button" class="interactive-button" id="constructionNext">Show next step</button>
+    <button type="button" class="interactive-button" id="constructionReset">Reset</button>
+  </div>
+
+  <svg class="interactive-canvas" viewBox="0 0 700 390" aria-label="Step-by-step ruler and compass construction">
+    <g id="perpBisectorDiagram">
+      <line x1="155" y1="205" x2="545" y2="205" stroke="currentColor" stroke-width="5"/>
+      <circle cx="155" cy="205" r="7"/><circle cx="545" cy="205" r="7"/>
+      <text x="135" y="235" font-size="20">A</text><text x="550" y="235" font-size="20">B</text>
+      <path data-step="1" d="M350 42 A215 215 0 0 0 350 368" fill="none" stroke="#bd725f" stroke-width="3" visibility="hidden"/>
+      <path data-step="2" d="M350 42 A215 215 0 0 1 350 368" fill="none" stroke="#4f8f91" stroke-width="3" visibility="hidden"/>
+      <line data-step="3" x1="350" y1="42" x2="350" y2="368" stroke="currentColor" stroke-width="4" visibility="hidden"/>
+    </g>
+
+    <g id="angleBisectorDiagram" visibility="hidden">
+      <line x1="165" y1="305" x2="575" y2="305" stroke="currentColor" stroke-width="5"/>
+      <line x1="165" y1="305" x2="500" y2="95" stroke="currentColor" stroke-width="5"/>
+      <circle cx="165" cy="305" r="7"/><text x="135" y="335" font-size="20">O</text>
+      <path data-step="1" d="M300 305 A135 135 0 0 0 279 233" fill="none" stroke="#bd725f" stroke-width="4" visibility="hidden"/>
+      <path data-step="2" d="M279 233 A105 105 0 0 1 300 305" fill="none" stroke="#4f8f91" stroke-width="3" visibility="hidden"/>
+      <circle data-step="2" cx="390" cy="240" r="6" fill="#4f8f91" visibility="hidden"/>
+      <line data-step="3" x1="165" y1="305" x2="470" y2="195" stroke="#7867a8" stroke-width="4" visibility="hidden"/>
+    </g>
+
+    <g id="angle60Diagram" visibility="hidden">
+      <line x1="150" y1="305" x2="575" y2="305" stroke="currentColor" stroke-width="5"/>
+      <circle cx="150" cy="305" r="7"/><text x="125" y="335" font-size="20">A</text>
+      <path data-step="1" d="M295 305 A145 145 0 0 0 222 179" fill="none" stroke="#bd725f" stroke-width="4" visibility="hidden"/>
+      <path data-step="2" d="M150 305 A145 145 0 0 1 295 160" fill="none" stroke="#4f8f91" stroke-width="4" visibility="hidden"/>
+      <circle data-step="2" cx="222" cy="179" r="7" fill="#4f8f91" visibility="hidden"/>
+      <line data-step="3" x1="150" y1="305" x2="430" y2="75" stroke="#7867a8" stroke-width="5" visibility="hidden"/>
+      <text data-step="3" x="235" y="270" font-size="22" visibility="hidden">60°</text>
+    </g>
+
+    <g id="perpendicularPointDiagram" visibility="hidden">
+      <line x1="100" y1="270" x2="600" y2="270" stroke="currentColor" stroke-width="5"/>
+      <circle cx="350" cy="270" r="7"/><text x="338" y="302" font-size="20">P</text>
+      <path data-step="1" d="M245 270 A105 105 0 0 0 455 270" fill="none" stroke="#bd725f" stroke-width="4" visibility="hidden"/>
+      <circle data-step="1" cx="245" cy="270" r="6" fill="#bd725f" visibility="hidden"/><circle data-step="1" cx="455" cy="270" r="6" fill="#bd725f" visibility="hidden"/>
+      <path data-step="2" d="M350 70 A180 180 0 0 0 350 270" fill="none" stroke="#4f8f91" stroke-width="3" visibility="hidden"/>
+      <path data-step="2" d="M350 70 A180 180 0 0 1 350 270" fill="none" stroke="#4f8f91" stroke-width="3" visibility="hidden"/>
+      <line data-step="3" x1="350" y1="55" x2="350" y2="340" stroke="#7867a8" stroke-width="5" visibility="hidden"/>
+      <path data-step="3" d="M350 245 h25 v25" fill="none" stroke="currentColor" stroke-width="3" visibility="hidden"/>
+    </g>
+  </svg>
+  <div class="interactive-output" id="constructionText"></div>
+</div>
+</section>
+<script>(()=>{
+  const type=document.querySelector('#constructionType');
+  const text=document.querySelector('#constructionText');
+  const diagrams={
+    perpBisector:document.querySelector('#perpBisectorDiagram'),
+    angleBisector:document.querySelector('#angleBisectorDiagram'),
+    angle60:document.querySelector('#angle60Diagram'),
+    perpendicularPoint:document.querySelector('#perpendicularPointDiagram')
+  };
+  const steps={
+    perpBisector:[
+      'Step 1: Draw line segment AB.',
+      'Step 2: With compass width greater than half of AB, draw arcs above and below from A.',
+      'Step 3: Without changing the compass width, repeat from B so the arcs intersect.',
+      'Step 4: Join the two arc intersections. The new line bisects AB at 90°.'
+    ],
+    angleBisector:[
+      'Step 1: Draw the angle with vertex O.',
+      'Step 2: Centre the compass at O and draw an arc crossing both arms.',
+      'Step 3: From the two crossing points, draw equal arcs that intersect inside the angle.',
+      'Step 4: Join O to the new intersection. The two resulting angles are equal.'
+    ],
+    angle60:[
+      'Step 1: Draw a starting ray from point A.',
+      'Step 2: With centre A, draw an arc crossing the ray.',
+      'Step 3: Keeping the same compass width, centre at the crossing point and mark a second intersection on the arc.',
+      'Step 4: Join A to the new intersection. The constructed angle is 60°.'
+    ],
+    perpendicularPoint:[
+      'Step 1: Draw the line and mark point P on it.',
+      'Step 2: With centre P, mark two points on the line at equal distances from P.',
+      'Step 3: From those two points, draw equal arcs that intersect above the line.',
+      'Step 4: Join the arc intersection to P. The new line is perpendicular to the original line.'
+    ]
+  };
+  let step=0;
+  function draw(){
+    Object.entries(diagrams).forEach(([key,g])=>g.setAttribute('visibility',key===type.value?'visible':'hidden'));
+    const active=diagrams[type.value];
+    active.querySelectorAll('[data-step]').forEach(el=>el.setAttribute('visibility',Number(el.dataset.step)<=step?'visible':'hidden'));
+    text.textContent=steps[type.value][step];
+  }
+  type.addEventListener('change',()=>{step=0;draw()});
+  document.querySelector('#constructionNext').addEventListener('click',()=>{step=Math.min(3,step+1);draw()});
+  document.querySelector('#constructionReset').addEventListener('click',()=>{step=0;draw()});
+  draw();
+})();</script>
+
+<section class="lesson-section">
+<h2>Practice Questions</h2>
+<ol class="practice-list">
+<li>Describe how to construct the perpendicular bisector of AB.</li>
+<li>Which locus contains points equidistant from A and B?</li>
+<li>Which locus contains points 4 cm from point P?</li>
+<li>What angle is formed when a perpendicular is constructed?</li>
+<li>Why should construction arcs remain visible?</li>
+</ol>
+</section>
+
+    <section class="lesson-section answers-section">
+      <h2>✅ Check Your Work</h2>
+      <details><summary>Show answers and working</summary>
+        <div class="answers-content"><ol><li>Draw equal-radius arcs from A and B above and below the segment, then join their intersections.</li><li>The perpendicular bisector of AB.</li><li>A circle centred at P with radius 4 cm.</li><li>90°.</li><li>They show the valid compass construction and method.</li></ol></div>
+      </details>
+    </section>
+
+<section class="lesson-section"><h2>One-Minute Summary</h2>
+<ul class="summary-list"><li>Use ruler and compasses, not estimation.</li><li>Bisectors create equal parts.</li><li>Loci describe sets of positions satisfying a rule.</li></ul></section>
+
+        <nav class="lesson-navigation">
+          <a class="nav-button" href="09-circle-theorems.html">← Circle Theorems</a>
+          <a class="nav-button" href="index.html">Geometry Roadmap</a>
+          <a class="nav-button primary" href="11-bearings.html">Bearings →</a>
+        </nav>
+      </main>
+
+<footer class="site-footer">
+    <strong>📚 StudyNest</strong>
+    <p>Helping students understand Mathematics, not memorise it.</p>
+    <p>© 2026 StudyNest</p>
+</footer>
+
+      <script src="../script-v3.js"></script>
+
+<script src="../studynest-3.1.js" defer></script>
+</body>
+    </html>

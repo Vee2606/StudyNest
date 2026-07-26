@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Convert frequencies into sector angles and interpret proportional data.">
+<title>Pie Charts | Statistics | StudyNest</title>
+<link rel="stylesheet" href="../styles/statistics-lessons.css">
+<link rel="stylesheet" href="../styles/statistics-interactive.css">
+  <link rel="stylesheet" href="../styles/studynest-v3.css">
+
+<link rel="stylesheet" href="../studynest-3.1.css">
+<link rel="stylesheet" href="../studynest-theme.css">
+</head>
+<body>
+
+<div class="announcement-bar">🚀 StudyNest is growing. New lessons and worksheets are added regularly.</div>
+<header class="site-header">
+    <a href="../index.html" class="logo">📚 StudyNest</a>
+    <nav class="main-navigation">
+        <a href="../index.html">🏠 Home</a>
+        <a href="../topics.html">📘 Study by Topic</a>
+        <a href="index.html">📊 Statistics</a>
+        <a href="../worksheets.html">📝 Worksheets</a>
+    </nav>
+</header>
+
+<section class="lesson-hero">
+<div>
+<p class="lesson-label">STATISTICS · LESSON 05</p>
+<h1>Pie Charts</h1>
+<p class="lesson-subtitle">Convert frequencies into sector angles and interpret proportional data.</p>
+<div class="lesson-meta">
+<span class="meta-pill">⏱️ 22–30 min</span>
+<span class="meta-pill">📘 Developing</span>
+<span class="meta-pill">📊 Interpretation included</span>
+</div>
+</div>
+
+<div class="hero-visual" aria-hidden="true">
+    <div class="statistics-hero-visual">
+        <span class="statistics-token token-mean">x̄</span>
+        <span class="statistics-token token-percent">%</span>
+        <span class="statistics-token token-sigma">Σ</span>
+        <div class="stat-bars"><span></span><span></span><span></span><span></span></div>
+        <div class="stat-pie"></div>
+        <div class="stat-line"><i></i><i></i><i></i></div>
+    </div>
+</div>
+
+</section>
+<main class="lesson-main">
+
+<section class="lesson-section"><h2>🎯 Learning Objectives</h2><ul class="objective-list">
+<li>calculate sector angles;</li><li>construct pie charts;</li><li>recover frequencies from angles;</li>
+<li>compare proportions;</li><li>check that sectors total 360°.</li></ul></section>
+<section class="lesson-section"><h2>Central Relationship</h2>
+<div class="statistics-rule">Sector angle = frequency ÷ total frequency × 360°</div>
+<div class="statistics-rule">Frequency = sector angle ÷ 360° × total frequency</div></section>
+<section class="lesson-section"><h2>Worked Example</h2>
+<p>In a survey of 40 learners, 10 choose football. Sector angle=10÷40×360°=90°.</p></section>
+<section class="lesson-section"><h2>Thinking Check</h2>
+<p>Before calculating, estimate: 10 out of 40 is one quarter, so the sector should be one quarter of a circle.</p></section>
+<section class="lesson-section"><h2>🥧 Build a Pie Chart</h2><div class="stats-lab"><p>Change the frequencies. The total, percentages and sector angles update automatically.</p><div class="stats-controls" id="s5controls"></div><div class="stats-metrics"><div class="stats-metric">Total<strong id="s5total"></strong></div><div class="stats-metric">Largest sector<strong id="s5largest"></strong></div></div><div class="stats-pie" id="s5pie" role="img" aria-label="Interactive pie chart"></div><div id="s5table"></div></div></section><script>(()=>{const n=['Football','Netball','Athletics','Tennis'],v=[16,10,8,6],cols=['#4f8f91','#bd725f','#d6a84b','#7d6b91'],c=document.querySelector('#s5controls');c.innerHTML=n.map((x,i)=>`<div class="stats-control"><label>${x}: <span id="s5v${i}">${v[i]}</span></label><input data-i="${i}" type="range" min="1" max="30" value="${v[i]}"></div>`).join('');function u(){c.querySelectorAll('input').forEach(x=>{v[+x.dataset.i]=+x.value;document.querySelector('#s5v'+x.dataset.i).textContent=x.value});let t=v.reduce((a,b)=>a+b,0),start=0,g=[];v.forEach((x,i)=>{let end=start+x/t*360;g.push(`${cols[i]} ${start}deg ${end}deg`);start=end});document.querySelector('#s5pie').style.background=`conic-gradient(${g.join(',')})`;document.querySelector('#s5total').textContent=t;document.querySelector('#s5largest').textContent=n[v.indexOf(Math.max(...v))];document.querySelector('#s5table').innerHTML='<table class="stats-table"><tr><th>Activity</th><th>Frequency</th><th>Percentage</th><th>Angle</th></tr>'+n.map((x,i)=>`<tr><td>${x}</td><td>${v[i]}</td><td>${(100*v[i]/t).toFixed(1)}%</td><td>${(360*v[i]/t).toFixed(1)}°</td></tr>`).join('')+'</table>'}c.addEventListener('input',u);u()})();</script>
+<section class="lesson-section"><h2>Practice</h2><ol class="practice-list">
+<li>Find the sector angle for 15 out of 60 learners.</li>
+<li>A sector is 72° in a survey of 50 people. Find the frequency.</li>
+<li>Frequencies are 8, 12 and 20. Find all sector angles.</li>
+<li>How can you check a completed pie chart?</li></ol></section>
+
+<section class="lesson-section answers-section">
+<h2>✅ Check Your Work</h2>
+<details>
+<summary>Show answers and working</summary>
+<div class="answers-content"><ol><li>15÷60×360=90°.</li><li>72÷360×50=10 people.</li><li>Total=40. Angles: 72°, 108° and 180°.</li><li>Add all sector angles; they must total 360°. Also compare sector sizes with the original proportions.</li></ol></div>
+</details>
+</section>
+<section class="lesson-section"><h2>Summary</h2><ul class="summary-list"><li>Pie charts show proportions of a whole.</li><li>Angles must total 360°.</li></ul></section>
+
+<section class="lesson-section">
+<h2>🧠 StudyNest Statistical Thinking Routine</h2>
+<div class="problem-routine">
+<div class="routine-step"><strong>1. Read</strong>What information and context have been given?</div>
+<div class="routine-step"><strong>2. Identify</strong>What type of data, table, graph or measure is involved?</div>
+<div class="routine-step"><strong>3. Choose</strong>Which method or representation answers the question best?</div>
+<div class="routine-step"><strong>4. Work</strong>Organise the calculation or construction clearly.</div>
+<div class="routine-step"><strong>5. Interpret</strong>Explain what the answer means in the original context.</div>
+<div class="routine-step"><strong>6. Check</strong>Does the result fit the data and make reasonable sense?</div>
+</div>
+</section>
+
+<nav class="lesson-navigation">
+<a class="nav-button" href="04-pictograms-and-bar-charts.html">← Pictograms and Bar Charts</a>
+<a class="nav-button" href="index.html">Statistics Roadmap</a>
+<a class="nav-button primary" href="06-line-graphs-and-time-series.html">Line Graphs and Time Series →</a>
+</nav>
+</main>
+
+<footer class="site-footer">
+    <strong>📚 StudyNest</strong>
+    <p>Helping students understand Mathematics, not memorise it.</p>
+    <p>© 2026 StudyNest</p>
+</footer>
+
+  <script src="../script-v3.js"></script>
+
+<script src="../studynest-3.1.js" defer></script>
+</body>
+</html>

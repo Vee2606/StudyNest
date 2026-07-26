@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Calculate interest using the original principal, rate and time." name="description"/>
+<title>Simple Interest | Money &amp; Finance | StudyNest</title>
+<link href="../styles/money-finance-lessons.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="../styles/studynest-v3.css">
+
+<link rel="stylesheet" href="../studynest-3.1.css">
+<link rel="stylesheet" href="../studynest-theme.css">
+</head>
+<body>
+<div class="announcement-bar">🚀 StudyNest is growing. New lessons and worksheets are added regularly.</div>
+<header class="site-header">
+<a class="logo" href="../index.html">📚 StudyNest</a>
+<nav class="main-navigation">
+<a href="../index.html">🏠 Home</a>
+<a href="../topics.html">📘 Study by Topic</a>
+<a href="index.html">💰 Money &amp; Finance</a>
+<a href="../worksheets.html">📝 Worksheets</a>
+</nav>
+</header>
+<section class="lesson-hero">
+<div>
+<p class="lesson-label">MONEY &amp; FINANCE · LESSON 06</p>
+<h1>Simple Interest</h1>
+<p class="lesson-subtitle">Calculate interest using the original principal, rate and time.</p>
+<div class="lesson-meta">
+<span class="meta-pill">⏱️ 20–24 min</span>
+<span class="meta-pill">📘 Developing</span>
+<span class="meta-pill">💼 Real-life examples included</span>
+</div>
+</div>
+<div aria-hidden="true" class="finance-hero-art">
+<div class="finance-card">
+<div class="finance-card-top">
+<span class="finance-chip"></span>
+<span class="finance-contactless">)))</span>
+</div>
+<span class="finance-card-number">•••• 4826</span>
+<div class="finance-card-bottom">
+<span>STUDYNEST</span>
+<span>12/29</span>
+</div>
+</div>
+<div class="finance-badge finance-badge-percent">%</div>
+<div class="finance-badge finance-badge-up">↗</div>
+<div class="finance-coin coin-one">$</div>
+<div class="finance-coin coin-two">$</div>
+<div class="finance-coin coin-three">$</div>
+<div class="finance-calculator">
+<div class="calculator-screen">125.00</div>
+<span></span><span></span><span></span>
+<span></span><span></span><span></span>
+<span></span><span></span><span></span>
+</div>
+</div>
+</section>
+<main class="lesson-main">
+<section class="lesson-section">
+<h2>🎯 By the End of This Lesson...</h2>
+<ul class="objective-list">
+<li>identify principal, rate and time;</li>
+<li>calculate simple interest;</li>
+<li>find the final amount;</li>
+<li>rearrange the simple-interest formula;</li>
+<li>solve borrowing and saving problems.</li>
+</ul>
+</section>
+<section class="lesson-section">
+<h2>📈 Interactive Simple Interest Explorer</h2><p>Move the sliders and watch the amount grow in a straight line. The graph is linear because the same interest is added each year.</p>
+<div class="interactive-lab" data-lab="simple"><div class="lab-grid">
+<div class="control-group"><label for="si-principal">Principal: $<span class="live-value" data-value-for="si-principal"></span></label><input id="si-principal" max="5000" min="100" step="100" type="range" value="1000"/></div>
+<div class="control-group"><label for="si-rate">Rate: <span class="live-value" data-value-for="si-rate"></span>% per year</label><input id="si-rate" max="25" min="1" step="0.5" type="range" value="8"/></div>
+<div class="control-group"><label for="si-time">Time: <span class="live-value" data-value-for="si-time"></span> years</label><input id="si-time" max="15" min="1" type="range" value="5"/></div>
+</div><div class="result-grid"><div class="result-card"><span>Simple interest</span><strong id="si-interest"></strong></div><div class="result-card"><span>Total amount</span><strong id="si-amount"></strong></div></div><div class="graph-wrap"><canvas aria-label="Simple interest amount over time"></canvas><div class="graph-key"><span>Simple-interest amount</span></div></div>
+<div aria-live="polite" class="money-scale-visual"><h3>Growth scale</h3><div class="comparison-row"><span>Principal</span><div class="comparison-track"><i id="si-principal-bar"></i></div><strong id="si-principal-scale"></strong></div><div class="comparison-row"><span>Interest</span><div class="comparison-track"><i id="si-interest-bar"></i></div><strong id="si-interest-scale"></strong></div><div class="comparison-row"><span>Total amount</span><div class="comparison-track"><i id="si-total-bar"></i></div><strong id="si-total-scale"></strong></div><div class="scale-axis"><span>$0</span><span>$2,000</span><span>$4,000</span><span>$6,000</span><span>$8,000+</span></div></div><div class="lab-note">Formula: I = Prt/100. The graph helps you understand the relationship, but you still need to know and apply the formula.</div></div></section>
+<section class="lesson-section">
+<div class="where-used">
+<h3>🌍 Where Will You Use This?</h3>
+<p>
+            Interest appears when money is saved, invested or borrowed. Simple
+            interest is calculated only on the original amount.
+        </p>
+</div>
+</section>
+<section class="lesson-section">
+<h2>The Meaning of Interest</h2>
+<div class="money-flow">
+<article class="money-flow-card">
+<strong>Principal P</strong>
+<span>Original amount</span>
+</article>
+<article class="money-flow-card">
+<strong>Rate r</strong>
+<span>Percentage per time period</span>
+</article>
+<article class="money-flow-card">
+<strong>Time t</strong>
+<span>Length of investment or loan</span>
+</article>
+</div>
+</section>
+<section class="lesson-section">
+<h2>Simple Interest Formula</h2>
+<div class="math-display">I = Prt / 100</div>
+<div class="math-display">Amount = Principal + Interest</div>
+<div class="key-idea">
+        Simple interest is always calculated on the original principal.
+    </div>
+</section>
+<section class="lesson-section">
+<h2>Worked Example 1</h2>
+<div class="worked-example">
+<h3>Find simple interest on US$600 at 8% per year for 3 years.</h3>
+<div class="step"><span class="step-number">1</span><p>P=600, r=8, t=3.</p></div>
+<div class="step"><span class="step-number">2</span><p>I=600×8×3÷100 = US$144.</p></div>
+<div class="step"><span class="step-number">3</span><p>Amount = 600+144 = US$744.</p></div>
+</div>
+</section>
+<section class="lesson-section">
+<h2>Matching Time Units</h2>
+<p>
+        If the rate is per year, express time in years.
+    </p>
+<div class="worked-example">
+<h3>US$900 at 10% per year for 9 months.</h3>
+<div class="step"><span class="step-number">1</span><p>9 months = 9/12 = 0.75 years.</p></div>
+<div class="step"><span class="step-number">2</span><p>I=900×10×0.75÷100 = US$67.50.</p></div>
+</div>
+</section>
+<section class="lesson-section">
+<h2>Finding a Missing Value</h2>
+<div class="worked-example">
+<h3>Interest is US$120 on US$500 for 4 years. Find the rate.</h3>
+<div class="step"><span class="step-number">1</span><p>120=500×r×4÷100.</p></div>
+<div class="step"><span class="step-number">2</span><p>120=20r.</p></div>
+<div class="step"><span class="step-number">3</span><p>r=6% per year.</p></div>
+</div>
+</section>
+<section class="lesson-section">
+<h2>💼 Money Smart Tip</h2>
+<div class="money-smart">
+<p>
+            Always check whether the question asks for interest only or the
+            total amount including the principal.
+        </p>
+</div>
+</section>
+<section class="lesson-section">
+<h2>Practice Questions</h2>
+<span class="level-heading">Foundation</span>
+<ol class="practice-list">
+<li>Find simple interest on US$400 at 5% for 3 years.</li>
+<li>Find the total amount for US$750 at 6% for 2 years.</li>
+<li>Find interest on US$1,200 at 9% for 8 months.</li>
+</ol>
+<span class="level-heading">Developing</span>
+<ol class="practice-list" start="4">
+<li>US$180 interest is earned on US$900 for 5 years. Find the rate.</li>
+<li>At 7% simple interest, how long will US$500 take to earn US$105?</li>
+<li>A loan grows to US$1,260 after 4 years at 6.5% simple interest. Find the principal.</li>
+</ol>
+<span class="level-heading">Challenge</span>
+<ol class="practice-list" start="7">
+<li>
+            Two investments earn the same simple interest. The first is US$800
+            at 9% for 2 years. The second is invested at 6% for 4 years. Find
+            the second principal.
+        </li>
+</ol>
+</section>
+<section class="lesson-section answers-section">
+<h2>✅ Check Your Work</h2>
+<details>
+<summary>Show practice answers</summary>
+<div class="answers-content">
+<ol>
+<li>US$60.</li>
+<li>Interest=90; amount=US$840.</li>
+<li>US$72.</li>
+<li>4%.</li>
+<li>3 years.</li>
+<li>
+                    Amount=P(1+0.065×4)=1.26P.<br/>
+                    P=1260÷1.26=US$1,000.
+                </li>
+<li>
+                    First interest=800×9×2÷100=144.<br/>
+                    144=P×6×4÷100, so P=US$600.
+                </li>
+</ol>
+</div>
+</details>
+</section>
+<section class="lesson-section">
+<h2>One-Minute Summary</h2>
+<ul class="summary-list">
+<li>Simple interest uses only the original principal.</li>
+<li>I=Prt/100.</li>
+<li>Amount = principal + interest.</li>
+<li>Time units must match the rate period.</li>
+</ul>
+</section>
+<nav class="lesson-navigation">
+<a class="nav-button" href="05-wages-salaries-and-commission.html">← Wages, Salaries and Commission</a>
+<a class="nav-button" href="index.html">Topic Roadmap</a>
+<a class="nav-button primary" href="07-compound-interest.html">Compound Interest →</a>
+</nav>
+</main>
+<footer class="site-footer">
+<strong>📚 StudyNest</strong>
+<p>Helping students understand Mathematics, not memorise it.</p>
+<p>© 2026 StudyNest</p>
+</footer>
+<script src="money-finance-interactions.js"></script>
+  <script src="../script-v3.js"></script>
+
+<script src="../studynest-3.1.js" defer></script>
+</body>
+</html>

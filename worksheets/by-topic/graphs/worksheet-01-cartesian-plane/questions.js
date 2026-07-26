@@ -1,0 +1,31 @@
+window.STUDYNEST_WORKSHEET = {
+  kicker: "GRAPHS • WORKSHEET 01",
+  title: "The Cartesian Plane",
+  description: "Learn the axes, origin and quadrants before reading and plotting coordinates.",
+  level: "Foundation",
+  time: "20–30 minutes",
+  skills: ["Horizontal and vertical axes", "The origin", "Quadrants", "Coordinate order", "Signs of coordinates"],
+  note: "Coordinates are always written in the order (x, y): move horizontally first, then vertically.",
+  questions: [
+    {section:"Graphs Batch 1",skill:"Axes",question:"What is the name of the horizontal axis?",answer:"x-axis",answers:["x-axis","x axis"],hint:"It shows x-values.",solution:"The horizontal axis is the x-axis."},
+    {section:"Graphs Batch 1",skill:"Axes",question:"What is the name of the vertical axis?",answer:"y-axis",answers:["y-axis","y axis"],hint:"It shows y-values.",solution:"The vertical axis is the y-axis."},
+    {section:"Graphs Batch 1",skill:"Origin",question:"Write the coordinates of the origin.",answer:"(0,0)",answers:["(0,0)","0,0"],hint:"Both axes have value zero there.",solution:"The origin is (0, 0)."},
+    {section:"Graphs Batch 1",skill:"Coordinate order",question:"In the point (4, −3), what is the x-coordinate?",answer:"4",hint:"The x-coordinate is written first.",solution:"The x-coordinate is 4."},
+    {section:"Graphs Batch 1",skill:"Coordinate order",question:"In the point (4, −3), what is the y-coordinate?",answer:"-3",hint:"The y-coordinate is written second.",solution:"The y-coordinate is −3."},
+    {section:"Graphs Batch 1",skill:"Quadrants",question:"Which quadrant contains the point (3, 5)?",answer:"1",answers:["1","I","quadrant 1","quadrant i"],hint:"Both coordinates are positive.",solution:"Positive x and positive y place the point in Quadrant I."},
+    {section:"Graphs Batch 1",skill:"Quadrants",question:"Which quadrant contains the point (−4, 2)?",answer:"2",answers:["2","II","quadrant 2","quadrant ii"],hint:"x is negative and y is positive.",solution:"The point lies in Quadrant II."},
+    {section:"Graphs Batch 1",skill:"Quadrants",question:"Which quadrant contains the point (−6, −1)?",answer:"3",answers:["3","III","quadrant 3","quadrant iii"],hint:"Both coordinates are negative.",solution:"The point lies in Quadrant III."},
+    {section:"Graphs Batch 1",skill:"Quadrants",question:"Which quadrant contains the point (7, −2)?",answer:"4",answers:["4","IV","quadrant 4","quadrant iv"],hint:"x is positive and y is negative.",solution:"The point lies in Quadrant IV."},
+    {section:"Graphs Batch 1",skill:"Signs",question:"State the signs of x and y in Quadrant II.",answer:"negative, positive",answers:["negative, positive","- , +","-,+","negative positive"],hint:"Quadrant II is left of the y-axis and above the x-axis.",solution:"In Quadrant II, x is negative and y is positive."},
+    {section:"Graphs Batch 1",skill:"Signs",question:"State the signs of x and y in Quadrant IV.",answer:"positive, negative",answers:["positive, negative","+ , -","+,-","positive negative"],hint:"Quadrant IV is right of the y-axis and below the x-axis.",solution:"In Quadrant IV, x is positive and y is negative."},
+    {section:"Graphs Batch 1",skill:"On an axis",question:"The point (0, 6) lies on which axis?",answer:"y-axis",answers:["y-axis","y axis"],hint:"Its x-coordinate is zero.",solution:"A point with x = 0 lies on the y-axis."},
+    {section:"Graphs Batch 1",skill:"On an axis",question:"The point (−8, 0) lies on which axis?",answer:"x-axis",answers:["x-axis","x axis"],hint:"Its y-coordinate is zero.",solution:"A point with y = 0 lies on the x-axis."},
+    {section:"Graphs Batch 1",skill:"Reflection",question:"Reflect (5, 2) in the y-axis. Write the image coordinates.",answer:"(-5,2)",answers:["(-5,2)","-5,2"],hint:"Change the sign of x only.",solution:"The image is (−5, 2)."},
+    {section:"Graphs Batch 1",skill:"Reflection",question:"Reflect (−3, 4) in the x-axis. Write the image coordinates.",answer:"(-3,-4)",answers:["(-3,-4)","-3,-4"],hint:"Change the sign of y only.",solution:"The image is (−3, −4)."},
+    {section:"Graphs Batch 1",skill:"Distance",question:"How many units is the point (6, 0) from the origin?",answer:"6",hint:"Measure along the x-axis from 0 to 6.",solution:"The distance is 6 units."},
+    {section:"Graphs Batch 1",skill:"Distance",question:"How many units is the point (0, −9) from the origin?",answer:"9",hint:"Distance is positive.",solution:"The distance is 9 units."},
+    {section:"Graphs Batch 1",skill:"Quadrants",question:"A point has x < 0 and y > 0. Which quadrant is it in?",answer:"2",answers:["2","II","quadrant 2","quadrant ii"],hint:"Left and above.",solution:"It is in Quadrant II."},
+    {section:"Graphs Batch 1",skill:"Quadrants",question:"A point has x > 0 and y < 0. Which quadrant is it in?",answer:"4",answers:["4","IV","quadrant 4","quadrant iv"],hint:"Right and below.",solution:"It is in Quadrant IV."},
+    {section:"Graphs Batch 1",skill:"Mastery",question:"A point lies on the y-axis, 7 units below the origin. Write its coordinates.",answer:"(0,-7)",answers:["(0,-7)","0,-7"],hint:"On the y-axis, x = 0.",solution:"The coordinates are (0, −7)."}
+  ]
+};

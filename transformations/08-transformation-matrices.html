@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Calculate images and identify transformations represented by matrices." name="description"/>
+<title>
+   Transformation Matrices | Transformations | StudyNest
+  </title>
+<link href="../styles/transformations-lessons.css" rel="stylesheet"/>
+<style id="studynest-v2-style">
+.v2-teaching{background:linear-gradient(135deg,#fffaf7,#f8fbff);border:2px solid #ead8d8;border-radius:22px;padding:24px;margin:28px 0;box-shadow:0 10px 28px rgba(36,59,83,.08)}
+.v2-teaching h2{margin-top:0}.v2-hook{font-size:1.05rem;background:#fff;border-left:6px solid #c46f72;padding:16px 18px;border-radius:12px;margin:12px 0 20px}.v2-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:16px 0}.v2-card{background:#fff;border:1px solid #eadbdb;border-radius:16px;padding:16px}.v2-card h3{margin-top:0;color:#243b53}.v2-diagram{background:#fff;border:1px solid #eadbdb;border-radius:18px;padding:14px;margin:18px 0;overflow:auto}.v2-diagram svg{display:block;max-width:100%;height:auto;margin:auto}.v2-callout{background:#fff4d8;border-left:6px solid #e3a52f;border-radius:12px;padding:14px 16px;margin:16px 0}.v2-think{background:#eef7f2;border:1px solid #b9dcc8;border-radius:16px;padding:16px;margin:18px 0}.v2-interactive{background:#f5f2ff;border:1px solid #d7c9ef;border-radius:18px;padding:18px;margin:20px 0}.v2-controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:12px 0}.v2-controls button,.v2-controls select,.v2-controls input{font:inherit}.v2-controls button{border:0;border-radius:999px;background:#243b53;color:#fff;padding:10px 15px;cursor:pointer}.v2-controls button:hover,.v2-controls button.active{background:#c46f72}.v2-output{background:white;border-radius:12px;padding:12px 14px;min-height:24px;margin-top:10px}.v2-mini-rule{font-size:1.1rem;font-weight:700;text-align:center;background:#fff;border:2px dashed #c46f72;border-radius:14px;padding:13px}.v2-label{font-weight:700;color:#c46f72}.v2-badges{display:flex;gap:8px;flex-wrap:wrap}.v2-badge{background:#edf2f7;border-radius:999px;padding:6px 10px;font-size:.92rem}.v2-move{transition:transform .8s ease}.v2-shape{transition:all .8s ease;transform-box:fill-box;transform-origin:center}.v2-answer{font-weight:700;color:#243b53}@media(max-width:650px){.v2-teaching{padding:17px}.v2-grid{grid-template-columns:1fr}.v2-controls{align-items:stretch}.v2-controls button,.v2-controls select{width:100%}}
+</style><link href="matrix-component.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="../styles/studynest-v3.css">
+
+<link rel="stylesheet" href="../studynest-3.1.css">
+<link rel="stylesheet" href="../studynest-theme.css">
+</head>
+<body>
+<div class="announcement-bar">
+   🚀 StudyNest is growing. New lessons and worksheets are added regularly.
+  </div>
+<header class="site-header">
+<a class="logo" href="../index.html">
+    📚 StudyNest
+   </a>
+<nav class="main-navigation">
+<a href="../index.html">
+     🏠 Home
+    </a>
+<a href="../topics.html">
+     📘 Study by Topic
+    </a>
+<a href="index.html">
+     🔄 Transformations
+    </a>
+<a href="../worksheets.html">
+     📝 Worksheets
+    </a>
+</nav>
+</header>
+<section class="lesson-hero">
+<div>
+<p class="lesson-label">
+     TRANSFORMATIONS · LESSON 08
+    </p>
+<h1>
+     Transformation Matrices
+    </h1>
+<p class="lesson-subtitle">
+     Calculate images and identify transformations represented by matrices.
+    </p>
+<div class="lesson-meta">
+<span class="meta-pill">
+      ⏱️ 26–38 min
+     </span>
+<span class="meta-pill">
+      📘 Challenge
+     </span>
+<span class="meta-pill">
+      📍 Coordinate diagrams included
+     </span>
+</div>
+</div>
+<div aria-hidden="true" class="hero-visual">
+<div class="transform-hero-visual">
+<span class="transform-token token-t">
+      T
+     </span>
+<span class="transform-token token-r">
+      ↻
+     </span>
+<span class="transform-token token-k">
+      k=2
+     </span>
+<div class="hero-grid">
+</div>
+<div class="hero-shape">
+</div>
+<div class="hero-image">
+</div>
+<div class="hero-motion">
+</div>
+</div>
+</div>
+</section>
+<main class="lesson-main">
+<section class="lesson-section">
+<h2>
+     🎯 Learning Objectives
+    </h2>
+<ul class="objective-list">
+<li>
+      use 2×2 matrices to transform coordinates;
+     </li>
+<li>
+      recognise standard reflection, rotation and enlargement matrices;
+     </li>
+<li>
+      determine a matrix from basis-vector images;
+     </li>
+<li>
+      interpret a transformation matrix.
+     </li>
+</ul>
+</section>
+<section class="lesson-section">
+<h2>
+     Matrix Mapping
+    </h2>
+<p>
+     If A is a transformation matrix, then image vector = A × object vector.
+    </p>
+<div class="transform-rule">
+     The first column is the image of (1,0); the second column is the image of (0,1).
+    </div>
+</section>
+<section class="lesson-section">
+<h2>
+     Standard Matrices
+    </h2>
+<div class="rule-grid">
+<article class="rule-card">
+<h3>
+       Reflect in x-axis
+      </h3>
+<p>
+       <span class="math-matrix" role="math" aria-label="matrix 1, 0, 0, −1"><span class="math-matrix__values"><span>1</span><span>0</span><span>0</span><span>−1</span></span></span>
+      </p>
+</article>
+<article class="rule-card">
+<h3>
+       Reflect in y-axis
+      </h3>
+<p>
+       <span class="math-matrix" role="math" aria-label="matrix −1, 0, 0, 1"><span class="math-matrix__values"><span>−1</span><span>0</span><span>0</span><span>1</span></span></span>
+      </p>
+</article>
+<article class="rule-card">
+<h3>
+       Reflect in y=x
+      </h3>
+<p>
+       <span class="math-matrix" role="math" aria-label="matrix 0, 1, 1, 0"><span class="math-matrix__values"><span>0</span><span>1</span><span>1</span><span>0</span></span></span>
+      </p>
+</article>
+<article class="rule-card">
+<h3>
+       90° anticlockwise
+      </h3>
+<p>
+       <span class="math-matrix" role="math" aria-label="matrix 0, −1, 1, 0"><span class="math-matrix__values"><span>0</span><span>−1</span><span>1</span><span>0</span></span></span>
+      </p>
+</article>
+<article class="rule-card">
+<h3>
+       180° rotation
+      </h3>
+<p>
+       <span class="math-matrix" role="math" aria-label="matrix −1, 0, 0, −1"><span class="math-matrix__values"><span>−1</span><span>0</span><span>0</span><span>−1</span></span></span>
+      </p>
+</article>
+<article class="rule-card">
+<h3>
+       Enlargement k
+      </h3>
+<p>
+       <span class="math-matrix" role="math" aria-label="matrix k, 0, 0, k"><span class="math-matrix__values"><span>k</span><span>0</span><span>0</span><span>k</span></span></span>
+      </p>
+</article>
+</div>
+</section>
+<section class="lesson-section">
+<h2>
+     Worked Example
+    </h2>
+<p>
+     Apply <span class="math-matrix" role="math" aria-label="matrix 0, −1, 1, 0"><span class="math-matrix__values"><span>0</span><span>−1</span><span>1</span><span>0</span></span></span> to (3,2).
+    </p>
+<div class="calc-steps">
+<p>
+      x′=0(3)−1(2)=−2.
+     </p>
+<p>
+      y′=1(3)+0(2)=3.
+     </p>
+<p>
+      Image=(−2,3), a 90° anticlockwise rotation.
+     </p>
+</div>
+</section>
+<section class="lesson-section">
+<h2>
+     Practice
+    </h2>
+<ol class="practice-list">
+<li>
+      Apply <span class="math-matrix" role="math" aria-label="matrix 1, 0, 0, −1"><span class="math-matrix__values"><span>1</span><span>0</span><span>0</span><span>−1</span></span></span> to (4,−3).
+     </li>
+<li>
+      Apply <span class="math-matrix" role="math" aria-label="matrix 2, 0, 0, 2"><span class="math-matrix__values"><span>2</span><span>0</span><span>0</span><span>2</span></span></span> to (−1,5).
+     </li>
+<li>
+      Identify <span class="math-matrix" role="math" aria-label="matrix 0, 1, 1, 0"><span class="math-matrix__values"><span>0</span><span>1</span><span>1</span><span>0</span></span></span>.
+     </li>
+</ol>
+</section>
+<section class="lesson-section answers-section">
+<h2>
+     ✅ Check Your Work
+    </h2>
+<details>
+<summary>
+      Show answers and working
+     </summary>
+<div class="answers-content">
+<ol>
+<li>
+        (4,3), reflection in x-axis.
+       </li>
+<li>
+        (−2,10), enlargement scale factor 2 about origin.
+       </li>
+<li>
+        Reflection in y=x.
+       </li>
+</ol>
+</div>
+</details>
+</section>
+<section class="lesson-section v2-teaching">
+<h2>🧠 Learn It Visually: Transformation Matrices</h2><div class="v2-hook">A 2×2 matrix can act like a movement rule. Multiplying the matrix by a point’s column vector produces the image coordinates.</div>
+<div class="v2-grid"><article class="v2-card"><h3>Point as a column vector</h3><p>Represent (x,y) as a vertical vector with x above y.</p></article><article class="v2-card"><h3>Multiply carefully</h3><p>Use row-by-column multiplication to find x′ and y′.</p></article><article class="v2-card"><h3>Recognise common matrices</h3><p>Different matrices represent reflections, rotations, stretches, enlargements and shears.</p></article></div><div class="v2-interactive"><h3>🎛️ See the Transformation Happen</h3><p>Select an option and watch the object change. Compare orientation, size and position.</p><div class="v2-controls"><button onclick="v2Apply('scaleY(-1)','Reflection in x-axis',this)">Reflection in x-axis</button><button onclick="v2Apply('rotate(-90deg)','90° anticlockwise',this)">90° anticlockwise</button><button onclick="v2Apply('scale(2)','Enlargement k=2',this)">Enlargement k=2</button><button onclick="v2Apply('','Reset',this)">Reset</button></div><div class="v2-diagram"><svg aria-label="Interactive coordinate grid" role="img" viewbox="0 0 620 330"><defs><pattern height="30" id="v2grid" patternunits="userSpaceOnUse" width="30"><path d="M30 0H0V30" fill="none" stroke="#e6dddd" stroke-width="1"></path></pattern></defs><rect fill="url(#v2grid)" height="300" rx="12" width="540" x="40" y="15"></rect><line stroke="#243b53" stroke-width="2" x1="310" x2="310" y1="15" y2="315"></line><line stroke="#243b53" stroke-width="2" x1="40" x2="580" y1="165" y2="165"></line><g class="v2-shape" id="v2-object"><polygon fill="rgba(196,111,114,.25)" points="220,225 280,225 250,165" stroke="#c46f72" stroke-width="4"></polygon><text fill="#c46f72" font-size="16" x="235" y="248">Object</text></g><g class="v2-shape" id="v2-image" opacity=".8" style="display:none"><polygon fill="rgba(36,59,83,.12)" points="340,135 400,135 370,75" stroke="#243b53" stroke-dasharray="8 6" stroke-width="4"></polygon><text fill="#243b53" font-size="16" x="355" y="65">Image</text></g></svg></div><div class="v2-output" id="v2out">Choose a transformation.</div></div><script>function v2Apply(t,n,b){document.getElementById('v2-object').style.transform=t;document.querySelectorAll('.v2-controls button').forEach(x=>x.classList.remove('active'));b.classList.add('active');document.getElementById('v2out').innerHTML=n==='Reset'?'The original object has been restored.':`Applied: <b>${n}</b>. Ask: what changed, and what stayed the same?`;}</script>
+<div class="v2-think"><strong>Think Like a Mathematician:</strong> Why must every vertex be multiplied by the same transformation matrix?</div>
+<div class="v2-grid"><article class="v2-card"><h3>🧷 Remember</h3><p>The matrix acts on position vectors measured from the origin, so these transformations are centred on or fixed relative to the origin.</p></article><article class="v2-card"><h3>⚠️ Common Mistake</h3><p>Multiplying coordinates in the wrong order or treating the point as a row vector.</p></article><article class="v2-card"><h3>🎯 Exam Tip</h3><p>Calculate one vertex, check the expected movement, then transform the remaining vertices.</p></article></div></section><section class="lesson-section">
+<h2>
+     🧭 StudyNest: How to Solve Transformation Problems
+    </h2>
+<div class="transform-solver">
+<div class="transform-step">
+<span>
+       1
+      </span>
+<strong>
+       Compare
+      </strong>
+      Look at the object and image before calculating anything.
+     </div>
+<div class="transform-step">
+<span>
+       2
+      </span>
+<strong>
+       Identify
+      </strong>
+      Decide whether the change is a slide, flip, turn, resize, stretch or shear.
+     </div>
+<div class="transform-step">
+<span>
+       3
+      </span>
+<strong>
+       Locate
+      </strong>
+      Find the vector, mirror line, centre, invariant line or centre of enlargement.
+     </div>
+<div class="transform-step">
+<span>
+       4
+      </span>
+<strong>
+       Measure
+      </strong>
+      Determine direction, angle and scale factor where needed.
+     </div>
+<div class="transform-step">
+<span>
+       5
+      </span>
+<strong>
+       Map
+      </strong>
+      Apply the coordinate rule or matrix to one vertex at a time.
+     </div>
+<div class="transform-step">
+<span>
+       6
+      </span>
+<strong>
+       Plot
+      </strong>
+      Plot every image point accurately and join them in the same order.
+     </div>
+<div class="transform-step">
+<span>
+       7
+      </span>
+<strong>
+       Describe
+      </strong>
+      Name the transformation completely—not only its type.
+     </div>
+<div class="transform-step">
+<span>
+       8
+      </span>
+<strong>
+       Check
+      </strong>
+      Verify distances, orientation, size and invariant features.
+     </div>
+</div>
+</section>
+<nav class="lesson-navigation">
+<a class="nav-button" href="07-combined-transformations.html">
+     ← Combined Transformations
+    </a>
+<a class="nav-button" href="index.html">
+     Transformations Roadmap
+    </a>
+<a class="nav-button primary" href="09-stretches.html">
+     Stretches →
+    </a>
+</nav>
+</main>
+<footer class="site-footer">
+<strong>
+    📚 StudyNest
+   </strong>
+<p>
+    Helping students understand Mathematics, not memorise it.
+   </p>
+<p>
+    © 2026 StudyNest
+   </p>
+</footer>
+  <script src="../script-v3.js"></script>
+
+<script src="../studynest-3.1.js" defer></script>
+</body>
+</html>

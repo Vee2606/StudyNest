@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Learn how to understand and calculate with positive and negative directed numbers using number lines, sign rules and real-life examples." name="description"/>
+<title>Directed Numbers | Positive and Negative Numbers | StudyNest</title>
+<link href="../styles/real-numbers-lessons.css" rel="stylesheet"/>
+<style id="studynest-real-animation-layer">
+.sn-concept-motion{margin:1.5rem auto 2rem;padding:1.25rem;border:2px solid rgba(19,48,76,.12);border-radius:22px;background:rgba(255,255,255,.88);overflow:hidden}
+.sn-concept-motion h2{margin-top:0}.sn-motion-stage{min-height:150px;display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;padding:18px;border-radius:18px;background:linear-gradient(135deg,rgba(232,246,255,.8),rgba(255,248,220,.75))}
+.sn-chip{display:inline-flex;align-items:center;justify-content:center;min-width:58px;min-height:48px;padding:10px 14px;border:2px solid #17324d;border-radius:14px;background:#fff;font-weight:800;font-size:1.1rem;box-shadow:0 5px 0 rgba(23,50,77,.12)}
+.sn-arrow{font-size:1.8rem;font-weight:900}.sn-pulse{animation:snPulse 2.4s ease-in-out infinite}.sn-slide{animation:snSlide 3s ease-in-out infinite}.sn-pop{animation:snPop 2.8s ease-in-out infinite}.sn-delay1{animation-delay:.45s}.sn-delay2{animation-delay:.9s}.sn-delay3{animation-delay:1.35s}
+.sn-line{position:relative;width:min(560px,94%);height:8px;border-radius:999px;background:#17324d;margin:42px auto 24px}.sn-line:before,.sn-line:after{content:'';position:absolute;top:-8px;width:2px;height:24px;background:#17324d}.sn-line:before{left:8%}.sn-line:after{right:8%}.sn-dot{position:absolute;top:-11px;width:30px;height:30px;border-radius:50%;background:#f5bf42;border:3px solid #17324d;animation:snTravel 4s ease-in-out infinite}
+.sn-grid{display:grid;grid-template-columns:repeat(4,54px);gap:7px}.sn-cell{width:54px;height:42px;display:grid;place-items:center;border:2px solid #17324d;border-radius:9px;background:#fff;font-weight:800}.sn-cell.active{animation:snCell 2.4s ease-in-out infinite;background:#fff4bd}
+.sn-bar{height:24px;border:2px solid #17324d;border-radius:999px;background:#fff;overflow:hidden;width:min(480px,90%)}.sn-fill{height:100%;width:0;background:#f5bf42;animation:snFill 3.5s ease-in-out infinite}
+.sn-caption{margin:.85rem 0 0;text-align:center;font-weight:700;color:#334e68}
+@keyframes snPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+@keyframes snSlide{0%,100%{transform:translateX(-18px)}50%{transform:translateX(18px)}}
+@keyframes snPop{0%,20%,100%{transform:translateY(0);opacity:.8}50%{transform:translateY(-10px);opacity:1}}
+@keyframes snTravel{0%,100%{left:7%}50%{left:86%}}
+@keyframes snCell{0%,100%{transform:scale(1);background:#fff}50%{transform:scale(1.08);background:#fff4bd}}
+@keyframes snFill{0%{width:0}55%,100%{width:75%}}
+@media (prefers-reduced-motion:reduce){.sn-concept-motion *{animation:none!important}}
+</style><style id="studynest-directed-number-line-fix">
+.sn-directed-number-line{position:relative;width:min(660px,96%);height:118px;margin:12px auto 0}
+.sn-directed-number-line:before{content:'';position:absolute;left:3%;right:3%;top:48px;height:5px;border-radius:999px;background:#17324d}
+.sn-directed-number-line:after{content:'◀                                      ▶';white-space:pre;position:absolute;left:1%;right:1%;top:31px;display:flex;justify-content:space-between;color:#17324d;font-size:1.4rem;font-weight:900}
+.directed-tick{position:absolute;left:calc(4% + (var(--i) * 9.2%));top:37px;width:3px;height:27px;background:#17324d;transform:translateX(-50%)}
+.directed-label{position:absolute;top:32px;left:50%;transform:translateX(-50%);font-weight:800;color:#17324d}
+.directed-mover{position:absolute;left:48.5%;top:13px;color:#f5bf42;-webkit-text-stroke:3px #17324d;font-size:2.2rem;line-height:1;animation:directedTravel 4.6s ease-in-out infinite;z-index:3}
+@keyframes directedTravel{0%{left:21%}50%{left:76%}100%{left:21%}}
+@media(max-width:600px){.directed-label{font-size:.78rem}.directed-tick{left:calc(4% + (var(--i) * 9.15%))}}
+@media(prefers-reduced-motion:reduce){.directed-mover{animation:none;left:48.5%}}
+</style>
+<style id="studynest-directed-lesson-line-fix">
+.lesson-section > .directed-number-line{display:flex;align-items:center;gap:.45rem;width:100%;margin:1.25rem auto .5rem;padding:.75rem .45rem;box-sizing:border-box;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.lesson-section > .directed-number-line .number-line-arrow{flex:0 0 auto;color:#17324d;font-size:1.25rem;font-weight:900;line-height:1}
+.lesson-section > .directed-number-line .number-line-values{position:relative;display:grid;grid-template-columns:repeat(11,minmax(34px,1fr));align-items:start;flex:1 0 430px;padding-top:18px}
+.lesson-section > .directed-number-line .number-line-values:before{content:'';position:absolute;left:0;right:0;top:10px;height:4px;border-radius:999px;background:#17324d}
+.lesson-section > .directed-number-line .number-line-value{position:relative;display:flex;justify-content:center;padding-top:16px;font-weight:800;color:#17324d}
+.lesson-section > .directed-number-line .number-line-value:before{content:'';position:absolute;top:0;left:50%;width:3px;height:16px;background:#17324d;transform:translateX(-50%)}
+.lesson-section > .directed-number-line .negative-value span{color:#9a3412}
+.lesson-section > .directed-number-line .zero-value span{color:#17324d}
+.lesson-section > .directed-number-line .positive-value span{color:#166534}
+.lesson-section > .number-line-labels{display:flex;justify-content:space-between;gap:1rem;margin:.35rem .5rem 1rem;font-weight:700;color:#334e68}
+@media(max-width:600px){.lesson-section > .directed-number-line{padding-left:.2rem;padding-right:.2rem}.lesson-section > .directed-number-line .number-line-values{flex-basis:385px;grid-template-columns:repeat(11,minmax(31px,1fr))}.lesson-section > .number-line-labels{font-size:.85rem}}
+</style>
+  <link rel="stylesheet" href="../styles/studynest-v3.css">
+
+<link rel="stylesheet" href="../studynest-3.1.css">
+<link rel="stylesheet" href="../studynest-theme.css">
+</head>
+<body>
+<div class="announcement-bar">🚀 StudyNest is growing. New lessons and worksheets are added regularly.</div>
+<header class="site-header">
+<a class="logo" href="../index.html">📚 StudyNest</a>
+<nav class="main-navigation">
+<a href="../index.html">🏠 Home</a>
+<a href="../topics.html">📘 Study by Topic</a>
+<a href="index.html">🔢 Real Numbers</a>
+<a href="../worksheets.html">📝 Worksheets</a>
+</nav>
+</header>
+<section class="lesson-hero">
+<div>
+<p class="lesson-label">🔢 Real Numbers • Lesson 4 of 17</p>
+<h1>Directed Numbers</h1>
+<p class="lesson-subtitle">Learn how positive and negative numbers show direction, how to place
+        them on a number line and how to add, subtract, multiply and divide them
+        correctly.</p>
+<div class="lesson-meta">
+<span class="meta-pill">🔢 Real Numbers</span>
+<span class="meta-pill">✏️ Worked examples included</span>
+<span class="meta-pill">🧠 Step-by-step learning</span>
+</div>
+</div>
+<div aria-hidden="true" class="hero-visual">
+<div class="real-number-visual">
+<div class="number-bubble bubble-pi">π</div>
+<div class="number-bubble bubble-fraction">¾</div>
+<div class="number-bubble bubble-root">√2</div>
+<div class="number-bubble bubble-negative">−8</div>
+<div class="real-set-symbol">ℝ</div>
+<div class="number-line"></div>
+<span class="number-tick tick-one"></span>
+<span class="number-tick tick-two"></span>
+<span class="number-tick tick-three"></span>
+<span class="number-tick tick-four"></span>
+<span class="number-label label-one">−2</span>
+<span class="number-label label-two">−1</span>
+<span class="number-label label-three">0</span>
+<span class="number-label label-four">1</span>
+</div>
+</div>
+</section><main class="lesson-main"><section aria-label="Animated concept demonstration" class="sn-concept-motion"><h2>🎬 Move along the number line</h2><div aria-hidden="true" class="sn-motion-stage"><div aria-label="Number line from negative five to positive five" class="sn-directed-number-line"><span class="directed-tick" style="--i:0"><span class="directed-label">-5</span></span><span class="directed-tick" style="--i:1"><span class="directed-label">-4</span></span><span class="directed-tick" style="--i:2"><span class="directed-label">-3</span></span><span class="directed-tick" style="--i:3"><span class="directed-label">-2</span></span><span class="directed-tick" style="--i:4"><span class="directed-label">-1</span></span><span class="directed-tick" style="--i:5"><span class="directed-label">0</span></span><span class="directed-tick" style="--i:6"><span class="directed-label">1</span></span><span class="directed-tick" style="--i:7"><span class="directed-label">2</span></span><span class="directed-tick" style="--i:8"><span class="directed-label">3</span></span><span class="directed-tick" style="--i:9"><span class="directed-label">4</span></span><span class="directed-tick" style="--i:10"><span class="directed-label">5</span></span><span class="directed-mover">●</span></div></div><p class="sn-caption">Positive movement goes right; negative movement goes left.</p></section><section class="lesson-section">
+<h2>⚡ Do Now!</h2>
+<p>
+        Try these before reading the lesson.
+    </p>
+<ol>
+<li>
+            The temperature changes from 4°C to −2°C.
+            Did it rise or fall?
+        </li>
+<li>
+            A lift moves from floor 3 to basement level −2.
+            How many floors does it travel?
+        </li>
+<li>
+            Which number is greater: −3 or −8?
+        </li>
+<li>
+            Calculate:
+            <div class="math-box">
+                5 + (−7)
+            </div>
+</li>
+</ol>
+<details>
+<summary>✅ Check the Do Now answers</summary>
+<ol>
+<li>It fell.</li>
+<li>5 floors.</li>
+<li>−3 is greater.</li>
+<li>−2</li>
+</ol>
+</details>
+</section><section class="lesson-section">
+<h2>🎯 By the end of this lesson...</h2>
+<p>You should be able to:</p>
+<ul>
+<li>Explain what directed numbers are.</li>
+<li>Identify positive and negative numbers.</li>
+<li>Place integers correctly on a number line.</li>
+<li>Compare and order directed numbers.</li>
+<li>Add positive and negative numbers.</li>
+<li>Subtract positive and negative numbers.</li>
+<li>Multiply and divide directed numbers.</li>
+<li>Use directed numbers in practical situations.</li>
+<li>Check whether an answer is reasonable.</li>
+</ul>
+</section><section class="lesson-section story-card">
+<h2>🤔 Think About This...</h2>
+<div class="real-life-situation">
+<div class="situation-icon">
+            🌡️
+        </div>
+<div>
+<h3>A cold morning</h3>
+<p>
+                At 6:00 a.m., the temperature is <strong>3°C</strong>.
+            </p>
+<p>
+                During the next few hours, it falls by
+                <strong>7°C</strong>.
+            </p>
+<p>
+                What is the new temperature?
+            </p>
+</div>
+</div>
+<div class="math-box">
+        3 − 7 = −4
+    </div>
+<div class="success-box">
+        The new temperature is <strong>−4°C</strong>.
+    </div>
+<p>
+        The negative sign tells us that the temperature is below zero.
+        Directed numbers help us show both an amount and its direction.
+    </p>
+</section><section class="lesson-section">
+<h2>1️⃣ What Are Directed Numbers?</h2>
+<p>
+        Directed numbers are numbers that have a positive or negative sign to
+        show direction from zero.
+    </p>
+<div class="direction-grid">
+<div class="direction-card positive-direction">
+<h3>Positive direction</h3>
+<p>
+                Positive numbers are greater than zero.
+            </p>
+<div class="math-box">
+                +1, +2, +3, +4, …
+            </div>
+<p>
+                They usually represent movement upwards, forwards, gains,
+                deposits or values above zero.
+            </p>
+</div>
+<div class="direction-card negative-direction">
+<h3>Negative direction</h3>
+<p>
+                Negative numbers are less than zero.
+            </p>
+<div class="math-box">
+                −1, −2, −3, −4, …
+            </div>
+<p>
+                They usually represent movement downwards, backwards, losses,
+                debts or values below zero.
+            </p>
+</div>
+</div>
+<div class="note-box">
+        Zero is neither positive nor negative. It is the point separating the
+        positive and negative directions.
+    </div>
+</section><section class="lesson-section">
+<h2>🌍 Where Do We Use Directed Numbers?</h2>
+<div class="directed-use-grid">
+<div class="directed-use-card">
+<span class="use-icon">🌡️</span>
+<h3>Temperature</h3>
+<p>−5°C means five degrees below zero.</p>
+</div>
+<div class="directed-use-card">
+<span class="use-icon">🏦</span>
+<h3>Money</h3>
+<p>−$20 can represent a debt or an overdrawn balance.</p>
+</div>
+<div class="directed-use-card">
+<span class="use-icon">🏢</span>
+<h3>Building floors</h3>
+<p>Floor −2 can represent a basement below ground level.</p>
+</div>
+<div class="directed-use-card">
+<span class="use-icon">⛰️</span>
+<h3>Elevation</h3>
+<p>−30 m means thirty metres below sea level.</p>
+</div>
+<div class="directed-use-card">
+<span class="use-icon">⚽</span>
+<h3>Goal difference</h3>
+<p>−4 means a team has conceded four more goals than it scored.</p>
+</div>
+<div class="directed-use-card">
+<span class="use-icon">📈</span>
+<h3>Change</h3>
+<p>+8 shows an increase, while −8 shows a decrease.</p>
+</div>
+</div>
+</section><section class="lesson-section">
+<h2>2️⃣ The Number Line</h2>
+<p>
+        A number line helps us see the position and direction of numbers.
+    </p>
+<div class="directed-number-line">
+<div class="number-line-arrow left-arrow">
+            ◀
+        </div>
+<div class="number-line-values">
+<div class="number-line-value negative-value">
+<span>−5</span>
+</div>
+<div class="number-line-value negative-value">
+<span>−4</span>
+</div>
+<div class="number-line-value negative-value">
+<span>−3</span>
+</div>
+<div class="number-line-value negative-value">
+<span>−2</span>
+</div>
+<div class="number-line-value negative-value">
+<span>−1</span>
+</div>
+<div class="number-line-value zero-value">
+<span>0</span>
+</div>
+<div class="number-line-value positive-value">
+<span>1</span>
+</div>
+<div class="number-line-value positive-value">
+<span>2</span>
+</div>
+<div class="number-line-value positive-value">
+<span>3</span>
+</div>
+<div class="number-line-value positive-value">
+<span>4</span>
+</div>
+<div class="number-line-value positive-value">
+<span>5</span>
+</div>
+</div>
+<div class="number-line-arrow right-arrow">
+            ▶
+        </div>
+</div>
+<div class="number-line-labels">
+<span>Numbers decrease</span>
+<span>Numbers increase</span>
+</div>
+<div class="success-box">
+        Moving to the right means the numbers are becoming greater.
+        <br/><br/>
+        Moving to the left means the numbers are becoming smaller.
+    </div>
+</section><section class="lesson-section">
+<h2>3️⃣ Comparing Directed Numbers</h2>
+<p>
+        The number farther to the right on a number line is always greater.
+    </p>
+<div class="worked-example">
+<h3>Example 1: Compare −3 and −7</h3>
+<p>
+            −3 is closer to zero and lies farther to the right.
+        </p>
+<div class="math-box">
+            −3 &gt; −7
+        </div>
+<div class="success-box">
+            −3 is greater than −7.
+        </div>
+</div>
+<div class="warning-box">
+        A negative number with a larger-looking digit is not necessarily
+        greater.
+        <br/><br/>
+        For example, −10 is less than −2 because −10 lies farther left.
+    </div>
+</section><section class="lesson-section">
+<h2>🧠 StudyNest Method: Comparing Negative Numbers</h2>
+<div class="tip-box">
+<strong>Step 1:</strong>
+        Imagine or draw a number line.
+
+        <br/><br/>
+<strong>Step 2:</strong>
+        Locate both numbers.
+
+        <br/><br/>
+<strong>Step 3:</strong>
+        The number farther to the right is greater.
+
+        <br/><br/>
+<strong>Step 4:</strong>
+        For two negative numbers, the number closer to zero is greater.
+
+    </div>
+<div class="math-box">
+        −2 &gt; −6
+    </div>
+<div class="math-box">
+        −8 &lt; −3
+    </div>
+</section><section class="lesson-section">
+<h2>4️⃣ Ordering Directed Numbers</h2>
+<div class="worked-example">
+<h3>Example 2: Arrange in ascending order</h3>
+<div class="math-box">
+            4, −2, 0, −7, 3
+        </div>
+<p>
+            Ascending order means smallest to largest.
+        </p>
+<p>
+            Imagine the numbers placed from left to right on a number line.
+        </p>
+<div class="success-box">
+            −7, −2, 0, 3, 4
+        </div>
+</div>
+<div class="worked-example">
+<h3>Example 3: Arrange in descending order</h3>
+<div class="math-box">
+            −5, 6, −1, 2, 0
+        </div>
+<p>
+            Descending order means largest to smallest.
+        </p>
+<div class="success-box">
+            6, 2, 0, −1, −5
+        </div>
+</div>
+</section><section class="lesson-section">
+<h2>5️⃣ Adding Directed Numbers</h2>
+<p>
+        Addition can be shown as movement on a number line.
+    </p>
+<div class="operation-direction-grid">
+<div class="operation-direction-card">
+<h3>Add a positive number</h3>
+<p>Move to the right.</p>
+<div class="math-box">
+                2 + 4 = 6
+            </div>
+</div>
+<div class="operation-direction-card">
+<h3>Add a negative number</h3>
+<p>Move to the left.</p>
+<div class="math-box">
+                2 + (−4) = −2
+            </div>
+</div>
+</div>
+<div class="worked-example">
+<h3>Example 4: Calculate 3 + (−5)</h3>
+<p>
+            Begin at 3.
+        </p>
+<p>
+            Adding −5 means moving five spaces to the left.
+        </p>
+<div class="movement-line">
+<div class="movement-start">
+                Start: 3
+            </div>
+<div class="movement-arrow negative-movement">
+                ← 5 spaces
+            </div>
+<div class="movement-answer">
+                Finish: −2
+            </div>
+</div>
+<div class="success-box">
+            3 + (−5) = −2
+        </div>
+</div>
+</section><section class="lesson-section">
+<h2>🧠 Adding Numbers with the Same Sign</h2>
+<p>
+        When both numbers have the same sign:
+    </p>
+<ol>
+<li>Add their numerical values.</li>
+<li>Keep the common sign.</li>
+</ol>
+<div class="worked-example">
+<h3>Example 5</h3>
+<div class="math-box">
+            (+4) + (+7) = +11
+        </div>
+</div>
+<div class="worked-example">
+<h3>Example 6</h3>
+<div class="math-box">
+            (−4) + (−7) = −11
+        </div>
+</div>
+<div class="success-box">
+        Same signs: add and keep the sign.
+    </div>
+</section><section class="lesson-section">
+<h2>🧠 Adding Numbers with Different Signs</h2>
+<p>
+        When the signs are different:
+    </p>
+<ol>
+<li>Subtract the smaller numerical value from the larger one.</li>
+<li>Use the sign of the number with the larger numerical value.</li>
+</ol>
+<div class="worked-example">
+<h3>Example 7: Calculate −9 + 4</h3>
+<div class="math-box">
+            9 − 4 = 5
+        </div>
+<p>
+            The number with the larger numerical value is −9.
+        </p>
+<p>
+            Therefore, the answer is negative.
+        </p>
+<div class="success-box">
+            −9 + 4 = −5
+        </div>
+</div>
+<div class="worked-example">
+<h3>Example 8: Calculate −3 + 8</h3>
+<div class="math-box">
+            8 − 3 = 5
+        </div>
+<p>
+            The number with the larger numerical value is +8.
+        </p>
+<div class="success-box">
+            −3 + 8 = 5
+        </div>
+</div>
+</section><section class="lesson-section">
+<h2>6️⃣ Subtracting Directed Numbers</h2>
+<p>
+        Subtraction can be changed into addition by adding the opposite.
+    </p>
+<div class="math-box">
+        a − b = a + (−b)
+    </div>
+<div class="tip-box">
+        💡 <strong>StudyNest Rule:</strong><br/><br/>
+        Keep the first number.
+        <br/><br/>
+        Change subtraction to addition.
+        <br/><br/>
+        Change the sign of the second number.
+    </div>
+<div class="worked-example">
+<h3>Example 9: Calculate 6 − 9</h3>
+<div class="math-box">
+            6 − 9
+        </div>
+<p>
+            Change subtraction to addition and change +9 to −9.
+        </p>
+<div class="math-box">
+            6 + (−9)
+        </div>
+<div class="success-box">
+            6 − 9 = −3
+        </div>
+</div>
+<div class="worked-example">
+<h3>Example 10: Calculate 4 − (−6)</h3>
+<p>
+            Change subtraction to addition.
+        </p>
+<p>
+            Change −6 to its opposite, +6.
+        </p>
+<div class="math-box">
+            4 + 6 = 10
+        </div>
+<div class="success-box">
+            4 − (−6) = 10
+        </div>
+</div>
+</section><section class="lesson-section">
+<h2>🔑 Why Does Subtracting a Negative Become Addition?</h2>
+<p>
+        A negative represents movement in the opposite direction.
+    </p>
+<p>
+        Subtracting means reversing that movement.
+    </p>
+<p>
+        Reversing a negative direction produces a positive direction.
+    </p>
+<div class="math-box">
+        5 − (−3) = 5 + 3
+    </div>
+<div class="success-box">
+        Subtracting a negative number is the same as adding its positive
+        opposite.
+    </div>
+</section><section class="lesson-section">
+<h2>7️⃣ Multiplying Directed Numbers</h2>
+<p>
+        For multiplication, calculate the numerical values first and then use
+        the signs to determine the answer.
+    </p>
+<div class="sign-rule-grid">
+<div class="sign-rule-card positive-rule">
+<div class="sign-expression">
+                + × +
+            </div>
+<div class="sign-answer">
+                +
+            </div>
+</div>
+<div class="sign-rule-card negative-rule">
+<div class="sign-expression">
+                + × −
+            </div>
+<div class="sign-answer">
+                −
+            </div>
+</div>
+<div class="sign-rule-card negative-rule">
+<div class="sign-expression">
+                − × +
+            </div>
+<div class="sign-answer">
+                −
+            </div>
+</div>
+<div class="sign-rule-card positive-rule">
+<div class="sign-expression">
+                − × −
+            </div>
+<div class="sign-answer">
+                +
+            </div>
+</div>
+</div>
+<div class="success-box">
+        Same signs give a positive answer.
+        <br/><br/>
+        Different signs give a negative answer.
+    </div>
+<div class="worked-example">
+<h3>Example 11</h3>
+<div class="math-box">
+            (−4) × 6
+        </div>
+<p>
+            The signs are different, so the answer is negative.
+        </p>
+<div class="math-box">
+            4 × 6 = 24
+        </div>
+<div class="success-box">
+            (−4) × 6 = −24
+        </div>
+</div>
+<div class="worked-example">
+<h3>Example 12</h3>
+<div class="math-box">
+            (−7) × (−3)
+        </div>
+<p>
+            The signs are the same, so the answer is positive.
+        </p>
+<div class="success-box">
+            (−7) × (−3) = 21
+        </div>
+</div>
+</section><section class="lesson-section">
+<h2>8️⃣ Dividing Directed Numbers</h2>
+<p>
+        Division uses the same sign rules as multiplication.
+    </p>
+<div class="sign-rule-grid">
+<div class="sign-rule-card positive-rule">
+<div class="sign-expression">
+                + ÷ +
+            </div>
+<div class="sign-answer">
+                +
+            </div>
+</div>
+<div class="sign-rule-card negative-rule">
+<div class="sign-expression">
+                + ÷ −
+            </div>
+<div class="sign-answer">
+                −
+            </div>
+</div>
+<div class="sign-rule-card negative-rule">
+<div class="sign-expression">
+                − ÷ +
+            </div>
+<div class="sign-answer">
+                −
+            </div>
+</div>
+<div class="sign-rule-card positive-rule">
+<div class="sign-expression">
+                − ÷ −
+            </div>
+<div class="sign-answer">
+                +
+            </div>
+</div>
+</div>
+<div class="worked-example">
+<h3>Example 13</h3>
+<div class="math-box">
+            −36 ÷ 6
+        </div>
+<p>
+            The signs are different.
+        </p>
+<div class="success-box">
+            −36 ÷ 6 = −6
+        </div>
+</div>
+<div class="worked-example">
+<h3>Example 14</h3>
+<div class="math-box">
+            −48 ÷ (−8)
+        </div>
+<p>
+            The signs are the same.
+        </p>
+<div class="success-box">
+            −48 ÷ (−8) = 6
+        </div>
+</div>
+</section><section class="lesson-section">
+<h2>🧠 StudyNest Thinking Method</h2>
+<p>
+        Before calculating, identify the operation and signs.
+    </p>
+<div class="tip-box">
+<strong>Step 1:</strong>
+        Look carefully at the operation sign.
+
+        <br/><br/>
+
+        Is the question asking you to add, subtract, multiply or divide?
+
+        <br/><br/>
+<strong>Step 2:</strong>
+        Identify whether each number is positive or negative.
+
+        <br/><br/>
+<strong>Step 3:</strong>
+        For addition:
+        <br/><br/>
+        Same signs → add and keep the sign.
+        <br/><br/>
+        Different signs → subtract and use the sign of the larger numerical
+        value.
+
+        <br/><br/>
+<strong>Step 4:</strong>
+        For subtraction:
+        <br/><br/>
+        Change subtraction to addition and change the sign of the second
+        number.
+
+        <br/><br/>
+<strong>Step 5:</strong>
+        For multiplication and division:
+        <br/><br/>
+        Same signs → positive.
+        <br/><br/>
+        Different signs → negative.
+
+        <br/><br/>
+<strong>Step 6:</strong>
+        Check whether the direction of your answer makes sense.
+
+    </div>
+</section><section class="lesson-section">
+<h2>🌍 Real-Life Worked Examples</h2>
+<div class="worked-example">
+<h3>Example 15: Bank account</h3>
+<p>
+            Tapiwa has $25 in his account.
+        </p>
+<p>
+            A payment of $40 is deducted.
+        </p>
+<div class="math-box">
+            25 − 40 = −15
+        </div>
+<div class="success-box">
+            Tapiwa's balance is <strong>−$15</strong>.
+            This means he owes the bank $15.
+        </div>
+</div>
+<div class="worked-example">
+<h3>Example 16: Temperature change</h3>
+<p>
+            The morning temperature is −3°C.
+        </p>
+<p>
+            It rises by 8°C.
+        </p>
+<div class="math-box">
+            −3 + 8 = 5
+        </div>
+<div class="success-box">
+            The new temperature is <strong>5°C</strong>.
+        </div>
+</div>
+<div class="worked-example">
+<h3>Example 17: Lift movement</h3>
+<p>
+            A lift begins at basement level −3 and moves up 7 floors.
+        </p>
+<div class="math-box">
+            −3 + 7 = 4
+        </div>
+<div class="success-box">
+            The lift stops at <strong>floor 4</strong>.
+        </div>
+</div>
+<div class="worked-example">
+<h3>Example 18: Elevation</h3>
+<p>
+            A diver is 18 metres below sea level.
+        </p>
+<p>
+            The diver rises by 11 metres.
+        </p>
+<div class="math-box">
+            −18 + 11 = −7
+        </div>
+<div class="success-box">
+            The diver is still <strong>7 metres below sea level</strong>.
+        </div>
+</div>
+</section><section class="lesson-section">
+<h2>⚠ Common Mistakes</h2>
+<div class="warning-box">
+<strong>Mistake 1:</strong><br/><br/>
+        Thinking −8 is greater than −3 because 8 is greater than 3.
+        <br/><br/>
+        On a number line, −8 lies farther left, so −8 &lt; −3.
+    </div>
+<div class="warning-box">
+<strong>Mistake 2:</strong><br/><br/>
+        Treating subtraction and a negative sign as the same thing.
+        <br/><br/>
+        In 5 − (−2), the first sign is the operation and the second belongs to
+        the number.
+    </div>
+<div class="warning-box">
+<strong>Mistake 3:</strong><br/><br/>
+        Forgetting to change the sign of the second number when changing
+        subtraction into addition.
+    </div>
+<div class="warning-box">
+<strong>Mistake 4:</strong><br/><br/>
+        Using multiplication sign rules for addition.
+        <br/><br/>
+        The rule “two negatives make a positive” does not automatically apply
+        to addition.
+    </div>
+<div class="warning-box">
+<strong>Mistake 5:</strong><br/><br/>
+        Saying:
+        <br/><br/>
+        −4 + (−3) = 7
+        <br/><br/>
+        The correct answer is −7 because both numbers are negative.
+    </div>
+<div class="warning-box">
+<strong>Mistake 6:</strong><br/><br/>
+        Giving a number without explaining its meaning in a real-life problem.
+        <br/><br/>
+        State whether it represents a debt, temperature, floor or direction.
+    </div>
+</section><section class="lesson-section practice-card">
+<h2>🎮 Your Turn!</h2>
+<ol>
+<li>
+            State which is greater:
+            <strong>−4 or −9</strong>.
+        </li>
+<li>
+            Arrange in ascending order:
+            <div class="math-box">
+                3, −5, 0, −1, 7
+            </div>
+</li>
+<li>
+            Arrange in descending order:
+            <div class="math-box">
+                −8, 4, −2, 1, 0
+            </div>
+</li>
+<li>
+            Calculate:
+            <div class="math-box">
+                −7 + 12
+            </div>
+</li>
+<li>
+            Calculate:
+            <div class="math-box">
+                −6 + (−9)
+            </div>
+</li>
+<li>
+            Calculate:
+            <div class="math-box">
+                5 − 13
+            </div>
+</li>
+<li>
+            Calculate:
+            <div class="math-box">
+                8 − (−4)
+            </div>
+</li>
+<li>
+            Calculate:
+            <div class="math-box">
+                (−7) × 5
+            </div>
+</li>
+<li>
+            Calculate:
+            <div class="math-box">
+                (−9) × (−4)
+            </div>
+</li>
+<li>
+            Calculate:
+            <div class="math-box">
+                −56 ÷ 7
+            </div>
+</li>
+<li>
+            Calculate:
+            <div class="math-box">
+                −72 ÷ (−8)
+            </div>
+</li>
+<li>
+            The temperature is −6°C and rises by 11°C.
+            Find the new temperature.
+        </li>
+<li>
+            A bank balance is $18. A payment of $30 is deducted.
+            Find the new balance.
+        </li>
+<li>
+            A lift begins on floor −2 and travels down 3 floors.
+            Which floor does it reach?
+        </li>
+<li>
+            A diver is 25 metres below sea level and rises 17 metres.
+            State the diver's new position.
+        </li>
+</ol>
+<details>
+<summary>✅ Show Answers</summary>
+<ol>
+<li>−4</li>
+<li>−5, −1, 0, 3, 7</li>
+<li>4, 1, 0, −2, −8</li>
+<li>5</li>
+<li>−15</li>
+<li>−8</li>
+<li>12</li>
+<li>−35</li>
+<li>36</li>
+<li>−8</li>
+<li>9</li>
+<li>5°C</li>
+<li>−$12, meaning a debt of $12</li>
+<li>Floor −5</li>
+<li>−8 metres, or 8 metres below sea level</li>
+</ol>
+</details>
+</section><section class="lesson-section">
+<h2>🧩 Sign Challenge</h2>
+<p>
+        Without calculating the full answer, decide whether each result will
+        be positive or negative.
+    </p>
+<ol>
+<li>(−8) × 7</li>
+<li>(−6) × (−5)</li>
+<li>48 ÷ (−6)</li>
+<li>(−63) ÷ (−9)</li>
+<li>(−4) + (−11)</li>
+</ol>
+<details>
+<summary>✅ Show Challenge Answers</summary>
+<ol>
+<li>Negative</li>
+<li>Positive</li>
+<li>Negative</li>
+<li>Positive</li>
+<li>Negative</li>
+</ol>
+</details>
+</section><section class="lesson-section">
+<h2>🧠 Remember This</h2>
+<div class="success-box">
+        Numbers increase as you move right on a number line.
+        <br/><br/>
+        Numbers decrease as you move left.
+        <br/><br/>
+        When adding the same signs, add and keep the sign.
+        <br/><br/>
+        When adding different signs, subtract and use the sign of the number
+        with the larger numerical value.
+        <br/><br/>
+        When subtracting, add the opposite.
+        <br/><br/>
+        For multiplication and division:
+        <br/><br/>
+<strong>same signs → positive</strong>
+<br/><br/>
+<strong>different signs → negative</strong>
+</div>
+</section><section class="lesson-section">
+<h2>🎯 Before Moving On...</h2>
+<ul class="check-list">
+<li>✅ Can I explain what a directed number is?</li>
+<li>✅ Can I place positive and negative integers on a number line?</li>
+<li>✅ Can I compare two negative numbers correctly?</li>
+<li>✅ Can I add directed numbers?</li>
+<li>✅ Can I subtract directed numbers?</li>
+<li>✅ Can I multiply and divide directed numbers?</li>
+<li>✅ Can I apply directed numbers to practical situations?</li>
+<li>✅ Can I explain what a negative answer means?</li>
+</ul>
+</section><section class="lesson-section success-card">
+<h2>🎉 Well Done!</h2>
+<p>
+        You can now compare, order and calculate with positive and negative
+        numbers.
+    </p>
+<div class="success-box">
+        Remember:
+        <br/><br/>
+<strong>
+            Identify the operation → Check the signs → Apply the correct rule →
+            Check the direction
+        </strong>
+</div>
+</section><section class="lesson-section">
+<h2>📈 Your Progress</h2>
+<p>
+        Lesson <strong>4 of 17</strong>
+</p>
+<div class="progress-wrap">
+<div class="progress-label">
+<span>Real Numbers Progress</span>
+<strong>24%</strong>
+</div>
+<div class="progress-bar">
+<div class="progress-fill" style="width:24%;"></div>
+</div>
+</div>
+</section><nav class="lesson-navigation">
+<a class="nav-button" href="03-hcf-and-lcm.html">← 03 Hcf And Lcm</a>
+<a class="nav-button" href="index.html">Real Numbers Roadmap</a>
+<a class="nav-button primary" href="05-order-of-operations.html">05 Order Of Operations →</a>
+</nav></main>
+<footer class="site-footer">
+<strong>📚 StudyNest</strong>
+<p>Helping students understand Mathematics, not memorise it.</p>
+<p>© 2026 StudyNest</p>
+</footer>  <script src="../script-v3.js"></script>
+
+<script src="../studynest-3.1.js" defer></script>
+</body>
+</html>

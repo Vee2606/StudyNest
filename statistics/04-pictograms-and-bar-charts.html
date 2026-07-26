@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Read and construct clear visual displays for categorical and discrete data.">
+<title>Pictograms and Bar Charts | Statistics | StudyNest</title>
+<link rel="stylesheet" href="../styles/statistics-lessons.css">
+<link rel="stylesheet" href="../styles/statistics-interactive.css">
+  <link rel="stylesheet" href="../styles/studynest-v3.css">
+
+<link rel="stylesheet" href="../studynest-3.1.css">
+<link rel="stylesheet" href="../studynest-theme.css">
+</head>
+<body>
+
+<div class="announcement-bar">🚀 StudyNest is growing. New lessons and worksheets are added regularly.</div>
+<header class="site-header">
+    <a href="../index.html" class="logo">📚 StudyNest</a>
+    <nav class="main-navigation">
+        <a href="../index.html">🏠 Home</a>
+        <a href="../topics.html">📘 Study by Topic</a>
+        <a href="index.html">📊 Statistics</a>
+        <a href="../worksheets.html">📝 Worksheets</a>
+    </nav>
+</header>
+
+<section class="lesson-hero">
+<div>
+<p class="lesson-label">STATISTICS · LESSON 04</p>
+<h1>Pictograms and Bar Charts</h1>
+<p class="lesson-subtitle">Read and construct clear visual displays for categorical and discrete data.</p>
+<div class="lesson-meta">
+<span class="meta-pill">⏱️ 22–30 min</span>
+<span class="meta-pill">📘 Foundation</span>
+<span class="meta-pill">📊 Interpretation included</span>
+</div>
+</div>
+
+<div class="hero-visual" aria-hidden="true">
+    <div class="statistics-hero-visual">
+        <span class="statistics-token token-mean">x̄</span>
+        <span class="statistics-token token-percent">%</span>
+        <span class="statistics-token token-sigma">Σ</span>
+        <div class="stat-bars"><span></span><span></span><span></span><span></span></div>
+        <div class="stat-pie"></div>
+        <div class="stat-line"><i></i><i></i><i></i></div>
+    </div>
+</div>
+
+</section>
+<main class="lesson-main">
+
+<section class="lesson-section"><h2>🎯 Learning Objectives</h2><ul class="objective-list">
+<li>interpret pictogram keys;</li><li>use partial symbols correctly;</li><li>construct bar charts;</li>
+<li>choose suitable scales;</li><li>identify misleading visual choices.</li></ul></section>
+<section class="lesson-section"><h2>Pictograms</h2>
+<div class="statistics-rule">Always read the key before counting symbols.</div>
+<p>If one ★ represents 4 learners, then 2½ stars represent 10 learners.</p></section>
+<section class="lesson-section"><h2>Bar Charts</h2>
+<figure class="chart-frame"><svg viewBox="0 0 680 380" role="img" aria-label="Bar chart of favourite fruits">
+<line x1="80" y1="310" x2="620" y2="310" stroke="#243b53" stroke-width="4"/><line x1="80" y1="50" x2="80" y2="310" stroke="#243b53" stroke-width="4"/>
+<rect x="130" y="190" width="70" height="120" fill="#4f8f91"/><rect x="260" y="120" width="70" height="190" fill="#4f8f91"/>
+<rect x="390" y="230" width="70" height="80" fill="#4f8f91"/><rect x="520" y="155" width="70" height="155" fill="#4f8f91"/>
+<text x="139" y="340" font-size="18">Apple</text><text x="267" y="340" font-size="18">Mango</text><text x="400" y="340" font-size="18">Pear</text><text x="525" y="340" font-size="18">Orange</text>
+</svg><figcaption>Equal-width bars with equal gaps represent separate categories.</figcaption></figure></section>
+<section class="lesson-section"><h2>⭐ Interactive Pictogram and Bar Chart</h2><div class="stats-lab"><p>One ★ represents 2 learners. Move the sliders and compare the pictogram with the bar chart.</p><div class="stats-controls" id="s4controls"></div><div id="s4pics"></div><svg id="s4svg" class="stats-canvas" viewBox="0 0 680 370" role="img" aria-label="Interactive favourite fruit bar chart"></svg></div></section><script>(()=>{const names=['Apple','Mango','Pear','Orange'],vals=[8,12,6,10],C=document.querySelector('#s4controls'),P=document.querySelector('#s4pics'),S=document.querySelector('#s4svg');C.innerHTML=names.map((n,i)=>`<div class="stats-control"><label>${n}: <span id="s4v${i}">${vals[i]}</span></label><input data-i="${i}" type="range" min="0" max="20" step="2" value="${vals[i]}"></div>`).join('');function u(){C.querySelectorAll('input').forEach(x=>{vals[+x.dataset.i]=+x.value;document.querySelector('#s4v'+x.dataset.i).textContent=x.value});P.innerHTML=names.map((n,i)=>`<div class="pictogram-row"><strong>${n}</strong><span class="pictogram-symbols">${'★'.repeat(vals[i]/2)||'—'}</span></div>`).join('');let mx=Math.max(20,...vals),base=310,scale=240/mx;S.innerHTML=`<line x1="70" y1="${base}" x2="640" y2="${base}" stroke="currentColor" stroke-width="3"/><line x1="70" y1="45" x2="70" y2="${base}" stroke="currentColor" stroke-width="3"/>`+names.map((n,i)=>{let x=115+i*135,h=vals[i]*scale;return `<rect x="${x}" y="${base-h}" width="75" height="${h}" fill="#4f8f91"/><text x="${x+37}" y="${base-h-8}" text-anchor="middle">${vals[i]}</text><text x="${x+37}" y="340" text-anchor="middle">${n}</text>`}).join('')}C.addEventListener('input',u);u()})();</script>
+<section class="lesson-section"><h2>Practice</h2><ol class="practice-list">
+<li>One symbol represents 6 books. What do 3½ symbols represent?</li>
+<li>Why should a bar-chart scale start at zero in most simple comparisons?</li>
+<li>State two differences between a bar chart and histogram.</li>
+<li>What information must every bar chart include?</li></ol></section>
+
+<section class="lesson-section answers-section">
+<h2>✅ Check Your Work</h2>
+<details>
+<summary>Show answers and working</summary>
+<div class="answers-content"><ol><li>3.5×6=21 books.</li><li>A shortened scale can exaggerate small differences and mislead the reader.</li><li>Bar-chart bars are separated and represent categories; histogram bars touch and represent continuous intervals.</li><li>A title, labelled axes, a suitable scale and correctly sized bars.</li></ol></div>
+</details>
+</section>
+<section class="lesson-section"><h2>Summary</h2><ul class="summary-list"><li>Keys control pictogram values.</li><li>Bar charts compare separate categories.</li></ul></section>
+
+<section class="lesson-section">
+<h2>🧠 StudyNest Statistical Thinking Routine</h2>
+<div class="problem-routine">
+<div class="routine-step"><strong>1. Read</strong>What information and context have been given?</div>
+<div class="routine-step"><strong>2. Identify</strong>What type of data, table, graph or measure is involved?</div>
+<div class="routine-step"><strong>3. Choose</strong>Which method or representation answers the question best?</div>
+<div class="routine-step"><strong>4. Work</strong>Organise the calculation or construction clearly.</div>
+<div class="routine-step"><strong>5. Interpret</strong>Explain what the answer means in the original context.</div>
+<div class="routine-step"><strong>6. Check</strong>Does the result fit the data and make reasonable sense?</div>
+</div>
+</section>
+
+<nav class="lesson-navigation">
+<a class="nav-button" href="03-tally-and-frequency-tables.html">← Frequency Tables</a>
+<a class="nav-button" href="index.html">Statistics Roadmap</a>
+<a class="nav-button primary" href="05-pie-charts.html">Pie Charts →</a>
+</nav>
+</main>
+
+<footer class="site-footer">
+    <strong>📚 StudyNest</strong>
+    <p>Helping students understand Mathematics, not memorise it.</p>
+    <p>© 2026 StudyNest</p>
+</footer>
+
+  <script src="../script-v3.js"></script>
+
+<script src="../studynest-3.1.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Learn how quantities change together in the same ratio.">
+        <title>Direct Variation | Variation | StudyNest</title>
+        <link rel="stylesheet" href="../styles/variation-lessons.css">
+      <link rel="stylesheet" href="../styles/studynest-v3.css">
+
+<link rel="stylesheet" href="../studynest-3.1.css">
+<link rel="stylesheet" href="../studynest-theme.css">
+</head>
+
+    <body>
+
+    <div class="announcement-bar">🚀 StudyNest is growing. New lessons and worksheets are added regularly.</div>
+    <header class="site-header">
+        <a href="../index.html" class="logo">📚 StudyNest</a>
+        <nav class="main-navigation">
+            <a href="../index.html">🏠 Home</a>
+            <a href="../topics.html">📘 Study by Topic</a>
+            <a href="index.html">↗ Variation</a>
+            <a href="../worksheets.html">📝 Worksheets</a>
+        </nav>
+    </header>
+
+
+    <section class="lesson-hero">
+        <div>
+            <p class="lesson-label">VARIATION · LESSON 02</p>
+            <h1>Direct Variation</h1>
+            <p class="lesson-subtitle">Learn how quantities change together in the same ratio.</p>
+            <div class="lesson-meta">
+                <span class="meta-pill">⏱️ 18–22 min</span>
+                <span class="meta-pill">📘 Foundation</span>
+                <span class="meta-pill">✏️ Worked examples included</span>
+            </div>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+            <div class="mini-coordinate-plane">
+                <span class="graph-line-demo"></span>
+                <span class="plot-dot dot-a"></span>
+                <span class="plot-dot dot-b"></span>
+                <span class="plot-dot dot-c"></span>
+            </div>
+        </div>
+    </section>
+
+<section class="lesson-section variation-real-life" id="direct-live-scenario">
+  <h2>💼 Start With Wages</h2>
+  <p>A worker earns <strong>$3 per hour</strong>. Move the slider and watch the hours, wages, equation, table, coordinates and graph update together.</p>
+  <div class="variation-board">
+    <div class="variation-controls">
+      <label class="variation-slider-label" for="direct-hours">Hours worked, x <strong id="direct-hours-value">5</strong></label>
+      <input id="direct-hours" type="range" min="1" max="8" value="5">
+      <div class="math-display" id="direct-equation">y = 3x → y = 3(5) = 15</div>
+      <div class="variation-live-cards"><div><span>Hours</span><strong id="direct-x-card">5</strong></div><div><span>Wages</span><strong id="direct-y-card">$15</strong></div></div>
+      <div class="variation-actions"><button type="button" id="direct-reset">Reset example</button><button type="button" id="direct-another">Try another example</button></div>
+    </div>
+    <div class="variation-graph-panel"><svg id="direct-graph" class="variation-svg" viewBox="0 0 560 360" role="img" aria-label="Direct variation graph with numbered axes and plotted coordinates"><g class="grid"></g><g class="axes"></g><path class="graph-line"></path><g class="graph-points"></g><g class="selected-coordinate"></g></svg></div>
+  </div>
+  <table class="example-table variation-live-table" id="direct-table"><thead><tr><th>x (hours)</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th></tr></thead><tbody><tr id="direct-table-y"><th>y (wages $)</th><td>3</td><td>6</td><td>9</td><td>12</td><td>15</td></tr></tbody></table>
+  <p class="interaction-note">The highlighted coordinate is <strong id="direct-coordinate">(5, 15)</strong>. Every plotted point follows the same rule.</p>
+</section>
+
+
+
+        <main class="lesson-main">
+
+<section class="lesson-section">
+    <h2>🎯 By the End of This Lesson...</h2>
+    <p>You should be able to:</p>
+    <ul class="objective-list">
+        <li>explain direct variation;</li>
+        <li>recognise direct-proportion language;</li>
+        <li>use ratio tables to test direct variation;</li>
+        <li>write y ∝ x and y = kx;</li>
+        <li>solve basic direct-variation problems.</li>
+    </ul>
+</section>
+
+<section class="lesson-section">
+    <h2>🤔 Think About This...</h2>
+
+    <p>One kilogram of tomatoes costs US$2.</p>
+
+    <div class="ratio-strip">
+        <div><strong>1 kg</strong><span>US$2</span></div>
+        <div><strong>2 kg</strong><span>US$4</span></div>
+        <div><strong>3 kg</strong><span>US$6</span></div>
+        <div><strong>5 kg</strong><span>US$10</span></div>
+    </div>
+
+    <div class="think-box">
+        What happens to the cost when the mass is multiplied by 2, 3 or 5?
+    </div>
+
+    <p>
+        The cost is multiplied by exactly the same factor. This is direct
+        variation.
+    </p>
+</section>
+
+<section class="lesson-section">
+    <h2>What Is Direct Variation?</h2>
+
+    <p>
+        Two quantities vary directly when they increase or decrease in the same
+        ratio.
+    </p>
+
+    <div class="key-idea">
+        <strong>Key idea:</strong> If x is multiplied by a number, y is
+        multiplied by the same number.
+    </div>
+
+    <div class="math-display">y ∝ x</div>
+
+    <p>
+        The symbol ∝ means “is proportional to”. To calculate with the
+        relationship, we replace it with an equation:
+    </p>
+
+    <div class="math-display">y = kx</div>
+
+    <p>
+        The fixed number k is called the constant of variation or constant of
+        proportionality.
+    </p>
+</section>
+
+<section class="lesson-section">
+    <h2>How Can We Test Direct Variation?</h2>
+
+    <p>
+        For direct variation, the ratio y ÷ x remains constant.
+    </p>
+
+    <table class="example-table">
+        <thead>
+            <tr>
+                <th>x</th>
+                <th>2</th>
+                <th>4</th>
+                <th>6</th>
+                <th>10</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td><strong>y</strong></td>
+                <td>6</td>
+                <td>12</td>
+                <td>18</td>
+                <td>30</td>
+            </tr>
+
+            <tr>
+                <td><strong>y ÷ x</strong></td>
+                <td>3</td>
+                <td>3</td>
+                <td>3</td>
+                <td>3</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="tip-box">
+        The constant ratio shows that y = 3x.
+    </div>
+</section>
+
+<section class="lesson-section">
+    <h2>Worked Example 1: Finding a Missing Value</h2>
+
+    <div class="worked-example">
+        <h3>
+            y varies directly as x. When x = 4, y = 20. Find y when x = 7.
+        </h3>
+
+        <div class="step">
+            <span class="step-number">1</span>
+            <p>Write y = kx.</p>
+        </div>
+
+        <div class="step">
+            <span class="step-number">2</span>
+            <p>Substitute x = 4 and y = 20: 20 = 4k.</p>
+        </div>
+
+        <div class="step">
+            <span class="step-number">3</span>
+            <p>k = 5.</p>
+        </div>
+
+        <div class="step">
+            <span class="step-number">4</span>
+            <p>The relationship is y = 5x.</p>
+        </div>
+
+        <div class="step">
+            <span class="step-number">5</span>
+            <p>When x = 7, y = 5(7) = 35.</p>
+        </div>
+    </div>
+</section>
+
+<section class="lesson-section">
+    <h2>Worked Example 2: A Real-Life Problem</h2>
+
+    <div class="worked-example">
+        <h3>
+            The cost C dollars of printing flyers varies directly as the number
+            n printed. Printing 80 flyers costs US$12. Find the cost of 150
+            flyers.
+        </h3>
+
+        <div class="step">
+            <span class="step-number">1</span>
+            <p>C = kn.</p>
+        </div>
+
+        <div class="step">
+            <span class="step-number">2</span>
+            <p>12 = 80k, so k = 12 ÷ 80 = 0.15.</p>
+        </div>
+
+        <div class="step">
+            <span class="step-number">3</span>
+            <p>C = 0.15n.</p>
+        </div>
+
+        <div class="step">
+            <span class="step-number">4</span>
+            <p>For 150 flyers, C = 0.15(150) = US$22.50.</p>
+        </div>
+    </div>
+
+    <div class="tip-box">
+        Interpret k in context. Here k = 0.15 means each flyer costs US$0.15.
+    </div>
+</section>
+
+<section class="lesson-section">
+    <h2>Direct Variation Graph</h2>
+
+    <p>
+        The graph of y = kx is a straight line passing through the origin.
+    </p>
+
+    <div class="math-display">x = 0  ⟹  y = k(0) = 0</div>
+
+    <p>
+        This is why the origin is an essential feature of a direct-proportion
+        graph.
+    </p>
+
+    <div class="warning-box">
+        A straight-line graph that does not pass through the origin is linear,
+        but it is not direct variation.
+    </div>
+</section>
+
+<section class="lesson-section">
+    <h2>🔍 How Do I Recognise Direct Variation in an Exam?</h2>
+
+    <div class="recognition-box">
+        <h3>Look for phrases such as:</h3>
+        <ul>
+            <li>“varies directly as...”</li>
+            <li>“is directly proportional to...”</li>
+            <li>“increases in the same ratio...”</li>
+            <li>“when one doubles, the other doubles...”</li>
+        </ul>
+
+        <p>
+            Also check for a constant ratio and a graph through the origin.
+        </p>
+    </div>
+</section>
+
+<section class="lesson-section">
+    <h2>⚠️ Common Mistakes</h2>
+
+    <div class="warning-box">
+        <strong>Mistake 1:</strong> Writing y = x + k.<br>
+        Direct variation uses multiplication: y = kx.
+        <br><br>
+
+        <strong>Mistake 2:</strong> Forgetting to find k before calculating a
+        new value.
+        <br><br>
+
+        <strong>Mistake 3:</strong> Assuming any straight-line relationship is
+        direct variation.
+    </div>
+</section>
+
+<section class="lesson-section">
+    <h2>✅ Quick Check</h2>
+
+    <div class="quick-check">
+        <div class="quick-card">
+            If y ∝ x and y = 18 when x = 6, find k.
+        </div>
+
+        <div class="quick-card">
+            If y = 4x, what happens to y when x is tripled?
+        </div>
+
+        <div class="quick-card">
+            Does y = 3x + 2 represent direct variation? Explain.
+        </div>
+    </div>
+</section>
+
+<section class="lesson-section">
+    <h2>Practice Questions</h2>
+
+    <span class="level-heading">Foundation</span>
+    <ol class="practice-list">
+        <li>
+            State whether each table represents direct variation:
+            <ol type="a">
+                <li>x: 1, 2, 3; y: 4, 8, 12</li>
+                <li>x: 1, 2, 3; y: 5, 9, 13</li>
+            </ol>
+        </li>
+
+        <li>
+            y varies directly as x. If y = 24 when x = 8, find k.
+        </li>
+
+        <li>
+            Given y = 7x, find:
+            <ol type="a">
+                <li>y when x = 5;</li>
+                <li>x when y = 56.</li>
+            </ol>
+        </li>
+    </ol>
+
+    <span class="level-heading">Developing</span>
+    <ol class="practice-list" start="4">
+        <li>
+            The cost C of mangoes varies directly as their mass m. If 3 kg
+            costs US$4.50, find:
+            <ol type="a">
+                <li>the equation connecting C and m;</li>
+                <li>the cost of 8 kg.</li>
+            </ol>
+        </li>
+
+        <li>
+            The distance d travelled at constant speed varies directly as time
+            t. A vehicle covers 135 km in 1.5 hours. Find the distance covered
+            in 4 hours.
+        </li>
+    </ol>
+
+    <span class="level-heading">Challenge</span>
+    <ol class="practice-list" start="6">
+        <li>
+            y varies directly as x. When x increases from 6 to 15, y increases
+            by 27. Find the equation connecting y and x.
+        </li>
+    </ol>
+</section>
+
+<section class="lesson-section answers-section">
+    <h2>✅ Check Your Work</h2>
+
+    <p>
+        Attempt every question before opening the answers.
+    </p>
+
+    <details>
+        <summary>Show practice answers</summary>
+
+        <div class="answers-content">
+            <h3>Foundation</h3>
+
+            <ol>
+                <li>
+                    <ol type="a">
+                        <li>
+                            Yes. y ÷ x = 4 for every pair.
+                        </li>
+                        <li>
+                            No. The ratios are 5, 4.5 and 13/3, so they are not constant.
+                        </li>
+                    </ol>
+                </li>
+
+                <li>
+                    k = 3.
+                    <div class="answer-working">
+                        y = kx<br>
+                        24 = 8k<br>
+                        k = 3
+                    </div>
+                </li>
+
+                <li>
+                    <ol type="a">
+                        <li>y = 35.</li>
+                        <li>x = 8.</li>
+                    </ol>
+                </li>
+            </ol>
+
+            <h3>Developing</h3>
+
+            <ol start="4">
+                <li>
+                    <ol type="a">
+                        <li>C = 1.5m.</li>
+                        <li>US$12.</li>
+                    </ol>
+
+                    <div class="answer-working">
+                        4.50 = 3k, so k = 1.50.<br>
+                        For 8 kg: C = 1.50(8) = 12.
+                    </div>
+                </li>
+
+                <li>
+                    360 km.
+                    <div class="answer-working">
+                        d = kt<br>
+                        135 = 1.5k, so k = 90 km/h.<br>
+                        d = 90(4) = 360 km.
+                    </div>
+                </li>
+            </ol>
+
+            <h3>Challenge</h3>
+
+            <ol start="6">
+                <li>
+                    y = 3x.
+                    <div class="answer-working">
+                        Let y = kx.<br>
+                        The change in y is k(15) − k(6) = 9k.<br>
+                        9k = 27, so k = 3.
+                    </div>
+                </li>
+            </ol>
+        </div>
+    </details>
+</section>
+
+<section class="lesson-section">
+    <h2>One-Minute Summary</h2>
+
+    <ul class="summary-list">
+        <li>Direct variation means quantities change in the same ratio.</li>
+        <li>Write y ∝ x, then y = kx.</li>
+        <li>The ratio y ÷ x is constant.</li>
+        <li>The graph is a straight line through the origin.</li>
+    </ul>
+</section>
+
+
+    <nav class="lesson-navigation">
+        <a class="nav-button" href="01-introduction-to-variation.html">← Introduction to Variation</a>
+        <a class="nav-button" href="index.html">Variation Roadmap</a>
+        <a class="nav-button primary" href="03-the-constant-of-variation.html">The Constant of Variation →</a>
+    </nav>
+
+        </main>
+
+
+    <footer class="site-footer">
+        <strong>📚 StudyNest</strong>
+        <p>Helping students understand Mathematics, not memorise it.</p>
+        <p>© 2026 StudyNest</p>
+    </footer>
+
+        <script>
+(function () {
+  function startVariationInteractions() {
+
+'use strict';
+const $=s=>document.querySelector(s);
+const fmt=n=>Number.isInteger(n)?String(n):n.toFixed(2).replace(/0+$/,'').replace(/\.$/,'');
+function drawGraph(svg,{xMax,yMax,xStep=1,yStep=1,curve,points,selected,xLabel='x',yLabel='y'}){
+ if(!svg)return; const W=560,H=360,m={l:62,r:28,t:22,b:52},pw=W-m.l-m.r,ph=H-m.t-m.b;
+ const sx=x=>m.l+(x/xMax)*pw, sy=y=>m.t+ph-(y/yMax)*ph;
+ let gh='',ah='';
+ for(let x=0;x<=xMax+1e-9;x+=xStep){gh+=`<line class="grid-line" x1="${sx(x)}" y1="${m.t}" x2="${sx(x)}" y2="${m.t+ph}"/>`;ah+=`<text class="tick-label" x="${sx(x)}" y="${m.t+ph+23}" text-anchor="middle">${fmt(x)}</text>`}
+ for(let y=0;y<=yMax+1e-9;y+=yStep){gh+=`<line class="grid-line" x1="${m.l}" y1="${sy(y)}" x2="${m.l+pw}" y2="${sy(y)}"/>`;ah+=`<text class="tick-label" x="${m.l-10}" y="${sy(y)+4}" text-anchor="end">${fmt(y)}</text>`}
+ ah+=`<line class="axis-line" x1="${m.l}" y1="${m.t+ph}" x2="${m.l+pw}" y2="${m.t+ph}"/><line class="axis-line" x1="${m.l}" y1="${m.t}" x2="${m.l}" y2="${m.t+ph}"/><text class="axis-label" x="${m.l+pw+5}" y="${m.t+ph+5}">${xLabel}</text><text class="axis-label" x="${m.l}" y="${m.t-7}" text-anchor="middle">${yLabel}</text>`;
+ svg.querySelector('.grid').innerHTML=gh;svg.querySelector('.axes').innerHTML=ah;
+ svg.querySelector('.graph-line').setAttribute('d',curve.map((p,i)=>`${i?'L':'M'} ${sx(p[0])} ${sy(p[1])}`).join(' '));
+ svg.querySelector('.graph-points').innerHTML=points.map(([x,y])=>`<circle class="point" cx="${sx(x)}" cy="${sy(y)}" r="5"/>`).join('');
+ const [x,y]=selected;svg.querySelector('.selected-coordinate').innerHTML=`<line class="guide" x1="${sx(x)}" y1="${sy(y)}" x2="${sx(x)}" y2="${sy(0)}"/><line class="guide" x1="${sx(0)}" y1="${sy(y)}" x2="${sx(x)}" y2="${sy(y)}"/><circle class="selected-point" cx="${sx(x)}" cy="${sy(y)}" r="7"/><text class="coordinate-label" x="${Math.min(sx(x)+10,W-100)}" y="${Math.max(sy(y)-10,16)}">(${fmt(x)}, ${fmt(y)})</text>`;
+}
+function bind(id,event,fn){const e=$(id);if(e)e.addEventListener(event,fn)}
+// Introduction
+const ih=$('#intro-hours');if(ih){const run=()=>{const x=+ih.value,y=3*x;$('#intro-hours-value').textContent=x;$('#intro-hours-card').textContent=x;$('#intro-wages-card').textContent=`$${y}`;$('#intro-direct-result').textContent=`${x} hour${x===1?'':'s'} → $${y}`};ih.addEventListener('input',run);run()}
+const iw=$('#intro-workers');if(iw){const run=()=>{const w=+iw.value,d=48/w;$('#intro-workers-value').textContent=w;$('#intro-workers-card').textContent=w;$('#intro-days-card').textContent=fmt(d);$('#intro-inverse-result').textContent=`${w} workers → ${fmt(d)} days`};iw.addEventListener('input',run);run()}
+// Direct variation: rate and selected x both change for another example
+const dh=$('#direct-hours');if(dh){let rate=3;const run=()=>{const x=+dh.value,y=rate*x;$('#direct-hours-value').textContent=x;$('#direct-x-card').textContent=x;$('#direct-y-card').textContent=`$${fmt(y)}`;$('#direct-equation').textContent=`y = ${rate}x → y = ${rate}(${x}) = ${fmt(y)}`;$('#direct-coordinate').textContent=`(${x}, ${fmt(y)})`;const vals=[1,2,3,4,5],ps=vals.map(v=>[v,rate*v]);drawGraph($('#direct-graph'),{xMax:8,yMax:40,xStep:1,yStep:5,curve:[[0,0],[8,8*rate]],points:ps,selected:[x,y],xLabel:'Hours',yLabel:'Wages'});const cells=$$('#direct-table-y td');cells.forEach((c,i)=>c.textContent=fmt(rate*(i+1)))};const $$=s=>document.querySelectorAll(s);dh.addEventListener('input',run);bind('#direct-reset','click',()=>{rate=3;dh.value=5;run()});bind('#direct-another','click',()=>{rate=rate===3?5:rate===5?2:3;run()});run()}
+// Chocolate
+const bs=$('#bars-slider');if(bs){let unit=3;const run=()=>{const n=+bs.value,c=unit*n;$('#bars-slider-value').textContent=n;$('#bars-count-card').textContent=`${n} bar${n===1?'':'s'}`;$('#bars-cost-card').textContent=`$${fmt(c)}`;$('#bars-equation').textContent=`k = ${unit}, so C = ${unit}(${n}) = $${fmt(c)}`;$('#chocolate-visual').innerHTML=Array.from({length:n},()=>'<span class="chocolate-bar" aria-hidden="true"></span>').join('');document.querySelectorAll('#bars-table-cost td').forEach((c,i)=>c.textContent=fmt(unit*(i+1)))};bs.addEventListener('input',run);bind('#bars-reset','click',()=>{unit=3;bs.value=5;run()});bind('#bars-another','click',()=>{unit=unit===3?2:unit===2?4:3;run()});run()}
+// Inverse
+const ws=$('#workers-slider');if(ws){let product=48;const run=()=>{const w=+ws.value,d=product/w;$('#workers-value').textContent=w;$('#workers-card').textContent=w;$('#days-card').textContent=fmt(d);$('#inverse-equation').textContent=`D = ${product} ÷ W → D = ${product} ÷ ${w} = ${fmt(d)}`;$('#inverse-coordinate').textContent=`(${w}, ${fmt(d)})`;const vals=[2,3,4,6,8],ps=vals.map(v=>[v,product/v]),curve=[];for(let x=2;x<=8;x+=.08)curve.push([x,product/x]);drawGraph($('#inverse-graph'),{xMax:8,yMax:32,xStep:1,yStep:4,curve,points:ps,selected:[w,d],xLabel:'Workers',yLabel:'Days'});document.querySelectorAll('#inverse-table-days td').forEach((c,i)=>c.textContent=fmt(product/vals[i]))};ws.addEventListener('input',run);bind('#inverse-reset','click',()=>{product=48;ws.value=4;run()});bind('#inverse-another','click',()=>{product=product===48?72:product===72?24:48;run()});run()}
+// Joint
+const ls=$('#length-slider'),ww=$('#width-slider');if(ls&&ww){const run=()=>{const l=+ls.value,w=+ww.value,a=l*w;$('#length-value').textContent=`${l} cm`;$('#width-value').textContent=`${w} cm`;$('#area-equation').textContent=`A = ${l} × ${w} = ${a} cm²`;$('#floor-area').textContent=`${a} cm²`;$('#length-caption').textContent=`${l} cm`;$('#width-caption').textContent=`${w} cm`;$('#joint-length-box').textContent=`${l} cm`;$('#joint-width-box').textContent=`${w} cm`;$('#joint-area-box').textContent=`${a} cm²`;const r=$('#floor-rectangle');r.style.width=`${70+l*18}px`;r.style.height=`${50+w*14}px`};ls.addEventListener('input',run);ww.addEventListener('input',run);bind('#joint-reset','click',()=>{ls.value=5;ww.value=8;run()});bind('#joint-another','click',()=>{ls.value=ls.value==='5'?7:5;ww.value=ww.value==='8'?4:8;run()});run()}
+// Partial
+const ds=$('#distance-slider');if(ds){let fixed=3,rate=.5;const run=()=>{const d=+ds.value,v=rate*d,t=fixed+v;$('#distance-value').textContent=`${d} km`;$('#distance-cost').textContent=`$${fmt(v)}`;$('#total-fare').textContent=`$${fmt(t)}`;$('#fare-equation').textContent=`F = ${fixed} + ${rate.toFixed(2)}(${d}) = $${fmt(t)}`;const vals=[0,5,10,15,20],ps=vals.map(x=>[x,fixed+rate*x]);drawGraph($('#partial-graph'),{xMax:20,yMax:20,xStep:2,yStep:2,curve:[[0,fixed],[20,fixed+20*rate]],points:ps,selected:[d,t],xLabel:'Distance',yLabel:'Fare'});document.querySelectorAll('#fare-table-row td').forEach((c,i)=>c.textContent=fmt(fixed+rate*vals[i]))};ds.addEventListener('input',run);bind('#partial-reset','click',()=>{fixed=3;rate=.5;ds.value=12;run()});bind('#partial-another','click',()=>{if(fixed===3){fixed=2;rate=.75}else{fixed=3;rate=.5}run()});run()}
+
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', startVariationInteractions, { once: true });
+  } else {
+    startVariationInteractions();
+  }
+})();
+</script>
+  <script src="../script-v3.js"></script>
+
+<script src="../studynest-3.1.js" defer></script>
+</body>
+    </html>

@@ -1,0 +1,1408 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Learn what surds are, how to recognise them and how to simplify square roots into exact surd form." name="description"/>
+<title>Surds Explained Step by Step | StudyNest</title>
+
+
+
+<link href="../styles/real-numbers-lessons.css" rel="stylesheet"/>
+<style id="studynest-real-animation-layer">
+.sn-concept-motion{margin:1.5rem auto 2rem;padding:1.25rem;border:2px solid rgba(19,48,76,.12);border-radius:22px;background:rgba(255,255,255,.88);overflow:hidden}
+.sn-concept-motion h2{margin-top:0}.sn-motion-stage{min-height:150px;display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;padding:18px;border-radius:18px;background:linear-gradient(135deg,rgba(232,246,255,.8),rgba(255,248,220,.75))}
+.sn-chip{display:inline-flex;align-items:center;justify-content:center;min-width:58px;min-height:48px;padding:10px 14px;border:2px solid #17324d;border-radius:14px;background:#fff;font-weight:800;font-size:1.1rem;box-shadow:0 5px 0 rgba(23,50,77,.12)}
+.sn-arrow{font-size:1.8rem;font-weight:900}.sn-pulse{animation:snPulse 2.4s ease-in-out infinite}.sn-slide{animation:snSlide 3s ease-in-out infinite}.sn-pop{animation:snPop 2.8s ease-in-out infinite}.sn-delay1{animation-delay:.45s}.sn-delay2{animation-delay:.9s}.sn-delay3{animation-delay:1.35s}
+.sn-line{position:relative;width:min(560px,94%);height:8px;border-radius:999px;background:#17324d;margin:42px auto 24px}.sn-line:before,.sn-line:after{content:'';position:absolute;top:-8px;width:2px;height:24px;background:#17324d}.sn-line:before{left:8%}.sn-line:after{right:8%}.sn-dot{position:absolute;top:-11px;width:30px;height:30px;border-radius:50%;background:#f5bf42;border:3px solid #17324d;animation:snTravel 4s ease-in-out infinite}
+.sn-grid{display:grid;grid-template-columns:repeat(4,54px);gap:7px}.sn-cell{width:54px;height:42px;display:grid;place-items:center;border:2px solid #17324d;border-radius:9px;background:#fff;font-weight:800}.sn-cell.active{animation:snCell 2.4s ease-in-out infinite;background:#fff4bd}
+.sn-bar{height:24px;border:2px solid #17324d;border-radius:999px;background:#fff;overflow:hidden;width:min(480px,90%)}.sn-fill{height:100%;width:0;background:#f5bf42;animation:snFill 3.5s ease-in-out infinite}
+.sn-caption{margin:.85rem 0 0;text-align:center;font-weight:700;color:#334e68}
+@keyframes snPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+@keyframes snSlide{0%,100%{transform:translateX(-18px)}50%{transform:translateX(18px)}}
+@keyframes snPop{0%,20%,100%{transform:translateY(0);opacity:.8}50%{transform:translateY(-10px);opacity:1}}
+@keyframes snTravel{0%,100%{left:7%}50%{left:86%}}
+@keyframes snCell{0%,100%{transform:scale(1);background:#fff}50%{transform:scale(1.08);background:#fff4bd}}
+@keyframes snFill{0%{width:0}55%,100%{width:75%}}
+@media (prefers-reduced-motion:reduce){.sn-concept-motion *{animation:none!important}}
+</style>  <link rel="stylesheet" href="../styles/studynest-v3.css">
+
+<link rel="stylesheet" href="../studynest-3.1.css">
+<link rel="stylesheet" href="../studynest-theme.css">
+</head>
+<body>
+
+
+<div class="announcement-bar">🚀 StudyNest is growing. New lessons and worksheets are added regularly.</div>
+<header class="site-header">
+<a class="logo" href="../index.html">📚 StudyNest</a>
+<nav class="main-navigation">
+<a href="../index.html">🏠 Home</a>
+<a href="../topics.html">📘 Study by Topic</a>
+<a href="index.html">🔢 Real Numbers</a>
+<a href="../worksheets.html">📝 Worksheets</a>
+</nav>
+</header>
+<section class="lesson-hero">
+<div>
+<p class="lesson-label">🔢 Real Numbers • Lesson 10 of 17</p>
+<h1>Surds</h1>
+<p class="lesson-subtitle">Learn how to recognise surds, simplify them and understand why exact
+        square-root answers are sometimes more useful than decimal
+        approximations.</p>
+<div class="lesson-meta">
+<span class="meta-pill">🔢 Real Numbers</span>
+<span class="meta-pill">✏️ Worked examples included</span>
+<span class="meta-pill">🧠 Step-by-step learning</span>
+</div>
+</div>
+<div aria-hidden="true" class="hero-visual">
+<div class="real-number-visual">
+<div class="number-bubble bubble-pi">π</div>
+<div class="number-bubble bubble-fraction">¾</div>
+<div class="number-bubble bubble-root">√2</div>
+<div class="number-bubble bubble-negative">−8</div>
+<div class="real-set-symbol">ℝ</div>
+<div class="number-line"></div>
+<span class="number-tick tick-one"></span>
+<span class="number-tick tick-two"></span>
+<span class="number-tick tick-three"></span>
+<span class="number-tick tick-four"></span>
+<span class="number-label label-one">−2</span>
+<span class="number-label label-two">−1</span>
+<span class="number-label label-three">0</span>
+<span class="number-label label-four">1</span>
+</div>
+</div>
+</section><main class="lesson-main"><section class="sn-concept-motion" aria-label="Animated concept demonstration"><h2>🎬 Keep exact values exact</h2><div class="sn-motion-stage" aria-hidden="true"><span class="sn-chip sn-slide">√12</span><span class="sn-arrow">=</span><span class="sn-chip sn-pop">√(4 × 3)</span><span class="sn-arrow">=</span><span class="sn-chip sn-pulse">2√3</span></div><p class="sn-caption">Look for the largest square factor inside the root.</p></section><section class="lesson-section">
+<h2>🎯 By the end of this lesson...</h2>
+<p>You should be able to:</p>
+<ul>
+<li>Explain what a surd is.</li>
+<li>Distinguish surds from ordinary whole-number roots.</li>
+<li>Recognise perfect squares.</li>
+<li>Identify whether a square root is a surd.</li>
+<li>Find the largest perfect-square factor of a number.</li>
+<li>Simplify surds into exact form.</li>
+<li>Add and subtract like surds.</li>
+<li>Multiply simple surds.</li>
+<li>Rationalise simple denominators.</li>
+<li>Apply surds to practical and geometrical problems.</li>
+</ul>
+</section><section class="lesson-section story-card">
+<h2>🤔 Think About This...</h2>
+<div class="real-life-situation">
+<div class="situation-icon">
+            🌿
+        </div>
+<div>
+<h3>A square garden</h3>
+<p>
+                A family wants to create a square garden with an area of
+                <strong>50 m²</strong>.
+            </p>
+<p>
+                Because the garden is square:
+            </p>
+<div class="math-box">
+                Area = side × side
+            </div>
+<p>
+                Therefore, one side must have length:
+            </p>
+<div class="math-box">
+                √50 metres
+            </div>
+<p>
+                But √50 is not a whole number.
+            </p>
+<p>
+                Can it be written in a simpler exact form?
+            </p>
+</div>
+</div>
+<div class="success-box">
+        Surds allow us to keep square-root answers exact instead of replacing
+        them with rounded decimal approximations.
+    </div>
+</section><section class="lesson-section">
+<h2>1️⃣ Revisiting Square Roots</h2>
+<p>
+        In the previous lesson, we learnt that a square root asks:
+    </p>
+<div class="question-box">
+        What number multiplied by itself gives the number inside the root?
+    </div>
+<div class="worked-example">
+<h3>Example 1: Find √25</h3>
+<div class="math-box">
+            5 × 5 = 25
+        </div>
+<div class="success-box">
+            √25 = <strong>5</strong>
+</div>
+</div>
+<div class="worked-example">
+<h3>Example 2: Find √81</h3>
+<div class="math-box">
+            9 × 9 = 81
+        </div>
+<div class="success-box">
+            √81 = <strong>9</strong>
+</div>
+</div>
+<p>
+        Numbers such as 25 and 81 are called
+        <strong>perfect squares</strong>.
+    </p>
+</section><section class="lesson-section">
+<h2>2️⃣ Perfect Squares</h2>
+<p>
+        A perfect square is a number obtained by multiplying a whole number by
+        itself.
+    </p>
+<div class="perfect-square-grid">
+<div class="perfect-square-card">
+<span>1²</span>
+<strong>1</strong>
+</div>
+<div class="perfect-square-card">
+<span>2²</span>
+<strong>4</strong>
+</div>
+<div class="perfect-square-card">
+<span>3²</span>
+<strong>9</strong>
+</div>
+<div class="perfect-square-card">
+<span>4²</span>
+<strong>16</strong>
+</div>
+<div class="perfect-square-card">
+<span>5²</span>
+<strong>25</strong>
+</div>
+<div class="perfect-square-card">
+<span>6²</span>
+<strong>36</strong>
+</div>
+<div class="perfect-square-card">
+<span>7²</span>
+<strong>49</strong>
+</div>
+<div class="perfect-square-card">
+<span>8²</span>
+<strong>64</strong>
+</div>
+<div class="perfect-square-card">
+<span>9²</span>
+<strong>81</strong>
+</div>
+<div class="perfect-square-card">
+<span>10²</span>
+<strong>100</strong>
+</div>
+<div class="perfect-square-card">
+<span>11²</span>
+<strong>121</strong>
+</div>
+<div class="perfect-square-card">
+<span>12²</span>
+<strong>144</strong>
+</div>
+</div>
+<div class="tip-box">
+        Recognising perfect squares quickly makes simplifying surds much easier.
+    </div>
+</section><section class="lesson-section">
+<h2>3️⃣ What Is a Surd?</h2>
+<p>
+        A <strong>surd</strong> is a root that cannot be simplified to a whole
+        number or written exactly as a fraction of two integers.
+    </p>
+<div class="definition-grid">
+<div class="definition-card">
+<h3>✅ Surds</h3>
+<div class="math-box">
+                √2
+            </div>
+<div class="math-box">
+                √3
+            </div>
+<div class="math-box">
+                √5
+            </div>
+<div class="math-box">
+                √7
+            </div>
+</div>
+<div class="definition-card">
+<h3>❌ Not Surds</h3>
+<div class="math-box">
+                √25 = 5
+            </div>
+<div class="math-box">
+                √64 = 8
+            </div>
+<div class="math-box">
+                √121 = 11
+            </div>
+<div class="math-box">
+                ∛27 = 3
+            </div>
+</div>
+</div>
+<div class="note-box">
+        Not every square root is a surd. Always simplify the root before
+        classifying it.
+    </div>
+</section><section class="lesson-section">
+<h2>🔍 Exact and Approximate Values</h2>
+<p>
+        Consider √2.
+    </p>
+<div class="exact-approx-grid">
+<div class="exact-value-card">
+<h3>Exact value</h3>
+<div class="math-box">
+                √2
+            </div>
+<span class="exact-badge">
+                Exact
+            </span>
+</div>
+<div class="approx-value-card">
+<h3>Approximate value</h3>
+<div class="math-box">
+                √2 ≈ 1.414
+            </div>
+<span class="approx-badge">
+                Approximate
+            </span>
+</div>
+</div>
+<p>
+        The decimal value continues forever without repeating:
+    </p>
+<div class="math-box">
+        √2 = 1.414213562...
+    </div>
+<div class="success-box">
+        Writing √2 keeps the exact value. Writing 1.414 gives only an
+        approximation.
+    </div>
+</section><section class="lesson-section did-you-know-card">
+<h2>💡 Did You Know?</h2>
+<p>
+        Engineers, architects and scientists often keep answers in surd form
+        until the final stage of a calculation.
+    </p>
+<p>
+        This prevents rounding errors from building up.
+    </p>
+<div class="comparison-grid">
+<div class="comparison-card">
+<h3>Exact</h3>
+<div class="math-box">
+                5√2
+            </div>
+</div>
+<div class="comparison-card">
+<h3>Approximate</h3>
+<div class="math-box">
+                7.071...
+            </div>
+</div>
+</div>
+<p>
+        Both values represent the same quantity, but the surd keeps the answer
+        exact.
+    </p>
+</section><section class="lesson-section">
+<h2>4️⃣ Is It a Surd?</h2>
+<p>
+        Before deciding, simplify the root.
+    </p>
+<div class="surd-decision-flow">
+<div class="surd-flow-card main-surd-flow-card">
+            Square root
+        </div>
+<div class="surd-flow-arrow">
+            ↓
+        </div>
+<div class="surd-flow-question">
+            Does it simplify to a whole number?
+        </div>
+<div class="surd-flow-branches">
+<div class="surd-branch">
+<span class="branch-label yes-label">
+                    Yes
+                </span>
+<div class="surd-flow-arrow">
+                    ↓
+                </div>
+<div class="surd-flow-result not-surd-result">
+                    Not a surd
+                </div>
+</div>
+<div class="surd-branch">
+<span class="branch-label no-label">
+                    No
+                </span>
+<div class="surd-flow-arrow">
+                    ↓
+                </div>
+<div class="surd-flow-result surd-result">
+                    It may be a surd
+                </div>
+</div>
+</div>
+</div>
+<div class="worked-example">
+<h3>Example 3: Is √49 a surd?</h3>
+<div class="math-box">
+            √49 = 7
+        </div>
+<div class="success-box">
+            √49 is <strong>not</strong> a surd because it simplifies to a whole
+            number.
+        </div>
+</div>
+<div class="worked-example">
+<h3>Example 4: Is √11 a surd?</h3>
+<p>
+            11 is not a perfect square.
+        </p>
+<p>
+            √11 cannot be written exactly as a whole number or fraction.
+        </p>
+<div class="success-box">
+            √11 is a <strong>surd</strong>.
+        </div>
+</div>
+</section><section class="lesson-section">
+<h2>🧠 StudyNest Method: Recognising a Surd</h2>
+<div class="tip-box">
+<strong>Step 1:</strong>
+        Simplify the root if possible.
+
+        <br/><br/>
+<strong>Step 2:</strong>
+        Ask whether the number inside the root is a perfect square.
+
+        <br/><br/>
+<strong>Step 3:</strong>
+        If the root becomes a whole number, it is not a surd.
+
+        <br/><br/>
+<strong>Step 4:</strong>
+        If it cannot be written exactly as a whole number or fraction, it is a
+        surd.
+
+    </div>
+</section><section class="lesson-section">
+<h2>5️⃣ The Product Rule for Square Roots</h2>
+<p>
+        To simplify surds, we use:
+    </p>
+<div class="surd-rule-box">
+        √(a × b) = √a × √b
+    </div>
+<p>
+        This lets us split a square root into factors.
+    </p>
+<div class="worked-example">
+<h3>Example 5</h3>
+<div class="math-box">
+            √12
+        </div>
+<p>
+            Since 12 = 4 × 3:
+        </p>
+<div class="math-box">
+            √12 = √(4 × 3)
+        </div>
+<div class="math-box">
+            = √4 × √3
+        </div>
+<div class="math-box">
+            = 2√3
+        </div>
+</div>
+<div class="note-box">
+        We choose a perfect-square factor because its square root becomes a
+        whole number.
+    </div>
+</section><section class="lesson-section">
+<h2>6️⃣ Simplifying Surds</h2>
+<p>
+        Simplifying a surd means removing every possible perfect-square factor
+        from inside the root.
+    </p>
+<div class="worked-example">
+<h3>Example 6: Simplify √18</h3>
+<p>
+            Find the largest perfect-square factor of 18.
+        </p>
+<div class="factor-choice-grid">
+<div class="factor-choice-card">
+                18 = 1 × 18
+            </div>
+<div class="factor-choice-card best-factor-choice">
+                18 = 9 × 2
+            </div>
+</div>
+<div class="math-box">
+            √18 = √(9 × 2)
+        </div>
+<div class="math-box">
+            = √9 × √2
+        </div>
+<div class="math-box">
+            = 3√2
+        </div>
+<div class="success-box">
+            √18 simplifies to <strong>3√2</strong>.
+        </div>
+</div>
+<div class="worked-example">
+<h3>Example 7: Simplify √72</h3>
+<p>
+            The largest perfect-square factor of 72 is 36.
+        </p>
+<div class="math-box">
+            72 = 36 × 2
+        </div>
+<div class="math-box">
+            √72 = √36 × √2
+        </div>
+<div class="math-box">
+            = 6√2
+        </div>
+<div class="success-box">
+            √72 simplifies to <strong>6√2</strong>.
+        </div>
+</div>
+</section><section class="lesson-section">
+<h2>🧠 StudyNest Method: Simplifying a Surd</h2>
+<div class="tip-box">
+<strong>Step 1:</strong>
+        Check whether the number inside the root is already a perfect square.
+
+        <br/><br/>
+<strong>Step 2:</strong>
+        If not, find its largest perfect-square factor.
+
+        <br/><br/>
+<strong>Step 3:</strong>
+        Write the number as:
+        <br/><br/>
+        perfect-square factor × remaining factor.
+
+        <br/><br/>
+<strong>Step 4:</strong>
+        Split the square root.
+
+        <br/><br/>
+<strong>Step 5:</strong>
+        Calculate the square root of the perfect-square factor.
+
+        <br/><br/>
+<strong>Step 6:</strong>
+        Check that the number remaining inside the root cannot be simplified
+        further.
+
+    </div>
+<div class="success-box">
+        Look for the largest perfect-square factor first. This usually gives the
+        shortest solution.
+    </div>
+</section><section class="lesson-section">
+<h2>7️⃣ More Simplifying Examples</h2>
+<div class="worked-example">
+<h3>Example 8: Simplify √8</h3>
+<div class="math-box">
+            8 = 4 × 2
+        </div>
+<div class="math-box">
+            √8 = √4 × √2
+        </div>
+<div class="success-box">
+            √8 = <strong>2√2</strong>
+</div>
+</div>
+<div class="worked-example">
+<h3>Example 9: Simplify √27</h3>
+<div class="math-box">
+            27 = 9 × 3
+        </div>
+<div class="math-box">
+            √27 = √9 × √3
+        </div>
+<div class="success-box">
+            √27 = <strong>3√3</strong>
+</div>
+</div>
+<div class="worked-example">
+<h3>Example 10: Simplify √45</h3>
+<div class="math-box">
+            45 = 9 × 5
+        </div>
+<div class="math-box">
+            √45 = √9 × √5
+        </div>
+<div class="success-box">
+            √45 = <strong>3√5</strong>
+</div>
+</div>
+<div class="worked-example">
+<h3>Example 11: Simplify √200</h3>
+<div class="math-box">
+            200 = 100 × 2
+        </div>
+<div class="math-box">
+            √200 = √100 × √2
+        </div>
+<div class="success-box">
+            √200 = <strong>10√2</strong>
+</div>
+</div>
+</section><section class="lesson-section">
+<h2>🌍 Real-Life Example: A Square Floor</h2>
+<div class="worked-example">
+<h3>Example 12</h3>
+<p>
+            A square floor has an area of <strong>72 m²</strong>.
+        </p>
+<p>
+            Find the exact length of one side.
+        </p>
+<div class="math-box">
+            Side length = √72
+        </div>
+<div class="math-box">
+            √72 = √(36 × 2)
+        </div>
+<div class="math-box">
+            = 6√2
+        </div>
+<div class="success-box">
+            The exact side length is <strong>6√2 metres</strong>.
+        </div>
+<div class="note-box">
+            A decimal answer would be approximate. The surd form gives the exact
+            length.
+        </div>
+</div>
+</section><section class="lesson-section">
+<h2>8️⃣ Simplifying Surds with Coefficients</h2>
+<p>
+        A coefficient is the number written in front of a surd.
+    </p>
+<div class="math-box">
+        3√5
+    </div>
+<p>
+        In this expression, 3 is the coefficient.
+    </p>
+<div class="worked-example">
+<h3>Example 13: Simplify 3√12</h3>
+<p>
+            Simplify the surd first.
+        </p>
+<div class="math-box">
+            √12 = 2√3
+        </div>
+<p>
+            Multiply the coefficient by 2.
+        </p>
+<div class="math-box">
+            3 × 2√3
+        </div>
+<div class="success-box">
+            3√12 = <strong>6√3</strong>
+</div>
+</div>
+<div class="worked-example">
+<h3>Example 14: Simplify 5√20</h3>
+<div class="math-box">
+            √20 = √(4 × 5)
+        </div>
+<div class="math-box">
+            = 2√5
+        </div>
+<div class="math-box">
+            5 × 2√5 = 10√5
+        </div>
+<div class="success-box">
+            5√20 = <strong>10√5</strong>
+</div>
+</div>
+</section><section class="lesson-section">
+<h2>⚠ Common Simplifying Mistakes</h2>
+<div class="warning-box">
+<strong>Mistake 1:</strong><br/><br/>
+        Assuming every root is a surd.
+        <br/><br/>
+        √36 = 6, so it is not a surd.
+    </div>
+<div class="warning-box">
+<strong>Mistake 2:</strong><br/><br/>
+        Choosing a factor that does not help.
+        <br/><br/>
+        For √18, using 3 × 6 does not remove a square root.
+        Using 9 × 2 does.
+    </div>
+<div class="warning-box">
+<strong>Mistake 3:</strong><br/><br/>
+        Stopping before the surd is fully simplified.
+        <br/><br/>
+        √48 = 4√3, not 2√12.
+    </div>
+<div class="warning-box">
+<strong>Mistake 4:</strong><br/><br/>
+        Splitting a sum incorrectly.
+        <br/><br/>
+        √(a + b) is generally not equal to √a + √b.
+    </div>
+</section><section class="lesson-section">
+<h2>9️⃣ Like and Unlike Surds</h2>
+<p>
+        Surds are called <strong>like surds</strong> when the root part is
+        exactly the same.
+    </p>
+<div class="surd-type-grid">
+<div class="surd-type-card like-surd-card">
+<h3>✅ Like Surds</h3>
+<div class="math-box">
+                3√5 and 7√5
+            </div>
+<div class="math-box">
+                2√3 and −4√3
+            </div>
+<p>
+                The number inside each square root is the same.
+            </p>
+</div>
+<div class="surd-type-card unlike-surd-card">
+<h3>❌ Unlike Surds</h3>
+<div class="math-box">
+                3√2 and 3√5
+            </div>
+<div class="math-box">
+                √7 and 4√3
+            </div>
+<p>
+                The root parts are different.
+            </p>
+</div>
+</div>
+<div class="note-box">
+        Like surds behave in a similar way to like terms in Algebra.
+        <br/><br/>
+        For example, 3x and 5x are like terms, while 3√2 and 5√2 are like
+        surds.
+    </div>
+</section><section class="lesson-section">
+<h2>🔟 Adding Like Surds</h2>
+<p>
+        To add like surds, add their coefficients and keep the common surd.
+    </p>
+<div class="worked-example">
+<h3>Example 15: Simplify 3√5 + 2√5</h3>
+<p>
+            Both terms contain √5, so they are like surds.
+        </p>
+<div class="math-box">
+            3√5 + 2√5
+        </div>
+<div class="math-box">
+            = (3 + 2)√5
+        </div>
+<div class="success-box">
+            3√5 + 2√5 = <strong>5√5</strong>
+</div>
+</div>
+<div class="worked-example">
+<h3>Example 16: Simplify 4√7 + 9√7</h3>
+<div class="math-box">
+            4√7 + 9√7
+        </div>
+<div class="math-box">
+            = (4 + 9)√7
+        </div>
+<div class="success-box">
+            4√7 + 9√7 = <strong>13√7</strong>
+</div>
+</div>
+</section><section class="lesson-section">
+<h2>1️⃣1️⃣ Subtracting Like Surds</h2>
+<p>
+        To subtract like surds, subtract their coefficients and keep the common
+        surd.
+    </p>
+<div class="worked-example">
+<h3>Example 17: Simplify 9√3 − 4√3</h3>
+<div class="math-box">
+            9√3 − 4√3
+        </div>
+<div class="math-box">
+            = (9 − 4)√3
+        </div>
+<div class="success-box">
+            9√3 − 4√3 = <strong>5√3</strong>
+</div>
+</div>
+<div class="worked-example">
+<h3>Example 18: Simplify 11√2 − 15√2</h3>
+<div class="math-box">
+            11√2 − 15√2
+        </div>
+<div class="math-box">
+            = (11 − 15)√2
+        </div>
+<div class="success-box">
+            11√2 − 15√2 = <strong>−4√2</strong>
+</div>
+</div>
+</section><section class="lesson-section">
+<h2>⚠ Unlike Surds Cannot Be Collected</h2>
+<div class="worked-example">
+<h3>Example 19: Simplify 2√3 + 5√2</h3>
+<p>
+            The root parts are different.
+        </p>
+<div class="math-box">
+            √3 ≠ √2
+        </div>
+<p>
+            Therefore, the two terms cannot be collected.
+        </p>
+<div class="success-box">
+            The answer remains:
+            <br/><br/>
+<strong>2√3 + 5√2</strong>
+</div>
+</div>
+<div class="warning-box">
+        Do not add the numbers inside the roots.
+        <br/><br/>
+        √2 + √3 is not equal to √5.
+    </div>
+</section><section class="lesson-section">
+<h2>🧠 StudyNest Method: Adding and Subtracting Surds</h2>
+<div class="tip-box">
+<strong>Step 1:</strong>
+        Simplify every surd first.
+
+        <br/><br/>
+<strong>Step 2:</strong>
+        Check whether the root parts are identical.
+
+        <br/><br/>
+<strong>Step 3:</strong>
+        If they are identical, add or subtract the coefficients.
+
+        <br/><br/>
+<strong>Step 4:</strong>
+        Keep the common surd unchanged.
+
+        <br/><br/>
+<strong>Step 5:</strong>
+        If the root parts differ, leave the terms separate.
+
+    </div>
+</section><section class="lesson-section">
+<h2>1️⃣2️⃣ Simplify Before Collecting</h2>
+<p>
+        Surds that initially look different may become like surds after
+        simplification.
+    </p>
+<div class="worked-example">
+<h3>Example 20: Simplify √12 + √27</h3>
+<p>
+            Simplify each surd separately.
+        </p>
+<div class="math-box">
+            √12 = √(4 × 3) = 2√3
+        </div>
+<div class="math-box">
+            √27 = √(9 × 3) = 3√3
+        </div>
+<p>
+            They are now like surds.
+        </p>
+<div class="math-box">
+            2√3 + 3√3
+        </div>
+<div class="success-box">
+            √12 + √27 = <strong>5√3</strong>
+</div>
+</div>
+<div class="worked-example">
+<h3>Example 21: Simplify √48 + 2√27</h3>
+<div class="math-box">
+            √48 = √(16 × 3) = 4√3
+        </div>
+<div class="math-box">
+            2√27 = 2(3√3) = 6√3
+        </div>
+<div class="math-box">
+            4√3 + 6√3
+        </div>
+<div class="success-box">
+            √48 + 2√27 = <strong>10√3</strong>
+</div>
+</div>
+</section><section class="lesson-section">
+<h2>1️⃣3️⃣ Multiplying Simple Surds</h2>
+<p>
+        When multiplying square roots, multiply the numbers inside the roots.
+    </p>
+<div class="surd-rule-box">
+        √a × √b = √(ab)
+    </div>
+<div class="worked-example">
+<h3>Example 22: Simplify √5 × √3</h3>
+<div class="math-box">
+            √5 × √3 = √15
+        </div>
+<div class="success-box">
+            √5 × √3 = <strong>√15</strong>
+</div>
+</div>
+<div class="worked-example">
+<h3>Example 23: Simplify √6 × √2</h3>
+<div class="math-box">
+            √6 × √2 = √12
+        </div>
+<p>
+            Simplify √12.
+        </p>
+<div class="math-box">
+            √12 = √(4 × 3)
+        </div>
+<div class="success-box">
+            √6 × √2 = <strong>2√3</strong>
+</div>
+</div>
+</section><section class="lesson-section">
+<h2>1️⃣4️⃣ Multiplying Surds with Coefficients</h2>
+<p>
+        Multiply the coefficients together and multiply the surds together.
+    </p>
+<div class="worked-example">
+<h3>Example 24: Simplify 2√3 × 4√5</h3>
+<div class="surd-multiplication-grid">
+<div class="surd-multiplication-card">
+<h3>Coefficients</h3>
+<div class="math-box">
+                    2 × 4 = 8
+                </div>
+</div>
+<div class="surd-multiplication-card">
+<h3>Surds</h3>
+<div class="math-box">
+                    √3 × √5 = √15
+                </div>
+</div>
+</div>
+<div class="success-box">
+            2√3 × 4√5 = <strong>8√15</strong>
+</div>
+</div>
+<div class="worked-example">
+<h3>Example 25: Simplify 3√2 × 2√8</h3>
+<div class="math-box">
+            3 × 2 = 6
+        </div>
+<div class="math-box">
+            √2 × √8 = √16 = 4
+        </div>
+<div class="math-box">
+            6 × 4 = 24
+        </div>
+<div class="success-box">
+            3√2 × 2√8 = <strong>24</strong>
+</div>
+</div>
+</section><section class="lesson-section">
+<h2>1️⃣5️⃣ Squaring a Surd</h2>
+<p>
+        A square root and a square undo each other.
+    </p>
+<div class="surd-rule-box">
+        (√a)² = a
+    </div>
+<div class="worked-example">
+<h3>Example 26: Calculate (√7)²</h3>
+<div class="math-box">
+            (√7)² = √7 × √7
+        </div>
+<div class="math-box">
+            = √49
+        </div>
+<div class="success-box">
+            (√7)² = <strong>7</strong>
+</div>
+</div>
+<div class="worked-example">
+<h3>Example 27: Calculate (3√2)²</h3>
+<p>
+            Square both the coefficient and the surd.
+        </p>
+<div class="math-box">
+            (3√2)² = 3² × (√2)²
+        </div>
+<div class="math-box">
+            = 9 × 2
+        </div>
+<div class="success-box">
+            (3√2)² = <strong>18</strong>
+</div>
+</div>
+</section><section class="lesson-section">
+<h2>1️⃣6️⃣ Rationalising a Simple Denominator</h2>
+<p>
+        A rationalised denominator does not contain a surd.
+    </p>
+<p>
+        Consider:
+    </p>
+<div class="math-box">
+        1/√2
+    </div>
+<p>
+        Multiply the numerator and denominator by √2.
+    </p>
+<div class="math-box">
+        1/√2 × √2/√2
+    </div>
+<div class="math-box">
+        = √2/(√2 × √2)
+    </div>
+<div class="math-box">
+        = √2/2
+    </div>
+<div class="success-box">
+        The rationalised form of 1/√2 is <strong>√2/2</strong>.
+    </div>
+<div class="note-box">
+        Multiplying the numerator and denominator by the same non-zero value
+        does not change the value of the fraction.
+    </div>
+</section><section class="lesson-section">
+<h2>🧠 StudyNest Method: Rationalising a Denominator</h2>
+<div class="tip-box">
+<strong>Step 1:</strong>
+        Identify the surd in the denominator.
+
+        <br/><br/>
+<strong>Step 2:</strong>
+        Multiply both the numerator and denominator by that surd.
+
+        <br/><br/>
+<strong>Step 3:</strong>
+        Multiply the numerator.
+
+        <br/><br/>
+<strong>Step 4:</strong>
+        Use √a × √a = a in the denominator.
+
+        <br/><br/>
+<strong>Step 5:</strong>
+        Simplify the final fraction if possible.
+
+    </div>
+</section><section class="lesson-section">
+<h2>1️⃣7️⃣ More Rationalising Examples</h2>
+<div class="worked-example">
+<h3>Example 28: Rationalise 3/√5</h3>
+<div class="math-box">
+            3/√5 × √5/√5
+        </div>
+<div class="math-box">
+            = 3√5/5
+        </div>
+<div class="success-box">
+            3/√5 = <strong>3√5/5</strong>
+</div>
+</div>
+<div class="worked-example">
+<h3>Example 29: Rationalise 5/√3</h3>
+<div class="math-box">
+            5/√3 × √3/√3
+        </div>
+<div class="math-box">
+            = 5√3/3
+        </div>
+<div class="success-box">
+            5/√3 = <strong>5√3/3</strong>
+</div>
+</div>
+<div class="worked-example">
+<h3>Example 30: Rationalise 6/√2</h3>
+<div class="math-box">
+            6/√2 × √2/√2
+        </div>
+<div class="math-box">
+            = 6√2/2
+        </div>
+<p>
+            Simplify by dividing by 2.
+        </p>
+<div class="success-box">
+            6/√2 = <strong>3√2</strong>
+</div>
+</div>
+</section><section class="lesson-section">
+<h2>🌍 Real-Life Example: Diagonal of a Square</h2>
+<div class="worked-example">
+<h3>Example 31</h3>
+<p>
+            A square noticeboard has side length <strong>5 metres</strong>.
+        </p>
+<p>
+            The diagonal forms the hypotenuse of a right-angled triangle.
+        </p>
+<div class="math-box">
+            Diagonal² = 5² + 5²
+        </div>
+<div class="math-box">
+            = 25 + 25
+        </div>
+<div class="math-box">
+            = 50
+        </div>
+<div class="math-box">
+            Diagonal = √50
+        </div>
+<div class="math-box">
+            = √(25 × 2)
+        </div>
+<div class="success-box">
+            The exact diagonal is <strong>5√2 metres</strong>.
+        </div>
+</div>
+</section><section class="lesson-section">
+<h2>🌍 Real-Life Example: Square Garden</h2>
+<div class="worked-example">
+<h3>Example 32</h3>
+<p>
+            A square garden has an area of <strong>200 m²</strong>.
+        </p>
+<p>
+            Find the exact side length.
+        </p>
+<div class="math-box">
+            Side = √200
+        </div>
+<div class="math-box">
+            = √(100 × 2)
+        </div>
+<div class="math-box">
+            = 10√2
+        </div>
+<div class="success-box">
+            Each side is exactly <strong>10√2 metres</strong>.
+        </div>
+</div>
+</section><section class="lesson-section">
+<h2>🎯 Exam Tips</h2>
+<div class="tip-box">
+        Memorise common perfect squares so you can recognise useful factors
+        quickly.
+    </div>
+<div class="tip-box">
+        Simplify every surd before trying to add or subtract terms.
+    </div>
+<div class="tip-box">
+        If the question asks for an exact answer, do not replace the surd with a
+        rounded decimal.
+    </div>
+<div class="tip-box">
+        When rationalising a simple denominator, multiply the numerator and
+        denominator by the surd in the denominator.
+    </div>
+<div class="tip-box">
+        Check that no perfect-square factor remains inside the final root.
+    </div>
+</section><section class="lesson-section">
+<h2>⚠ Common Mistakes</h2>
+<div class="warning-box">
+<strong>Mistake 1:</strong><br/><br/>
+        Thinking every square root is a surd.
+        <br/><br/>
+        √64 = 8, so it is not a surd.
+    </div>
+<div class="warning-box">
+<strong>Mistake 2:</strong><br/><br/>
+        Adding unlike surds.
+        <br/><br/>
+        √2 + √3 cannot be simplified to √5.
+    </div>
+<div class="warning-box">
+<strong>Mistake 3:</strong><br/><br/>
+        Collecting terms before simplifying them.
+        <br/><br/>
+        √12 and √27 become like surds only after simplification.
+    </div>
+<div class="warning-box">
+<strong>Mistake 4:</strong><br/><br/>
+        Forgetting to multiply the coefficients when multiplying surds.
+    </div>
+<div class="warning-box">
+<strong>Mistake 5:</strong><br/><br/>
+        Rationalising only the denominator.
+        <br/><br/>
+        You must multiply both numerator and denominator by the same surd.
+    </div>
+<div class="warning-box">
+<strong>Mistake 6:</strong><br/><br/>
+        Giving a decimal when the question requests an exact value.
+    </div>
+</section><section class="lesson-section practice-card">
+<h2>🎮 Your Turn!</h2>
+<h3>🟢 Foundation Questions</h3>
+<ol>
+<li>State whether √36 is a surd.</li>
+<li>State whether √13 is a surd.</li>
+<li>Simplify √8.</li>
+<li>Simplify √18.</li>
+<li>Simplify √27.</li>
+<li>Simplify √45.</li>
+<li>Simplify √75.</li>
+<li>Simplify √200.</li>
+</ol>
+<h3>🔵 Developing Questions</h3>
+<ol start="9">
+<li>Simplify 3√12.</li>
+<li>Simplify 5√20.</li>
+<li>Simplify 4√50.</li>
+<li>Simplify 2√3 + 7√3.</li>
+<li>Simplify 9√5 − 4√5.</li>
+<li>Simplify √12 + √27.</li>
+<li>Simplify √6 × √2.</li>
+<li>Simplify 3√2 × 2√7.</li>
+</ol>
+<h3>🔴 Challenge Questions</h3>
+<ol start="17">
+<li>Simplify √48 + 2√27.</li>
+<li>Simplify 3√8 + √18.</li>
+<li>Simplify (4√3)².</li>
+<li>Rationalise 5/√3.</li>
+<li>Rationalise 7/√2.</li>
+<li>Rationalise 8/√5.</li>
+<li>
+            A square floor has an area of 98 m².
+            Find the exact length of one side in simplest surd form.
+        </li>
+<li>
+            A square garden has an area of 200 m².
+            Find the exact side length.
+        </li>
+</ol>
+<details>
+<summary>✅ Show Answers</summary>
+<ol>
+<li>
+                No. √36 = 6.
+            </li>
+<li>
+                Yes. √13 cannot be written exactly as a whole number or
+                fraction.
+            </li>
+<li>
+                √8 = <strong>2√2</strong>
+</li>
+<li>
+                √18 = <strong>3√2</strong>
+</li>
+<li>
+                √27 = <strong>3√3</strong>
+</li>
+<li>
+                √45 = <strong>3√5</strong>
+</li>
+<li>
+                √75 = <strong>5√3</strong>
+</li>
+<li>
+                √200 = <strong>10√2</strong>
+</li>
+<li>
+                3√12 = 3(2√3) = <strong>6√3</strong>
+</li>
+<li>
+                5√20 = 5(2√5) = <strong>10√5</strong>
+</li>
+<li>
+                4√50 = 4(5√2) = <strong>20√2</strong>
+</li>
+<li>
+                2√3 + 7√3 = <strong>9√3</strong>
+</li>
+<li>
+                9√5 − 4√5 = <strong>5√5</strong>
+</li>
+<li>
+                √12 + √27
+                <br/><br/>
+                = 2√3 + 3√3
+                <br/><br/>
+                = <strong>5√3</strong>
+</li>
+<li>
+                √6 × √2 = √12 = <strong>2√3</strong>
+</li>
+<li>
+                3√2 × 2√7 = <strong>6√14</strong>
+</li>
+<li>
+                √48 + 2√27
+                <br/><br/>
+                = 4√3 + 6√3
+                <br/><br/>
+                = <strong>10√3</strong>
+</li>
+<li>
+                3√8 + √18
+                <br/><br/>
+                = 3(2√2) + 3√2
+                <br/><br/>
+                = 6√2 + 3√2
+                <br/><br/>
+                = <strong>9√2</strong>
+</li>
+<li>
+                (4√3)² = 16 × 3 = <strong>48</strong>
+</li>
+<li>
+                5/√3 = <strong>5√3/3</strong>
+</li>
+<li>
+                7/√2 = 7√2/2
+            </li>
+<li>
+                8/√5 = 8√5/5
+            </li>
+<li>
+                √98 = √(49 × 2) = <strong>7√2 m</strong>
+</li>
+<li>
+                √200 = √(100 × 2) = <strong>10√2 m</strong>
+</li>
+</ol>
+</details>
+</section><section class="lesson-section">
+<h2>🧠 Remember This</h2>
+<div class="success-box">
+        A surd is an irrational root kept in exact form.
+        <br/><br/>
+        Not every root is a surd.
+        <br/><br/>
+        To simplify, find the largest perfect-square factor.
+        <br/><br/>
+        Only like surds can be added or subtracted.
+        <br/><br/>
+        Multiply coefficients and root parts separately.
+        <br/><br/>
+        Rationalising removes a surd from the denominator.
+        <br/><br/>
+        Keep a surd when the question asks for an exact answer.
+    </div>
+</section><section class="lesson-section">
+<h2>🎯 Before Moving On...</h2>
+<ul class="check-list">
+<li>✅ Can I explain what a surd is?</li>
+<li>✅ Can I distinguish perfect-square roots from surds?</li>
+<li>✅ Can I simplify a surd fully?</li>
+<li>✅ Can I simplify a surd with a coefficient?</li>
+<li>✅ Can I identify like and unlike surds?</li>
+<li>✅ Can I add and subtract like surds?</li>
+<li>✅ Can I multiply simple surds?</li>
+<li>✅ Can I rationalise a simple denominator?</li>
+<li>✅ Can I distinguish an exact value from an approximation?</li>
+</ul>
+</section><section class="lesson-section success-card">
+<h2>🎉 Well Done!</h2>
+<p>
+        You can now recognise, simplify and calculate with surds.
+    </p>
+<div class="success-box">
+        Remember:
+        <br/><br/>
+<strong>
+            Simplify first → Check for like surds → Use the correct operation →
+            Keep the answer exact
+        </strong>
+</div>
+</section><section class="lesson-section">
+<h2>📈 Your Progress</h2>
+<p>
+        Lesson <strong>10 of 17</strong>
+</p>
+<div class="progress-wrap">
+<div class="progress-label">
+<span>Real Numbers Progress</span>
+<strong>59%</strong>
+</div>
+<div class="progress-bar">
+<div class="progress-fill" style="width:59%;"></div>
+</div>
+</div>
+</section><nav class="lesson-navigation">
+<a class="nav-button" href="09-powers-squares-cubes-roots.html">← 09 Powers Squares Cubes Roots</a>
+<a class="nav-button" href="index.html">Real Numbers Roadmap</a>
+<a class="nav-button primary" href="11-number-patterns.html">11 Number Patterns →</a>
+</nav></main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="site-footer">
+<strong>📚 StudyNest</strong>
+<p>Helping students understand Mathematics, not memorise it.</p>
+<p>© 2026 StudyNest</p>
+</footer>  <script src="../script-v3.js"></script>
+
+<script src="../studynest-3.1.js" defer></script>
+</body>
+</html>

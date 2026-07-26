@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Learn how to calculate lower bounds, upper bounds and error intervals for rounded measurements using clear step-by-step methods." name="description"/>
+<title>Bounds and Error Intervals | StudyNest</title>
+
+
+
+<link href="../styles/real-numbers-lessons.css" rel="stylesheet"/>
+<style id="studynest-real-animation-layer">
+.sn-concept-motion{margin:1.5rem auto 2rem;padding:1.25rem;border:2px solid rgba(19,48,76,.12);border-radius:22px;background:rgba(255,255,255,.88);overflow:hidden}
+.sn-concept-motion h2{margin-top:0}.sn-motion-stage{min-height:150px;display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;padding:18px;border-radius:18px;background:linear-gradient(135deg,rgba(232,246,255,.8),rgba(255,248,220,.75))}
+.sn-chip{display:inline-flex;align-items:center;justify-content:center;min-width:58px;min-height:48px;padding:10px 14px;border:2px solid #17324d;border-radius:14px;background:#fff;font-weight:800;font-size:1.1rem;box-shadow:0 5px 0 rgba(23,50,77,.12)}
+.sn-arrow{font-size:1.8rem;font-weight:900}.sn-pulse{animation:snPulse 2.4s ease-in-out infinite}.sn-slide{animation:snSlide 3s ease-in-out infinite}.sn-pop{animation:snPop 2.8s ease-in-out infinite}.sn-delay1{animation-delay:.45s}.sn-delay2{animation-delay:.9s}.sn-delay3{animation-delay:1.35s}
+.sn-line{position:relative;width:min(560px,94%);height:8px;border-radius:999px;background:#17324d;margin:42px auto 24px}.sn-line:before,.sn-line:after{content:'';position:absolute;top:-8px;width:2px;height:24px;background:#17324d}.sn-line:before{left:8%}.sn-line:after{right:8%}.sn-dot{position:absolute;top:-11px;width:30px;height:30px;border-radius:50%;background:#f5bf42;border:3px solid #17324d;animation:snTravel 4s ease-in-out infinite}
+.sn-grid{display:grid;grid-template-columns:repeat(4,54px);gap:7px}.sn-cell{width:54px;height:42px;display:grid;place-items:center;border:2px solid #17324d;border-radius:9px;background:#fff;font-weight:800}.sn-cell.active{animation:snCell 2.4s ease-in-out infinite;background:#fff4bd}
+.sn-bar{height:24px;border:2px solid #17324d;border-radius:999px;background:#fff;overflow:hidden;width:min(480px,90%)}.sn-fill{height:100%;width:0;background:#f5bf42;animation:snFill 3.5s ease-in-out infinite}
+.sn-caption{margin:.85rem 0 0;text-align:center;font-weight:700;color:#334e68}
+@keyframes snPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+@keyframes snSlide{0%,100%{transform:translateX(-18px)}50%{transform:translateX(18px)}}
+@keyframes snPop{0%,20%,100%{transform:translateY(0);opacity:.8}50%{transform:translateY(-10px);opacity:1}}
+@keyframes snTravel{0%,100%{left:7%}50%{left:86%}}
+@keyframes snCell{0%,100%{transform:scale(1);background:#fff}50%{transform:scale(1.08);background:#fff4bd}}
+@keyframes snFill{0%{width:0}55%,100%{width:75%}}
+@media (prefers-reduced-motion:reduce){.sn-concept-motion *{animation:none!important}}
+</style>  <link rel="stylesheet" href="../styles/studynest-v3.css">
+
+<link rel="stylesheet" href="../studynest-3.1.css">
+<link rel="stylesheet" href="../studynest-theme.css">
+</head>
+<body>
+
+
+<div class="announcement-bar">🚀 StudyNest is growing. New lessons and worksheets are added regularly.</div>
+<header class="site-header">
+<a class="logo" href="../index.html">📚 StudyNest</a>
+<nav class="main-navigation">
+<a href="../index.html">🏠 Home</a>
+<a href="../topics.html">📘 Study by Topic</a>
+<a href="index.html">🔢 Real Numbers</a>
+<a href="../worksheets.html">📝 Worksheets</a>
+</nav>
+</header>
+<section class="lesson-hero">
+<div>
+<p class="lesson-label">🔢 Real Numbers • Lesson 17</p>
+<h1>Bounds and Error Intervals</h1>
+<p class="lesson-subtitle">Learn how rounded measurements represent a range of possible values and
+        how to calculate lower bounds, upper bounds and error intervals.</p>
+<div class="lesson-meta">
+<span class="meta-pill">🔢 Real Numbers</span>
+<span class="meta-pill">✏️ Worked examples included</span>
+<span class="meta-pill">🧠 Step-by-step learning</span>
+</div>
+</div>
+<div aria-hidden="true" class="hero-visual">
+<div class="real-number-visual">
+<div class="number-bubble bubble-pi">π</div>
+<div class="number-bubble bubble-fraction">¾</div>
+<div class="number-bubble bubble-root">√2</div>
+<div class="number-bubble bubble-negative">−8</div>
+<div class="real-set-symbol">ℝ</div>
+<div class="number-line"></div>
+<span class="number-tick tick-one"></span>
+<span class="number-tick tick-two"></span>
+<span class="number-tick tick-three"></span>
+<span class="number-tick tick-four"></span>
+<span class="number-label label-one">−2</span>
+<span class="number-label label-two">−1</span>
+<span class="number-label label-three">0</span>
+<span class="number-label label-four">1</span>
+</div>
+</div>
+</section><main class="lesson-main"><section class="sn-concept-motion" aria-label="Animated concept demonstration"><h2>🎬 See the interval around a rounded value</h2><div class="sn-motion-stage" aria-hidden="true"><div class="sn-line"><span class="sn-dot"></span></div><span class="sn-chip sn-pulse">4.5 ≤ x &lt; 5.5</span></div><p class="sn-caption">A rounded value represents every original value inside its error interval.</p></section><section class="lesson-section">
+<h2>🎯 By the end of this lesson...</h2>
+<p>You should be able to:</p>
+<ul>
+<li>Distinguish between exact and measured values.</li>
+<li>Explain why measured values contain uncertainty.</li>
+<li>Identify the unit to which a value was rounded.</li>
+<li>Calculate the lower bound of a rounded value.</li>
+<li>Calculate the upper bound of a rounded value.</li>
+<li>Write error intervals using inequality symbols.</li>
+<li>Find bounds for whole numbers and decimal measurements.</li>
+<li>Apply bounds to practical measurement problems.</li>
+</ul>
+</section><section class="lesson-section story-card">
+<h2>🤔 Think About This...</h2>
+<div class="real-life-situation">
+<div class="situation-icon">
+            ⚖️
+        </div>
+<div>
+<h3>Is the bag exactly 2 kilograms?</h3>
+<p>
+                A bag of sugar is labelled:
+            </p>
+<div class="measurement-label">
+                2 kg
+            </div>
+<p>
+                Does the bag have a mass of exactly 2.000000 kg?
+            </p>
+<p>
+                Its actual mass could instead be:
+            </p>
+<ul>
+<li>1.998 kg;</li>
+<li>2.001 kg;</li>
+<li>2.003 kg.</li>
+</ul>
+<p>
+                The value shown on the label may have been rounded.
+            </p>
+</div>
+</div>
+<div class="success-box">
+        A rounded measurement represents a range of possible actual values,
+        rather than only one exact value.
+    </div>
+</section><section class="lesson-section">
+<h2>1️⃣ Exact Values and Measured Values</h2>
+<div class="exact-measured-grid">
+<div class="exact-measured-card exact-count-card">
+<h3>Exact values</h3>
+<p>
+                Exact values are normally obtained by counting.
+            </p>
+<div class="example-chip-grid">
+<span>12 eggs</span>
+<span>30 learners</span>
+<span>8 books</span>
+<span>5 chairs</span>
+</div>
+<p>
+                There is no rounding uncertainty.
+            </p>
+</div>
+<div class="exact-measured-card measured-value-card">
+<h3>Measured values</h3>
+<p>
+                Measured values are obtained using instruments.
+            </p>
+<div class="example-chip-grid">
+<span>1.7 m</span>
+<span>35°C</span>
+<span>4.6 kg</span>
+<span>12.3 cm</span>
+</div>
+<p>
+                The displayed value may have been rounded.
+            </p>
+</div>
+</div>
+<div class="note-box">
+        Counting usually gives exact values. Measuring usually gives
+        approximations because measuring instruments have limited precision.
+    </div>
+</section><section class="lesson-section did-you-know-card">
+<h2>💡 Did You Know?</h2>
+<p>
+        Even highly accurate scientific instruments have limits.
+    </p>
+<p>
+        Scientists and engineers therefore record the range within which the
+        actual value is expected to lie.
+    </p>
+<div class="bounds-use-grid">
+<div class="bounds-use-card">
+<span>🏗️</span>
+<strong>Construction</strong>
+</div>
+<div class="bounds-use-card">
+<span>⚙️</span>
+<strong>Manufacturing</strong>
+</div>
+<div class="bounds-use-card">
+<span>🌡️</span>
+<strong>Temperature</strong>
+</div>
+<div class="bounds-use-card">
+<span>🧪</span>
+<strong>Scientific experiments</strong>
+</div>
+<div class="bounds-use-card">
+<span>🧁</span>
+<strong>Food measurement</strong>
+</div>
+<div class="bounds-use-card">
+<span>🛣️</span>
+<strong>Road distances</strong>
+</div>
+</div>
+</section><section class="lesson-section">
+<h2>2️⃣ What Is a Bound?</h2>
+<p>
+        A <strong>bound</strong> describes the smallest or largest possible
+        actual value represented by a rounded measurement.
+    </p>
+<div class="bounds-definition-grid">
+<div class="bound-definition-card lower-bound-card">
+<h3>Lower bound</h3>
+<p>
+                The smallest possible value that would round to the stated
+                measurement.
+            </p>
+</div>
+<div class="bound-definition-card upper-bound-card">
+<h3>Upper bound</h3>
+<p>
+                The value at which the measurement would begin rounding to the
+                next number.
+            </p>
+</div>
+</div>
+<div class="worked-example">
+<h3>Example 1: A length is 15 cm to the nearest centimetre</h3>
+<p>
+            Values from 14.5 cm up to, but not including, 15.5 cm round to
+            15 cm.
+        </p>
+<div class="bound-range-visual">
+<div class="bound-point included-point">
+<span>14.5</span>
+<strong>Lower bound</strong>
+</div>
+<div class="range-line">
+<span class="range-value">15 cm</span>
+</div>
+<div class="bound-point excluded-point">
+<span>15.5</span>
+<strong>Upper bound</strong>
+</div>
+</div>
+<div class="success-box">
+            Lower bound = <strong>14.5 cm</strong>
+<br/><br/>
+            Upper bound = <strong>15.5 cm</strong>
+</div>
+</div>
+</section><section class="lesson-section">
+<h2>3️⃣ The Half-Unit Rule</h2>
+<p>
+        To find bounds, first identify the unit used for rounding.
+    </p>
+<p>
+        Then find half of that unit.
+    </p>
+<div class="half-unit-table-wrap">
+<table class="study-table half-unit-table">
+<tr>
+<th>Rounded to the nearest...</th>
+<th>Rounding unit</th>
+<th>Half of the unit</th>
+</tr>
+<tr>
+<td>10</td>
+<td>10</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Whole number</td>
+<td>1</td>
+<td>0.5</td>
+</tr>
+<tr>
+<td>One decimal place</td>
+<td>0.1</td>
+<td>0.05</td>
+</tr>
+<tr>
+<td>Two decimal places</td>
+<td>0.01</td>
+<td>0.005</td>
+</tr>
+<tr>
+<td>Three decimal places</td>
+<td>0.001</td>
+<td>0.0005</td>
+</tr>
+</table>
+</div>
+<div class="bounds-formula-grid">
+<div class="bounds-formula-card lower-formula-card">
+<h3>Lower bound</h3>
+<div class="math-box">
+                Rounded value − half the rounding unit
+            </div>
+</div>
+<div class="bounds-formula-card upper-formula-card">
+<h3>Upper bound</h3>
+<div class="math-box">
+                Rounded value + half the rounding unit
+            </div>
+</div>
+</div>
+</section><section class="lesson-section">
+<h2>🧠 StudyNest Method: Finding Bounds</h2>
+<div class="tip-box">
+<strong>Step 1:</strong>
+        Identify the place value or unit to which the number was rounded.
+
+        <br/><br/>
+<strong>Step 2:</strong>
+        Find half of that rounding unit.
+
+        <br/><br/>
+<strong>Step 3:</strong>
+        Subtract the half-unit from the rounded value to find the lower bound.
+
+        <br/><br/>
+<strong>Step 4:</strong>
+        Add the half-unit to the rounded value to find the upper bound.
+
+        <br/><br/>
+<strong>Step 5:</strong>
+        Write the error interval using:
+        <br/><br/>
+        lower bound ≤ actual value &lt; upper bound
+
+    </div>
+<div class="study-method-summary">
+        Half below → Rounded value → Half above
+    </div>
+</section><section class="lesson-section">
+<h2>4️⃣ Bounds to the Nearest Whole Number</h2>
+<div class="worked-example">
+<h3>Example 2: A mass is 40 kg to the nearest kilogram</h3>
+<p>
+            The rounding unit is 1 kg.
+        </p>
+<div class="math-box">
+            Half of 1 kg = 0.5 kg
+        </div>
+<div class="bound-calculation-grid">
+<div class="bound-calculation-card">
+<h3>Lower bound</h3>
+<div class="math-box">
+                    40 − 0.5 = 39.5
+                </div>
+</div>
+<div class="bound-calculation-card">
+<h3>Upper bound</h3>
+<div class="math-box">
+                    40 + 0.5 = 40.5
+                </div>
+</div>
+</div>
+<div class="success-box">
+            Lower bound = <strong>39.5 kg</strong>
+<br/><br/>
+            Upper bound = <strong>40.5 kg</strong>
+</div>
+</div>
+<div class="worked-example">
+<h3>Example 3: A distance is 126 m to the nearest metre</h3>
+<div class="math-box">
+            Half of 1 m = 0.5 m
+        </div>
+<div class="math-box">
+            Lower bound = 126 − 0.5 = 125.5
+        </div>
+<div class="math-box">
+            Upper bound = 126 + 0.5 = 126.5
+        </div>
+<div class="success-box">
+            125.5 m ≤ actual distance &lt; 126.5 m
+        </div>
+</div>
+</section><section class="lesson-section">
+<h2>5️⃣ Bounds to One Decimal Place</h2>
+<div class="worked-example">
+<h3>Example 4: A distance is 3.6 km to one decimal place</h3>
+<p>
+            One decimal place means the number was rounded to the nearest 0.1.
+        </p>
+<div class="math-box">
+            Half of 0.1 = 0.05
+        </div>
+<div class="math-box">
+            Lower bound = 3.6 − 0.05 = 3.55
+        </div>
+<div class="math-box">
+            Upper bound = 3.6 + 0.05 = 3.65
+        </div>
+<div class="success-box">
+            3.55 km ≤ actual distance &lt; 3.65 km
+        </div>
+</div>
+<div class="worked-example">
+<h3>Example 5: A temperature is 28.4°C to one decimal place</h3>
+<div class="math-box">
+            Half of 0.1°C = 0.05°C
+        </div>
+<div class="math-box">
+            Lower bound = 28.4 − 0.05 = 28.35
+        </div>
+<div class="math-box">
+            Upper bound = 28.4 + 0.05 = 28.45
+        </div>
+<div class="success-box">
+            28.35°C ≤ actual temperature &lt; 28.45°C
+        </div>
+</div>
+</section><section class="lesson-section">
+<h2>6️⃣ Bounds to Two Decimal Places</h2>
+<div class="worked-example">
+<h3>Example 6: A height is 1.72 m to two decimal places</h3>
+<p>
+            Two decimal places means the number was rounded to the nearest
+            0.01 m.
+        </p>
+<div class="math-box">
+            Half of 0.01 = 0.005
+        </div>
+<div class="math-box">
+            Lower bound = 1.72 − 0.005 = 1.715
+        </div>
+<div class="math-box">
+            Upper bound = 1.72 + 0.005 = 1.725
+        </div>
+<div class="success-box">
+            1.715 m ≤ actual height &lt; 1.725 m
+        </div>
+</div>
+<div class="note-box">
+        The bounds normally contain one more decimal place than the rounded
+        value.
+    </div>
+</section><section class="lesson-section">
+<h2>7️⃣ Bounds to the Nearest Ten</h2>
+<div class="worked-example">
+<h3>Example 7: A crowd is estimated as 480 people to the nearest ten</h3>
+<p>
+            The rounding unit is 10.
+        </p>
+<div class="math-box">
+            Half of 10 = 5
+        </div>
+<div class="math-box">
+            Lower bound = 480 − 5 = 475
+        </div>
+<div class="math-box">
+            Upper bound = 480 + 5 = 485
+        </div>
+<div class="success-box">
+            475 ≤ actual number of people &lt; 485
+        </div>
+</div>
+<div class="warning-box">
+        Do not automatically use 0.5. The half-unit depends on what the value
+        was rounded to.
+    </div>
+</section><section class="lesson-section">
+<h2>8️⃣ Writing Error Intervals</h2>
+<p>
+        An <strong>error interval</strong> shows the complete range of possible
+        values.
+    </p>
+<div class="error-interval-formula">
+<span>Lower bound</span>
+<strong>≤ x &lt;</strong>
+<span>Upper bound</span>
+</div>
+<div class="worked-example">
+<h3>Example 8: A length is 20 cm to the nearest centimetre</h3>
+<div class="math-box">
+            Lower bound = 19.5 cm
+        </div>
+<div class="math-box">
+            Upper bound = 20.5 cm
+        </div>
+<div class="success-box">
+            19.5 ≤ x &lt; 20.5
+        </div>
+</div>
+</section><section class="lesson-section">
+<h2>9️⃣ Why Is the Upper Bound Not Included?</h2>
+<p>
+        Consider a value recorded as 20 to the nearest whole number.
+    </p>
+<div class="rounding-comparison-grid">
+<div class="rounding-comparison-card">
+<h3>20.49</h3>
+<p>
+                This rounds down to 20.
+            </p>
+<span class="included-label">
+                Included
+            </span>
+</div>
+<div class="rounding-comparison-card">
+<h3>20.50</h3>
+<p>
+                This rounds up to 21.
+            </p>
+<span class="excluded-label">
+                Not included
+            </span>
+</div>
+</div>
+<div class="math-box">
+        19.5 ≤ x &lt; 20.5
+    </div>
+<div class="warning-box">
+        Writing 19.5 ≤ x ≤ 20.5 is incorrect because 20.5 does not round to
+        20.
+    </div>
+</section><section class="lesson-section">
+<h2>🔍 Inequality Symbols in Error Intervals</h2>
+<div class="inequality-symbol-grid">
+<div class="inequality-symbol-card">
+<span>≤</span>
+<h3>Less than or equal to</h3>
+<p>
+                The lower bound is included.
+            </p>
+</div>
+<div class="inequality-symbol-card">
+<span>&lt;</span>
+<h3>Less than</h3>
+<p>
+                The upper bound is not included.
+            </p>
+</div>
+</div>
+<div class="success-box">
+        Use <strong>≤</strong> at the lower end and
+        <strong>&lt;</strong> at the upper end.
+    </div>
+</section><section class="lesson-section">
+<h2>🔟 Finding the Rounded Value from an Error Interval</h2>
+<div class="worked-example">
+<h3>Example 9</h3>
+<div class="math-box">
+            12.5 ≤ m &lt; 13.5
+        </div>
+<p>
+            The midpoint of the interval is:
+        </p>
+<div class="math-box">
+            (12.5 + 13.5) ÷ 2 = 13
+        </div>
+<p>
+            The interval has a width of 1, so the measurement was rounded to the
+            nearest whole number.
+        </p>
+<div class="success-box">
+            The recorded measurement was <strong>13</strong>, correct to the
+            nearest whole number.
+        </div>
+</div>
+</section><section class="lesson-section">
+<h2>🌍 Real-Life Example: Carpentry</h2>
+<div class="worked-example">
+<h3>Example 10</h3>
+<p>
+            A carpenter records the length of a wooden plank as
+            <strong>2.4 m</strong>, correct to the nearest 0.1 m.
+        </p>
+<div class="math-box">
+            Half of 0.1 m = 0.05 m
+        </div>
+<div class="math-box">
+            Lower bound = 2.4 − 0.05 = 2.35
+        </div>
+<div class="math-box">
+            Upper bound = 2.4 + 0.05 = 2.45
+        </div>
+<div class="success-box">
+            2.35 m ≤ actual length &lt; 2.45 m
+        </div>
+<div class="note-box">
+            This range matters when parts must fit together accurately.
+        </div>
+</div>
+</section><section class="lesson-section">
+<h2>🌍 Real-Life Example: Road Distance</h2>
+<div class="worked-example">
+<h3>Example 11</h3>
+<p>
+            A road distance is recorded as <strong>4.8 km</strong>, correct to
+            the nearest 0.1 km.
+        </p>
+<div class="math-box">
+            Lower bound = 4.8 − 0.05 = 4.75
+        </div>
+<div class="math-box">
+            Upper bound = 4.8 + 0.05 = 4.85
+        </div>
+<div class="success-box">
+            4.75 km ≤ actual distance &lt; 4.85 km
+        </div>
+</div>
+</section><section class="lesson-section">
+<h2>🌍 Real-Life Example: Package Mass</h2>
+<div class="worked-example">
+<h3>Example 12</h3>
+<p>
+            The mass of a parcel is recorded as <strong>6.35 kg</strong>,
+            correct to the nearest 0.01 kg.
+        </p>
+<div class="math-box">
+            Half of 0.01 kg = 0.005 kg
+        </div>
+<div class="math-box">
+            Lower bound = 6.35 − 0.005 = 6.345
+        </div>
+<div class="math-box">
+            Upper bound = 6.35 + 0.005 = 6.355
+        </div>
+<div class="success-box">
+            6.345 kg ≤ actual mass &lt; 6.355 kg
+        </div>
+</div>
+</section><section class="lesson-section">
+<h2>🧠 The StudyNest Bounds Strategy</h2>
+<div class="tip-box">
+<strong>Step 1:</strong>
+        Read what the value was rounded to.
+
+        <br/><br/>
+<strong>Step 2:</strong>
+        Write the rounding unit.
+
+        <br/><br/>
+<strong>Step 3:</strong>
+        Divide the rounding unit by 2.
+
+        <br/><br/>
+<strong>Step 4:</strong>
+        Subtract that amount for the lower bound.
+
+        <br/><br/>
+<strong>Step 5:</strong>
+        Add that amount for the upper bound.
+
+        <br/><br/>
+<strong>Step 6:</strong>
+        Write the interval as:
+        <br/><br/>
+        lower bound ≤ value &lt; upper bound
+
+        <br/><br/>
+<strong>Step 7:</strong>
+        Include the correct measurement units.
+
+    </div>
+</section><section class="lesson-section">
+<h2>🎯 Exam Tips</h2>
+<div class="tip-box">
+        Identify the rounding unit before beginning any calculation.
+    </div>
+<div class="tip-box">
+        The adjustment is half the rounding unit, not the complete rounding
+        unit.
+    </div>
+<div class="tip-box">
+        The lower bound is included, while the upper bound is excluded.
+    </div>
+<div class="tip-box">
+        Bounds usually contain one more decimal place than the rounded value.
+    </div>
+<div class="tip-box">
+        Keep measurement units consistent throughout the calculation.
+    </div>
+<div class="tip-box">
+        Check that the original rounded value lies halfway between the two
+        bounds.
+    </div>
+</section><section class="lesson-section">
+<h2>⚠ Common Mistakes</h2>
+<div class="warning-box">
+<strong>Mistake 1:</strong><br/><br/>
+        Adding and subtracting the full rounding unit instead of half of it.
+    </div>
+<div class="warning-box">
+<strong>Mistake 2:</strong><br/><br/>
+        Assuming every whole number has bounds 0.5 away without checking
+        whether it was rounded to the nearest ten, hundred or another unit.
+    </div>
+<div class="warning-box">
+<strong>Mistake 3:</strong><br/><br/>
+        Including the upper bound using ≤.
+    </div>
+<div class="warning-box">
+<strong>Mistake 4:</strong><br/><br/>
+        Using 0.5 instead of 0.05 for a value rounded to one decimal place.
+    </div>
+<div class="warning-box">
+<strong>Mistake 5:</strong><br/><br/>
+        Confusing the lower and upper bounds.
+    </div>
+<div class="warning-box">
+<strong>Mistake 6:</strong><br/><br/>
+        Forgetting measurement units in the final answer.
+    </div>
+<div class="warning-box">
+<strong>Mistake 7:</strong><br/><br/>
+        Treating a counted quantity as though it were a rounded measurement.
+    </div>
+</section><section class="lesson-section practice-card">
+<h2>🎮 Your Turn!</h2>
+<h3>🟢 Foundation Questions</h3>
+<ol>
+<li>
+            State whether each value is exact or measured:
+            <br/><br/>
+            a) 18 learners
+            <br/>
+            b) 1.6 metres
+        </li>
+<li>
+            Find the lower and upper bounds of 15 kg, correct to the nearest
+            kilogram.
+        </li>
+<li>
+            Find the lower and upper bounds of 28 cm, correct to the nearest
+            centimetre.
+        </li>
+<li>
+            Write the error interval for 42 m, correct to the nearest metre.
+        </li>
+<li>
+            Find the bounds of 350, correct to the nearest ten.
+        </li>
+<li>
+            Find the bounds of 7200, correct to the nearest hundred.
+        </li>
+</ol>
+<h3>🔵 Developing Questions</h3>
+<ol start="7">
+<li>
+            Find the lower and upper bounds of 5.8 kg, correct to one decimal
+            place.
+        </li>
+<li>
+            Find the bounds of 16.42 cm, correct to two decimal places.
+        </li>
+<li>
+            Write the error interval for 7.3 litres, correct to one decimal
+            place.
+        </li>
+<li>
+            Write the error interval for 2.68 metres, correct to two decimal
+            places.
+        </li>
+<li>
+            A temperature is recorded as 31.6°C, correct to one decimal place.
+            Find its error interval.
+        </li>
+<li>
+            A package has a recorded mass of 4.25 kg, correct to the nearest
+            0.01 kg. Find its bounds.
+        </li>
+</ol>
+<h3>🔴 Challenge Questions</h3>
+<ol start="13">
+<li>
+            A road is recorded as 4.8 km long, correct to the nearest 0.1 km.
+            Find its lower bound, upper bound and error interval.
+        </li>
+<li>
+            The length of a field is recorded as 120 m, correct to the nearest
+            10 m. Write its error interval.
+        </li>
+<li>
+            The error interval for a mass is:
+            <br/><br/>
+            17.5 ≤ m &lt; 18.5
+            <br/><br/>
+            State the recorded mass and the degree of accuracy.
+        </li>
+<li>
+            The error interval for a length is:
+            <br/><br/>
+            6.25 ≤ x &lt; 6.35
+            <br/><br/>
+            State the recorded length and the unit to which it was rounded.
+        </li>
+<li>
+            A student writes the following interval for 12.4 cm, correct to one
+            decimal place:
+            <br/><br/>
+            12.35 ≤ x ≤ 12.45
+            <br/><br/>
+            Explain the mistake and write the correct interval.
+        </li>
+<li>
+            A package is labelled 3 kg, correct to the nearest kilogram. Could
+            its actual mass be:
+            <br/><br/>
+            a) 2.51 kg?
+            <br/>
+            b) 3.49 kg?
+            <br/>
+            c) 3.50 kg?
+        </li>
+</ol>
+<details>
+<summary>✅ Show Answers</summary>
+<ol>
+<li>
+                a) Exact
+                <br/><br/>
+                b) Measured
+            </li>
+<li>
+                Lower bound = 14.5 kg
+                <br/><br/>
+                Upper bound = 15.5 kg
+            </li>
+<li>
+                Lower bound = 27.5 cm
+                <br/><br/>
+                Upper bound = 28.5 cm
+            </li>
+<li>
+                41.5 ≤ x &lt; 42.5
+            </li>
+<li>
+                Rounded to nearest 10:
+                <br/><br/>
+                Half-unit = 5
+                <br/><br/>
+                345 ≤ x &lt; 355
+            </li>
+<li>
+                Rounded to nearest 100:
+                <br/><br/>
+                Half-unit = 50
+                <br/><br/>
+                7150 ≤ x &lt; 7250
+            </li>
+<li>
+                Half of 0.1 = 0.05
+                <br/><br/>
+                Lower bound = 5.75 kg
+                <br/><br/>
+                Upper bound = 5.85 kg
+            </li>
+<li>
+                Half of 0.01 = 0.005
+                <br/><br/>
+                Lower bound = 16.415 cm
+                <br/><br/>
+                Upper bound = 16.425 cm
+            </li>
+<li>
+                7.25 ≤ x &lt; 7.35
+            </li>
+<li>
+                2.675 ≤ x &lt; 2.685
+            </li>
+<li>
+                31.55°C ≤ t &lt; 31.65°C
+            </li>
+<li>
+                4.245 kg ≤ m &lt; 4.255 kg
+            </li>
+<li>
+                Lower bound = 4.75 km
+                <br/><br/>
+                Upper bound = 4.85 km
+                <br/><br/>
+                4.75 ≤ d &lt; 4.85
+            </li>
+<li>
+                Half of 10 m = 5 m
+                <br/><br/>
+                115 m ≤ length &lt; 125 m
+            </li>
+<li>
+                Recorded mass = 18
+                <br/><br/>
+                Rounded to the nearest whole unit.
+            </li>
+<li>
+                The midpoint is:
+                <br/><br/>
+                (6.25 + 6.35) ÷ 2 = 6.30
+                <br/><br/>
+                The interval width is 0.10, so it was rounded to the nearest
+                0.1.
+                <br/><br/>
+                Recorded length = 6.3
+            </li>
+<li>
+                The upper bound must not be included.
+                <br/><br/>
+                Correct interval:
+                <br/><br/>
+                12.35 ≤ x &lt; 12.45
+            </li>
+<li>
+                The valid range is:
+                <br/><br/>
+                2.5 ≤ m &lt; 3.5
+                <br/><br/>
+                a) Yes
+                <br/><br/>
+                b) Yes
+                <br/><br/>
+                c) No
+            </li>
+</ol>
+</details>
+</section><section class="lesson-section">
+<h2>🧠 Remember This</h2>
+<div class="success-box">
+        Counted values are usually exact.
+        <br/><br/>
+        Measured values may have been rounded.
+        <br/><br/>
+        Find half of the rounding unit.
+        <br/><br/>
+        Lower bound = rounded value − half-unit.
+        <br/><br/>
+        Upper bound = rounded value + half-unit.
+        <br/><br/>
+        Write error intervals as:
+        <br/><br/>
+        Lower bound ≤ actual value &lt; upper bound.
+        <br/><br/>
+        The upper bound is not included.
+    </div>
+</section><section class="lesson-section">
+<h2>🎯 Before Moving On...</h2>
+<ul class="check-list">
+<li>✅ Can I distinguish exact and measured values?</li>
+<li>✅ Can I identify the rounding unit?</li>
+<li>✅ Can I find half of the rounding unit?</li>
+<li>✅ Can I calculate a lower bound?</li>
+<li>✅ Can I calculate an upper bound?</li>
+<li>✅ Can I write an error interval?</li>
+<li>✅ Do I know why the upper bound is excluded?</li>
+<li>✅ Can I solve a practical bounds problem?</li>
+</ul>
+</section><section class="lesson-section success-card">
+<h2>🎉 Well Done!</h2>
+<p>
+        You can now calculate bounds and describe the complete range represented
+        by a rounded measurement.
+    </p>
+<div class="success-box">
+        Remember:
+        <br/><br/>
+<strong>
+            Identify the rounding unit → Find half → Subtract for the lower
+            bound → Add for the upper bound → Write the interval
+        </strong>
+</div>
+</section><section class="lesson-section">
+<h2>📈 Your Progress</h2>
+<p>
+        Lesson <strong>17</strong>
+</p>
+<div class="progress-wrap">
+<div class="progress-label">
+<span>Real Numbers Progress</span>
+<strong>89%</strong>
+</div>
+<div class="progress-bar">
+<div class="progress-fill" style="width:89%;"></div>
+</div>
+</div>
+</section><nav class="lesson-navigation">
+<a class="nav-button" href="16-estimation-approximation.html">← 16 Estimation Approximation</a>
+<a class="nav-button" href="index.html">Real Numbers Roadmap</a>
+<a class="nav-button primary" href="18-real-numbers-mixed-review.html">18 Real Numbers Mixed Review →</a>
+</nav></main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="site-footer">
+<strong>📚 StudyNest</strong>
+<p>Helping students understand Mathematics, not memorise it.</p>
+<p>© 2026 StudyNest</p>
+</footer>  <script src="../script-v3.js"></script>
+
+<script src="../studynest-3.1.js" defer></script>
+</body>
+</html>

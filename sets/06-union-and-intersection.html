@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Combine sets and identify the elements they share." name="description"/>
+<title>Union and Intersection | Sets | StudyNest</title>
+<link href="../styles/sets-lessons.css" rel="stylesheet"/>
+<link href="sets-visuals.css" rel="stylesheet"/>  <link rel="stylesheet" href="../styles/studynest-v3.css">
+
+<link rel="stylesheet" href="../studynest-3.1.css">
+<link rel="stylesheet" href="../studynest-theme.css">
+</head>
+<body>
+<div class="announcement-bar">🚀 StudyNest is growing. New lessons and worksheets are added regularly.</div>
+<header class="site-header">
+<a class="logo" href="../index.html">📚 StudyNest</a>
+<nav class="main-navigation">
+<a href="../index.html">🏠 Home</a>
+<a href="../topics.html">📘 Study by Topic</a>
+<a href="index.html">{ } Sets</a>
+<a href="../worksheets.html">📝 Worksheets</a>
+</nav>
+</header>
+<section class="lesson-hero">
+<div>
+<p class="lesson-label">SETS · LESSON 06</p>
+<h1>Union and Intersection</h1>
+<p class="lesson-subtitle">Combine sets and identify the elements they share.</p>
+<div class="lesson-meta">
+<span class="meta-pill">⏱️ 18–22 min</span>
+<span class="meta-pill">📘 Confidence</span>
+<span class="meta-pill">✏️ Worked examples included</span>
+</div>
+</div>
+<div aria-hidden="true" class="hero-visual">
+<div class="sets-hero-art">
+<div class="sets-universal">
+<span class="set-circle set-a">A</span>
+<span class="set-circle set-b">B</span>
+<span class="set-overlap">A ∩ B</span>
+</div>
+<span class="set-chip chip-union">A ∪ B</span>
+<span class="set-chip chip-complement">A′</span>
+<span class="set-dot dot-one"></span>
+<span class="set-dot dot-two"></span>
+<span class="set-dot dot-three"></span>
+</div>
+</div>
+</section>
+<main class="lesson-main">
+<section class="lesson-section">
+<h2>🎯 By the End of This Lesson...</h2>
+<ul class="objective-list">
+<li>find the union of sets;</li>
+<li>find the intersection of sets;</li>
+<li>use ∪ and ∩ correctly;</li>
+<li>shade union and intersection regions;</li>
+<li>apply the two-set counting formula.</li>
+</ul>
+</section><section class="lesson-section"><h2>🌍 Why This Matters</h2><div class="why-box"><p>Union and intersection allow us to combine groups and identify what they share. These operations appear frequently in surveys and probability questions.</p></div></section>
+<section class="lesson-section">
+<h2>Union</h2>
+<p>A ∪ B contains elements in A or B or both.</p>
+<div class="math-display">A ∪ B = all elements appearing in at least one set</div>
+<div class="worked-example">
+<h3>A = {1,2,3,4}, B = {3,4,5,6}</h3>
+<p>A ∪ B = {1,2,3,4,5,6}</p>
+</div>
+</section><div class="visual-board"><h3>Explore the shaded regions</h3><div class="diagram-controls"><button data-operation="union" type="button">Union A ∪ B</button><button data-operation="intersection" type="button">Intersection A ∩ B</button><button data-operation="a-difference" type="button">Difference A − B</button><button data-operation="complement" type="button">Complement A′</button></div><div data-venn-interactive=""><svg aria-label="Interactive Venn diagram showing set operations" class="venn-svg" role="img" viewbox="0 0 760 410"><rect class="venn-frame" height="330" rx="24" width="690" x="35" y="35"></rect><path class="op-outside" d="M35 35h690v330H35z M310 205m-125 0a125 125 0 1 0 250 0a125 125 0 1 0-250 0" fill="#7ea69d" fill-rule="evenodd"></path><circle class="venn-circle venn-a" cx="310" cy="205" r="125"></circle><circle class="venn-circle venn-b" cx="450" cy="205" r="125"></circle><path class="op-left" d="M380 103a125 125 0 1 0 0 204a125 125 0 0 1 0-204z" fill="#4d8f80"></path><path class="op-right" d="M380 103a125 125 0 1 1 0 204a125 125 0 0 0 0-204z" fill="#4d8f80"></path><path class="op-overlap" d="M380 103a125 125 0 0 1 0 204a125 125 0 0 1 0-204z" fill="#315e91"></path><text class="venn-label" x="220" y="105">A</text><text class="venn-label" x="520" y="105">B</text></svg><div aria-live="polite" class="diagram-note" data-operation-label=""></div></div><p class="visual-caption">Choose an operation above to highlight the correct region.</p></div>
+<section class="lesson-section">
+<h2>Intersection</h2>
+<p>A ∩ B contains elements common to both sets.</p>
+<div class="math-display">A ∩ B = elements shared by A and B</div>
+<div class="worked-example">
+<h3>A = {1,2,3,4}, B = {3,4,5,6}</h3>
+<p>A ∩ B = {3,4}</p>
+</div>
+</section>
+<section class="lesson-section">
+<h2>Union and Intersection Compared</h2>
+<table class="example-table">
+<thead><tr><th>Operation</th><th>Meaning</th><th>Key word</th></tr></thead>
+<tbody>
+<tr><td>A ∪ B</td><td>In A or B or both</td><td>at least one</td></tr>
+<tr><td>A ∩ B</td><td>In both A and B</td><td>common/shared</td></tr>
+</tbody>
+</table>
+</section>
+<section class="lesson-section">
+<h2>The Counting Formula</h2>
+<div class="math-display">n(A ∪ B) = n(A) + n(B) − n(A ∩ B)</div>
+<p>
+        The intersection is subtracted because it was counted once in n(A) and
+        once again in n(B).
+    </p>
+<div class="worked-example">
+<h3>n(A)=18, n(B)=15 and n(A∩B)=6.</h3>
+<p>n(A∪B)=18+15−6=27.</p>
+</div>
+</section>
+<section class="lesson-section">
+<h2>🔍 Recognition Guide</h2>
+<div class="recognition-box">
+<ul>
+<li>“A or B” → union.</li>
+<li>“A and B”, “both” or “common” → intersection.</li>
+<li>“at least one” → union.</li>
+<li>Never count an overlap twice.</li>
+</ul>
+</div>
+</section>
+<section class="lesson-section"><h2>💡 Exam Tip</h2><div class="exam-tip-box"><p>Translate the symbols into words before calculating: union means “in A or B or both,” while intersection means “in both A and B.”</p></div></section><section class="lesson-section">
+<h2>Practice Questions</h2>
+<span class="level-heading">Foundation</span>
+<ol class="practice-list">
+<li>A={1,2,3,4}, B={3,4,5}. Find A∪B and A∩B.</li>
+<li>If A∩B=∅, what does this tell you?</li>
+<li>n(A)=12, n(B)=9 and n(A∩B)=4. Find n(A∪B).</li>
+</ol>
+<span class="level-heading">Confidence</span>
+<ol class="practice-list" start="4">
+<li>
+            In a class, 20 learners study French, 17 study Shona and 8 study
+            both. How many study at least one?
+        </li>
+<li>
+            U={1,2,...,12}, A=multiples of 2 and B=multiples of 3. Find A∪B and A∩B.
+        </li>
+</ol>
+<span class="level-heading">Challenge</span>
+<ol class="practice-list" start="6">
+<li>n(A∪B)=40, n(A)=27 and n(B)=21. Find n(A∩B).</li>
+</ol>
+</section>
+<section class="lesson-section answers-section">
+<h2>✅ Check Your Work</h2>
+<details>
+<summary>Show practice answers</summary>
+<div class="answers-content">
+<ol>
+<li>A∪B={1,2,3,4,5}; A∩B={3,4}.</li>
+<li>The sets are disjoint; they share no elements.</li>
+<li>12+9−4=17.</li>
+<li>20+17−8=29 learners.</li>
+<li>A={2,4,6,8,10,12}, B={3,6,9,12}; A∪B={2,3,4,6,8,9,10,12}; A∩B={6,12}.</li>
+<li>40=27+21−n(A∩B), so n(A∩B)=8.</li>
+</ol>
+</div>
+</details>
+</section>
+<section class="lesson-section">
+<h2>One-Minute Summary</h2>
+<ul class="summary-list">
+<li>Union means in at least one set.</li>
+<li>Intersection means in both sets.</li>
+<li>∪ means union; ∩ means intersection.</li>
+<li>Subtract the overlap when counting a union.</li>
+</ul>
+</section>
+<section class="lesson-section"><h2>➡️ What’s Next? </h2><div class="whats-next-box"><p>Next, you will study complements and set difference—the regions outside a set or left after removing another set.</p></div></section><nav class="lesson-navigation">
+<a class="nav-button" href="05-venn-diagrams.html">← Venn Diagrams</a>
+<a class="nav-button" href="index.html">Sets Roadmap</a>
+<a class="nav-button primary" href="07-complements-and-difference.html">Complements and Difference →</a>
+</nav>
+</main>
+<footer class="site-footer">
+<strong>📚 StudyNest</strong>
+<p>Helping students understand Mathematics, not memorise it.</p>
+<p>© 2026 StudyNest</p>
+</footer>
+<script src="sets-diagrams.js"></script>  <script src="../script-v3.js"></script>
+
+<script src="../studynest-3.1.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Learn how to identify natural numbers, whole numbers, integers, rational numbers, irrational numbers and real numbers." name="description"/>
+<title>Types of Numbers Explained | StudyNest</title>
+<link href="../styles/real-numbers-lessons.css" rel="stylesheet"/>
+<style id="studynest-real-animation-layer">
+.sn-concept-motion{margin:1.5rem auto 2rem;padding:1.25rem;border:2px solid rgba(19,48,76,.12);border-radius:22px;background:rgba(255,255,255,.88);overflow:hidden}
+.sn-concept-motion h2{margin-top:0}.sn-motion-stage{min-height:150px;display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;padding:18px;border-radius:18px;background:linear-gradient(135deg,rgba(232,246,255,.8),rgba(255,248,220,.75))}
+.sn-chip{display:inline-flex;align-items:center;justify-content:center;min-width:58px;min-height:48px;padding:10px 14px;border:2px solid #17324d;border-radius:14px;background:#fff;font-weight:800;font-size:1.1rem;box-shadow:0 5px 0 rgba(23,50,77,.12)}
+.sn-arrow{font-size:1.8rem;font-weight:900}.sn-pulse{animation:snPulse 2.4s ease-in-out infinite}.sn-slide{animation:snSlide 3s ease-in-out infinite}.sn-pop{animation:snPop 2.8s ease-in-out infinite}.sn-delay1{animation-delay:.45s}.sn-delay2{animation-delay:.9s}.sn-delay3{animation-delay:1.35s}
+.sn-line{position:relative;width:min(560px,94%);height:8px;border-radius:999px;background:#17324d;margin:42px auto 24px}.sn-line:before,.sn-line:after{content:'';position:absolute;top:-8px;width:2px;height:24px;background:#17324d}.sn-line:before{left:8%}.sn-line:after{right:8%}.sn-dot{position:absolute;top:-11px;width:30px;height:30px;border-radius:50%;background:#f5bf42;border:3px solid #17324d;animation:snTravel 4s ease-in-out infinite}
+.sn-grid{display:grid;grid-template-columns:repeat(4,54px);gap:7px}.sn-cell{width:54px;height:42px;display:grid;place-items:center;border:2px solid #17324d;border-radius:9px;background:#fff;font-weight:800}.sn-cell.active{animation:snCell 2.4s ease-in-out infinite;background:#fff4bd}
+.sn-bar{height:24px;border:2px solid #17324d;border-radius:999px;background:#fff;overflow:hidden;width:min(480px,90%)}.sn-fill{height:100%;width:0;background:#f5bf42;animation:snFill 3.5s ease-in-out infinite}
+.sn-caption{margin:.85rem 0 0;text-align:center;font-weight:700;color:#334e68}
+@keyframes snPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+@keyframes snSlide{0%,100%{transform:translateX(-18px)}50%{transform:translateX(18px)}}
+@keyframes snPop{0%,20%,100%{transform:translateY(0);opacity:.8}50%{transform:translateY(-10px);opacity:1}}
+@keyframes snTravel{0%,100%{left:7%}50%{left:86%}}
+@keyframes snCell{0%,100%{transform:scale(1);background:#fff}50%{transform:scale(1.08);background:#fff4bd}}
+@keyframes snFill{0%{width:0}55%,100%{width:75%}}
+@media (prefers-reduced-motion:reduce){.sn-concept-motion *{animation:none!important}}
+</style><style id="studynest-real-component-fixes">
+.decimal-comparison-table{width:100%;border-collapse:collapse;margin:1.25rem 0;background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 8px 24px rgba(23,50,77,.08)}
+.decimal-comparison-table th,.decimal-comparison-table td{padding:.9rem 1rem;border:1px solid rgba(23,50,77,.18);text-align:left;vertical-align:middle}
+.decimal-comparison-table th{background:#17324d;color:#fff;font-weight:800}
+.decimal-comparison-table tbody tr:nth-child(even){background:#f7fbff}
+@media(max-width:680px){.decimal-comparison-table{font-size:.9rem}.decimal-comparison-table th,.decimal-comparison-table td{padding:.7rem .55rem}}
+</style>  <link rel="stylesheet" href="../styles/studynest-v3.css">
+
+<link rel="stylesheet" href="../studynest-3.1.css">
+<link rel="stylesheet" href="../studynest-theme.css">
+</head>
+<body>
+<div class="announcement-bar">🚀 StudyNest is growing. New lessons and worksheets are added regularly.</div>
+<header class="site-header">
+<a class="logo" href="../index.html">📚 StudyNest</a>
+<nav class="main-navigation">
+<a href="../index.html">🏠 Home</a>
+<a href="../topics.html">📘 Study by Topic</a>
+<a href="index.html">🔢 Real Numbers</a>
+<a href="../worksheets.html">📝 Worksheets</a>
+</nav>
+</header>
+<section class="lesson-hero">
+<div>
+<p class="lesson-label">🔢 Real Numbers • Lesson 1 of 17</p>
+<h1>Types of Numbers</h1>
+<p class="lesson-subtitle">Numbers belong to different families. In this lesson, you will learn
+        how to identify each family and understand how the different types of
+        numbers are connected.</p>
+<div class="lesson-meta">
+<span class="meta-pill">🔢 Real Numbers</span>
+<span class="meta-pill">✏️ Worked examples included</span>
+<span class="meta-pill">🧠 Step-by-step learning</span>
+</div>
+</div>
+<div aria-hidden="true" class="hero-visual">
+<div class="real-number-visual">
+<div class="number-bubble bubble-pi">π</div>
+<div class="number-bubble bubble-fraction">¾</div>
+<div class="number-bubble bubble-root">√2</div>
+<div class="number-bubble bubble-negative">−8</div>
+<div class="real-set-symbol">ℝ</div>
+<div class="number-line"></div>
+<span class="number-tick tick-one"></span>
+<span class="number-tick tick-two"></span>
+<span class="number-tick tick-three"></span>
+<span class="number-tick tick-four"></span>
+<span class="number-label label-one">−2</span>
+<span class="number-label label-two">−1</span>
+<span class="number-label label-three">0</span>
+<span class="number-label label-four">1</span>
+</div>
+</div>
+</section><main class="lesson-main"><section class="lesson-section">
+<h2>🎯 By the end of this lesson...</h2>
+<p>You should be able to:</p>
+<ul>
+<li>Identify natural numbers.</li>
+<li>Identify whole numbers.</li>
+<li>Identify integers.</li>
+<li>Identify rational numbers.</li>
+<li>Identify irrational numbers.</li>
+<li>Explain what real numbers are.</li>
+<li>Recognise terminating, recurring and non-recurring decimals.</li>
+<li>Classify a number into all the families to which it belongs.</li>
+</ul>
+</section><section class="lesson-section story-card">
+<h2>🤔 Think About This...</h2>
+<p>
+        Imagine your friend says:
+    </p>
+<div class="example-box">
+        “−5 is a whole number because it has no decimal point.”
+    </div>
+<p>
+        Do you agree?
+    </p>
+<p>
+        Many students make this mistake because they look only at how a number
+        appears instead of asking which number family it belongs to.
+    </p>
+<div class="success-box">
+        We will learn how to test the properties of a number before deciding
+        which family it belongs to.
+    </div>
+</section><section class="lesson-section">
+<h2>📖 What Are Types of Numbers?</h2>
+<p>
+        Numbers can be placed into different groups according to their
+        properties. These groups are called <strong>number families</strong>.
+    </p>
+<p>
+        Some smaller number families belong inside larger number families.
+    </p>
+<div class="number-statements">
+<div class="number-statement">
+            Every natural number is also a whole number.
+        </div>
+<div class="number-statement">
+            Every whole number is also an integer.
+        </div>
+<div class="number-statement">
+            Every integer is also a rational number.
+        </div>
+<div class="number-statement">
+            Every rational number is also a real number.
+        </div>
+</div>
+<div class="note-box">
+        A number can belong to more than one family at the same time.
+    </div>
+</section><section class="lesson-section">
+<h2>🌳 The Real Number Family</h2>
+<p>
+        Follow the arrows from top to bottom.
+    </p>
+<div class="number-family-flow">
+<div class="family-flow-box main-family-box">
+            Real Numbers
+        </div>
+<div class="family-down-arrow">
+            ↓
+        </div>
+<div class="family-split">
+<div class="family-side">
+<div class="family-flow-box">
+                    Rational Numbers
+                </div>
+<div class="family-down-arrow">
+                    ↓
+                </div>
+<div class="family-flow-box">
+                    Integers
+                </div>
+<div class="family-down-arrow">
+                    ↓
+                </div>
+<div class="family-flow-box">
+                    Whole Numbers
+                </div>
+<div class="family-down-arrow">
+                    ↓
+                </div>
+<div class="family-flow-box">
+                    Natural Numbers
+                </div>
+</div>
+<div class="family-side">
+<div class="family-flow-box irrational-family-box">
+                    Irrational Numbers
+                </div>
+</div>
+</div>
+</div>
+<div class="info-box">
+        Real numbers are divided into two main families:
+        <strong>rational numbers</strong> and
+        <strong>irrational numbers</strong>.
+    </div>
+</section><section class="lesson-section">
+<h2>1️⃣ Natural Numbers</h2>
+<p>
+        Natural numbers are the counting numbers beginning at
+        <strong>1</strong>.
+    </p>
+<div class="math-box">
+        1, 2, 3, 4, 5, …
+    </div>
+<p>Natural numbers do not include:</p>
+<ul>
+<li>Zero</li>
+<li>Negative numbers</li>
+<li>Fractions</li>
+<li>Decimals between whole numbers</li>
+</ul>
+<div class="definition-grid">
+<div class="definition-card">
+<h3>✅ Natural Numbers</h3>
+<div class="math-box">
+                3
+            </div>
+<div class="math-box">
+                27
+            </div>
+<div class="math-box">
+                105
+            </div>
+</div>
+<div class="definition-card">
+<h3>❌ Not Natural Numbers</h3>
+<div class="math-box">
+                0
+            </div>
+<div class="math-box">
+                −4
+            </div>
+<div class="math-box">
+                3.5
+            </div>
+</div>
+</div>
+</section><section class="lesson-section">
+<h2>2️⃣ Whole Numbers</h2>
+<p>
+        Whole numbers are the natural numbers together with zero.
+    </p>
+<div class="math-box">
+        0, 1, 2, 3, 4, 5, …
+    </div>
+<p>Whole numbers do not include:</p>
+<ul>
+<li>Negative numbers</li>
+<li>Fractions</li>
+<li>Decimals between whole numbers</li>
+</ul>
+<div class="definition-grid">
+<div class="definition-card">
+<h3>✅ Whole Numbers</h3>
+<div class="math-box">
+                0
+            </div>
+<div class="math-box">
+                14
+            </div>
+<div class="math-box">
+                206
+            </div>
+</div>
+<div class="definition-card">
+<h3>❌ Not Whole Numbers</h3>
+<div class="math-box">
+                −6
+            </div>
+<div class="math-box">
+                ½
+            </div>
+<div class="math-box">
+                2.7
+            </div>
+</div>
+</div>
+<div class="success-box">
+        Every natural number is a whole number, but zero is a whole number
+        that is not a natural number.
+    </div>
+</section><section class="lesson-section">
+<h2>3️⃣ Integers</h2>
+<p>
+        Integers are positive and negative whole numbers, including zero.
+    </p>
+<div class="math-box">
+        …, −3, −2, −1, 0, 1, 2, 3, …
+    </div>
+<div class="definition-grid">
+<div class="definition-card">
+<h3>✅ Integers</h3>
+<div class="math-box">
+                −8
+            </div>
+<div class="math-box">
+                0
+            </div>
+<div class="math-box">
+                19
+            </div>
+</div>
+<div class="definition-card">
+<h3>❌ Not Integers</h3>
+<div class="math-box">
+                ½
+            </div>
+<div class="math-box">
+                3.4
+            </div>
+<div class="math-box">
+                √2
+            </div>
+</div>
+</div>
+<div class="note-box">
+        Integers do not include fractions or decimals between two whole-valued
+        numbers.
+    </div>
+</section><section class="lesson-section">
+<h2>4️⃣ Rational Numbers</h2>
+<p>
+        A rational number is any number that can be written exactly in the form:
+    </p>
+<div class="math-box">
+        a/b
+    </div>
+<p>where:</p>
+<ul>
+<li><strong>a</strong> is an integer;</li>
+<li><strong>b</strong> is an integer;</li>
+<li><strong>b ≠ 0</strong>.</li>
+</ul>
+<p>Rational numbers include:</p>
+<ul>
+<li>Integers</li>
+<li>Ordinary fractions</li>
+<li>Terminating decimals</li>
+<li>Recurring decimals</li>
+</ul>
+<div class="definition-grid">
+<div class="definition-card">
+<h3>✅ Rational Numbers</h3>
+<div class="math-box">
+                5 = 5/1
+            </div>
+<div class="math-box">
+                ¾
+            </div>
+<div class="math-box">
+                0.25 = ¼
+            </div>
+<div class="math-box">
+                0.333… = ⅓
+            </div>
+</div>
+<div class="definition-card">
+<h3>❌ Not Rational Numbers</h3>
+<div class="math-box">
+                √2
+            </div>
+<div class="math-box">
+                π
+            </div>
+</div>
+</div>
+</section><section class="lesson-section">
+<h2>🔢 Types of Decimals</h2>
+<p>
+        The way a decimal behaves can help us decide whether it is rational or
+        irrational.
+    </p>
+<h3>1. Terminating Decimals</h3>
+<p>
+        A terminating decimal is a decimal that ends.
+    </p>
+<div class="math-box">
+        0.5
+    </div>
+<div class="math-box">
+        0.25
+    </div>
+<div class="math-box">
+        3.125
+    </div>
+<p>
+        Every terminating decimal can be written as a fraction.
+    </p>
+<div class="math-box">
+        0.5 = ½
+    </div>
+<div class="math-box">
+        0.25 = ¼
+    </div>
+<div class="success-box">
+        All terminating decimals are rational numbers.
+    </div>
+<h3>2. Recurring or Repeating Decimals</h3>
+<p>
+        A recurring decimal does not end, but one digit or a group of digits
+        repeats in a regular pattern.
+    </p>
+<div class="math-box">
+        0.333333…
+    </div>
+<div class="math-box">
+        0.727272…
+    </div>
+<div class="math-box">
+        4.166666…
+    </div>
+<p>
+        Recurring decimals can also be written as fractions.
+    </p>
+<div class="math-box">
+        0.333… = ⅓
+    </div>
+<div class="math-box">
+        0.727272… = 8/11
+    </div>
+<div class="success-box">
+        All recurring decimals are rational numbers.
+    </div>
+</section><section class="lesson-section">
+<h2>5️⃣ Irrational Numbers</h2>
+<p>
+        Irrational numbers cannot be written exactly in the form:
+    </p>
+<div class="math-box">
+        a/b
+    </div>
+<p>
+        where <strong>a</strong> and <strong>b</strong> are integers and
+        <strong>b ≠ 0</strong>.
+    </p>
+<p>
+        Their decimal expansions:
+    </p>
+<ul>
+<li>do not end;</li>
+<li>do not repeat in a regular pattern.</li>
+</ul>
+<h3>Examples</h3>
+<div class="math-box">
+        π = 3.141592653589793…
+    </div>
+<p>
+        The decimal continues forever without repeating.
+    </p>
+<div class="math-box">
+        √2 = 1.414213562373095…
+    </div>
+<p>
+        The decimal continues forever without repeating.
+    </p>
+<div class="math-box">
+        √5 = 2.23606797749979…
+    </div>
+<p>
+        The decimal continues forever without repeating.
+    </p>
+<div class="tip-box">
+        Mathematicians have proved that there are no integers
+        <strong>a</strong> and <strong>b</strong>, with
+        <strong>b ≠ 0</strong>, for which:
+        <br/><br/>
+<strong>√2 = a/b</strong>
+<br/><br/>
+        Therefore, √2 is irrational.
+    </div>
+<div class="warning-box">
+        Not every square root is irrational.
+        <br/><br/>
+        Always simplify the square root first.
+        <br/><br/>
+<strong>√16 = 4</strong>
+<br/><br/>
+        Since 4 is an integer, √16 is rational.
+    </div>
+</section><section class="lesson-section">
+<h2>📊 Rational and Irrational Decimals</h2>
+<table aria-label="How to identify rational and irrational decimals" class="study-table decimal-comparison-table"><thead><tr><th>Decimal type</th><th>Does it end?</th><th>Does it repeat?</th><th>Number family</th></tr></thead><tbody><tr><td>Terminating</td><td>Yes</td><td>Not needed</td><td>Rational</td></tr><tr><td>Recurring</td><td>No</td><td>Yes</td><td>Rational</td></tr><tr><td>Non-terminating and non-recurring</td><td>No</td><td>No</td><td>Irrational</td></tr></tbody></table>
+<div class="success-box">
+        A decimal is rational if it ends or repeats.
+        <br/><br/>
+        A decimal is irrational if it continues forever without repeating.
+    </div>
+</section><section class="lesson-section">
+<h2>6️⃣ Real Numbers</h2>
+<p>
+        Real numbers include all rational numbers and all irrational numbers.
+    </p>
+<div class="math-box">
+        Real Numbers = Rational Numbers + Irrational Numbers
+    </div>
+<p>
+        Every number that can be placed on an ordinary number line is a real
+        number.
+    </p>
+<div class="success-box">
+        Natural numbers, whole numbers, integers, fractions, terminating
+        decimals, recurring decimals and irrational numbers are all real
+        numbers.
+    </div>
+</section><section class="lesson-section">
+<h2>🧠 The StudyNest Thinking Method</h2>
+<p>
+        When a question asks you to classify a number, do not decide based only
+        on how it looks.
+    </p>
+<div class="tip-box">
+<strong>Follow these steps:</strong>
+<br/><br/>
+<strong>Step 1:</strong>
+        Simplify the number first, if possible.
+        <br/><br/>
+
+        For example:
+        <br/><br/>
+<strong>√16 = 4</strong>
+<br/><br/>
+<strong>Step 2:</strong>
+        Is it a positive counting number beginning at 1?
+        <br/><br/>
+
+        If yes, it is natural.
+
+        <br/><br/>
+<strong>Step 3:</strong>
+        Is it zero or a positive whole-valued number?
+        <br/><br/>
+
+        If yes, it is whole.
+
+        <br/><br/>
+<strong>Step 4:</strong>
+        Is it a positive or negative whole-valued number?
+        <br/><br/>
+
+        If yes, it is an integer.
+
+        <br/><br/>
+<strong>Step 5:</strong>
+        Can it be written exactly as a/b, where a and b are integers and b ≠ 0?
+        <br/><br/>
+
+        If yes, it is rational.
+
+        <br/><br/>
+<strong>Step 6:</strong>
+        If it is a decimal, does it end or repeat?
+        <br/><br/>
+
+        If it ends or repeats, it is rational.
+
+        <br/><br/>
+<strong>Step 7:</strong>
+        Does the decimal continue forever without repeating?
+        <br/><br/>
+
+        If yes, it is irrational.
+
+        <br/><br/>
+<strong>Step 8:</strong>
+        Every number classified above is also a real number.
+
+    </div>
+<div class="note-box">
+        Do not assume that every square root is irrational.
+        Simplify the square root before classifying it.
+    </div>
+</section><section class="lesson-section">
+<h2>📝 Worked Examples</h2>
+<div class="worked-example">
+<h3>Example 1: Classify −7</h3>
+<p>
+            −7 is not natural or whole because it is negative.
+        </p>
+<p>
+            It is an integer.
+        </p>
+<div class="math-box">
+            −7 = −7/1
+        </div>
+<p>
+            It can be written as a fraction of two integers, so it is rational.
+        </p>
+<div class="success-box">
+            −7 is an integer, a rational number and a real number.
+        </div>
+</div>
+<div class="worked-example">
+<h3>Example 2: Classify 0</h3>
+<p>
+            0 is not a natural number because natural numbers begin at 1.
+        </p>
+<p>
+            0 is a whole number and an integer.
+        </p>
+<div class="math-box">
+            0 = 0/1
+        </div>
+<div class="success-box">
+            0 is a whole number, an integer, a rational number and a real number.
+        </div>
+</div>
+<div class="worked-example">
+<h3>Example 3: Classify √3</h3>
+<p>
+            √3 cannot be simplified to a whole-valued number.
+        </p>
+<div class="math-box">
+            √3 = 1.732050807…
+        </div>
+<p>
+            Its decimal continues forever without repeating.
+        </p>
+<div class="success-box">
+            √3 is an irrational number and a real number.
+        </div>
+</div>
+<div class="worked-example">
+<h3>Example 4: Classify √16</h3>
+<p>
+            Simplify first:
+        </p>
+<div class="math-box">
+            √16 = 4
+        </div>
+<p>
+            4 is a positive counting number.
+        </p>
+<div class="success-box">
+            √16 is natural, whole, an integer, rational and real.
+        </div>
+</div>
+<div class="worked-example">
+<h3>Example 5: Classify 0.75</h3>
+<p>
+            0.75 is a terminating decimal.
+        </p>
+<div class="math-box">
+            0.75 = ¾
+        </div>
+<div class="success-box">
+            0.75 is a rational number and a real number.
+        </div>
+</div>
+<div class="worked-example">
+<h3>Example 6: Classify 0.333…</h3>
+<p>
+            The digit 3 repeats forever.
+        </p>
+<div class="math-box">
+            0.333… = ⅓
+        </div>
+<div class="success-box">
+            0.333… is a rational number and a real number.
+        </div>
+</div>
+</section><section class="lesson-section">
+<h2>⚠ Common Mistakes</h2>
+<div class="warning-box">
+<strong>Mistake 1:</strong><br/><br/>
+        Thinking −5 is a whole number because it has no decimal part.
+        <br/><br/>
+        Negative integers are not whole numbers.
+    </div>
+<div class="warning-box">
+<strong>Mistake 2:</strong><br/><br/>
+        Thinking every decimal is irrational.
+        <br/><br/>
+        Terminating and recurring decimals are rational.
+    </div>
+<div class="warning-box">
+<strong>Mistake 3:</strong><br/><br/>
+        Forgetting that every integer can be written over 1.
+        <br/><br/>
+        For example, 6 = 6/1, so 6 is rational.
+    </div>
+<div class="warning-box">
+<strong>Mistake 4:</strong><br/><br/>
+        Assuming every square root is irrational.
+        <br/><br/>
+        Always simplify the square root first.
+    </div>
+<div class="warning-box">
+<strong>Mistake 5:</strong><br/><br/>
+        Thinking a decimal is rational only when it ends.
+        <br/><br/>
+        Recurring decimals are also rational.
+    </div>
+</section><section class="lesson-section practice-card">
+<h2>🎮 Your Turn!</h2>
+<p>
+        Classify each number into all the number families to which it belongs.
+    </p>
+<ol>
+<li>8</li>
+<li>0</li>
+<li>−15</li>
+<li>⅝</li>
+<li>π</li>
+<li>√16</li>
+<li>0.75</li>
+<li>√7</li>
+<li>0.444…</li>
+<li>−2.5</li>
+</ol>
+<details>
+<summary>✅ Show Answers</summary>
+<ol>
+<li>
+                Natural, whole, integer, rational and real
+            </li>
+<li>
+                Whole, integer, rational and real
+            </li>
+<li>
+                Integer, rational and real
+            </li>
+<li>
+                Rational and real
+            </li>
+<li>
+                Irrational and real
+            </li>
+<li>
+                Natural, whole, integer, rational and real
+            </li>
+<li>
+                Rational and real
+            </li>
+<li>
+                Irrational and real
+            </li>
+<li>
+                Rational and real
+            </li>
+<li>
+                Rational and real
+            </li>
+</ol>
+</details>
+</section><section class="lesson-section">
+<h2>🧠 Remember This</h2>
+<div class="success-box">
+        Natural numbers begin at 1.
+        <br/><br/>
+        Whole numbers begin at 0.
+        <br/><br/>
+        Integers include negative and positive whole-valued numbers.
+        <br/><br/>
+        Rational decimals end or repeat.
+        <br/><br/>
+        Irrational decimals never end and never repeat.
+        <br/><br/>
+        Always simplify a square root before classifying it.
+    </div>
+</section><section class="lesson-section">
+<h2>🎯 Before Moving On...</h2>
+<ul class="check-list">
+<li>✅ Can I explain the difference between natural and whole numbers?</li>
+<li>✅ Can I identify an integer?</li>
+<li>✅ Can I explain why every integer is rational?</li>
+<li>✅ Can I recognise terminating and recurring decimals?</li>
+<li>✅ Can I identify an irrational decimal?</li>
+<li>✅ Can I simplify a square root before classifying it?</li>
+<li>✅ Can I classify one number into several families?</li>
+</ul>
+</section><section class="lesson-section success-card">
+<h2>🎉 Well Done!</h2>
+<p>
+        You now understand the main families within the real number system.
+    </p>
+<div class="success-box">
+        Remember:
+        <br/><br/>
+<strong>
+            Simplify → Test the number → Check its decimal → List every family
+        </strong>
+</div>
+</section><section class="lesson-section">
+<h2>📈 Your Progress</h2>
+<p>
+        Lesson <strong>1 of 17</strong>
+</p>
+<div class="progress-wrap">
+<div class="progress-label">
+<span>Real Numbers Progress</span>
+<strong>6%</strong>
+</div>
+<div class="progress-bar">
+<div class="progress-fill" style="width:6%;"></div>
+</div>
+</div>
+</section><nav class="lesson-navigation">
+<a class="nav-button" href="index.html">← Back to Real Numbers</a>
+<a class="nav-button" href="index.html">Real Numbers Roadmap</a>
+<a class="nav-button primary" href="02-factors-multiples-primes.html">02 Factors Multiples Primes →</a>
+</nav></main>
+<footer class="site-footer">
+<strong>📚 StudyNest</strong>
+<p>Helping students understand Mathematics, not memorise it.</p>
+<p>© 2026 StudyNest</p>
+</footer>  <script src="../script-v3.js"></script>
+
+<script src="../studynest-3.1.js" defer></script>
+</body>
+</html>

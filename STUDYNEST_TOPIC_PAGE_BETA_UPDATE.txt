@@ -1,0 +1,7 @@
+StudyNest Topic Page Beta Refresh
+
+- Restyled Study by Topic to match the light homepage design.
+- Preserved individual topic colour identities.
+- Added a light hero section, gold calls to action and responsive visual.
+- Removed Past Papers from the visible navigation and footer.
+- Kept only currently available user pathways.

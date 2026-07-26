@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A mixed, exam-style assessment covering the complete Real Numbers module.">
+  <title>Real Numbers · Mastery Challenge | StudyNest</title>
+  <style>
+:root{
+  --ink:#16333d;--muted:#627781;--deep:#174f69;--accent:#23859a;--accent-2:#45afaf;
+  --gold:#f4bd4f;--paper:#f4f8f8;--white:#fff;--line:#cfe0e3;--soft:#e8f7f7;
+  --good:#157347;--good-bg:#e9f8f0;--bad:#ad2e24;--bad-bg:#fff0ed;--hint:#fff7dc;
+  --shadow:0 18px 50px rgba(23,79,105,.13);--radius:24px;
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-rounded,"Segoe UI",Arial,sans-serif;color:var(--ink);background:radial-gradient(circle at top left,#dff5f2 0,transparent 32%),linear-gradient(180deg,#f8fbfb,var(--paper));min-height:100vh}
+button,input,textarea{font:inherit}.top-strip{padding:9px 16px;text-align:center;background:var(--deep);color:#fff;font-size:.78rem;font-weight:850;letter-spacing:.08em;text-transform:uppercase}.app-shell{width:min(960px,calc(100% - 28px));margin:28px auto 70px}.screen{display:none}.screen.active{display:block;animation:fadeIn .3s ease}@keyframes fadeIn{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:none}}
+.hero-card,.results-hero{position:relative;overflow:hidden;padding:clamp(28px,5vw,52px);border-radius:30px;background:linear-gradient(135deg,var(--deep),var(--accent) 58%,var(--accent-2));color:#fff;box-shadow:var(--shadow)}.hero-card:after,.results-hero:after{content:"";position:absolute;width:280px;height:280px;border-radius:50%;right:-95px;top:-120px;background:rgba(255,255,255,.11)}.hero-card>*{position:relative;z-index:1}.eyebrow{margin:0 0 10px;font-size:.76rem;font-weight:900;letter-spacing:.13em;color:#d7fbfb}.hero-card h1,.results-hero h1{margin:0;font-size:clamp(2.45rem,7vw,4.6rem);line-height:.98;letter-spacing:-.04em}.hero-copy{max-width:680px;margin:18px 0 0;font-size:1.06rem;line-height:1.7;color:#efffff}.level-badge{display:inline-flex;margin-top:24px;padding:10px 15px;border-radius:999px;background:#fff;color:var(--deep);font-weight:900;box-shadow:0 9px 22px rgba(0,0,0,.13)}
+.welcome-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin:16px 0 8px;padding:3px 0 14px;border-bottom:1px solid var(--line)}.info-card,.coverage-card,.question-card,.result-card,.mistakes-card{background:rgba(255,255,255,.95);border:1px solid var(--line);box-shadow:0 10px 28px rgba(30,77,89,.07)}.info-card{display:flex;gap:10px;align-items:center;padding:10px 16px;border:0;border-right:1px solid var(--line);border-radius:0;background:transparent;box-shadow:none}.info-card:last-child{border-right:0}.info-icon{display:grid;place-items:center;flex:0 0 38px;height:38px;border-radius:12px;background:var(--soft);color:var(--deep);font-size:.88rem;font-weight:950}.info-card strong{display:block;font-size:.9rem}.info-card p{display:none}.coverage-card{padding:16px 0 0;border:0;border-radius:0;background:transparent;box-shadow:none}.coverage-card h2{margin:0 0 12px;font-size:1.18rem}.topic-chips{display:flex;flex-wrap:wrap;gap:8px}.topic-chips span{padding:8px 11px;border-radius:999px;background:var(--soft);color:var(--deep);font-size:.84rem;font-weight:800}.convention-note{margin-top:14px;padding:12px 14px;border-radius:12px;background:#fff8e4;border-left:4px solid var(--gold);line-height:1.5}.start-button{display:flex!important;margin:20px auto 0;min-width:220px;justify-content:center;gap:10px}
+.primary-button,.secondary-button,.text-button{border:0;cursor:pointer;font-weight:880;transition:.18s ease}.primary-button,.secondary-button{padding:12px 17px;border-radius:13px}.primary-button{background:var(--accent);color:#fff;box-shadow:0 8px 18px rgba(35,133,154,.2)}.primary-button:hover,.secondary-button:hover{transform:translateY(-1px)}.primary-button:disabled{opacity:.5;cursor:not-allowed;transform:none}.secondary-button{background:#fff;color:var(--deep);border:1px solid var(--line)}.text-button{padding:8px;background:transparent;color:var(--deep)}
+.quiz-header{display:flex;justify-content:space-between;align-items:flex-end;gap:16px}.quiz-header .eyebrow{color:var(--accent)}.quiz-header h2{margin:0;font-size:clamp(1.55rem,4vw,2.15rem)}.score-pill{padding:9px 13px;border-radius:999px;background:#fff;border:1px solid var(--line);font-weight:850}.progress-track{height:12px;margin:16px 0 20px;border-radius:999px;background:#dce9eb;overflow:hidden}.progress-fill{height:100%;width:0;border-radius:inherit;background:linear-gradient(90deg,var(--accent),var(--gold));transition:width .35s ease}
+.question-card{min-height:465px;padding:clamp(22px,4vw,38px);border-radius:var(--radius);display:flex;flex-direction:column}.question-topline{display:flex;justify-content:space-between;align-items:center;gap:12px}.question-number{display:grid;place-items:center;width:43px;height:43px;border-radius:14px;background:var(--soft);color:var(--deep);font-weight:950}.skill-tag{padding:7px 10px;border-radius:999px;background:#f6f0df;color:#72510e;font-size:.78rem;font-weight:850}.question-card h3{margin:24px 0 7px;font-size:clamp(1.3rem,3vw,1.75rem);line-height:1.35}.question-instruction{margin:0 0 22px;color:var(--muted);line-height:1.55}.option-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.option{position:relative;display:flex;align-items:center;gap:11px;padding:15px;border:2px solid var(--line);border-radius:15px;background:#fff;cursor:pointer;font-weight:720;transition:.17s}.option:hover{border-color:var(--accent);transform:translateY(-1px)}.option.selected{border-color:var(--accent);background:var(--soft)}.option input{width:18px;height:18px;accent-color:var(--accent)}.multi-note{margin:0 0 12px;color:var(--muted);font-size:.86rem}.text-answer{width:100%;min-height:112px;padding:15px;border:2px solid var(--line);border-radius:15px;resize:vertical;color:var(--ink);background:#fff}.text-answer.short{min-height:0;height:51px}.text-answer:focus,.select-answer:focus{outline:4px solid rgba(35,133,154,.12);border-color:var(--accent)}.classification-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;align-items:center}.classification-grid .item{padding:12px 13px;border-radius:12px;background:#f7fafb;font-weight:830}.select-answer{width:100%;padding:12px;border:2px solid var(--line);border-radius:12px;background:#fff;color:var(--ink)}
+.feedback-box,.support-box{display:none;margin-top:16px;padding:14px 16px;border-radius:14px;line-height:1.55}.feedback-box.show,.support-box.show{display:block}.feedback-box.good{background:var(--good-bg);color:var(--good);border:1px solid #9ad3b6}.feedback-box.bad{background:var(--bad-bg);color:var(--bad);border:1px solid #efb2ac}.hint-box{background:var(--hint);border:1px solid #efd47f}.solution-box{background:#eaf4fb;border:1px solid #afd1e5}.question-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:auto;padding-top:22px}.question-actions .primary-button{margin-left:auto}.navigation-row{display:flex;justify-content:space-between;align-items:center;margin-top:12px;color:var(--muted);font-size:.9rem}
+.results-hero{text-align:center}.results-hero .eyebrow{color:#d7fbfb}.result-ring{position:relative;z-index:1;display:grid;place-items:center;width:148px;height:148px;margin:0 auto 20px;border-radius:50%;background:conic-gradient(var(--gold) 0deg,#ffffff33 0deg);box-shadow:inset 0 0 0 13px rgba(255,255,255,.16)}.result-ring:after{content:"";position:absolute;width:108px;height:108px;border-radius:50%;background:var(--deep)}.result-ring span{position:relative;z-index:1;font-size:2rem;font-weight:950}.results-hero h1{font-size:clamp(2rem,5vw,3.4rem)}.results-hero p{position:relative;z-index:1;max-width:620px;margin:13px auto;color:#eaffff;line-height:1.6}.result-score{position:relative;z-index:1;display:inline-block;margin-top:6px;font-size:1.3rem}.results-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin:18px 0}.result-card,.mistakes-card{padding:24px;border-radius:20px}.result-card h2,.mistakes-card h2{margin:0 0 15px}.result-list{display:grid;gap:9px}.result-item{padding:10px 12px;border-radius:12px;background:var(--good-bg);font-weight:780}.review-card .result-item{background:var(--bad-bg)}.mistakes-card ul{margin:0;padding-left:22px;line-height:1.75}.results-actions{display:flex;justify-content:center;flex-wrap:wrap;gap:11px;margin-top:20px}
+
+.review-panel{background:rgba(255,255,255,.96);border:1px solid var(--line);box-shadow:var(--shadow);border-radius:var(--radius);padding:clamp(22px,4vw,36px)}
+.review-panel h1{margin:0 0 8px;font-size:clamp(2rem,5vw,3rem)}.review-copy{margin:0 0 22px;color:var(--muted);line-height:1.6}.review-summary{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:20px}.review-summary span{padding:9px 13px;border-radius:999px;font-weight:850;background:var(--soft);color:var(--deep)}
+.review-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}.review-question{border:2px solid var(--line);border-radius:14px;background:#fff;padding:13px 8px;cursor:pointer;text-align:center;font-weight:900;color:var(--deep)}.review-question:hover{border-color:var(--accent);transform:translateY(-1px)}.review-question.answered{background:var(--good-bg);border-color:#9ad3b6;color:var(--good)}.review-question.unanswered{background:#f7fafb;color:var(--muted)}.review-actions{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-top:24px}
+.modal-backdrop{position:fixed;inset:0;z-index:1000;display:none;place-items:center;padding:18px;background:rgba(10,35,45,.62);backdrop-filter:blur(4px)}.modal-backdrop.show{display:grid}.modal-card{width:min(500px,100%);background:#fff;border-radius:22px;padding:28px;box-shadow:0 24px 70px rgba(0,0,0,.28)}.modal-card h2{margin:0 0 10px}.modal-card p{margin:0;color:var(--muted);line-height:1.6}.modal-warning{margin-top:14px!important;padding:12px 14px;border-radius:13px;background:var(--hint);color:#72510e!important}.modal-actions{display:flex;justify-content:flex-end;flex-wrap:wrap;gap:10px;margin-top:22px}
+@media(max-width:720px){.review-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.app-shell{width:min(100% - 20px,960px);margin-top:15px}.welcome-grid,.results-grid{grid-template-columns:1fr}.welcome-grid{padding-bottom:8px}.info-card{border-right:0;border-bottom:1px solid var(--line);padding:10px 4px}.info-card:last-child{border-bottom:0}.hero-card,.results-hero{border-radius:23px;padding:28px 22px}.option-grid,.classification-grid{grid-template-columns:1fr}.question-card{min-height:520px;padding:22px 17px}.question-actions>*{flex:1 1 130px}.question-actions .primary-button{margin-left:0;flex-basis:100%}.navigation-row{font-size:.8rem}.quiz-header{align-items:center}.score-pill{font-size:.8rem}}
+@media print{body{background:#fff}.top-strip,.welcome-screen,.quiz-header,.progress-track,.question-actions,.navigation-row,.results-screen{display:none!important}.app-shell{width:100%;margin:0}.quiz-screen{display:block!important}.question-card{display:block;min-height:0;box-shadow:none;border:1px solid #999;break-inside:avoid;margin:0 0 18px}.option{border:0;padding:5px}.feedback-box,.support-box{display:none!important}}
+
+</style>
+</head>
+<body>
+  <div class="top-strip">StudyNest Interactive Practice</div>
+
+  <main class="app-shell" id="worksheetApp">
+    <section class="welcome-screen screen active" id="welcomeScreen">
+      <div class="hero-card">
+        <div>
+          <p class="eyebrow">REAL NUMBERS · WORKSHEET 01</p>
+          <h1>Factors & Multiples</h1>
+          <p class="hero-copy">Build complete confidence with natural, whole, integer, rational, irrational, prime, composite, even, odd, square and cube numbers.</p>
+        </div>
+        <span class="level-badge">Foundation → Mastery</span>
+      </div>
+
+      <div class="welcome-grid">
+        <article class="info-card">
+          <span class="info-icon">20</span>
+          <div><strong>Mastery questions</strong><p>Questions increase gradually in difficulty.</p></div>
+        </article>
+        <article class="info-card">
+          <span class="info-icon">⏱</span>
+          <div><strong>20–25 minutes</strong><p>Work carefully rather than rushing.</p></div>
+        </article>
+        <article class="info-card">
+          <span class="info-icon">✓</span>
+          <div><strong>Instant marking</strong><p>Use hints and explanations when needed.</p></div>
+        </article>
+      </div>
+
+      <section class="coverage-card">
+        <h2>You will practise</h2>
+        <div class="topic-chips"><span>Factors</span><span>Multiples</span><span>Prime numbers</span><span>Composite numbers</span><span>Factor pairs</span><span>Common factors</span><span>Common multiples</span><span>Prime factorisation</span></div>
+        <div class="convention-note"><strong>StudyNest convention:</strong> natural numbers begin at 1. Whole numbers include 0.</div>
+      </section>
+
+      <button class="primary-button start-button" id="startButton">Start worksheet <span>→</span></button>
+    </section>
+
+    <section class="quiz-screen screen" id="quizScreen" aria-live="polite">
+      <header class="quiz-header">
+        <div>
+          <p class="eyebrow" id="sectionLabel">GETTING STARTED</p>
+          <h2 id="questionCounter">Question 1 of 30</h2>
+        </div>
+        <div class="score-pill"><span id="liveScore">0 correct</span></div>
+      </header>
+
+      <div class="progress-track" aria-label="Worksheet progress">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+
+      <article class="question-card" id="questionCard">
+        <div class="question-topline">
+          <span class="question-number" id="questionNumber">1</span>
+          <span class="skill-tag" id="skillTag">Number families</span>
+        </div>
+        <h3 id="questionText"></h3>
+        <p class="question-instruction" id="questionInstruction"></p>
+        <div id="answerArea"></div>
+
+        <div class="feedback-box" id="feedbackBox"></div>
+        <div class="support-box hint-box" id="hintBox"></div>
+        <div class="support-box solution-box" id="solutionBox"></div>
+
+        <div class="question-actions">
+          <button class="secondary-button" id="hintButton">Hint 1</button>
+          <button class="secondary-button" id="solutionButton">Show solution</button>
+          <button class="primary-button" id="checkButton">Check answer</button>
+        </div>
+      </article>
+
+      <div class="navigation-row">
+        <button class="text-button" id="previousButton">← Previous</button>
+        <span id="answeredCount">0 of 30 answered</span>
+        <button class="text-button" id="nextButton">Next →</button>
+      </div>
+    </section>
+
+    <section class="review-screen screen" id="reviewScreen">
+      <div class="review-panel">
+        <p class="eyebrow" style="color:var(--accent)">FINAL CHECK</p>
+        <h1>Review your answers</h1>
+        <p class="review-copy">Green questions have an answer. Grey questions are unanswered. Select any question to return and make changes before submitting.</p>
+        <div class="review-summary">
+          <span id="reviewAnswered">0 answered</span>
+          <span id="reviewUnanswered">30 unanswered</span>
+        </div>
+        <div class="review-grid" id="reviewGrid"></div>
+        <div class="review-actions">
+          <button class="secondary-button" id="returnToWorksheetButton">← Continue working</button>
+          <button class="primary-button" id="submitWorksheetButton">Submit worksheet</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="results-screen screen" id="resultsScreen">
+      <div class="results-hero">
+        <p class="eyebrow">WORKSHEET COMPLETE</p>
+        <div class="result-ring" id="resultRing"><span id="resultPercent">0%</span></div>
+        <h1 id="resultHeading">Your results</h1>
+        <p id="resultMessage"></p>
+        <strong class="result-score" id="resultScore">0 / 20</strong>
+      </div>
+
+      <div class="results-grid">
+        <article class="result-card">
+          <h2>Strong areas</h2>
+          <div id="strengthsList" class="result-list"></div>
+        </article>
+        <article class="result-card review-card">
+          <h2>Review next</h2>
+          <div id="reviewList" class="result-list"></div>
+        </article>
+      </div>
+
+      <section class="mistakes-card">
+        <h2>Common mistakes to remember</h2>
+        <ul>
+          <li>A factor divides a number exactly; a multiple is produced by multiplying.</li>
+          <li>1 is neither prime nor composite.</li>
+          <li>Prime factorisation must contain prime factors only.</li>
+          <li>Common factors divide both numbers; common multiples are divisible by both numbers.</li>
+          <li>When counting factors from prime powers, add 1 to each exponent and multiply.</li>
+        </ul>
+      </section>
+
+      <div class="results-actions">
+        <button class="secondary-button" id="retryIncorrectButton">Retry incorrect questions</button>
+        <button class="primary-button" id="retryAllButton">Retry full worksheet</button>
+        <button class="secondary-button" id="printButton">Print questions</button>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal-backdrop" id="finishModal" role="dialog" aria-modal="true" aria-labelledby="finishModalTitle">
+    <div class="modal-card">
+      <h2 id="finishModalTitle">Review and finish?</h2>
+      <p id="finishModalMessage"></p>
+      <p class="modal-warning" id="finishModalWarning"></p>
+      <div class="modal-actions">
+        <button class="secondary-button" id="cancelFinishButton">Continue working</button>
+        <button class="primary-button" id="openReviewButton">Review answers</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+(() => {
+  const questions = [{"section":"Section A","skill":"Number sets","type":"single","question":"Which number is irrational?","instruction":"Choose one answer.","answer":["√5"],"hints":["Think carefully about the rule involved.","Check each step and the sign or place value."],"solution":"√5 cannot be written as a terminating or recurring decimal, so it is irrational.","options":["0.25","√5","-7","3/8"]},{"section":"Section A","skill":"Number sets","type":"multi","question":"Select all integers.","instruction":"Select all that apply.","answer":["-9","0","14"],"hints":["Think carefully about the rule involved.","Check each step and the sign or place value."],"solution":"Integers are whole numbers and their negatives, including zero.","options":["-9","0","2.5","14","√2"]},{"section":"Section A","skill":"Factors","type":"text-short","question":"How many positive factors does 36 have?","instruction":"Enter your answer.","answer":["9"],"hints":["Think carefully about the rule involved.","Check each step and the sign or place value."],"solution":"36=2²×3², so number of factors=(2+1)(2+1)=9."},{"section":"Section A","skill":"Prime numbers","type":"single","question":"Which number is prime?","instruction":"Choose one answer.","answer":["47"],"hints":["Think carefully about the rule involved.","Check each step and the sign or place value."],"solution":"47 has no positive factors other than 1 and 47.","options":["39","47","51","57"]},{"section":"Section A","skill":"Prime factors","type":"text","question":"Write 180 as a product of prime factors.","instruction":"Enter your answer.","answer":["contains:2,2,3,3,5|contains:2²,3²,5"],"hints":["Think carefully about the rule involved.","Check each step and the sign or place value."],"solution":"180=18×10=(2×3²)(2×5)=2²×3²×5."},{"section":"Section A","skill":"HCF","type":"text-short","question":"Find HCF(72, 90).","instruction":"Enter your answer.","answer":["18"],"hints":["Think carefully about the rule involved.","Check each step and the sign or place value."],"solution":"72=2³×3² and 90=2×3²×5. HCF=2×3²=18."},{"section":"Section A","skill":"LCM","type":"text-short","question":"Find LCM(12, 15, 20).","instruction":"Enter your answer.","answer":["60"],"hints":["Think carefully about the rule involved.","Check each step and the sign or place value."],"solution":"LCM=2²×3×5=60."},{"section":"Section A","skill":"Directed numbers","type":"text-short","question":"Calculate −7 + 12 − 9.","instruction":"Enter your answer.","answer":["-4"],"hints":["Think carefully about the rule involved.","Check each step and the sign or place value."],"solution":"−7+12=5; 5−9=−4."},{"section":"Section A","skill":"Directed numbers","type":"text-short","question":"Calculate (−6)(−4) ÷ 8.","instruction":"Enter your answer.","answer":["3"],"hints":["Think carefully about the rule involved.","Check each step and the sign or place value."],"solution":"(−6)(−4)=24; 24÷8=3."},{"section":"Section A","skill":"Rounding","type":"text-short","question":"Round 0.06784 to 3 significant figures.","instruction":"Enter your answer.","answer":["0.0678"],"hints":["Think carefully about the rule involved.","Check each step and the sign or place value."],"solution":"The first three significant digits are 6,7,8; the next digit is 4."},{"section":"Section B","skill":"Classification","type":"matching","question":"Classify each number using the most specific listed set.","instruction":"Choose one set per row.","answer":["Natural","Integer","Rational","Irrational"],"hints":["Think carefully about the rule involved.","Check each step and the sign or place value."],"solution":"12 natural; −5 integer; 0.375 rational; √7 irrational.","rows":[["12",["Natural","Integer","Rational","Irrational"]],["−5",["Natural","Integer","Rational","Irrational"]],["0.375",["Natural","Integer","Rational","Irrational"]],["√7",["Natural","Integer","Rational","Irrational"]]]},{"section":"Section B","skill":"Factor pairs","type":"text","question":"List all positive factor pairs of 84.","instruction":"Enter your answer.","answer":["contains:1,84,2,42,3,28,4,21,6,14,7,12"],"hints":["Think carefully about the rule involved.","Check each step and the sign or place value."],"solution":"Factor pairs: 1×84, 2×42, 3×28, 4×21, 6×14 and 7×12."},{"section":"Section B","skill":"HCF application","type":"text","question":"48 oranges and 60 apples are packed into the greatest possible number of identical bags with none left. How many bags are made, and what is in each bag?","instruction":"Enter your answer.","answer":["contains:12,4,5"],"hints":["Think carefully about the rule involved.","Check each step and the sign or place value."],"solution":"HCF(48,60)=12. Each bag has 4 oranges and 5 apples."},{"section":"Section B","skill":"LCM application","type":"text-short","question":"Three bells ring every 8, 12 and 18 minutes. They ring together now. After how many minutes will they next ring together?","instruction":"Enter your answer.","answer":["72"],"hints":["Think carefully about the rule involved.","Check each step and the sign or place value."],"solution":"LCM(8,12,18)=72."},{"section":"Section B","skill":"Directed numbers","type":"text-short","question":"Calculate 18 − [5 − (−7)].","instruction":"Enter your answer.","answer":["6"],"hints":["Think carefully about the rule involved.","Check each step and the sign or place value."],"solution":"5−(−7)=12, then 18−12=6."},{"section":"Section B","skill":"Temperature","type":"text","question":"A town records −6°C at dawn. It warms by 13°C, then cools by 9°C. Find the final temperature.","instruction":"Enter your answer.","answer":["contains:-2"],"hints":["Think carefully about the rule involved.","Check each step and the sign or place value."],"solution":"−6+13−9=−2°C."},{"section":"Section B","skill":"Estimation","type":"text-short","question":"Estimate 79.6×0.493 by rounding each number to 1 significant figure.","instruction":"Enter your answer.","answer":["40"],"hints":["Think carefully about the rule involved.","Check each step and the sign or place value."],"solution":"79.6≈80 and 0.493≈0.5, so estimate=40."},{"section":"Section B","skill":"Error interval","type":"text","question":"A length is 26.4 cm correct to 1 decimal place. State its error interval.","instruction":"Enter your answer.","answer":["contains:26.35,26.45"],"hints":["Think carefully about the rule involved.","Check each step and the sign or place value."],"solution":"26.35≤L<26.45."},{"section":"Section B","skill":"Upper bound","type":"text-short","question":"A mass is 7.2 kg correct to 1 decimal place. State its upper bound.","instruction":"Enter your answer.","answer":["7.25"],"hints":["Think carefully about the rule involved.","Check each step and the sign or place value."],"solution":"Upper bound=7.25 kg."},{"section":"Section B","skill":"Lower bound","type":"text-short","question":"A distance is 350 m correct to the nearest 10 m. State its lower bound.","instruction":"Enter your answer.","answer":["345"],"hints":["Think carefully about the rule involved.","Check each step and the sign or place value."],"solution":"Lower bound=345 m."},{"section":"Section C","skill":"Number reasoning","type":"text","question":"Show that 231 is not prime by giving a factorisation.","instruction":"Enter your answer.","answer":["contains:3,77|contains:7,33|contains:11,21"],"hints":["Think carefully about the rule involved.","Check each step and the sign or place value."],"solution":"For example, 231=3×77, so it is composite."},{"section":"Section C","skill":"HCF and LCM theorem","type":"text-short","question":"Two positive integers have HCF 8 and LCM 240. One integer is 48. Find the other.","instruction":"Enter your answer.","answer":["40"],"hints":["Think carefully about the rule involved.","Check each step and the sign or place value."],"solution":"Other number=(8×240)÷48=40."},{"section":"Section C","skill":"Square tiles","type":"text","question":"A floor is 540 cm by 360 cm. Find the side of the largest square tile that fits exactly and the number of tiles required.","instruction":"Enter your answer.","answer":["contains:180,6"],"hints":["Think carefully about the rule involved.","Check each step and the sign or place value."],"solution":"HCF(540,360)=180 cm. Tiles: 3×2=6."},{"section":"Section C","skill":"Directed numbers","type":"text-short","question":"Find x if −4x + 7 = 31.","instruction":"Enter your answer.","answer":["-6"],"hints":["Think carefully about the rule involved.","Check each step and the sign or place value."],"solution":"−4x=24, so x=−6."},{"section":"Section C","skill":"Sequence","type":"text-short","question":"The sequence is 11, 5, −1, −7, … Find the 8th term.","instruction":"Enter your answer.","answer":["-31"],"hints":["Think carefully about the rule involved.","Check each step and the sign or place value."],"solution":"Common difference −6. 8th term=11+7(−6)=−31."},{"section":"Section C","skill":"Bounds of area","type":"text","question":"A rectangle is measured as 12 cm by 7 cm, each correct to the nearest cm. Find the lower bound for its area.","instruction":"Enter your answer.","answer":["74.75"],"hints":["Think carefully about the rule involved.","Check each step and the sign or place value."],"solution":"Lower dimensions are 11.5 and 6.5, so lower bound area=74.75 cm²."},{"section":"Section C","skill":"Bounds of speed","type":"text","question":"Distance is 90 km correct to nearest 10 km; time is 1.5 h correct to nearest 0.1 h. Find the lower bound for average speed.","instruction":"Enter your answer.","answer":["contains:54.8|contains:54.83"],"hints":["Use the smallest distance and largest time.","85÷1.55."],"solution":"Lower bound=85÷1.55≈54.84 km/h."},{"section":"Section D","skill":"Reverse rounding","type":"text","question":"A number rounds to 3,700 correct to 2 significant figures. State its error interval.","instruction":"Enter your answer.","answer":["contains:3650,3750"],"hints":["Think carefully about the rule involved.","Check each step and the sign or place value."],"solution":"The rounding unit is 100, so 3650≤x<3750."},{"section":"Section D","skill":"Remainders and LCM","type":"text-short","question":"Find the smallest positive integer greater than 1 that leaves remainder 1 when divided by 6, 8 and 15.","instruction":"Enter your answer.","answer":["121"],"hints":["Think carefully about the rule involved.","Check each step and the sign or place value."],"solution":"LCM(6,8,15)=120, so the required number is 121."},{"section":"Section D","skill":"Integrated reasoning","type":"text","question":"A lift starts at floor −3, rises 11 floors, descends 6 floors, then rises twice as many floors as it descended. On which floor does it finish?","instruction":"Enter your answer.","answer":["contains:14"],"hints":["Think carefully about the rule involved.","Check each step and the sign or place value."],"solution":"−3+11−6+12=14."}];
+
+  const state = { index: 0, answers: Array(questions.length).fill(null), marked: Array(questions.length).fill(false), correct: Array(questions.length).fill(false), hints: Array(questions.length).fill(0), retrySet: null };
+  const $ = id => document.getElementById(id);
+  const screens = {welcome:$('welcomeScreen'),quiz:$('quizScreen'),review:$('reviewScreen'),results:$('resultsScreen')};
+
+  function showScreen(name){Object.values(screens).forEach(s=>s.classList.remove('active'));screens[name].classList.add('active');window.scrollTo({top:0,behavior:'smooth'});}
+  function escapeHtml(value){return String(value).replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));}
+  function currentQuestion(){return questions[state.index];}
+  function answerKey(arr){return [...arr].map(String).sort().join('|');}
+
+  function render(){
+    const q=currentQuestion(), n=state.index;
+    $('sectionLabel').textContent=q.section.toUpperCase();$('questionCounter').textContent=`Question ${n+1} of ${questions.length}`;
+    $('questionNumber').textContent=n+1;$('skillTag').textContent=q.skill;$('questionText').textContent=q.question;$('questionInstruction').textContent=q.instruction||'';
+    $('progressFill').style.width=`${((n+1)/questions.length)*100}%`;
+    $('answeredCount').textContent=`${state.marked.filter(Boolean).length} of ${questions.length} answered`;
+    $('liveScore').textContent=`${state.correct.filter(Boolean).length} correct`;
+    $('previousButton').disabled=n===0;$('nextButton').textContent=n===questions.length-1?'Review & Finish →':'Next →';
+    $('feedbackBox').className='feedback-box';$('feedbackBox').textContent='';$('hintBox').className='support-box hint-box';$('solutionBox').className='support-box solution-box';
+    $('hintButton').textContent=state.hints[n]===0?'Hint 1':state.hints[n]===1?'Hint 2':'Hide hints';
+    renderAnswerArea(q,n);
+    if(state.marked[n]) showMarkedFeedback(n,false);
+  }
+
+  function renderAnswerArea(q,n){
+    const area=$('answerArea'), saved=state.answers[n];
+    if(q.type==='single'||q.type==='multi'){
+      area.innerHTML=(q.type==='multi'?'<p class="multi-note">Select all that apply.</p>':'')+'<div class="option-grid">'+q.options.map((o,i)=>{
+        const checked=q.type==='single'?saved===o:Array.isArray(saved)&&saved.includes(o);
+        return `<label class="option ${checked?'selected':''}"><input type="${q.type==='single'?'radio':'checkbox'}" name="answer" value="${escapeHtml(o)}" ${checked?'checked':''}><span>${escapeHtml(o)}</span></label>`;
+      }).join('')+'</div>';
+      area.querySelectorAll('input').forEach(input=>input.addEventListener('change',()=>{
+        if(q.type==='single') state.answers[n]=input.value;
+        else state.answers[n]=[...area.querySelectorAll('input:checked')].map(x=>x.value);
+        area.querySelectorAll('.option').forEach(label=>label.classList.toggle('selected',label.querySelector('input').checked));
+      }));
+    } else if(q.type==='matching'){
+      area.innerHTML='<div class="classification-grid">'+q.rows.map((row,i)=>`<div class="item">${escapeHtml(row[0])}</div><select class="select-answer" data-row="${i}"><option value="">Choose a category</option>${row[1].map(o=>`<option ${saved&&saved[i]===o?'selected':''}>${escapeHtml(o)}</option>`).join('')}</select>`).join('')+'</div>';
+      area.querySelectorAll('select').forEach(select=>select.addEventListener('change',()=>state.answers[n]=[...area.querySelectorAll('select')].map(x=>x.value)));
+    } else {
+      const cls=q.type==='text-short'?'text-answer short':'text-answer';
+      area.innerHTML=q.type==='text-short'?`<input class="${cls}" value="${escapeHtml(saved||'')}" placeholder="Type your answer">`:`<textarea class="${cls}" placeholder="Write your explanation here">${escapeHtml(saved||'')}</textarea>`;
+      area.querySelector('.text-answer').addEventListener('input',e=>state.answers[n]=e.target.value);
+    }
+  }
+
+  function hasAnswer(q,a){if(q.type==='multi'||q.type==='matching')return Array.isArray(a)&&a.length>0&&a.every(Boolean);return String(a??'').trim()!=='';}
+  function normalize(s){return String(s).toLowerCase().replace(/[.,;:()]/g,' ').replace(/\s+/g,' ').trim();}
+  function evaluate(q,a){
+    if(q.type==='single')return a===q.answer[0];
+    if(q.type==='multi'||q.type==='matching')return answerKey(a)===answerKey(q.answer);
+    const value=normalize(a);
+    return q.answer.some(rule=>{
+      if(!rule.startsWith('contains:'))return value===normalize(rule);
+      const groups=rule.slice(9).split('|');
+      return groups.some(group=>group.split(',').every(term=>value.includes(normalize(term))));
+    });
+  }
+
+  function checkCurrent(){
+    const q=currentQuestion(), n=state.index, a=state.answers[n];
+    if(!hasAnswer(q,a)){
+      const box=$('feedbackBox');box.className='feedback-box show bad';box.textContent='Please answer every part before checking.';return;
+    }
+    state.marked[n]=true;state.correct[n]=evaluate(q,a);showMarkedFeedback(n,true);updateCounts();
+  }
+  function showMarkedFeedback(n,animate){
+    const box=$('feedbackBox'),ok=state.correct[n];box.className=`feedback-box show ${ok?'good':'bad'}`;
+    box.textContent=ok?'Correct — excellent work!':'Not quite. Read the feedback, use a hint, then change your answer and check again.';
+    if(animate)box.scrollIntoView({behavior:'smooth',block:'nearest'});
+  }
+  function updateCounts(){$('answeredCount').textContent=`${state.marked.filter(Boolean).length} of ${questions.length} answered`;$('liveScore').textContent=`${state.correct.filter(Boolean).length} correct`;}
+
+  function showHint(){
+    const n=state.index,q=currentQuestion(),box=$('hintBox');
+    if(state.hints[n]>=2){state.hints[n]=0;box.className='support-box hint-box';$('hintButton').textContent='Hint 1';return;}
+    state.hints[n]++;box.className='support-box hint-box show';box.innerHTML=`<strong>Hint ${state.hints[n]}</strong><br>${escapeHtml(q.hints[state.hints[n]-1])}`;$('hintButton').textContent=state.hints[n]===1?'Hint 2':'Hide hints';
+  }
+  function showSolution(){const box=$('solutionBox');box.classList.toggle('show');box.innerHTML=`<strong>Worked solution</strong><br>${escapeHtml(currentQuestion().solution)}`;}
+  function go(delta){
+    if(delta===1&&state.index===questions.length-1){finish();return;}
+    state.index=Math.max(0,Math.min(questions.length-1,state.index+delta));render();
+  }
+  function answeredIndexes(){return questions.map((q,i)=>hasAnswer(q,state.answers[i])?i:null).filter(i=>i!==null);}
+  function finish(){
+    const answered=answeredIndexes().length, remaining=questions.length-answered;
+    $('finishModalMessage').textContent=`You have answered ${answered} of ${questions.length} questions.`;
+    $('finishModalWarning').textContent=remaining?`${remaining} question${remaining===1?' is':'s are'} still unanswered. You can review them before submitting.`:'All questions have answers. Review them once more before submitting.';
+    $('finishModal').classList.add('show');
+  }
+  function closeFinishModal(){$('finishModal').classList.remove('show');}
+  function buildReview(){
+    const answered=answeredIndexes().length, remaining=questions.length-answered;
+    $('reviewAnswered').textContent=`${answered} answered`;$('reviewUnanswered').textContent=`${remaining} unanswered`;
+    $('reviewGrid').innerHTML=questions.map((q,i)=>{
+      const done=hasAnswer(q,state.answers[i]);
+      return `<button class="review-question ${done?'answered':'unanswered'}" data-index="${i}" aria-label="Question ${i+1}: ${done?'answered':'unanswered'}">${i+1}<br><small>${done?'Answered':'Unanswered'}</small></button>`;
+    }).join('');
+    $('reviewGrid').querySelectorAll('button').forEach(btn=>btn.addEventListener('click',()=>{state.index=Number(btn.dataset.index);showScreen('quiz');render();}));
+  }
+  function openReview(){closeFinishModal();buildReview();showScreen('review');}
+  function submitWorksheet(){
+    questions.forEach((q,i)=>{state.marked[i]=hasAnswer(q,state.answers[i]);state.correct[i]=state.marked[i]&&evaluate(q,state.answers[i]);});
+    const score=state.correct.filter(Boolean).length,pct=Math.round(score/questions.length*100);
+    $('resultScore').textContent=`${score} / ${questions.length}`;$('resultPercent').textContent=`${pct}%`;$('resultRing').style.background=`conic-gradient(var(--gold) ${pct*3.6}deg,#ffffff33 0deg)`;
+    const heading=pct>=90?'🏆 Mastered':pct>=75?'🌟 Proficient':pct>=60?'👍 Developing':'📘 Needs More Practice';
+    const msg=pct>=90?'You have mastered factors and multiples and are ready for HCF and LCM.':pct>=75?'You have a strong understanding. Review the weaker skills below before moving on.':pct>=60?'You are developing well. Revisit the targeted areas, then retry.':'Use the hints and worked solutions to rebuild the foundations before retrying.';
+    $('resultHeading').textContent=heading;$('resultMessage').textContent=msg;
+    buildSkillFeedback();showScreen('results');
+  }
+  function buildSkillFeedback(){
+    const stats={};questions.forEach((q,i)=>{stats[q.skill]??={right:0,total:0};stats[q.skill].total++;if(state.correct[i])stats[q.skill].right++;});
+    const strengths=Object.entries(stats).filter(([,v])=>v.right/v.total>=.75).map(([k])=>k);
+    const reviews=Object.entries(stats).filter(([,v])=>v.right/v.total<.75).map(([k,v])=>`${k} (${v.right}/${v.total})`);
+    $('strengthsList').innerHTML=(strengths.length?strengths:['Keep practising to build a strong area']).map(x=>`<div class="result-item">✓ ${escapeHtml(x)}</div>`).join('');
+    $('reviewList').innerHTML=(reviews.length?reviews:['No weak areas identified']).map(x=>`<div class="result-item">${reviews.length?'↻':'✓'} ${escapeHtml(x)}</div>`).join('');
+  }
+  function retryIncorrect(){
+    const incorrect=state.correct.map((ok,i)=>ok?null:i).filter(i=>i!==null);
+    if(!incorrect.length){retryAll();return;}
+    incorrect.forEach(i=>{state.answers[i]=null;state.marked[i]=false;state.correct[i]=false;state.hints[i]=0;});state.index=incorrect[0];showScreen('quiz');render();
+  }
+  function retryAll(){state.index=0;state.answers.fill(null);state.marked.fill(false);state.correct.fill(false);state.hints.fill(0);showScreen('quiz');render();}
+
+  $('startButton').addEventListener('click',()=>{showScreen('quiz');render();});$('checkButton').addEventListener('click',checkCurrent);$('hintButton').addEventListener('click',showHint);$('solutionButton').addEventListener('click',showSolution);$('previousButton').addEventListener('click',()=>go(-1));$('nextButton').addEventListener('click',()=>go(1));$('cancelFinishButton').addEventListener('click',closeFinishModal);$('openReviewButton').addEventListener('click',openReview);$('returnToWorksheetButton').addEventListener('click',()=>{showScreen('quiz');render();});$('submitWorksheetButton').addEventListener('click',submitWorksheet);$('finishModal').addEventListener('click',e=>{if(e.target===$('finishModal'))closeFinishModal();});$('retryIncorrectButton').addEventListener('click',retryIncorrect);$('retryAllButton').addEventListener('click',retryAll);$('printButton').addEventListener('click',()=>window.print());
+})();
+
+</script>
+</body>
+</html>

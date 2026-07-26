@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Use Pythagoras to calculate vector length." name="description"/>
+<title>Magnitude of a Vector | Vectors | StudyNest</title>
+<link href="../styles/vectors-lessons.css" rel="stylesheet"/>
+<style id="studynest-vector-interactive-styles">
+.vector-interactive{margin:2rem 0;padding:1.35rem;border:2px solid #9bbcaf;border-radius:22px;background:#f8fbf9;box-shadow:0 8px 22px rgba(36,59,83,.08)}
+.vector-interactive h2{margin-top:0}.vector-interactive .activity-intro{margin-bottom:1rem}.vector-controls{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.9rem;margin:1rem 0}.vector-controls label{display:flex;flex-direction:column;gap:.35rem;font-weight:700}.vector-controls input,.vector-controls select{width:100%;box-sizing:border-box;padding:.7rem;border:1.5px solid #9bbcaf;border-radius:12px;background:#fff;font:inherit}.vector-actions{display:flex;flex-wrap:wrap;gap:.65rem;margin:.8rem 0}.vector-actions button,.vector-choice{border:0;border-radius:999px;padding:.72rem 1rem;background:#4f8b78;color:#fff;font:inherit;font-weight:700;cursor:pointer}.vector-actions button.secondary,.vector-choice.secondary{background:#243b53}.vector-actions button:focus-visible,.vector-choice:focus-visible{outline:3px solid #d79b61;outline-offset:3px}.vector-stage{width:100%;overflow:hidden;border-radius:16px;background:#fff;border:1.5px solid #c9d8d2;padding:.6rem;box-sizing:border-box}.vector-stage svg{display:block;width:100%;height:auto;max-height:430px}.vector-result{margin-top:1rem;padding:1rem;border-left:5px solid #4f8b78;border-radius:10px;background:#edf6f2;font-weight:700}.vector-result.bad{border-color:#b65050;background:#fff1f1}.vector-result.good{border-color:#4f8b78;background:#edf6f2}.vector-mini-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:.8rem}.vector-option{padding:.8rem;border:1.5px solid #9bbcaf;border-radius:14px;background:#fff;cursor:pointer;text-align:left;font:inherit}.vector-option.active{background:#dfeee8;border-color:#4f8b78}.vector-option.correct{background:#dff3e8;border-color:#2f7d54}.vector-option.wrong{background:#fde6e6;border-color:#b65050}.vector-wrapups{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin:2rem 0}.vector-wrapup{padding:1rem 1.1rem;border-radius:18px;border:1.5px solid #c9d8d2;background:#fff}.vector-wrapup h3{margin-top:0}.vector-formula{font-family:Georgia,serif;font-size:1.08em}.vector-score{font-size:1.15rem}.drag-dot{cursor:grab}.drag-dot:active{cursor:grabbing}
+@media(max-width:600px){.vector-interactive{padding:1rem;border-radius:16px}.vector-controls{grid-template-columns:1fr}.vector-actions{flex-direction:column}.vector-actions button{width:100%}.vector-stage{padding:.25rem}.vector-wrapups{grid-template-columns:1fr}}
+</style>
+  <link rel="stylesheet" href="../styles/studynest-v3.css">
+
+<link rel="stylesheet" href="../studynest-3.1.css">
+<link rel="stylesheet" href="../studynest-theme.css">
+</head><body>
+<div class="announcement-bar">🚀 StudyNest is growing. New lessons and worksheets are added regularly.</div>
+<header class="site-header">
+<a class="logo" href="../index.html">📚 StudyNest</a>
+<nav class="main-navigation">
+<a href="../index.html">🏠 Home</a>
+<a href="../topics.html">📘 Study by Topic</a>
+<a href="index.html">➶ Vectors</a>
+<a href="../worksheets.html">📝 Worksheets</a>
+</nav>
+</header>
+<section class="lesson-hero"><div><p class="lesson-label">VECTORS · LESSON 07</p>
+<h1>Magnitude of a Vector</h1><p class="lesson-subtitle">Use Pythagoras to calculate vector length.</p>
+<div class="lesson-meta"><span class="meta-pill">⏱️ 24–34 min</span>
+<span class="meta-pill">📘 Developing</span><span class="meta-pill">➶ Diagrams included</span></div></div>
+<div aria-hidden="true" class="hero-visual">
+<div class="vector-hero-visual">
+<span class="vector-token token-a">a⃗</span>
+<span class="vector-token token-b">b⃗</span>
+<span class="vector-token token-mag">|v|</span>
+<div class="vector-axis-x"></div>
+<div class="vector-axis-y"></div>
+<div class="vector-arrow"></div>
+<div class="vector-arrow-secondary"></div>
+</div>
+</div>
+</section>
+<main class="lesson-main">
+<section class="lesson-section"><h2>🎯 Learning Objectives</h2><ul class="objective-list">
+<li>calculate vector magnitude;</li><li>connect magnitude with Pythagoras;</li>
+<li>find unit vectors;</li><li>interpret distance from components.</li></ul></section>
+<section class="lesson-section"><h2>Magnitude Formula</h2>
+<div class="vector-rule">For v=(x,y), |v|=√(x²+y²).</div>
+<figure class="vector-diagram"><svg viewbox="0 0 660 390"><line stroke="#243b53" stroke-width="5" x1="120" x2="500" y1="310" y2="310"></line><line stroke="#243b53" stroke-width="5" x1="500" x2="500" y1="310" y2="90"></line><line stroke="#4f8b78" stroke-width="7" x1="120" x2="500" y1="310" y2="90"></line><polygon fill="#4f8b78" points="500,90 476,95 488,115"></polygon><rect fill="none" height="30" stroke="#7a67a8" stroke-width="4" width="30" x="470" y="280"></rect><text font-size="22" x="300" y="345">x</text><text font-size="22" x="520" y="205">y</text><text font-size="22" x="295" y="180">|v|</text></svg><figcaption>Magnitude is the hypotenuse of the component triangle.</figcaption></figure></section>
+<section class="lesson-section"><h2>Worked Example</h2>
+<p>For v=(6,8): |v|=√(36+64)=√100=10.</p></section>
+<section class="lesson-section vector-interactive" data-vector-activity=""><h2>🧭 Interactive Diagram: Magnitude and Pythagoras</h2><p class="activity-intro">Change the components and see the right triangle behind the magnitude formula.</p><div class="vector-controls"><label>x component<input id="magX" max="6" min="-6" type="range" value="3"/></label><label>y component<input id="magY" max="4" min="-4" type="range" value="4"/></label></div><div class="vector-stage"><svg aria-label="Interactive vector coordinate grid" role="img" viewbox="0 0 640 420"><defs><marker id="arrow" markerheight="10" markerwidth="10" orient="auto" refx="8" refy="3"><path d="M0,0 L0,6 L9,3 z" fill="#4f8b78"></path></marker><marker id="arrow2" markerheight="10" markerwidth="10" orient="auto" refx="8" refy="3"><path d="M0,0 L0,6 L9,3 z" fill="#d07955"></path></marker></defs><style>.grid{stroke:#e0ebe6;stroke-width:1}.axis{stroke:#243b53;stroke-width:3}.v1{stroke:#4f8b78;stroke-width:6;marker-end:url(#arrow)}.v2{stroke:#d07955;stroke-width:6;marker-end:url(#arrow2)}.guide{stroke:#849b92;stroke-width:2;stroke-dasharray:7 6}.lbl{font:700 17px sans-serif;fill:#243b53}</style><line class="grid" x1="40" x2="40" y1="20" y2="400"></line><line class="grid" x1="80" x2="80" y1="20" y2="400"></line><line class="grid" x1="120" x2="120" y1="20" y2="400"></line><line class="grid" x1="160" x2="160" y1="20" y2="400"></line><line class="grid" x1="200" x2="200" y1="20" y2="400"></line><line class="grid" x1="240" x2="240" y1="20" y2="400"></line><line class="grid" x1="280" x2="280" y1="20" y2="400"></line><line class="grid" x1="320" x2="320" y1="20" y2="400"></line><line class="grid" x1="360" x2="360" y1="20" y2="400"></line><line class="grid" x1="400" x2="400" y1="20" y2="400"></line><line class="grid" x1="440" x2="440" y1="20" y2="400"></line><line class="grid" x1="480" x2="480" y1="20" y2="400"></line><line class="grid" x1="520" x2="520" y1="20" y2="400"></line><line class="grid" x1="560" x2="560" y1="20" y2="400"></line><line class="grid" x1="600" x2="600" y1="20" y2="400"></line><line class="grid" x1="640" x2="640" y1="20" y2="400"></line><line class="grid" x1="40" x2="620" y1="20" y2="20"></line><line class="grid" x1="40" x2="620" y1="60" y2="60"></line><line class="grid" x1="40" x2="620" y1="100" y2="100"></line><line class="grid" x1="40" x2="620" y1="140" y2="140"></line><line class="grid" x1="40" x2="620" y1="180" y2="180"></line><line class="grid" x1="40" x2="620" y1="220" y2="220"></line><line class="grid" x1="40" x2="620" y1="260" y2="260"></line><line class="grid" x1="40" x2="620" y1="300" y2="300"></line><line class="grid" x1="40" x2="620" y1="340" y2="340"></line><line class="grid" x1="40" x2="620" y1="380" y2="380"></line><line class="axis" x1="40" x2="620" y1="220" y2="220"></line><line class="axis" x1="320" x2="320" y1="400" y2="20"></line><line class="v1" id="magVec" x1="320" y1="220"></line><line class="guide" id="magH"></line><line class="guide" id="magV"></line><text class="lbl" id="magXL">3</text><text class="lbl" id="magYL">4</text></svg></div><div aria-live="polite" class="vector-result">|v| = √(3² + 4²) = 5.00 units.</div></section><section class="lesson-section"><h2>Practice</h2><ol class="practice-list">
+<li>Find |(3,4)|.</li><li>Find |(−5,12)|.</li><li>Find the magnitude of (7,−7).</li>
+<li>Why does a negative component not make magnitude negative?</li></ol></section>
+<section class="lesson-section answers-section">
+<h2>✅ Check Your Work</h2>
+<details><summary>Show answers and working</summary>
+<div class="answers-content"><ol><li>√(9+16)=5.</li><li>√(25+144)=13.</li><li>√(49+49)=√98=7√2≈9.90.</li><li>Components are squared, and magnitude represents a non-negative length.</li></ol></div>
+</details>
+</section>
+<section class="lesson-section">
+<h2>🧭 StudyNest: How to Solve Vector Problems</h2>
+<div class="vector-solver">
+<div class="vector-step"><span>1</span><strong>Read</strong>Identify the starting point, endpoint, direction and required vector.</div>
+<div class="vector-step"><span>2</span><strong>Represent</strong>Draw an arrow or write the vector in column form.</div>
+<div class="vector-step"><span>3</span><strong>Choose</strong>Decide whether to add, subtract, scale or find magnitude.</div>
+<div class="vector-step"><span>4</span><strong>Work</strong>Operate on horizontal and vertical components separately.</div>
+<div class="vector-step"><span>5</span><strong>Simplify</strong>Collect like vector terms and reduce numerical components.</div>
+<div class="vector-step"><span>6</span><strong>Interpret</strong>State what the result means as a movement or displacement.</div>
+<div class="vector-step"><span>7</span><strong>Check</strong>Confirm the direction and signs match the diagram.</div>
+<div class="vector-step"><span>8</span><strong>Conclude</strong>Give the final vector or magnitude in correct notation.</div>
+</div>
+</section>
+<section aria-label="Lesson summary and exam guidance" class="vector-wrapups"><article class="vector-wrapup"><h3>📘 Remember</h3><p>Vectors carry both magnitude and direction. Work with horizontal and vertical components separately, and keep signs consistent.</p></article><article class="vector-wrapup"><h3>⚠️ Common Mistakes</h3><p>Do not confuse a point with its position vector. For AB, always calculate B − A, not A − B.</p></article><article class="vector-wrapup"><h3>⭐ Exam Tips</h3><p>Sketch arrows, label directions clearly, show component working and check whether the final direction agrees with the diagram.</p></article><article class="vector-wrapup"><h3>🌍 Did You Know?</h3><p>Vectors are used in navigation, animation, engineering, robotics, weather modelling and computer games.</p></article></section><nav class="lesson-navigation"><a class="nav-button" href="06-scalar-multiplication.html">← Scalar Multiplication</a>
+<a class="nav-button" href="index.html">Vectors Roadmap</a>
+<a class="nav-button primary" href="08-position-vectors-and-points.html">Position Vectors →</a></nav></main>
+<footer class="site-footer">
+<strong>📚 StudyNest</strong>
+<p>Helping students understand Mathematics, not memorise it.</p>
+<p>© 2026 StudyNest</p>
+</footer>
+<script>document.addEventListener("DOMContentLoaded",()=>{const q=s=>document.querySelector(s),out=q('[data-vector-activity] .vector-result');function u(){let x=+q('#magX').value,y=+q('#magY').value,O=[320,220],E=[O[0]+x*40,O[1]-y*40],C=[E[0],O[1]];function line(id,p1,p2){let e=q('#'+id);['x1','y1','x2','y2'].forEach((a,i)=>e.setAttribute(a,[...p1,...p2][i]));}line('magVec',O,E);line('magH',O,C);line('magV',C,E);q('#magXL').setAttribute('x',(O[0]+C[0])/2);q('#magXL').setAttribute('y',O[1]+22);q('#magXL').textContent=Math.abs(x);q('#magYL').setAttribute('x',C[0]+10);q('#magYL').setAttribute('y',(C[1]+E[1])/2);q('#magYL').textContent=Math.abs(y);out.textContent=`|v| = √(${x}² + ${y}²) = ${Math.hypot(x,y).toFixed(2)} units.`;}['magX','magY'].forEach(id=>q('#'+id).addEventListener('input',u));u();});</script>  <script src="../script-v3.js"></script>
+
+<script src="../studynest-3.1.js" defer></script>
+</body></html>

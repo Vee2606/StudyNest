@@ -1,0 +1,31 @@
+window.STUDYNEST_WORKSHEET = {
+  kicker: "GRAPHS • WORKSHEET 03",
+  title: "Tables of Values and Linear Graphs",
+  description: "Complete value tables, recognise straight-line rules and connect equations with coordinates.",
+  level: "Core",
+  time: "30–40 minutes",
+  skills: ["Substitution into graph rules", "Completing tables", "Coordinates on a line", "Gradient patterns", "Intercepts"],
+  note: "For each x-value, substitute carefully into the rule to calculate y.",
+  questions: [
+    {section:"Graphs Batch 1",skill:"Tables of values",question:"For y = x + 3, find y when x = 2.",answer:"5",hint:"Substitute x = 2.",solution:"y = 2 + 3 = 5."},
+    {section:"Graphs Batch 1",skill:"Tables of values",question:"For y = 2x, find y when x = −4.",answer:"-8",hint:"Multiply −4 by 2.",solution:"y = 2(−4) = −8."},
+    {section:"Graphs Batch 1",skill:"Tables of values",question:"For y = 3x − 1, find y when x = 5.",answer:"14",hint:"Calculate 3 × 5, then subtract 1.",solution:"y = 15 − 1 = 14."},
+    {section:"Graphs Batch 1",skill:"Tables of values",question:"For y = −x + 4, find y when x = 7.",answer:"-3",hint:"Use −7 + 4.",solution:"y = −7 + 4 = −3."},
+    {section:"Graphs Batch 1",skill:"Tables of values",question:"For y = 0.5x + 2, find y when x = 6.",answer:"5",hint:"Half of 6 is 3.",solution:"y = 3 + 2 = 5."},
+    {section:"Graphs Batch 1",skill:"Missing x-value",question:"For y = x + 5, y = 12. Find x.",answer:"7",hint:"Solve x + 5 = 12.",solution:"x = 12 − 5 = 7."},
+    {section:"Graphs Batch 1",skill:"Missing x-value",question:"For y = 3x, y = −15. Find x.",answer:"-5",hint:"Divide −15 by 3.",solution:"x = −15 ÷ 3 = −5."},
+    {section:"Graphs Batch 1",skill:"Point on a line",question:"Does the point (2, 7) lie on y = 2x + 3?",answer:"yes",answers:["yes","y"],hint:"Substitute x = 2 and compare the y-value.",solution:"2(2) + 3 = 7, so yes."},
+    {section:"Graphs Batch 1",skill:"Point on a line",question:"Does the point (4, 9) lie on y = 3x − 2?",answer:"no",answers:["no","n"],hint:"Substitute x = 4.",solution:"3(4) − 2 = 10, not 9, so no."},
+    {section:"Graphs Batch 1",skill:"Coordinate pair",question:"For y = x − 2, write the coordinate when x = −3.",answer:"(-3,-5)",answers:["(-3,-5)","-3,-5"],hint:"Find y first.",solution:"y = −3 − 2 = −5, so the coordinate is (−3, −5)."},
+    {section:"Graphs Batch 1",skill:"Coordinate pair",question:"For y = −2x + 1, write the coordinate when x = 3.",answer:"(3,-5)",answers:["(3,-5)","3,-5"],hint:"Calculate −2(3) + 1.",solution:"y = −6 + 1 = −5, so the coordinate is (3, −5)."},
+    {section:"Graphs Batch 1",skill:"Pattern",question:"A table for a straight line gives y-values 1, 4, 7, 10 as x increases by 1. What is the change in y each time?",answer:"3",hint:"Subtract consecutive y-values.",solution:"The y-value increases by 3 each time."},
+    {section:"Graphs Batch 1",skill:"Gradient pattern",question:"For y = 5x − 2, what is the gradient?",answer:"5",hint:"In y = mx + c, the gradient is m.",solution:"The gradient is 5."},
+    {section:"Graphs Batch 1",skill:"Gradient pattern",question:"For y = −3x + 8, what is the gradient?",answer:"-3",hint:"Read the coefficient of x.",solution:"The gradient is −3."},
+    {section:"Graphs Batch 1",skill:"Intercept",question:"For y = 4x + 7, what is the y-intercept?",answer:"7",hint:"Set x = 0.",solution:"When x = 0, y = 7, so the y-intercept is 7."},
+    {section:"Graphs Batch 1",skill:"Intercept",question:"For y = −2x − 5, what is the y-intercept?",answer:"-5",hint:"Read the constant term.",solution:"The y-intercept is −5."},
+    {section:"Graphs Batch 1",skill:"Rule from a table",question:"The pairs (0, 2), (1, 4), (2, 6), (3, 8) follow which rule?",answer:"y=2x+2",answers:["y=2x+2","y = 2x + 2"],hint:"The gradient is 2 and y = 2 when x = 0.",solution:"The rule is y = 2x + 2."},
+    {section:"Graphs Batch 1",skill:"Rule from a table",question:"The pairs (0, 5), (1, 4), (2, 3), (3, 2) follow which rule?",answer:"y=-x+5",answers:["y=-x+5","y = -x + 5","y=−x+5","y = −x + 5"],hint:"y decreases by 1 and starts at 5.",solution:"The rule is y = −x + 5."},
+    {section:"Graphs Batch 1",skill:"Parallel lines",question:"Which has the same gradient as y = 3x + 1: y = 3x − 7 or y = −3x + 1?",answer:"y=3x-7",answers:["y=3x-7","y = 3x - 7","y = 3x − 7"],hint:"Parallel straight lines have equal gradients.",solution:"y = 3x − 7 has the same gradient, 3."},
+    {section:"Graphs Batch 1",skill:"Mastery",question:"For y = 2x − 5, find the value of x when y = 9.",answer:"7",hint:"Solve 9 = 2x − 5.",solution:"14 = 2x, so x = 7."}
+  ]
+};

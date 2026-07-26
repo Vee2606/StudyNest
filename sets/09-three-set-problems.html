@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Work from the centre outward to solve more advanced set-counting questions." name="description"/>
+<title>Three-Set Problems | Sets | StudyNest</title>
+<link href="../styles/sets-lessons.css" rel="stylesheet"/>
+<link href="sets-visuals.css" rel="stylesheet"/>  <link rel="stylesheet" href="../styles/studynest-v3.css">
+
+<link rel="stylesheet" href="../studynest-3.1.css">
+<link rel="stylesheet" href="../studynest-theme.css">
+</head>
+<body>
+<div class="announcement-bar">🚀 StudyNest is growing. New lessons and worksheets are added regularly.</div>
+<header class="site-header">
+<a class="logo" href="../index.html">📚 StudyNest</a>
+<nav class="main-navigation">
+<a href="../index.html">🏠 Home</a>
+<a href="../topics.html">📘 Study by Topic</a>
+<a href="index.html">{ } Sets</a>
+<a href="../worksheets.html">📝 Worksheets</a>
+</nav>
+</header>
+<section class="lesson-hero">
+<div>
+<p class="lesson-label">SETS · LESSON 09</p>
+<h1>Three-Set Problems</h1>
+<p class="lesson-subtitle">Work from the centre outward to solve more advanced set-counting questions.</p>
+<div class="lesson-meta">
+<span class="meta-pill">⏱️ 22–28 min</span>
+<span class="meta-pill">📘 Challenge</span>
+<span class="meta-pill">✏️ Worked examples included</span>
+</div>
+</div>
+<div aria-hidden="true" class="hero-visual">
+<div class="sets-hero-art">
+<div class="sets-universal">
+<span class="set-circle set-a">A</span>
+<span class="set-circle set-b">B</span>
+<span class="set-overlap">A ∩ B</span>
+</div>
+<span class="set-chip chip-union">A ∪ B</span>
+<span class="set-chip chip-complement">A′</span>
+<span class="set-dot dot-one"></span>
+<span class="set-dot dot-two"></span>
+<span class="set-dot dot-three"></span>
+</div>
+</div>
+</section>
+<main class="lesson-main"><section class="lesson-section"><h2>🎯 By the End of This Lesson...</h2><p>You should be able to:</p><ul class="objective-list"><li>identify the seven regions inside a three-set Venn diagram;</li><li>fill a three-set diagram from the centre outward;</li><li>distinguish “exactly two” from “at least two”;</li><li>solve and check three-set survey problems.</li></ul></section><section class="lesson-section"><h2>🌍 Why This Matters</h2><div class="why-box"><p>Three-set diagrams organise more complicated survey information into seven separate inside regions. Working from the centre outward keeps the data consistent.</p></div></section>
+<section class="lesson-section">
+<h2>Three-Set Venn Diagrams</h2>
+<p>
+        Three-set problems contain seven regions inside the circles. Work from
+        the centre outward.
+    </p>
+<div class="key-idea">
+        Fill the intersection of all three sets first. Then calculate the
+        pairwise-only regions, then the single-set-only regions.
+    </div>
+</section><div class="visual-board"><h3>Three-set Venn diagram: start at the centre</h3><svg aria-label="Three-set Venn diagram with labelled regions" class="venn-svg" role="img" viewbox="0 0 760 500"><rect class="venn-frame" height="420" rx="24" width="700" x="30" y="30"></rect><circle class="venn-circle venn-a" cx="315" cy="225" r="135"></circle><circle class="venn-circle venn-b" cx="445" cy="225" r="135"></circle><circle class="venn-circle venn-c" cx="380" cy="330" r="135"></circle><text class="venn-label" x="210" y="105">A</text><text class="venn-label" x="520" y="105">B</text><text class="venn-label" x="375" y="455">C</text><text class="venn-item" x="370" y="272">4</text><text class="venn-item" x="368" y="175">6</text><text class="venn-item" x="302" y="305">5</text><text class="venn-item" x="435" y="305">3</text><text class="venn-item" x="245" y="205">7</text><text class="venn-item" x="505" y="205">8</text><text class="venn-item" x="370" y="385">9</text><text class="venn-small" x="82" y="410">Centre first → pair-only regions → single-only regions → outside.</text></svg></div>
+<section class="lesson-section">
+<h2>The Seven Inside Regions</h2>
+<ol class="practice-list">
+<li>A only</li>
+<li>B only</li>
+<li>C only</li>
+<li>A and B only</li>
+<li>A and C only</li>
+<li>B and C only</li>
+<li>A and B and C</li>
+</ol>
+</section>
+<section class="lesson-section">
+<h2>Worked Example</h2>
+<div class="worked-example">
+<h3>
+            In a survey of 50 learners: n(A)=24, n(B)=22, n(C)=20,
+            n(A∩B)=9, n(A∩C)=8, n(B∩C)=7 and n(A∩B∩C)=3.
+        </h3>
+<div class="step"><span class="step-number">1</span><p>Centre = 3.</p></div>
+<div class="step"><span class="step-number">2</span><p>A∩B only = 9−3=6.</p></div>
+<div class="step"><span class="step-number">3</span><p>A∩C only = 8−3=5.</p></div>
+<div class="step"><span class="step-number">4</span><p>B∩C only = 7−3=4.</p></div>
+<div class="step"><span class="step-number">5</span><p>A only = 24−6−5−3=10.</p></div>
+<div class="step"><span class="step-number">6</span><p>B only = 22−6−4−3=9.</p></div>
+<div class="step"><span class="step-number">7</span><p>C only = 20−5−4−3=8.</p></div>
+<div class="step"><span class="step-number">8</span><p>At least one = 45, so neither = 5.</p></div>
+</div>
+</section>
+<section class="lesson-section">
+<h2>Three-Set Counting Formula</h2>
+<div class="math-display">
+        n(A∪B∪C)=n(A)+n(B)+n(C)−n(A∩B)−n(A∩C)−n(B∩C)+n(A∩B∩C)
+    </div>
+<p>
+        The triple intersection is added back because subtracting the three
+        pairwise intersections removes it too many times.
+    </p>
+</section>
+<section class="lesson-section"><h2>💡 Exam Tip</h2><div class="exam-tip-box"><p>Fill the centre first, then the pairwise-only regions, then the single-only regions, and calculate neither last.</p></div></section><section class="lesson-section">
+<h2>Practice Questions</h2>
+<span class="level-heading">Foundation</span>
+<ol class="practice-list">
+<li>
+            n(A∩B)=10 and n(A∩B∩C)=4. Find the number in A and B only.
+        </li>
+<li>
+            n(A)=25. Inside A there are 7 in A∩B only, 5 in A∩C only and 3 in
+            all three. Find A only.
+        </li>
+</ol>
+<span class="level-heading">Confidence</span>
+<ol class="practice-list" start="3">
+<li>
+            n(A)=30, n(B)=28, n(C)=24, pairwise intersections are 12, 10 and 9,
+            and the triple intersection is 4. Find n(A∪B∪C).
+        </li>
+<li>If n(U)=80 and the union in Question 3 is known, find neither.</li>
+</ol>
+<span class="level-heading">Challenge</span>
+<ol class="practice-list" start="5">
+<li>
+            In a survey of 100 people, 56 chose A, 48 chose B, 40 chose C, 22
+            chose A and B, 18 chose A and C, 16 chose B and C, and 8 chose all
+            three. How many chose none?
+        </li>
+</ol>
+</section>
+<section class="lesson-section answers-section">
+<h2>✅ Check Your Work</h2>
+<details>
+<summary>Show practice answers</summary>
+<div class="answers-content">
+<ol>
+<li>10−4=6.</li>
+<li>25−7−5−3=10.</li>
+<li>30+28+24−12−10−9+4=55.</li>
+<li>80−55=25.</li>
+<li>
+                    Union = 56+48+40−22−18−16+8 = 96.<br/>
+                    None = 100−96 = 4.
+                </li>
+</ol>
+</div>
+</details>
+</section>
+<section class="lesson-section">
+<h2>One-Minute Summary</h2>
+<ul class="summary-list">
+<li>Start with the triple intersection.</li>
+<li>Then fill pairwise-only regions.</li>
+<li>Then calculate single-set-only regions.</li>
+<li>Use inclusion–exclusion to check the total.</li>
+</ul>
+</section>
+<section class="lesson-section"><h2>➡️ What’s Next? </h2><div class="whats-next-box"><p>Next, you will complete a mixed review in which you must choose the correct set idea without being told.</p></div></section><nav class="lesson-navigation">
+<a class="nav-button" href="08-two-set-problems.html">← Two-Set Problems</a>
+<a class="nav-button" href="index.html">Sets Roadmap</a>
+<a class="nav-button primary" href="10-sets-mixed-review.html">Mixed Review →</a>
+</nav>
+</main>
+<footer class="site-footer">
+<strong>📚 StudyNest</strong>
+<p>Helping students understand Mathematics, not memorise it.</p>
+<p>© 2026 StudyNest</p>
+</footer>
+  <script src="../script-v3.js"></script>
+
+<script src="../studynest-3.1.js" defer></script>
+</body>
+</html>

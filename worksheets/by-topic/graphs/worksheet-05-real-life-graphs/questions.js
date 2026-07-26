@@ -1,0 +1,31 @@
+window.STUDYNEST_WORKSHEET = {
+  kicker: "GRAPHS • WORKSHEET 05",
+  title: "Real-Life Graphs",
+  description: "Interpret distance–time, conversion and other graphs used to represent real situations.",
+  level: "Core",
+  time: "25–35 minutes",
+  skills: ["Distance–time graphs", "Speed from gradient", "Stationary sections", "Reading trends", "Interpolation"],
+  note: "Always read the axis labels and units before interpreting a graph.",
+  questions: [
+    {section:"Graphs Batch 2",skill:"Distance–time",question:"On a distance–time graph, what does a horizontal section mean?",answer:"stationary",answers:["stationary","stopped","not moving","at rest"],hint:"The distance is not changing.",solution:"A horizontal section means the object is stationary."},
+    {section:"Graphs Batch 2",skill:"Distance–time",question:"On a distance–time graph, what does a steeper line show?",answer:"greater speed",answers:["greater speed","faster","higher speed"],hint:"Gradient represents speed.",solution:"A steeper line has a greater gradient, so it shows a greater speed."},
+    {section:"Graphs Batch 2",skill:"Speed",question:"A cyclist travels 12 km in 3 hours. Find the average speed in km/h.",answer:"4",hint:"Speed = distance ÷ time.",solution:"12 ÷ 3 = 4 km/h."},
+    {section:"Graphs Batch 2",skill:"Speed",question:"A car travels 150 km in 2.5 hours. Find its average speed in km/h.",answer:"60",hint:"Divide 150 by 2.5.",solution:"150 ÷ 2.5 = 60 km/h."},
+    {section:"Graphs Batch 2",skill:"Distance",question:"A runner moves at 8 km/h for 2 hours. How far does the runner travel?",answer:"16",hint:"Distance = speed × time.",solution:"8 × 2 = 16 km."},
+    {section:"Graphs Batch 2",skill:"Time",question:"A bus travels 180 km at an average speed of 60 km/h. How long does the journey take?",answer:"3",hint:"Time = distance ÷ speed.",solution:"180 ÷ 60 = 3 hours."},
+    {section:"Graphs Batch 2",skill:"Journey",question:"A journey graph rises from 0 km at 08:00 to 90 km at 09:30. Find the average speed in km/h.",answer:"60",hint:"The journey takes 1.5 hours.",solution:"90 ÷ 1.5 = 60 km/h."},
+    {section:"Graphs Batch 2",skill:"Journey",question:"A traveller remains at 40 km from 10:15 to 10:45. How long is the stop in minutes?",answer:"30",hint:"Find the time difference.",solution:"10:45 - 10:15 = 30 minutes."},
+    {section:"Graphs Batch 2",skill:"Return journey",question:"On a distance-from-home graph, what does a downward sloping line usually show?",answer:"returning home",answers:["returning home","moving towards home","going back home","return journey"],hint:"The distance from home is decreasing.",solution:"It shows the traveller moving back towards home."},
+    {section:"Graphs Batch 2",skill:"Temperature",question:"A temperature graph falls from 18°C to 6°C. What is the decrease in temperature?",answer:"12",hint:"Subtract the final temperature from the initial temperature.",solution:"18 - 6 = 12°C."},
+    {section:"Graphs Batch 2",skill:"Temperature",question:"The temperature rises from -4°C to 7°C. By how many degrees does it rise?",answer:"11",hint:"Count from -4 to 0, then to 7.",solution:"7 - (-4) = 11°C."},
+    {section:"Graphs Batch 2",skill:"Conversion graph",question:"A conversion graph shows 1 US dollar = 15 units of a currency. How many units equal 8 US dollars?",answer:"120",hint:"Multiply by 15.",solution:"8 × 15 = 120 units."},
+    {section:"Graphs Batch 2",skill:"Conversion graph",question:"Using the same rate, how many US dollars equal 225 currency units?",answer:"15",hint:"Divide by 15.",solution:"225 ÷ 15 = 15 US dollars."},
+    {section:"Graphs Batch 2",skill:"Trend",question:"If a graph rises steadily as time increases, describe the trend in one word.",answer:"increasing",answers:["increasing","increase","rising","upward"],hint:"The values get larger.",solution:"The trend is increasing."},
+    {section:"Graphs Batch 2",skill:"Trend",question:"A graph first rises, then becomes horizontal. What happens after the rise?",answer:"constant",answers:["constant","stays the same","unchanged","levels off"],hint:"A horizontal line has no change.",solution:"The quantity becomes constant."},
+    {section:"Graphs Batch 2",skill:"Interpolation",question:"A straight conversion graph passes through (0, 0) and (10, 50). Find y when x = 6.",answer:"30",hint:"The rate is 5 units of y per unit of x.",solution:"y = 5x, so y = 5(6) = 30."},
+    {section:"Graphs Batch 2",skill:"Interpolation",question:"A straight graph passes through (0, 0) and (4, 28). Find y when x = 2.5.",answer:"17.5",hint:"First find the rate 28 ÷ 4.",solution:"The rate is 7, so y = 7(2.5) = 17.5."},
+    {section:"Graphs Batch 2",skill:"Rate",question:"Water fills a tank from 20 litres to 80 litres in 5 minutes. Find the average filling rate in litres per minute.",answer:"12",hint:"Find the increase in volume first.",solution:"Increase = 80 - 20 = 60 litres. Rate = 60 ÷ 5 = 12 litres per minute."},
+    {section:"Graphs Batch 2",skill:"Rate",question:"A tank empties from 100 litres to 40 litres in 4 minutes. Find the average decrease per minute.",answer:"15",hint:"Find the total decrease, then divide by 4.",solution:"Decrease = 60 litres. 60 ÷ 4 = 15 litres per minute."},
+    {section:"Graphs Batch 2",skill:"Mastery",question:"A traveller covers 30 km in the first 30 minutes, stops for 15 minutes, then covers another 45 km in 45 minutes. Find the average speed for the whole journey, including the stop, in km/h.",answer:"50",hint:"Total distance is 75 km and total time is 1.5 hours.",solution:"Average speed = 75 ÷ 1.5 = 50 km/h."}
+  ]
+};

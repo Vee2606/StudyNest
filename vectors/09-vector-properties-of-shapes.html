@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Use routes, diagonals and scalar multiples to reason about shapes." name="description"/>
+<title>Vector Properties of Plane Shapes | Vectors | StudyNest</title>
+<link href="../styles/vectors-lessons.css" rel="stylesheet"/>
+<style id="studynest-vector-interactive-styles">
+.vector-interactive{margin:2rem 0;padding:1.35rem;border:2px solid #9bbcaf;border-radius:22px;background:#f8fbf9;box-shadow:0 8px 22px rgba(36,59,83,.08)}
+.vector-interactive h2{margin-top:0}.vector-interactive .activity-intro{margin-bottom:1rem}.vector-controls{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.9rem;margin:1rem 0}.vector-controls label{display:flex;flex-direction:column;gap:.35rem;font-weight:700}.vector-controls input,.vector-controls select{width:100%;box-sizing:border-box;padding:.7rem;border:1.5px solid #9bbcaf;border-radius:12px;background:#fff;font:inherit}.vector-actions{display:flex;flex-wrap:wrap;gap:.65rem;margin:.8rem 0}.vector-actions button,.vector-choice{border:0;border-radius:999px;padding:.72rem 1rem;background:#4f8b78;color:#fff;font:inherit;font-weight:700;cursor:pointer}.vector-actions button.secondary,.vector-choice.secondary{background:#243b53}.vector-actions button:focus-visible,.vector-choice:focus-visible{outline:3px solid #d79b61;outline-offset:3px}.vector-stage{width:100%;overflow:hidden;border-radius:16px;background:#fff;border:1.5px solid #c9d8d2;padding:.6rem;box-sizing:border-box}.vector-stage svg{display:block;width:100%;height:auto;max-height:430px}.vector-result{margin-top:1rem;padding:1rem;border-left:5px solid #4f8b78;border-radius:10px;background:#edf6f2;font-weight:700}.vector-result.bad{border-color:#b65050;background:#fff1f1}.vector-result.good{border-color:#4f8b78;background:#edf6f2}.vector-mini-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:.8rem}.vector-option{padding:.8rem;border:1.5px solid #9bbcaf;border-radius:14px;background:#fff;cursor:pointer;text-align:left;font:inherit}.vector-option.active{background:#dfeee8;border-color:#4f8b78}.vector-option.correct{background:#dff3e8;border-color:#2f7d54}.vector-option.wrong{background:#fde6e6;border-color:#b65050}.vector-wrapups{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin:2rem 0}.vector-wrapup{padding:1rem 1.1rem;border-radius:18px;border:1.5px solid #c9d8d2;background:#fff}.vector-wrapup h3{margin-top:0}.vector-formula{font-family:Georgia,serif;font-size:1.08em}.vector-score{font-size:1.15rem}.drag-dot{cursor:grab}.drag-dot:active{cursor:grabbing}
+@media(max-width:600px){.vector-interactive{padding:1rem;border-radius:16px}.vector-controls{grid-template-columns:1fr}.vector-actions{flex-direction:column}.vector-actions button{width:100%}.vector-stage{padding:.25rem}.vector-wrapups{grid-template-columns:1fr}}
+</style>
+  <link rel="stylesheet" href="../styles/studynest-v3.css">
+
+<link rel="stylesheet" href="../studynest-3.1.css">
+<link rel="stylesheet" href="../studynest-theme.css">
+</head><body>
+<div class="announcement-bar">🚀 StudyNest is growing. New lessons and worksheets are added regularly.</div>
+<header class="site-header">
+<a class="logo" href="../index.html">📚 StudyNest</a>
+<nav class="main-navigation">
+<a href="../index.html">🏠 Home</a>
+<a href="../topics.html">📘 Study by Topic</a>
+<a href="index.html">➶ Vectors</a>
+<a href="../worksheets.html">📝 Worksheets</a>
+</nav>
+</header>
+<section class="lesson-hero"><div><p class="lesson-label">VECTORS · LESSON 09</p>
+<h1>Vector Properties of Plane Shapes</h1><p class="lesson-subtitle">Use routes, diagonals and scalar multiples to reason about shapes.</p>
+<div class="lesson-meta"><span class="meta-pill">⏱️ 24–34 min</span>
+<span class="meta-pill">📘 Challenge</span><span class="meta-pill">➶ Diagrams included</span></div></div>
+<div aria-hidden="true" class="hero-visual">
+<div class="vector-hero-visual">
+<span class="vector-token token-a">a⃗</span>
+<span class="vector-token token-b">b⃗</span>
+<span class="vector-token token-mag">|v|</span>
+<div class="vector-axis-x"></div>
+<div class="vector-axis-y"></div>
+<div class="vector-arrow"></div>
+<div class="vector-arrow-secondary"></div>
+</div>
+</div>
+</section>
+<main class="lesson-main">
+<section class="lesson-section"><h2>🎯 Learning Objectives</h2><ul class="objective-list">
+<li>express edges and diagonals using vectors;</li><li>use parallelogram and triangle properties;</li>
+<li>simplify vector routes;</li><li>prove lines are parallel or points are collinear.</li></ul></section>
+<section class="lesson-section"><h2>Vectors in a Parallelogram</h2>
+<figure class="vector-diagram"><svg viewbox="0 0 700 430"><polygon fill="none" points="120,320 430,320 570,120 260,120" stroke="#243b53" stroke-width="6"></polygon><line stroke="#4f8b78" stroke-width="7" x1="120" x2="430" y1="320" y2="320"></line><polygon fill="#4f8b78" points="430,320 407,309 407,331"></polygon><line stroke="#7a67a8" stroke-width="7" x1="120" x2="260" y1="320" y2="120"></line><polygon fill="#7a67a8" points="260,120 237,132 255,145"></polygon><line stroke="#243b53" stroke-dasharray="10 9" stroke-width="4" x1="120" x2="570" y1="320" y2="120"></line><text font-size="23" x="95" y="350">A</text><text font-size="23" x="435" y="350">B</text><text font-size="23" x="578" y="115">C</text><text font-size="23" x="238" y="105">D</text><text font-size="22" x="275" y="350">a</text><text font-size="22" x="165" y="210">b</text></svg><figcaption>If AB⃗=a and AD⃗=b, then AC⃗=a+b.</figcaption></figure></section>
+<section class="lesson-section"><h2>Proving Parallelism</h2>
+<div class="vector-rule">If one vector is a scalar multiple of another, the lines are parallel.</div></section>
+<section class="lesson-section vector-interactive" data-vector-activity=""><h2>🧭 Interactive Diagram: Parallelogram Vector Properties</h2><p class="activity-intro">Drag the orange vertex. Opposite sides remain equal and parallel, and the diagonal is the sum of two adjacent side vectors.</p><p><strong>Try it:</strong> drag vertex C and observe how AB = DC and AD = BC remain true.</p><div class="vector-stage"><svg aria-label="Interactive parallelogram" id="shapeSvg" role="img" viewbox="0 0 640 420"><defs><marker id="shArrow" markerheight="10" markerwidth="10" orient="auto" refx="8" refy="3"><path d="M0,0 L0,6 L9,3 z" fill="#4f8b78"></path></marker></defs><polygon fill="#e8f2ee" id="para" points="160,300 360,300 500,140 300,140" stroke="#243b53" stroke-width="3"></polygon><line id="ab" marker-end="url(#shArrow)" stroke="#4f8b78" stroke-width="6" x1="160" x2="360" y1="300" y2="300"></line><line id="ad" stroke="#d07955" stroke-width="6" x1="160" x2="300" y1="300" y2="140"></line><line id="ac" stroke="#7a5b9e" stroke-dasharray="8 6" stroke-width="4" x1="160" x2="500" y1="300" y2="140"></line><circle cx="160" cy="300" r="7"></circle><circle cx="360" cy="300" r="7"></circle><circle class="drag-dot" cx="500" cy="140" fill="#d07955" id="dragC" r="12"></circle><circle cx="300" cy="140" id="dragD" r="7"></circle><g font-family="sans-serif" font-size="18" font-weight="700"><text x="140" y="330">A</text><text x="365" y="325">B</text><text id="cLbl" x="510" y="135">C</text><text id="dLbl" x="280" y="125">D</text></g></svg></div><div aria-live="polite" class="vector-result">AB and DC are equal; AD and BC are equal; AC = AB + BC.</div></section><section class="lesson-section"><h2>Practice</h2><ol class="practice-list">
+<li>In parallelogram ABCD, AB⃗=a and AD⃗=b. Express AC⃗.</li>
+<li>Express DB⃗ in terms of a and b.</li><li>Explain why vectors (4,6) and (−2,−3) are parallel.</li>
+<li>What vector condition shows three points are collinear?</li></ol></section>
+<section class="lesson-section answers-section">
+<h2>✅ Check Your Work</h2>
+<details><summary>Show answers and working</summary>
+<div class="answers-content"><ol><li>AC⃗=a+b.</li><li>DB⃗=DA⃗+AB⃗=−b+a=a−b.</li><li>(4,6)=−2(−2,−3), so they are scalar multiples.</li><li>Two direction vectors along the same line are scalar multiples.</li></ol></div>
+</details>
+</section>
+<section class="lesson-section">
+<h2>🧭 StudyNest: How to Solve Vector Problems</h2>
+<div class="vector-solver">
+<div class="vector-step"><span>1</span><strong>Read</strong>Identify the starting point, endpoint, direction and required vector.</div>
+<div class="vector-step"><span>2</span><strong>Represent</strong>Draw an arrow or write the vector in column form.</div>
+<div class="vector-step"><span>3</span><strong>Choose</strong>Decide whether to add, subtract, scale or find magnitude.</div>
+<div class="vector-step"><span>4</span><strong>Work</strong>Operate on horizontal and vertical components separately.</div>
+<div class="vector-step"><span>5</span><strong>Simplify</strong>Collect like vector terms and reduce numerical components.</div>
+<div class="vector-step"><span>6</span><strong>Interpret</strong>State what the result means as a movement or displacement.</div>
+<div class="vector-step"><span>7</span><strong>Check</strong>Confirm the direction and signs match the diagram.</div>
+<div class="vector-step"><span>8</span><strong>Conclude</strong>Give the final vector or magnitude in correct notation.</div>
+</div>
+</section>
+<section aria-label="Lesson summary and exam guidance" class="vector-wrapups"><article class="vector-wrapup"><h3>📘 Remember</h3><p>Vectors carry both magnitude and direction. Work with horizontal and vertical components separately, and keep signs consistent.</p></article><article class="vector-wrapup"><h3>⚠️ Common Mistakes</h3><p>Do not confuse a point with its position vector. For AB, always calculate B − A, not A − B.</p></article><article class="vector-wrapup"><h3>⭐ Exam Tips</h3><p>Sketch arrows, label directions clearly, show component working and check whether the final direction agrees with the diagram.</p></article><article class="vector-wrapup"><h3>🌍 Did You Know?</h3><p>Vectors are used in navigation, animation, engineering, robotics, weather modelling and computer games.</p></article></section><nav class="lesson-navigation"><a class="nav-button" href="08-position-vectors-and-points.html">← Position Vectors</a>
+<a class="nav-button" href="index.html">Vectors Roadmap</a>
+<a class="nav-button primary" href="10-combined-vector-operations.html">Combined Operations →</a></nav></main>
+<footer class="site-footer">
+<strong>📚 StudyNest</strong>
+<p>Helping students understand Mathematics, not memorise it.</p>
+<p>© 2026 StudyNest</p>
+</footer>
+<script>document.addEventListener("DOMContentLoaded",()=>{const q=s=>document.querySelector(s),svg=q('#shapeSvg'),C=q('#dragC'),out=q('[data-vector-activity] .vector-result');let dragging=false;function setC(x,y){x=Math.max(390,Math.min(570,x));y=Math.max(70,Math.min(240,y));let B=[360,300],A=[160,300],D=[x-(B[0]-A[0]),y];q('#para').setAttribute('points',`${A} ${B} ${x},${y} ${D}`);C.setAttribute('cx',x);C.setAttribute('cy',y);q('#dragD').setAttribute('cx',D[0]);q('#dragD').setAttribute('cy',D[1]);q('#ad').setAttribute('x2',D[0]);q('#ad').setAttribute('y2',D[1]);q('#ac').setAttribute('x2',x);q('#ac').setAttribute('y2',y);q('#cLbl').setAttribute('x',x+12);q('#cLbl').setAttribute('y',y-8);q('#dLbl').setAttribute('x',D[0]-20);q('#dLbl').setAttribute('y',D[1]-12);let ab=[200,0],bc=[x-360,300-y];out.textContent=`AB = (${ab[0]/40}, 0), DC = (${ab[0]/40}, 0); BC = (${(bc[0]/40).toFixed(1)}, ${(bc[1]/40).toFixed(1)}), AD is identical; AC = AB + BC.`;}C.addEventListener('pointerdown',e=>{dragging=true;C.setPointerCapture(e.pointerId)});C.addEventListener('pointermove',e=>{if(!dragging)return;let r=svg.getBoundingClientRect();setC((e.clientX-r.left)/r.width*640,(e.clientY-r.top)/r.height*420)});C.addEventListener('pointerup',()=>dragging=false);setC(500,140);});</script>  <script src="../script-v3.js"></script>
+
+<script src="../studynest-3.1.js" defer></script>
+</body></html>

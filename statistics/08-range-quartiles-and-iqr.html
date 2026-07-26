@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Measure spread and compare the consistency of different data sets.">
+<title>Range, Quartiles and Interquartile Range | Statistics | StudyNest</title>
+<link rel="stylesheet" href="../styles/statistics-lessons.css">
+<link rel="stylesheet" href="../styles/statistics-interactive.css">
+  <link rel="stylesheet" href="../styles/studynest-v3.css">
+
+<link rel="stylesheet" href="../studynest-3.1.css">
+<link rel="stylesheet" href="../studynest-theme.css">
+</head>
+<body>
+
+<div class="announcement-bar">🚀 StudyNest is growing. New lessons and worksheets are added regularly.</div>
+<header class="site-header">
+    <a href="../index.html" class="logo">📚 StudyNest</a>
+    <nav class="main-navigation">
+        <a href="../index.html">🏠 Home</a>
+        <a href="../topics.html">📘 Study by Topic</a>
+        <a href="index.html">📊 Statistics</a>
+        <a href="../worksheets.html">📝 Worksheets</a>
+    </nav>
+</header>
+
+<section class="lesson-hero">
+<div>
+<p class="lesson-label">STATISTICS · LESSON 08</p>
+<h1>Range, Quartiles and Interquartile Range</h1>
+<p class="lesson-subtitle">Measure spread and compare the consistency of different data sets.</p>
+<div class="lesson-meta">
+<span class="meta-pill">⏱️ 22–30 min</span>
+<span class="meta-pill">📘 Developing</span>
+<span class="meta-pill">📊 Interpretation included</span>
+</div>
+</div>
+
+<div class="hero-visual" aria-hidden="true">
+    <div class="statistics-hero-visual">
+        <span class="statistics-token token-mean">x̄</span>
+        <span class="statistics-token token-percent">%</span>
+        <span class="statistics-token token-sigma">Σ</span>
+        <div class="stat-bars"><span></span><span></span><span></span><span></span></div>
+        <div class="stat-pie"></div>
+        <div class="stat-line"><i></i><i></i><i></i></div>
+    </div>
+</div>
+
+</section>
+<main class="lesson-main">
+
+<section class="lesson-section"><h2>🎯 Learning Objectives</h2><ul class="objective-list">
+<li>calculate range;</li><li>identify lower and upper quartiles;</li>
+<li>calculate interquartile range;</li><li>calculate semi-interquartile range;</li><li>compare spread in context.</li></ul></section>
+<section class="lesson-section"><h2>Measures of Spread</h2><div class="spread-grid">
+<article class="spread-card"><h3>Range</h3><p>Maximum−minimum.</p></article>
+<article class="spread-card"><h3>Interquartile Range</h3><p>IQR=Q₃−Q₁.</p></article>
+<article class="spread-card"><h3>Semi-IQR</h3><p>(Q₃−Q₁)÷2.</p></article></div>
+<div class="statistics-rule">A smaller spread usually means the values are more consistent.</div></section>
+<section class="lesson-section"><h2>Worked Example</h2>
+<p>Ordered data: 2,4,5,7,8,10,12,15.</p>
+<p>Q₁=(4+5)÷2=4.5; Q₃=(10+12)÷2=11; IQR=6.5.</p></section>
+<section class="lesson-section"><h2>📦 Quartiles and Box Plot Explorer</h2><div class="stats-lab"><div class="stats-control"><label for="s8data">Ordered or unordered values</label><textarea id="s8data" rows="3">4, 7, 8, 10, 12, 13, 16, 18, 21</textarea></div><button class="stats-btn" id="s8go" type="button">Find five-number summary</button><div class="stats-metrics" id="s8metrics"></div><svg class="stats-canvas" id="s8svg" viewBox="0 0 700 250"></svg></div></section><script>(()=>{const med=a=>a.length%2?a[(a.length-1)/2]:(a[a.length/2-1]+a[a.length/2])/2;document.querySelector('#s8go').addEventListener('click',()=>{let a=document.querySelector('#s8data').value.split(/[\s,]+/).map(Number).filter(Number.isFinite).sort((x,y)=>x-y);if(a.length<4)return;let m=med(a),half=Math.floor(a.length/2),q1=med(a.slice(0,half)),q3=med(a.slice(a.length-half)),min=a[0],max=a.at(-1),iqr=q3-q1,semi=iqr/2;document.querySelector('#s8metrics').innerHTML=[['Minimum',min],['Q1',q1],['Median',m],['Q3',q3],['Maximum',max],['IQR',iqr],['Semi-IQR',semi]].map(x=>`<div class="stats-metric">${x[0]}<strong>${x[1]}</strong></div>`).join('');let lo=min-1,hi=max+1,X=x=>70+(x-lo)/(hi-lo)*560,y=120;document.querySelector('#s8svg').innerHTML=`<line x1="${X(min)}" y1="${y}" x2="${X(q1)}" y2="${y}" stroke="currentColor" stroke-width="4"/><rect x="${X(q1)}" y="75" width="${X(q3)-X(q1)}" height="90" fill="#eef4f4" stroke="#4f8f91" stroke-width="4"/><line x1="${X(m)}" y1="75" x2="${X(m)}" y2="165" stroke="#bd725f" stroke-width="5"/><line x1="${X(q3)}" y1="${y}" x2="${X(max)}" y2="${y}" stroke="currentColor" stroke-width="4"/>`+[min,q1,m,q3,max].map(x=>`<line x1="${X(x)}" y1="95" x2="${X(x)}" y2="145" stroke="currentColor" stroke-width="3"/><text x="${X(x)}" y="200" text-anchor="middle">${x}</text>`).join('')});document.querySelector('#s8go').click()})();</script>
+<section class="lesson-section"><h2>Practice</h2><ol class="practice-list">
+<li>Find the range of 3,7,8,9,15.</li>
+<li>Given Q₁=18 and Q₃=34, find IQR and semi-IQR.</li>
+<li>Team A has IQR 4; Team B has IQR 11. Which is more consistent?</li>
+<li>Why is IQR less affected by extreme values than range?</li></ol></section>
+
+<section class="lesson-section answers-section">
+<h2>✅ Check Your Work</h2>
+<details>
+<summary>Show answers and working</summary>
+<div class="answers-content"><ol><li>15−3=12.</li><li>IQR=34−18=16; semi-IQR=8.</li><li>Team A, because its middle 50% is less spread out.</li><li>IQR uses the middle half of the data and ignores the most extreme quarter at each end.</li></ol></div>
+</details>
+</section>
+<section class="lesson-section"><h2>Summary</h2><ul class="summary-list"><li>Range uses extremes.</li><li>IQR describes the middle 50%.</li></ul></section>
+
+<section class="lesson-section">
+<h2>🧠 StudyNest Statistical Thinking Routine</h2>
+<div class="problem-routine">
+<div class="routine-step"><strong>1. Read</strong>What information and context have been given?</div>
+<div class="routine-step"><strong>2. Identify</strong>What type of data, table, graph or measure is involved?</div>
+<div class="routine-step"><strong>3. Choose</strong>Which method or representation answers the question best?</div>
+<div class="routine-step"><strong>4. Work</strong>Organise the calculation or construction clearly.</div>
+<div class="routine-step"><strong>5. Interpret</strong>Explain what the answer means in the original context.</div>
+<div class="routine-step"><strong>6. Check</strong>Does the result fit the data and make reasonable sense?</div>
+</div>
+</section>
+
+<nav class="lesson-navigation">
+<a class="nav-button" href="07-mean-median-and-mode.html">← Mean, Median and Mode</a>
+<a class="nav-button" href="index.html">Statistics Roadmap</a>
+<a class="nav-button primary" href="09-grouped-data-and-estimated-mean.html">Grouped Data and Estimated Mean →</a>
+</nav>
+</main>
+
+<footer class="site-footer">
+    <strong>📚 StudyNest</strong>
+    <p>Helping students understand Mathematics, not memorise it.</p>
+    <p>© 2026 StudyNest</p>
+</footer>
+
+  <script src="../script-v3.js"></script>
+
+<script src="../studynest-3.1.js" defer></script>
+</body>
+</html>

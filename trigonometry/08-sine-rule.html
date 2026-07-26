@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Solve non-right triangles using opposite side-angle pairs." name="description"/>
+<title>The Sine Rule | Trigonometry | StudyNest</title>
+<link href="../styles/trigonometry-lessons.css" rel="stylesheet"/>
+
+<style id="studynest-trig-interactive-styles">
+.trig-lab{margin:28px 0;padding:24px;border:2px solid #d9def2;border-radius:20px;background:#fbfbff}
+.trig-lab h2{margin-top:0}.trig-lab-grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(240px,.8fr);gap:24px;align-items:center}
+.trig-controls{display:grid;gap:14px}.trig-control label{display:block;font-weight:700;margin-bottom:5px}.trig-control input,.trig-control select{width:100%;box-sizing:border-box;padding:10px 12px;border:1px solid #aab2d5;border-radius:10px;font:inherit;background:white}
+.trig-control input[type=range]{padding:0}.trig-buttons{display:flex;gap:10px;flex-wrap:wrap}.trig-btn{border:0;border-radius:12px;padding:11px 16px;background:#6673b8;color:white;font:inherit;font-weight:700;cursor:pointer}.trig-btn.secondary{background:#eef0fb;color:#243b53;border:1px solid #aab2d5}.trig-btn.active{outline:3px solid rgba(102,115,184,.28)}
+.trig-result{padding:14px 16px;border-radius:14px;background:#eef0fb;color:#243b53;min-height:48px}.trig-result strong{font-size:1.12em}.trig-svg{width:100%;height:auto;display:block;overflow:visible}.trig-svg text{font-family:inherit;fill:#243b53}.trig-highlight{stroke:#d46a5f!important;stroke-width:9!important}.trig-fill{fill:rgba(212,106,95,.18)!important}.trig-muted{opacity:.28}.trig-choice-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.trig-choice{padding:14px;border:2px solid #d9def2;border-radius:14px;background:white;cursor:pointer;text-align:left;font:inherit}.trig-choice.correct{border-color:#2f855a;background:#edf9f2}.trig-choice.wrong{border-color:#c53030;background:#fff2f2}
+.lesson-end-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.lesson-end-card{padding:18px;border-radius:16px;background:#fbfbff;border:1px solid #d9def2}.lesson-end-card h3{margin-top:0}.lesson-end-card ul{margin-bottom:0}
+@media(max-width:720px){.trig-lab{padding:18px}.trig-lab-grid{grid-template-columns:1fr}.trig-choice-grid,.lesson-end-grid{grid-template-columns:1fr}.trig-btn{width:100%}.trig-buttons{display:grid;grid-template-columns:1fr}.trig-svg text{font-size:18px}}
+</style>  <link rel="stylesheet" href="../styles/studynest-v3.css">
+
+<link rel="stylesheet" href="../studynest-3.1.css">
+<link rel="stylesheet" href="../studynest-theme.css">
+</head>
+<body>
+<div class="announcement-bar">🚀 StudyNest is growing. New lessons and worksheets are added regularly.</div>
+<header class="site-header">
+<a class="logo" href="../index.html">📚 StudyNest</a>
+<nav class="main-navigation">
+<a href="../index.html">🏠 Home</a>
+<a href="../topics.html">📘 Study by Topic</a>
+<a href="index.html">📐 Trigonometry</a>
+<a href="../worksheets.html">📝 Worksheets</a>
+</nav>
+</header>
+<section class="lesson-hero">
+<div>
+<p class="lesson-label">TRIGONOMETRY · LESSON 08</p>
+<h1>The Sine Rule</h1>
+<p class="lesson-subtitle">Solve non-right triangles using opposite side-angle pairs.</p>
+<div class="lesson-meta">
+<span class="meta-pill">⏱️ 25–35 min</span>
+<span class="meta-pill">📘 Challenge</span>
+<span class="meta-pill">📐 Diagrams included</span>
+</div>
+</div>
+<div aria-hidden="true" class="hero-visual">
+<div class="trig-hero-visual">
+<span class="trig-token token-sin">sin</span>
+<span class="trig-token token-cos">cos</span>
+<span class="trig-token token-tan">tan</span>
+<div class="hero-triangle"></div>
+<div class="hero-right-angle"></div>
+<div class="hero-angle-arc"></div>
+</div>
+</div>
+</section>
+<main class="lesson-main">
+<section class="lesson-section"><h2>🎯 Learning Objectives</h2><ul class="objective-list">
+<li>recognise when the sine rule applies;</li><li>match sides with opposite angles;</li>
+<li>find missing sides and angles;</li><li>handle the ambiguous case cautiously.</li></ul></section>
+<section class="lesson-section"><h2>The Sine Rule</h2>
+<div class="trig-rule">a/sin A = b/sin B = c/sin C</div>
+<figure class="diagram-card"><svg viewbox="0 0 700 420"><polygon fill="none" points="110,330 560,330 400,80" stroke="#243b53" stroke-width="6"></polygon><text font-size="24" x="90" y="360">A</text><text font-size="24" x="565" y="360">B</text><text font-size="24" x="395" y="65">C</text><text font-size="24" x="475" y="200">a</text><text font-size="24" x="250" y="190">b</text><text font-size="24" x="325" y="365">c</text></svg><figcaption>Each side is paired with the angle directly opposite it.</figcaption></figure></section>
+<section class="lesson-section"><h2>When to Use It</h2>
+<p>Use the sine rule when you know an opposite side-angle pair and at least one other side or angle.</p></section>
+<section class="lesson-section"><h2>Worked Example</h2>
+<p>A=42°, a=9 cm and B=68°. Find b.</p>
+<div class="calc-steps"><p>b/sin68°=9/sin42°</p><p>b=9sin68°/sin42°</p><p><strong>b≈12.5 cm</strong></p></div></section>
+<section class="lesson-section"><h2>Practice</h2><ol class="practice-list">
+<li>A=35°, a=8 cm, B=74°. Find b.</li>
+<li>A=48°, a=12 cm, b=9 cm. Find B.</li>
+<li>What essential matching relationship must be identified first?</li></ol></section>
+<section class="lesson-section answers-section">
+<h2>✅ Check Your Work</h2>
+<details>
+<summary>Show answers and working</summary>
+<div class="answers-content">
+<ol><li>b=8sin74°/sin35°≈13.4 cm.</li><li>sinB=9sin48°/12≈0.5574, so B≈33.9°. A second possible angle must be checked against the triangle sum and context.</li><li>Each side must be paired with its opposite angle.</li></ol>
+</div>
+</details>
+</section>
+<section class="lesson-section trig-lab"><h2>🧭 Interactive Lab: Sine Rule Pair Explorer</h2><p>Change the values or make a choice and watch the mathematics respond.</p><div class="trig-lab-grid"><svg class="trig-svg" viewbox="0 0 650 420"><polygon fill="rgba(102,115,184,.08)" points="90,340 550,340 380,80" stroke="#243b53" stroke-width="6"></polygon><text x="70" y="365">A</text><text x="560" y="365">B</text><text x="380" y="65">C</text><text x="290" y="375">c</text><text x="480" y="200">a</text><text x="205" y="200">b</text></svg><div class="trig-controls"><div class="trig-control"><label for="sineA">Side a</label><input id="sineA" type="number" value="8"/></div><div class="trig-control"><label for="sineAngleA">Angle A (°)</label><input id="sineAngleA" type="number" value="42"/></div><div class="trig-control"><label for="sineAngleB">Angle B (°)</label><input id="sineAngleB" type="number" value="65"/></div><button class="trig-btn" id="sineCalc">Find side b</button><div class="trig-result" id="sineResult"></div></div></div></section><section class="lesson-section">
+<h2>🧭 StudyNest: How to Solve It</h2>
+<div class="solve-template">
+<div class="solve-step"><span class="step-number">1</span><strong>Inspect</strong>Look for the right angle, the given angle and the information already labelled.</div>
+<div class="solve-step"><span class="step-number">2</span><strong>Label</strong>Name the relevant sides or identify the triangle information.</div>
+<div class="solve-step"><span class="step-number">3</span><strong>Identify</strong>State exactly what is known and what must be found.</div>
+<div class="solve-step"><span class="step-number">4</span><strong>Choose</strong>Select the relationship containing the known and unknown quantities.</div>
+<div class="solve-step"><span class="step-number">5</span><strong>Write</strong>Write the formula before substituting values.</div>
+<div class="solve-step"><span class="step-number">6</span><strong>Solve</strong>Rearrange carefully and use the calculator in degree mode.</div>
+<div class="solve-step"><span class="step-number">7</span><strong>Round</strong>Use the accuracy requested and include units.</div>
+<div class="solve-step"><span class="step-number">8</span><strong>Check</strong>Confirm the side lengths and angles are reasonable.</div>
+</div>
+</section>
+<section class="lesson-section"><h2>📚 Lesson Wrap-Up</h2><div class="lesson-end-grid">
+<article class="lesson-end-card"><h3>📘 Remember</h3><ul><li>Label the triangle before choosing a formula.</li><li>Use degree mode unless the question says otherwise.</li><li>Keep full calculator values until the final rounding step.</li></ul></article>
+<article class="lesson-end-card"><h3>⚠️ Common Mistakes</h3><ul><li>Using the wrong reference angle.</li><li>Rounding too early.</li><li>Forgetting units or the degree symbol.</li></ul></article>
+<article class="lesson-end-card"><h3>⭐ Exam Tips</h3><ul><li>Write the formula before substituting.</li><li>Sketch and label any diagram that is not already provided.</li><li>Check whether the answer is sensible for the shape.</li></ul></article>
+<article class="lesson-end-card"><h3>🌍 Did You Know?</h3><p>Surveyors, engineers, pilots and architects use trigonometry to calculate distances that are difficult or unsafe to measure directly.</p></article>
+</div></section><nav class="lesson-navigation">
+<a class="nav-button" href="07-elevation-and-depression.html">← Elevation and Depression</a>
+<a class="nav-button" href="index.html">Trigonometry Roadmap</a>
+<a class="nav-button primary" href="09-cosine-rule.html">Cosine Rule →</a>
+</nav>
+</main>
+<footer class="site-footer">
+<strong>📚 StudyNest</strong>
+<p>Helping students understand Mathematics, not memorise it.</p>
+<p>© 2026 StudyNest</p>
+</footer>
+<script id="studynest-trig-interactive-script">document.addEventListener('DOMContentLoaded',()=>{document.getElementById('sineCalc').addEventListener('click',()=>{const a=+document.getElementById('sineA').value,A=+document.getElementById('sineAngleA').value,B=+document.getElementById('sineAngleB').value,b=a*Math.sin(B*Math.PI/180)/Math.sin(A*Math.PI/180);document.getElementById('sineResult').innerHTML=`b/sin ${B}° = ${a}/sin ${A}°<br><strong>b ≈ ${b.toFixed(2)}</strong>`;});document.getElementById('sineCalc').click();});</script>  <script src="../script-v3.js"></script>
+
+<script src="../studynest-3.1.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Use corresponding, alternate and co-interior angle rules.">
+        <title>Parallel Lines and Transversals | Geometry | StudyNest</title>
+        <link rel="stylesheet" href="../styles/geometry-lessons.css">
+      <link rel="stylesheet" href="../styles/studynest-v3.css">
+
+<link rel="stylesheet" href="../studynest-3.1.css">
+<link rel="stylesheet" href="../studynest-theme.css">
+</head>
+    <body>
+
+<div class="announcement-bar">🚀 StudyNest is growing. New lessons and worksheets are added regularly.</div>
+<header class="site-header">
+    <a href="../index.html" class="logo">📚 StudyNest</a>
+    <nav class="main-navigation">
+        <a href="../index.html">🏠 Home</a>
+        <a href="../topics.html">📘 Study by Topic</a>
+        <a href="index.html">📐 Geometry</a>
+        <a href="../worksheets.html">📝 Worksheets</a>
+    </nav>
+</header>
+
+        <section class="lesson-hero">
+            <div>
+                <p class="lesson-label">GEOMETRY · LESSON 04</p>
+                <h1>Parallel Lines and Transversals</h1>
+                <p class="lesson-subtitle">Use corresponding, alternate and co-interior angle rules.</p>
+                <div class="lesson-meta">
+                    <span class="meta-pill">⏱️ 20–26 min</span>
+                    <span class="meta-pill">📘 Developing</span>
+                </div>
+            </div>
+
+<div class="hero-visual" aria-hidden="true">
+    <div class="geometry-hero-visual">
+        <span class="geometry-token token-90">90°</span>
+        <span class="geometry-token token-180">180°</span>
+        <span class="geometry-token token-theta">θ</span>
+        <div class="hero-angle"></div>
+        <div class="hero-triangle"></div>
+    </div>
+</div>
+
+        </section>
+
+        <main class="lesson-main">
+
+<section class="lesson-section">
+<h2>🎯 By the End of This Lesson...</h2>
+<ul class="objective-list">
+<li>identify corresponding angles;</li>
+<li>identify alternate angles;</li>
+<li>identify co-interior angles;</li>
+<li>calculate missing angles on parallel lines;</li>
+<li>recognise when parallel-line rules may be used.</li>
+</ul>
+</section>
+
+<section class="lesson-section">
+<h2>Parallel Lines and a Transversal</h2>
+<p>A transversal is a line that crosses two or more other lines.</p>
+
+<figure class="diagram-card">
+<svg viewBox="0 0 720 430" role="img" aria-label="Two parallel lines crossed by a transversal">
+<line x1="90" y1="120" x2="630" y2="120" stroke="currentColor" stroke-width="5"/>
+<line x1="90" y1="300" x2="630" y2="300" stroke="currentColor" stroke-width="5"/>
+<line x1="220" y1="35" x2="480" y2="385" stroke="#bd725f" stroke-width="5"/>
+<text x="610" y="101" fill="currentColor" font-size="24">l</text>
+<text x="610" y="281" fill="currentColor" font-size="24">m</text>
+<text x="250" y="90" fill="currentColor" font-size="20">1</text>
+<text x="320" y="90" fill="currentColor" font-size="20">2</text>
+<text x="324" y="155" fill="currentColor" font-size="20">3</text>
+<text x="260" y="155" fill="currentColor" font-size="20">4</text>
+<text x="382" y="270" fill="currentColor" font-size="20">5</text>
+<text x="455" y="270" fill="currentColor" font-size="20">6</text>
+<text x="457" y="335" fill="currentColor" font-size="20">7</text>
+<text x="392" y="335" fill="currentColor" font-size="20">8</text>
+</svg>
+<figcaption>Assume l ∥ m. The numbered positions help identify angle relationships.</figcaption>
+</figure>
+</section>
+
+<section class="lesson-section">
+<h2>Three Main Rules</h2>
+<div class="geometry-grid">
+<article class="geometry-card"><h3>Corresponding</h3><p>Same relative position. They are equal.</p></article>
+<article class="geometry-card"><h3>Alternate</h3><p>Inside the parallel lines on opposite sides of the transversal. They are equal.</p></article>
+<article class="geometry-card"><h3>Co-interior / Allied</h3><p>Inside the parallel lines on the same side. They add to 180°.</p></article>
+</div>
+</section>
+
+<section class="lesson-section">
+<h2>Worked Example</h2>
+<div class="worked-example">
+<h3>One angle formed by a transversal is 68°.</h3>
+<p>Its corresponding angle is 68°.</p>
+<p>Its alternate angle is 68°.</p>
+<p>The co-interior angle is 180°−68°=112°.</p>
+</div>
+</section>
+
+<section class="lesson-section">
+<h2>Recognition Guide</h2>
+<ul class="summary-list">
+<li>Corresponding angles often form an F shape.</li>
+<li>Alternate angles often form a Z shape.</li>
+<li>Co-interior angles often form a C or U shape.</li>
+</ul>
+<div class="common-mistake">These rules require parallel lines. Look for arrow markings or a statement that the lines are parallel.</div>
+</section>
+
+
+<section class="lesson-section"><h2>Try It: Parallel-Line Angle Families</h2><div class="interactive-geometry"><div class="interactive-controls"><div class="interactive-control"><label for="transversalAngle">Acute angle: <span id="transversalValue">55°</span></label><input id="transversalAngle" type="range" min="15" max="85" value="55"></div><div class="interactive-control"><label for="relationship">Relationship</label><select id="relationship"><option>Corresponding</option><option>Alternate interior</option><option>Co-interior</option></select></div></div><div class="interactive-output" id="parallelOutput"></div></div></section>
+<script>(()=>{const a=document.querySelector('#transversalAngle'),s=document.querySelector('#relationship');function u(){const x=+a.value,y=180-x;document.querySelector('#transversalValue').textContent=x+'°';const type=s.value;document.querySelector('#parallelOutput').textContent=type==='Co-interior'?`Co-interior angles add to 180°: ${x}° + ${y}° = 180°.`:`${type} angles are equal, so the matching angle is ${x}°.`}a.addEventListener('input',u);s.addEventListener('change',u);u();})();</script>
+
+<section class="lesson-section">
+<h2>Practice Questions</h2>
+<span class="level-heading">Foundation</span>
+<ol class="practice-list">
+<li>If a corresponding angle is 73°, find its matching angle.</li>
+<li>If an alternate angle is 118°, find the other alternate angle.</li>
+<li>A co-interior angle is 64°. Find its partner.</li>
+</ol>
+<span class="level-heading">Developing</span>
+<ol class="practice-list" start="4">
+<li>Corresponding angles are (3x+10)° and (5x−30)°. Find x.</li>
+<li>Co-interior angles are (2x+20)° and (4x−8)°. Find x.</li>
+</ol>
+<span class="level-heading">Challenge</span>
+<ol class="practice-list" start="6">
+<li>An acute angle made by a transversal is 38°. List all eight angles formed at the two intersections.</li>
+</ol>
+</section>
+
+<section class="lesson-section answers-section">
+<h2>✅ Check Your Work</h2>
+<details><summary>Show practice answers</summary>
+<div class="answers-content">
+<ol>
+<li>73°.</li>
+<li>118°.</li>
+<li>116°.</li>
+<li>3x+10=5x−30, so x=20.</li>
+<li>6x+12=180, so x=28.</li>
+<li>Four angles are 38° and four are 142°.</li>
+</ol>
+</div></details>
+</section>
+
+<section class="lesson-section">
+<h2>One-Minute Summary</h2>
+<ul class="summary-list">
+<li>Corresponding angles are equal.</li>
+<li>Alternate angles are equal.</li>
+<li>Co-interior angles total 180°.</li>
+<li>Use these rules only when the lines are parallel.</li>
+</ul>
+</section>
+
+            <nav class="lesson-navigation">
+                <a class="nav-button" href="03-vertically-opposite-angles.html">← Vertically Opposite Angles</a>
+                <a class="nav-button" href="index.html">Geometry Roadmap</a>
+                <a class="nav-button primary" href="05-triangles-and-angle-properties.html">Triangles and Angle Properties →</a>
+            </nav>
+        </main>
+
+<footer class="site-footer">
+    <strong>📚 StudyNest</strong>
+    <p>Helping students understand Mathematics, not memorise it.</p>
+    <p>© 2026 StudyNest</p>
+</footer>
+
+      <script src="../script-v3.js"></script>
+
+<script src="../studynest-3.1.js" defer></script>
+</body>
+    </html>

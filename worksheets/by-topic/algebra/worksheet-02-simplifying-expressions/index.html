@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="StudyNest interactive worksheet on simplifying expressions.">
+  <title>Worksheet 02 · Simplifying Expressions | StudyNest</title>
+  <style>
+:root{
+  --ink:#16333d;--muted:#627781;--deep:#174f69;--accent:#23859a;--accent-2:#45afaf;
+  --gold:#f4bd4f;--paper:#f4f8f8;--white:#fff;--line:#cfe0e3;--soft:#e8f7f7;
+  --good:#157347;--good-bg:#e9f8f0;--bad:#ad2e24;--bad-bg:#fff0ed;--hint:#fff7dc;
+  --shadow:0 18px 50px rgba(23,79,105,.13);--radius:24px;
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-rounded,"Segoe UI",Arial,sans-serif;color:var(--ink);background:radial-gradient(circle at top left,#dff5f2 0,transparent 32%),linear-gradient(180deg,#f8fbfb,var(--paper));min-height:100vh}
+button,input,textarea{font:inherit}.top-strip{padding:9px 16px;text-align:center;background:var(--deep);color:#fff;font-size:.78rem;font-weight:850;letter-spacing:.08em;text-transform:uppercase}.app-shell{width:min(960px,calc(100% - 28px));margin:28px auto 70px}.screen{display:none}.screen.active{display:block;animation:fadeIn .3s ease}@keyframes fadeIn{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:none}}
+.hero-card,.results-hero{position:relative;overflow:hidden;padding:clamp(28px,5vw,52px);border-radius:30px;background:linear-gradient(135deg,var(--deep),var(--accent) 58%,var(--accent-2));color:#fff;box-shadow:var(--shadow)}.hero-card:after,.results-hero:after{content:"";position:absolute;width:280px;height:280px;border-radius:50%;right:-95px;top:-120px;background:rgba(255,255,255,.11)}.hero-card>*{position:relative;z-index:1}.eyebrow{margin:0 0 10px;font-size:.76rem;font-weight:900;letter-spacing:.13em;color:#d7fbfb}.hero-card h1,.results-hero h1{margin:0;font-size:clamp(2.45rem,7vw,4.6rem);line-height:.98;letter-spacing:-.04em}.hero-copy{max-width:680px;margin:18px 0 0;font-size:1.06rem;line-height:1.7;color:#efffff}.level-badge{display:inline-flex;margin-top:24px;padding:10px 15px;border-radius:999px;background:#fff;color:var(--deep);font-weight:900;box-shadow:0 9px 22px rgba(0,0,0,.13)}
+.welcome-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin:16px 0 8px;padding:3px 0 14px;border-bottom:1px solid var(--line)}.info-card,.coverage-card,.question-card,.result-card,.mistakes-card{background:rgba(255,255,255,.95);border:1px solid var(--line);box-shadow:0 10px 28px rgba(30,77,89,.07)}.info-card{display:flex;gap:10px;align-items:center;padding:10px 16px;border:0;border-right:1px solid var(--line);border-radius:0;background:transparent;box-shadow:none}.info-card:last-child{border-right:0}.info-icon{display:grid;place-items:center;flex:0 0 38px;height:38px;border-radius:12px;background:var(--soft);color:var(--deep);font-size:.88rem;font-weight:950}.info-card strong{display:block;font-size:.9rem}.info-card p{display:none}.coverage-card{padding:16px 0 0;border:0;border-radius:0;background:transparent;box-shadow:none}.coverage-card h2{margin:0 0 12px;font-size:1.18rem}.topic-chips{display:flex;flex-wrap:wrap;gap:8px}.topic-chips span{padding:8px 11px;border-radius:999px;background:var(--soft);color:var(--deep);font-size:.84rem;font-weight:800}.convention-note{margin-top:14px;padding:12px 14px;border-radius:12px;background:#fff8e4;border-left:4px solid var(--gold);line-height:1.5}.start-button{display:flex!important;margin:20px auto 0;min-width:220px;justify-content:center;gap:10px}
+.primary-button,.secondary-button,.text-button{border:0;cursor:pointer;font-weight:880;transition:.18s ease}.primary-button,.secondary-button{padding:12px 17px;border-radius:13px}.primary-button{background:var(--accent);color:#fff;box-shadow:0 8px 18px rgba(35,133,154,.2)}.primary-button:hover,.secondary-button:hover{transform:translateY(-1px)}.primary-button:disabled{opacity:.5;cursor:not-allowed;transform:none}.secondary-button{background:#fff;color:var(--deep);border:1px solid var(--line)}.text-button{padding:8px;background:transparent;color:var(--deep)}
+.quiz-header{display:flex;justify-content:space-between;align-items:flex-end;gap:16px}.quiz-header .eyebrow{color:var(--accent)}.quiz-header h2{margin:0;font-size:clamp(1.55rem,4vw,2.15rem)}.score-pill{padding:9px 13px;border-radius:999px;background:#fff;border:1px solid var(--line);font-weight:850}.progress-track{height:12px;margin:16px 0 20px;border-radius:999px;background:#dce9eb;overflow:hidden}.progress-fill{height:100%;width:0;border-radius:inherit;background:linear-gradient(90deg,var(--accent),var(--gold));transition:width .35s ease}
+.question-card{min-height:465px;padding:clamp(22px,4vw,38px);border-radius:var(--radius);display:flex;flex-direction:column}.question-topline{display:flex;justify-content:space-between;align-items:center;gap:12px}.question-number{display:grid;place-items:center;width:43px;height:43px;border-radius:14px;background:var(--soft);color:var(--deep);font-weight:950}.skill-tag{padding:7px 10px;border-radius:999px;background:#f6f0df;color:#72510e;font-size:.78rem;font-weight:850}.question-card h3{margin:24px 0 7px;font-size:clamp(1.3rem,3vw,1.75rem);line-height:1.35}.question-instruction{margin:0 0 22px;color:var(--muted);line-height:1.55}.option-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.option{position:relative;display:flex;align-items:center;gap:11px;padding:15px;border:2px solid var(--line);border-radius:15px;background:#fff;cursor:pointer;font-weight:720;transition:.17s}.option:hover{border-color:var(--accent);transform:translateY(-1px)}.option.selected{border-color:var(--accent);background:var(--soft)}.option input{width:18px;height:18px;accent-color:var(--accent)}.multi-note{margin:0 0 12px;color:var(--muted);font-size:.86rem}.text-answer{width:100%;min-height:112px;padding:15px;border:2px solid var(--line);border-radius:15px;resize:vertical;color:var(--ink);background:#fff}.text-answer.short{min-height:0;height:51px}.text-answer:focus,.select-answer:focus{outline:4px solid rgba(35,133,154,.12);border-color:var(--accent)}.classification-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;align-items:center}.classification-grid .item{padding:12px 13px;border-radius:12px;background:#f7fafb;font-weight:830}.select-answer{width:100%;padding:12px;border:2px solid var(--line);border-radius:12px;background:#fff;color:var(--ink)}
+.feedback-box,.support-box{display:none;margin-top:16px;padding:14px 16px;border-radius:14px;line-height:1.55}.feedback-box.show,.support-box.show{display:block}.feedback-box.good{background:var(--good-bg);color:var(--good);border:1px solid #9ad3b6}.feedback-box.bad{background:var(--bad-bg);color:var(--bad);border:1px solid #efb2ac}.hint-box{background:var(--hint);border:1px solid #efd47f}.solution-box{background:#eaf4fb;border:1px solid #afd1e5}.question-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:auto;padding-top:22px}.question-actions .primary-button{margin-left:auto}.navigation-row{display:flex;justify-content:space-between;align-items:center;margin-top:12px;color:var(--muted);font-size:.9rem}
+.results-hero{text-align:center}.results-hero .eyebrow{color:#d7fbfb}.result-ring{position:relative;z-index:1;display:grid;place-items:center;width:148px;height:148px;margin:0 auto 20px;border-radius:50%;background:conic-gradient(var(--gold) 0deg,#ffffff33 0deg);box-shadow:inset 0 0 0 13px rgba(255,255,255,.16)}.result-ring:after{content:"";position:absolute;width:108px;height:108px;border-radius:50%;background:var(--deep)}.result-ring span{position:relative;z-index:1;font-size:2rem;font-weight:950}.results-hero h1{font-size:clamp(2rem,5vw,3.4rem)}.results-hero p{position:relative;z-index:1;max-width:620px;margin:13px auto;color:#eaffff;line-height:1.6}.result-score{position:relative;z-index:1;display:inline-block;margin-top:6px;font-size:1.3rem}.results-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin:18px 0}.result-card,.mistakes-card{padding:24px;border-radius:20px}.result-card h2,.mistakes-card h2{margin:0 0 15px}.result-list{display:grid;gap:9px}.result-item{padding:10px 12px;border-radius:12px;background:var(--good-bg);font-weight:780}.review-card .result-item{background:var(--bad-bg)}.mistakes-card ul{margin:0;padding-left:22px;line-height:1.75}.results-actions{display:flex;justify-content:center;flex-wrap:wrap;gap:11px;margin-top:20px}
+
+.review-panel{background:rgba(255,255,255,.96);border:1px solid var(--line);box-shadow:var(--shadow);border-radius:var(--radius);padding:clamp(22px,4vw,36px)}
+.review-panel h1{margin:0 0 8px;font-size:clamp(2rem,5vw,3rem)}.review-copy{margin:0 0 22px;color:var(--muted);line-height:1.6}.review-summary{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:20px}.review-summary span{padding:9px 13px;border-radius:999px;font-weight:850;background:var(--soft);color:var(--deep)}
+.review-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}.review-question{border:2px solid var(--line);border-radius:14px;background:#fff;padding:13px 8px;cursor:pointer;text-align:center;font-weight:900;color:var(--deep)}.review-question:hover{border-color:var(--accent);transform:translateY(-1px)}.review-question.answered{background:var(--good-bg);border-color:#9ad3b6;color:var(--good)}.review-question.unanswered{background:#f7fafb;color:var(--muted)}.review-actions{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-top:24px}
+.modal-backdrop{position:fixed;inset:0;z-index:1000;display:none;place-items:center;padding:18px;background:rgba(10,35,45,.62);backdrop-filter:blur(4px)}.modal-backdrop.show{display:grid}.modal-card{width:min(500px,100%);background:#fff;border-radius:22px;padding:28px;box-shadow:0 24px 70px rgba(0,0,0,.28)}.modal-card h2{margin:0 0 10px}.modal-card p{margin:0;color:var(--muted);line-height:1.6}.modal-warning{margin-top:14px!important;padding:12px 14px;border-radius:13px;background:var(--hint);color:#72510e!important}.modal-actions{display:flex;justify-content:flex-end;flex-wrap:wrap;gap:10px;margin-top:22px}
+@media(max-width:720px){.review-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.app-shell{width:min(100% - 20px,960px);margin-top:15px}.welcome-grid,.results-grid{grid-template-columns:1fr}.welcome-grid{padding-bottom:8px}.info-card{border-right:0;border-bottom:1px solid var(--line);padding:10px 4px}.info-card:last-child{border-bottom:0}.hero-card,.results-hero{border-radius:23px;padding:28px 22px}.option-grid,.classification-grid{grid-template-columns:1fr}.question-card{min-height:520px;padding:22px 17px}.question-actions>*{flex:1 1 130px}.question-actions .primary-button{margin-left:0;flex-basis:100%}.navigation-row{font-size:.8rem}.quiz-header{align-items:center}.score-pill{font-size:.8rem}}
+@media print{body{background:#fff}.top-strip,.welcome-screen,.quiz-header,.progress-track,.question-actions,.navigation-row,.results-screen{display:none!important}.app-shell{width:100%;margin:0}.quiz-screen{display:block!important}.question-card{display:block;min-height:0;box-shadow:none;border:1px solid #999;break-inside:avoid;margin:0 0 18px}.option{border:0;padding:5px}.feedback-box,.support-box{display:none!important}}
+
+</style>
+</head>
+<body>
+  <div class="top-strip">StudyNest Interactive Practice</div>
+
+  <main class="app-shell" id="worksheetApp">
+    <section class="welcome-screen screen active" id="welcomeScreen">
+      <div class="hero-card">
+        <div>
+          <p class="eyebrow">ALGEBRA · WORKSHEET 02</p>
+          <h1>Simplifying Expressions</h1>
+          <p class="hero-copy">Build fluency collecting like terms, working with positive and negative coefficients, and simplifying expressions containing more than one variable.</p>
+        </div>
+        <span class="level-badge">Foundation → Mastery</span>
+      </div>
+
+      <div class="welcome-grid">
+        <article class="info-card">
+          <span class="info-icon">26</span>
+          <div><strong>Mastery questions</strong><p>Questions increase gradually in difficulty.</p></div>
+        </article>
+        <article class="info-card">
+          <span class="info-icon">⏱</span>
+          <div><strong>30–35 minutes</strong><p>Work carefully rather than rushing.</p></div>
+        </article>
+        <article class="info-card">
+          <span class="info-icon">✓</span>
+          <div><strong>Instant marking</strong><p>Use hints and explanations when needed.</p></div>
+        </article>
+      </div>
+
+      <section class="coverage-card">
+        <h2>You will practise</h2>
+        <div class="topic-chips"><span>Like terms</span><span>Unlike terms</span><span>Collecting terms</span><span>Negative coefficients</span><span>Constants</span><span>Multiple variables</span><span>Long expressions</span><span>Exam-style reasoning</span></div>
+      </section>
+
+      <button class="primary-button start-button" id="startButton">Start worksheet <span>→</span></button>
+    </section>
+
+    <section class="quiz-screen screen" id="quizScreen" aria-live="polite">
+      <header class="quiz-header">
+        <div>
+          <p class="eyebrow" id="sectionLabel">GETTING STARTED</p>
+          <h2 id="questionCounter">Question 1 of 26</h2>
+        </div>
+        <div class="score-pill"><span id="liveScore">0 correct</span></div>
+      </header>
+
+      <div class="progress-track" aria-label="Worksheet progress">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+
+      <article class="question-card" id="questionCard">
+        <div class="question-topline">
+          <span class="question-number" id="questionNumber">1</span>
+          <span class="skill-tag" id="skillTag">Number families</span>
+        </div>
+        <h3 id="questionText"></h3>
+        <p class="question-instruction" id="questionInstruction"></p>
+        <div id="answerArea"></div>
+
+        <div class="feedback-box" id="feedbackBox"></div>
+        <div class="support-box hint-box" id="hintBox"></div>
+        <div class="support-box solution-box" id="solutionBox"></div>
+
+        <div class="question-actions">
+          <button class="secondary-button" id="hintButton">Hint 1</button>
+          <button class="secondary-button" id="solutionButton">Show solution</button>
+          <button class="primary-button" id="checkButton">Check answer</button>
+        </div>
+      </article>
+
+      <div class="navigation-row">
+        <button class="text-button" id="previousButton">← Previous</button>
+        <span id="answeredCount">0 of 26 answered</span>
+        <button class="text-button" id="nextButton">Next →</button>
+      </div>
+    </section>
+
+    <section class="review-screen screen" id="reviewScreen">
+      <div class="review-panel">
+        <p class="eyebrow" style="color:var(--accent)">FINAL CHECK</p>
+        <h1>Review your answers</h1>
+        <p class="review-copy">Green questions have an answer. Grey questions are unanswered. Select any question to return and make changes before submitting.</p>
+        <div class="review-summary">
+          <span id="reviewAnswered">0 answered</span>
+          <span id="reviewUnanswered">20 unanswered</span>
+        </div>
+        <div class="review-grid" id="reviewGrid"></div>
+        <div class="review-actions">
+          <button class="secondary-button" id="returnToWorksheetButton">← Continue working</button>
+          <button class="primary-button" id="submitWorksheetButton">Submit worksheet</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="results-screen screen" id="resultsScreen">
+      <div class="results-hero">
+        <p class="eyebrow">WORKSHEET COMPLETE</p>
+        <div class="result-ring" id="resultRing"><span id="resultPercent">0%</span></div>
+        <h1 id="resultHeading">Your results</h1>
+        <p id="resultMessage"></p>
+        <strong class="result-score" id="resultScore">0 / 20</strong>
+      </div>
+
+      <div class="results-grid">
+        <article class="result-card">
+          <h2>Strong areas</h2>
+          <div id="strengthsList" class="result-list"></div>
+        </article>
+        <article class="result-card review-card">
+          <h2>Review next</h2>
+          <div id="reviewList" class="result-list"></div>
+        </article>
+      </div>
+
+      <section class="mistakes-card">
+        <h2>Common mistakes to remember</h2>
+        <ul>
+          <li>Zero is whole, integer, rational and real, but it is not natural under the StudyNest convention.</li>
+          <li>Negative integers are not whole numbers.</li>
+          <li>Recurring decimals are rational because they can be written as fractions.</li>
+          <li>Not every square root is irrational: simplify it first.</li>
+          <li>A number can belong to several number families at the same time.</li>
+        </ul>
+      </section>
+
+      <div class="results-actions">
+        <button class="secondary-button" id="retryIncorrectButton">Retry incorrect questions</button>
+        <button class="primary-button" id="retryAllButton">Retry full worksheet</button>
+        <button class="secondary-button" id="printButton">Print questions</button>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal-backdrop" id="finishModal" role="dialog" aria-modal="true" aria-labelledby="finishModalTitle">
+    <div class="modal-card">
+      <h2 id="finishModalTitle">Review and finish?</h2>
+      <p id="finishModalMessage"></p>
+      <p class="modal-warning" id="finishModalWarning"></p>
+      <div class="modal-actions">
+        <button class="secondary-button" id="cancelFinishButton">Continue working</button>
+        <button class="primary-button" id="openReviewButton">Review answers</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+(() => {
+  const questions = [
+    {section:"Getting started",skill:"Like terms",type:"single",question:"Simplify 3x + 2x.",instruction:"Choose one answer.",options:["5", "5x", "6x", "x"],answer:["5x"],hints:["Add the coefficients, not the variables."],solution:"3x + 2x = 5x."},
+    {section:"Getting started",skill:"Like terms",type:"single",question:"Simplify 7a − 3a.",instruction:"Choose one answer.",options:["4", "4a", "10a", "−4a"],answer:["4a"],hints:["Subtract the coefficients."],solution:"7a − 3a = 4a."},
+    {section:"Getting started",skill:"Constants",type:"single",question:"Simplify 8 + 5 − 3.",instruction:"Choose one answer.",options:["10", "13", "16", "0"],answer:["10"],hints:["Combine the constants."],solution:"8 + 5 − 3 = 10."},
+    {section:"Getting started",skill:"Unlike terms",type:"single",question:"Which expression is already fully simplified?",instruction:"Choose one answer.",options:["3x + 4x", "5a + 2b", "7m − 2m", "4 + 6"],answer:["5a + 2b"],hints:["Unlike variable terms cannot be combined."],solution:"5a + 2b is already simplified."},
+    {section:"Getting started",skill:"Like terms",type:"single",question:"Simplify y + y + y.",instruction:"Choose one answer.",options:["y³", "3y", "y + 3", "3"],answer:["3y"],hints:["Each y has coefficient 1."],solution:"y + y + y = 3y."},
+    {section:"Understanding",skill:"Negative coefficients",type:"single",question:"Simplify 4x − 9x.",instruction:"Choose one answer.",options:["5x", "−5x", "13x", "−13x"],answer:["−5x"],hints:["Compute 4 − 9."],solution:"4x − 9x = −5x."},
+    {section:"Understanding",skill:"Negative coefficients",type:"single",question:"Simplify −3a + 8a.",instruction:"Choose one answer.",options:["−11a", "5a", "11a", "−5a"],answer:["5a"],hints:["Compute −3 + 8."],solution:"−3a + 8a = 5a."},
+    {section:"Understanding",skill:"Constants",type:"single",question:"Simplify 5p + 7 + 2p − 3.",instruction:"Choose one answer.",options:["7p + 4", "7p + 10", "10p + 4", "3p + 4"],answer:["7p + 4"],hints:["Group p-terms and constants separately."],solution:"5p + 2p = 7p and 7 − 3 = 4."},
+    {section:"Understanding",skill:"Multiple variables",type:"single",question:"Simplify 3x + 4y + 2x.",instruction:"Choose one answer.",options:["9xy", "5x + 4y", "5x + 6y", "3x + 6y"],answer:["5x + 4y"],hints:["Only the x-terms are like terms."],solution:"3x + 2x = 5x, so 5x + 4y."},
+    {section:"Understanding",skill:"Multiple variables",type:"single",question:"Simplify 6a − 2b − a + 5b.",instruction:"Choose one answer.",options:["5a + 3b", "7a + 7b", "5a − 7b", "6a + 3b"],answer:["5a + 3b"],hints:["Collect a-terms and b-terms separately."],solution:"6a − a = 5a and −2b + 5b = 3b."},
+    {section:"Understanding",skill:"Coefficients",type:"single",question:"Simplify x + 4x − 2x.",instruction:"Choose one answer.",options:["3x", "5x", "7x", "x"],answer:["3x"],hints:["Use coefficients 1, 4 and −2."],solution:"1x + 4x − 2x = 3x."},
+    {section:"Understanding",skill:"Powers",type:"single",question:"Which terms can be combined?",instruction:"Choose one answer.",options:["3x and 2x²", "4ab and −7ab", "5a and 5b", "x and x²"],answer:["4ab and −7ab"],hints:["Like terms need the same variables with the same powers."],solution:"4ab and −7ab are like terms."},
+    {section:"Application",skill:"Long expressions",type:"single",question:"Simplify 2x + 5 + 7x − 9.",instruction:"Choose one answer.",options:["9x − 4", "9x + 14", "5x − 4", "9x + 4"],answer:["9x − 4"],hints:["Combine 2x + 7x and 5 − 9."],solution:"The result is 9x − 4."},
+    {section:"Application",skill:"Long expressions",type:"single",question:"Simplify 10m − 4 + 3 − 6m.",instruction:"Choose one answer.",options:["4m − 1", "16m − 1", "4m + 7", "−4m − 1"],answer:["4m − 1"],hints:["Reorder into m-terms and constants."],solution:"10m − 6m = 4m and −4 + 3 = −1."},
+    {section:"Application",skill:"Multiple variables",type:"single",question:"Simplify 8x − 3y − 5x + 7y.",instruction:"Choose one answer.",options:["3x + 4y", "13x + 10y", "3x − 10y", "−3x + 4y"],answer:["3x + 4y"],hints:["Collect each variable separately."],solution:"8x − 5x = 3x; −3y + 7y = 4y."},
+    {section:"Application",skill:"Negative coefficients",type:"single",question:"Simplify −2p − 5p + 3.",instruction:"Choose one answer.",options:["−7p + 3", "3p + 3", "−3p + 3", "−7p"],answer:["−7p + 3"],hints:["Add −2 and −5."],solution:"−2p − 5p = −7p."},
+    {section:"Application",skill:"Powers",type:"single",question:"Simplify 4x² + 3x − x² + 5x.",instruction:"Choose one answer.",options:["3x² + 8x", "11x²", "3x² + 2x", "4x² + 8x"],answer:["3x² + 8x"],hints:["Collect x²-terms separately from x-terms."],solution:"4x² − x² = 3x² and 3x + 5x = 8x."},
+    {section:"Application",skill:"Powers",type:"single",question:"Simplify 2a² + 4a − 5 + 3a² − a + 8.",instruction:"Choose one answer.",options:["5a² + 3a + 3", "5a² + 5a + 13", "a² + 3a + 3", "5a² − 3a + 3"],answer:["5a² + 3a + 3"],hints:["Group a², a and constant terms."],solution:"2a² + 3a² = 5a²; 4a − a = 3a; −5 + 8 = 3."},
+    {section:"Application",skill:"Signs",type:"single",question:"Simplify 7 − 2x + 5x − 11.",instruction:"Choose one answer.",options:["3x − 4", "7x − 4", "3x + 18", "−3x − 4"],answer:["3x − 4"],hints:["Combine variable terms and constants."],solution:"−2x + 5x = 3x and 7 − 11 = −4."},
+    {section:"Application",skill:"Reasoning",type:"single",question:"A learner writes 3x + 4 = 7x. What is the mistake?",instruction:"Choose the best answer.",options:["The coefficients were multiplied", "Unlike terms were combined", "The variable should be squared", "The answer should be negative"],answer:["Unlike terms were combined"],hints:["A constant and an x-term are unlike terms."],solution:"3x and 4 cannot be combined."},
+    {section:"Mastery",skill:"Long expressions",type:"single",question:"Simplify 4a − 3b + 2 − 7a + 5b − 9.",instruction:"Choose one answer.",options:["−3a + 2b − 7", "11a + 8b − 7", "−3a − 8b + 11", "3a + 2b − 7"],answer:["−3a + 2b − 7"],hints:["Collect a, b and constant terms."],solution:"4a − 7a = −3a; −3b + 5b = 2b; 2 − 9 = −7."},
+    {section:"Mastery",skill:"Powers",type:"single",question:"Simplify −3x² + 6x + 5x² − 10x + 4.",instruction:"Choose one answer.",options:["2x² − 4x + 4", "8x² − 16x + 4", "2x² + 16x + 4", "−8x² − 4x + 4"],answer:["2x² − 4x + 4"],hints:["Group terms with the same power."],solution:"−3x² + 5x² = 2x² and 6x − 10x = −4x."},
+    {section:"Mastery",skill:"Multiple variables",type:"single",question:"Simplify 5ab − 2a + 3ab + 7a − 4.",instruction:"Choose one answer.",options:["8ab + 5a − 4", "8a²b + 5a − 4", "6ab + 9a − 4", "8ab − 9a − 4"],answer:["8ab + 5a − 4"],hints:["ab-terms and a-terms are different families."],solution:"5ab + 3ab = 8ab and −2a + 7a = 5a."},
+    {section:"Mastery",skill:"Missing coefficient",type:"single",question:"If 3x + kx = 11x, what is k?",instruction:"Choose one answer.",options:["8", "14", "−8", "3"],answer:["8"],hints:["Compare coefficients."],solution:"3 + k = 11, so k = 8."},
+    {section:"Mastery",skill:"Equivalence",type:"single",question:"Which expression is equivalent to 2a + 3b − 5a + b?",instruction:"Choose one answer.",options:["−3a + 4b", "7a + 4b", "−3a + 2b", "3a − 4b"],answer:["−3a + 4b"],hints:["Collect a-terms and b-terms."],solution:"2a − 5a = −3a and 3b + b = 4b."},
+    {section:"Mastery",skill:"Final challenge",type:"single",question:"Simplify 3x² − 2xy + 5x² + 7xy − x².",instruction:"Choose one answer.",options:["7x² + 5xy", "9x² + 5xy", "7x² − 9xy", "8x² + 7xy"],answer:["7x² + 5xy"],hints:["Collect x² terms and xy terms separately."],solution:"3x² + 5x² − x² = 7x²; −2xy + 7xy = 5xy."}
+  ];
+
+  const state = { index: 0, answers: Array(questions.length).fill(null), marked: Array(questions.length).fill(false), correct: Array(questions.length).fill(false), hints: Array(questions.length).fill(0), retrySet: null };
+  const $ = id => document.getElementById(id);
+  const screens = {welcome:$('welcomeScreen'),quiz:$('quizScreen'),review:$('reviewScreen'),results:$('resultsScreen')};
+
+  function showScreen(name){Object.values(screens).forEach(s=>s.classList.remove('active'));screens[name].classList.add('active');window.scrollTo({top:0,behavior:'smooth'});}
+  function escapeHtml(value){return String(value).replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));}
+  function currentQuestion(){return questions[state.index];}
+  function answerKey(arr){return [...arr].map(String).sort().join('|');}
+
+  function render(){
+    const q=currentQuestion(), n=state.index;
+    $('sectionLabel').textContent=q.section.toUpperCase();$('questionCounter').textContent=`Question ${n+1} of ${questions.length}`;
+    $('questionNumber').textContent=n+1;$('skillTag').textContent=q.skill;$('questionText').textContent=q.question;$('questionInstruction').textContent=q.instruction||'';
+    $('progressFill').style.width=`${((n+1)/questions.length)*100}%`;
+    $('answeredCount').textContent=`${state.marked.filter(Boolean).length} of ${questions.length} answered`;
+    $('liveScore').textContent=`${state.correct.filter(Boolean).length} correct`;
+    $('previousButton').disabled=n===0;$('nextButton').textContent=n===questions.length-1?'Review & Finish →':'Next →';
+    $('feedbackBox').className='feedback-box';$('feedbackBox').textContent='';$('hintBox').className='support-box hint-box';$('solutionBox').className='support-box solution-box';
+    $('hintButton').textContent=state.hints[n]===0?'Hint 1':state.hints[n]===1?'Hint 2':'Hide hints';
+    renderAnswerArea(q,n);
+    if(state.marked[n]) showMarkedFeedback(n,false);
+  }
+
+  function renderAnswerArea(q,n){
+    const area=$('answerArea'), saved=state.answers[n];
+    if(q.type==='single'||q.type==='multi'){
+      area.innerHTML=(q.type==='multi'?'<p class="multi-note">Select all that apply.</p>':'')+'<div class="option-grid">'+q.options.map((o,i)=>{
+        const checked=q.type==='single'?saved===o:Array.isArray(saved)&&saved.includes(o);
+        return `<label class="option ${checked?'selected':''}"><input type="${q.type==='single'?'radio':'checkbox'}" name="answer" value="${escapeHtml(o)}" ${checked?'checked':''}><span>${escapeHtml(o)}</span></label>`;
+      }).join('')+'</div>';
+      area.querySelectorAll('input').forEach(input=>input.addEventListener('change',()=>{
+        if(q.type==='single') state.answers[n]=input.value;
+        else state.answers[n]=[...area.querySelectorAll('input:checked')].map(x=>x.value);
+        area.querySelectorAll('.option').forEach(label=>label.classList.toggle('selected',label.querySelector('input').checked));
+      }));
+    } else if(q.type==='matching'){
+      area.innerHTML='<div class="classification-grid">'+q.rows.map((row,i)=>`<div class="item">${escapeHtml(row[0])}</div><select class="select-answer" data-row="${i}"><option value="">Choose a category</option>${row[1].map(o=>`<option ${saved&&saved[i]===o?'selected':''}>${escapeHtml(o)}</option>`).join('')}</select>`).join('')+'</div>';
+      area.querySelectorAll('select').forEach(select=>select.addEventListener('change',()=>state.answers[n]=[...area.querySelectorAll('select')].map(x=>x.value)));
+    } else {
+      const cls=q.type==='text-short'?'text-answer short':'text-answer';
+      area.innerHTML=q.type==='text-short'?`<input class="${cls}" value="${escapeHtml(saved||'')}" placeholder="Type your answer">`:`<textarea class="${cls}" placeholder="Write your explanation here">${escapeHtml(saved||'')}</textarea>`;
+      area.querySelector('.text-answer').addEventListener('input',e=>state.answers[n]=e.target.value);
+    }
+  }
+
+  function hasAnswer(q,a){if(q.type==='multi'||q.type==='matching')return Array.isArray(a)&&a.length>0&&a.every(Boolean);return String(a??'').trim()!=='';}
+  function normalize(s){return String(s).toLowerCase().replace(/[.,;:()]/g,' ').replace(/\s+/g,' ').trim();}
+  function evaluate(q,a){
+    if(q.type==='single')return a===q.answer[0];
+    if(q.type==='multi'||q.type==='matching')return answerKey(a)===answerKey(q.answer);
+    const value=normalize(a);
+    return q.answer.some(rule=>{
+      if(!rule.startsWith('contains:'))return value===normalize(rule);
+      const groups=rule.slice(9).split('|');
+      return groups.some(group=>group.split(',').every(term=>value.includes(normalize(term))));
+    });
+  }
+
+  function checkCurrent(){
+    const q=currentQuestion(), n=state.index, a=state.answers[n];
+    if(!hasAnswer(q,a)){
+      const box=$('feedbackBox');box.className='feedback-box show bad';box.textContent='Please answer every part before checking.';return;
+    }
+    state.marked[n]=true;state.correct[n]=evaluate(q,a);showMarkedFeedback(n,true);updateCounts();
+  }
+  function showMarkedFeedback(n,animate){
+    const box=$('feedbackBox'),ok=state.correct[n];box.className=`feedback-box show ${ok?'good':'bad'}`;
+    box.textContent=ok?'Correct — excellent work!':'Not quite. Read the feedback, use a hint, then change your answer and check again.';
+    if(animate)box.scrollIntoView({behavior:'smooth',block:'nearest'});
+  }
+  function updateCounts(){$('answeredCount').textContent=`${state.marked.filter(Boolean).length} of ${questions.length} answered`;$('liveScore').textContent=`${state.correct.filter(Boolean).length} correct`;}
+
+  function showHint(){
+    const n=state.index,q=currentQuestion(),box=$('hintBox');
+    if(state.hints[n]>=2){state.hints[n]=0;box.className='support-box hint-box';$('hintButton').textContent='Hint 1';return;}
+    state.hints[n]++;box.className='support-box hint-box show';box.innerHTML=`<strong>Hint ${state.hints[n]}</strong><br>${escapeHtml(q.hints[state.hints[n]-1])}`;$('hintButton').textContent=state.hints[n]===1?'Hint 2':'Hide hints';
+  }
+  function showSolution(){const box=$('solutionBox');box.classList.toggle('show');box.innerHTML=`<strong>Worked solution</strong><br>${escapeHtml(currentQuestion().solution)}`;}
+  function go(delta){
+    if(delta===1&&state.index===questions.length-1){finish();return;}
+    state.index=Math.max(0,Math.min(questions.length-1,state.index+delta));render();
+  }
+  function answeredIndexes(){return questions.map((q,i)=>hasAnswer(q,state.answers[i])?i:null).filter(i=>i!==null);}
+  function finish(){
+    const answered=answeredIndexes().length, remaining=questions.length-answered;
+    $('finishModalMessage').textContent=`You have answered ${answered} of ${questions.length} questions.`;
+    $('finishModalWarning').textContent=remaining?`${remaining} question${remaining===1?' is':'s are'} still unanswered. You can review them before submitting.`:'All questions have answers. Review them once more before submitting.';
+    $('finishModal').classList.add('show');
+  }
+  function closeFinishModal(){$('finishModal').classList.remove('show');}
+  function buildReview(){
+    const answered=answeredIndexes().length, remaining=questions.length-answered;
+    $('reviewAnswered').textContent=`${answered} answered`;$('reviewUnanswered').textContent=`${remaining} unanswered`;
+    $('reviewGrid').innerHTML=questions.map((q,i)=>{
+      const done=hasAnswer(q,state.answers[i]);
+      return `<button class="review-question ${done?'answered':'unanswered'}" data-index="${i}" aria-label="Question ${i+1}: ${done?'answered':'unanswered'}">${i+1}<br><small>${done?'Answered':'Unanswered'}</small></button>`;
+    }).join('');
+    $('reviewGrid').querySelectorAll('button').forEach(btn=>btn.addEventListener('click',()=>{state.index=Number(btn.dataset.index);showScreen('quiz');render();}));
+  }
+  function openReview(){closeFinishModal();buildReview();showScreen('review');}
+  function submitWorksheet(){
+    questions.forEach((q,i)=>{state.marked[i]=hasAnswer(q,state.answers[i]);state.correct[i]=state.marked[i]&&evaluate(q,state.answers[i]);});
+    const score=state.correct.filter(Boolean).length,pct=Math.round(score/questions.length*100);
+    $('resultScore').textContent=`${score} / ${questions.length}`;$('resultPercent').textContent=`${pct}%`;$('resultRing').style.background=`conic-gradient(var(--gold) ${pct*3.6}deg,#ffffff33 0deg)`;
+    const heading=pct>=90?'Outstanding mastery!':pct>=75?'Excellent progress!':pct>=60?'Good foundation!':'Keep building confidence';
+    const msg=pct>=90?'You have a very strong understanding of types of numbers.':pct>=75?'You understand most number families. Review the few areas below, then continue.':pct>=60?'You are making good progress. Use the targeted review list before retrying.':'Use the hints and worked solutions, then retry the questions that need attention.';
+    $('resultHeading').textContent=heading;$('resultMessage').textContent=msg;
+    buildSkillFeedback();showScreen('results');
+  }
+  function buildSkillFeedback(){
+    const stats={};questions.forEach((q,i)=>{stats[q.skill]??={right:0,total:0};stats[q.skill].total++;if(state.correct[i])stats[q.skill].right++;});
+    const strengths=Object.entries(stats).filter(([,v])=>v.right/v.total>=.75).map(([k])=>k);
+    const reviews=Object.entries(stats).filter(([,v])=>v.right/v.total<.75).map(([k,v])=>`${k} (${v.right}/${v.total})`);
+    $('strengthsList').innerHTML=(strengths.length?strengths:['Keep practising to build a strong area']).map(x=>`<div class="result-item">✓ ${escapeHtml(x)}</div>`).join('');
+    $('reviewList').innerHTML=(reviews.length?reviews:['No weak areas identified']).map(x=>`<div class="result-item">${reviews.length?'↻':'✓'} ${escapeHtml(x)}</div>`).join('');
+  }
+  function retryIncorrect(){
+    const incorrect=state.correct.map((ok,i)=>ok?null:i).filter(i=>i!==null);
+    if(!incorrect.length){retryAll();return;}
+    incorrect.forEach(i=>{state.answers[i]=null;state.marked[i]=false;state.correct[i]=false;state.hints[i]=0;});state.index=incorrect[0];showScreen('quiz');render();
+  }
+  function retryAll(){state.index=0;state.answers.fill(null);state.marked.fill(false);state.correct.fill(false);state.hints.fill(0);showScreen('quiz');render();}
+
+  $('startButton').addEventListener('click',()=>{showScreen('quiz');render();});$('checkButton').addEventListener('click',checkCurrent);$('hintButton').addEventListener('click',showHint);$('solutionButton').addEventListener('click',showSolution);$('previousButton').addEventListener('click',()=>go(-1));$('nextButton').addEventListener('click',()=>go(1));$('cancelFinishButton').addEventListener('click',closeFinishModal);$('openReviewButton').addEventListener('click',openReview);$('returnToWorksheetButton').addEventListener('click',()=>{showScreen('quiz');render();});$('submitWorksheetButton').addEventListener('click',submitWorksheet);$('finishModal').addEventListener('click',e=>{if(e.target===$('finishModal'))closeFinishModal();});$('retryIncorrectButton').addEventListener('click',retryIncorrect);$('retryAllButton').addEventListener('click',retryAll);$('printButton').addEventListener('click',()=>window.print());
+})();
+
+</script>
+</body>
+</html>

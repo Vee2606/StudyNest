@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Discover how changing quantities can be connected in predictable ways.">
+        <title>Introduction to Variation | Variation | StudyNest</title>
+        <link rel="stylesheet" href="../styles/variation-lessons.css">
+      <link rel="stylesheet" href="../styles/studynest-v3.css">
+
+<link rel="stylesheet" href="../studynest-3.1.css">
+<link rel="stylesheet" href="../studynest-theme.css">
+</head>
+
+    <body>
+
+    <div class="announcement-bar">🚀 StudyNest is growing. New lessons and worksheets are added regularly.</div>
+    <header class="site-header">
+        <a href="../index.html" class="logo">📚 StudyNest</a>
+        <nav class="main-navigation">
+            <a href="../index.html">🏠 Home</a>
+            <a href="../topics.html">📘 Study by Topic</a>
+            <a href="index.html">↗ Variation</a>
+            <a href="../worksheets.html">📝 Worksheets</a>
+        </nav>
+    </header>
+
+
+    <section class="lesson-hero">
+        <div>
+            <p class="lesson-label">VARIATION · LESSON 01</p>
+            <h1>Introduction to Variation</h1>
+            <p class="lesson-subtitle">Discover how changing quantities can be connected in predictable ways.</p>
+            <div class="lesson-meta">
+                <span class="meta-pill">⏱️ 14–16 min</span>
+                <span class="meta-pill">📘 Foundation</span>
+                <span class="meta-pill">✏️ Worked examples included</span>
+            </div>
+        </div>
+
+        <div class="hero-visual variation-hero-demo" aria-label="Two animated examples of variation">
+            <div class="hero-relation direct-hero-relation">
+                <span>Hours Worked</span><strong class="hero-arrow-up">↑</strong><span>Wages Earned</span>
+                <small>Increase one… watch the other increase.</small>
+            </div>
+            <div class="hero-relation inverse-hero-relation">
+                <span>Workers</span><strong class="hero-arrow-up">↑</strong><span>Days Needed</span>
+                <small>Increase workers… days decrease.</small>
+            </div>
+        </div>
+    </section>
+
+<section class="lesson-section variation-real-life" id="intro-live-scenario">
+    <h2>👀 See Variation Before the Formula</h2>
+    <p>Move either slider. The numbers change immediately so you can see the two main patterns before reading their definitions.</p>
+    <div class="variation-pattern-grid">
+      <article class="variation-mini-board">
+        <h3>💼 Hours Worked and Wages</h3>
+        <label class="variation-slider-label" for="intro-hours">Hours worked <strong id="intro-hours-value">4</strong></label>
+        <input id="intro-hours" type="range" min="1" max="8" value="4">
+        <div class="variation-arrow-pair"><span>Hours <b id="intro-hours-card">4</b></span><strong>↑</strong><span>Wages <b id="intro-wages-card">$12</b></span></div>
+        <p class="variation-result" id="intro-direct-result">4 hours → $12</p>
+      </article>
+      <article class="variation-mini-board">
+        <h3>👷 Workers and Days</h3>
+        <label class="variation-slider-label" for="intro-workers">Workers <strong id="intro-workers-value">4</strong></label>
+        <input id="intro-workers" type="range" min="2" max="8" step="1" value="4">
+        <div class="variation-arrow-pair"><span>Workers <b id="intro-workers-card">4</b></span><strong>↑</strong><span>Days <b id="intro-days-card">12</b></span></div>
+        <p class="variation-result" id="intro-inverse-result">4 workers → 12 days</p>
+      </article>
+    </div>
+</section>
+
+
+
+        <main class="lesson-main">
+
+<section class="lesson-section">
+    <h2>🎯 By the End of This Lesson...</h2>
+    <p>You should be able to:</p>
+    <ul class="objective-list">
+        <li>explain variation in plain English;</li>
+        <li>identify two quantities that are connected;</li>
+        <li>distinguish a relationship from a coincidence;</li>
+        <li>recognise direct and inverse behaviour informally;</li>
+        <li>describe how one quantity changes when another changes.</li>
+    </ul>
+</section>
+
+<section class="lesson-section">
+    <h2>🤔 Think About This...</h2>
+    <p>
+        Suppose one exercise book costs US$2. One book costs US$2, two books
+        cost US$4 and five books cost US$10.
+    </p>
+
+    <div class="think-box">
+        What happens to the total cost when the number of books doubles?
+    </div>
+
+    <p>
+        The cost doubles too. The two quantities are not changing randomly:
+        they are connected by a clear rule.
+    </p>
+</section>
+
+<section class="lesson-section">
+    <h2>What Is Variation?</h2>
+    <p>
+        Variation describes how one quantity changes when another quantity
+        changes. The two quantities may increase together, decrease together,
+        or move in opposite directions.
+    </p>
+
+    <div class="key-idea">
+        <strong>Key idea:</strong> Variation is about a relationship between
+        changing quantities.
+    </div>
+
+    <div class="relationship-flow">
+        <div class="relationship-box">Number of books changes</div>
+        <div class="relationship-arrow">→</div>
+        <div class="relationship-box">Total cost changes</div>
+    </div>
+</section>
+
+<section class="lesson-section">
+    <h2>Everyday Relationships</h2>
+
+    <div class="visual-grid-two">
+        <article class="visual-card">
+            <h3>Shopping</h3>
+            <p>Buying more identical items usually increases the total cost.</p>
+        </article>
+
+        <article class="visual-card">
+            <h3>Travel</h3>
+            <p>At the same speed, travelling for longer increases the distance.</p>
+        </article>
+
+        <article class="visual-card">
+            <h3>Work</h3>
+            <p>More workers may reduce the time needed to finish a job.</p>
+        </article>
+
+        <article class="visual-card">
+            <h3>Recipes</h3>
+            <p>Making twice as much food requires twice as much of each ingredient.</p>
+        </article>
+    </div>
+</section>
+
+<section class="lesson-section">
+    <h2>Two Important Patterns</h2>
+
+    <div class="visual-grid-two">
+        <article class="visual-card">
+            <h3>Moving together</h3>
+            <p>
+                As one quantity increases, the other also increases in a
+                predictable ratio. This leads to <strong>direct variation</strong>.
+            </p>
+        </article>
+
+        <article class="visual-card">
+            <h3>Moving oppositely</h3>
+            <p>
+                As one quantity increases, the other decreases in a predictable
+                way. This leads to <strong>inverse variation</strong>.
+            </p>
+        </article>
+    </div>
+
+    <div class="tip-box">
+        At this stage, focus on the behaviour of the quantities before thinking
+        about formulas.
+    </div>
+</section>
+
+<section class="lesson-section">
+    <h2>Worked Example 1: Recognising a Connection</h2>
+
+    <div class="worked-example">
+        <h3>A taxi charges US$1 per kilometre.</h3>
+
+        <div class="step">
+            <span class="step-number">1</span>
+            <p>The changing quantities are distance and cost.</p>
+        </div>
+
+        <div class="step">
+            <span class="step-number">2</span>
+            <p>Each extra kilometre adds US$1.</p>
+        </div>
+
+        <div class="step">
+            <span class="step-number">3</span>
+            <p>Travelling twice as far costs twice as much.</p>
+        </div>
+
+        <div class="step">
+            <span class="step-number">4</span>
+            <p>The quantities move together in a direct pattern.</p>
+        </div>
+    </div>
+</section>
+
+<section class="lesson-section">
+    <h2>Worked Example 2: Moving in Opposite Directions</h2>
+
+    <div class="worked-example">
+        <h3>
+            Six workers complete a task in 8 hours. More workers are added,
+            while everyone works at the same rate.
+        </h3>
+
+        <div class="step">
+            <span class="step-number">1</span>
+            <p>The quantities are number of workers and time taken.</p>
+        </div>
+
+        <div class="step">
+            <span class="step-number">2</span>
+            <p>More workers should complete the same job in less time.</p>
+        </div>
+
+        <div class="step">
+            <span class="step-number">3</span>
+            <p>One quantity increases while the other decreases.</p>
+        </div>
+
+        <div class="step">
+            <span class="step-number">4</span>
+            <p>This is the behaviour associated with inverse variation.</p>
+        </div>
+    </div>
+</section>
+
+<section class="lesson-section">
+    <h2>🌟 Did You Know?</h2>
+
+    <div class="did-you-know">
+        Scientists use variation to describe how measurable quantities are
+        connected. For example, the distance travelled at a constant speed
+        varies with time.
+    </div>
+</section>
+
+<section class="lesson-section">
+    <h2>🔍 How Do I Recognise Variation?</h2>
+
+    <div class="recognition-box">
+        <h3>Look for two changing quantities.</h3>
+        <ul>
+            <li>What is changing?</li>
+            <li>Does changing one quantity affect the other?</li>
+            <li>Do they move together or in opposite directions?</li>
+            <li>Is the relationship predictable?</li>
+        </ul>
+    </div>
+</section>
+
+<section class="lesson-section">
+    <h2>⚠️ Common Mistakes</h2>
+
+    <div class="warning-box">
+        <strong>Mistake:</strong> Assuming that any two increasing quantities
+        are directly proportional.<br><br>
+
+        Two quantities may both increase without increasing in the same ratio.
+        Variation requires a consistent mathematical relationship.
+    </div>
+</section>
+
+<section class="lesson-section">
+    <h2>✅ Quick Check</h2>
+
+    <div class="quick-check">
+        <div class="quick-card">
+            A recipe is doubled. What should happen to every ingredient?
+        </div>
+
+        <div class="quick-card">
+            More taps fill the same tank. What should happen to the time?
+        </div>
+
+        <div class="quick-card">
+            Name the two changing quantities when buying identical pens.
+        </div>
+    </div>
+</section>
+
+<section class="lesson-section">
+    <h2>Practice Questions</h2>
+
+    <span class="level-heading">Foundation</span>
+    <ol class="practice-list">
+        <li>Explain variation using your own words.</li>
+        <li>
+            Name the two changing quantities when a shopper buys several
+            identical loaves of bread.
+        </li>
+        <li>
+            State whether the following quantities generally move together or
+            in opposite directions:
+            <ol type="a">
+                <li>litres of fuel purchased and total cost;</li>
+                <li>number of workers and time to complete the same task;</li>
+                <li>time travelled at constant speed and distance covered.</li>
+            </ol>
+        </li>
+    </ol>
+
+    <span class="level-heading">Developing</span>
+    <ol class="practice-list" start="4">
+        <li>
+            Explain why “age and height” are not necessarily directly
+            proportional, even though children generally grow taller as they age.
+        </li>
+        <li>
+            Give one original example of quantities that move together and one
+            example of quantities that move in opposite directions.
+        </li>
+    </ol>
+
+    <span class="level-heading">Challenge</span>
+    <ol class="practice-list" start="6">
+        <li>
+            A company’s sales and advertising spending both increased during
+            one month. Is that enough information to prove variation? Explain.
+        </li>
+    </ol>
+</section>
+
+<section class="lesson-section answers-section">
+    <h2>✅ Check Your Work</h2>
+
+    <p>
+        Attempt every question before opening the answers. Learning happens
+        when you think first.
+    </p>
+
+    <details>
+        <summary>Show practice answers</summary>
+
+        <div class="answers-content">
+            <h3>Foundation</h3>
+
+            <ol>
+                <li>
+                    Variation describes how one changing quantity is connected
+                    to another changing quantity.
+                </li>
+
+                <li>
+                    Number of loaves bought and total cost.
+                </li>
+
+                <li>
+                    <ol type="a">
+                        <li>They move together.</li>
+                        <li>They move in opposite directions.</li>
+                        <li>They move together.</li>
+                    </ol>
+                </li>
+            </ol>
+
+            <h3>Developing</h3>
+
+            <ol start="4">
+                <li>
+                    Children do not grow by the same fixed ratio whenever their
+                    age changes. For example, doubling a child’s age does not
+                    generally double the child’s height.
+                </li>
+
+                <li>
+                    Answers vary. Example: quantity of rice and cost move
+                    together; number of identical machines and completion time
+                    for one fixed job may move oppositely.
+                </li>
+            </ol>
+
+            <h3>Challenge</h3>
+
+            <ol start="6">
+                <li>
+                    No. The two values increasing together once does not prove a
+                    consistent mathematical relationship. More data would be
+                    needed to test whether one quantity changes predictably with
+                    the other.
+                </li>
+            </ol>
+        </div>
+    </details>
+</section>
+
+<section class="lesson-section">
+    <h2>One-Minute Summary</h2>
+
+    <ul class="summary-list">
+        <li>Variation describes a relationship between changing quantities.</li>
+        <li>Some quantities move together.</li>
+        <li>Other quantities move in opposite directions.</li>
+        <li>A true variation relationship must be consistent and predictable.</li>
+    </ul>
+</section>
+
+
+    <nav class="lesson-navigation">
+        <a class="nav-button" href="index.html">← Back to Variation</a>
+        <a class="nav-button" href="index.html">Variation Roadmap</a>
+        <a class="nav-button primary" href="02-direct-variation.html">Direct Variation →</a>
+    </nav>
+
+        </main>
+
+
+    <footer class="site-footer">
+        <strong>📚 StudyNest</strong>
+        <p>Helping students understand Mathematics, not memorise it.</p>
+        <p>© 2026 StudyNest</p>
+    </footer>
+
+        <script>
+(function () {
+  function startVariationInteractions() {
+
+'use strict';
+const $=s=>document.querySelector(s);
+const fmt=n=>Number.isInteger(n)?String(n):n.toFixed(2).replace(/0+$/,'').replace(/\.$/,'');
+function drawGraph(svg,{xMax,yMax,xStep=1,yStep=1,curve,points,selected,xLabel='x',yLabel='y'}){
+ if(!svg)return; const W=560,H=360,m={l:62,r:28,t:22,b:52},pw=W-m.l-m.r,ph=H-m.t-m.b;
+ const sx=x=>m.l+(x/xMax)*pw, sy=y=>m.t+ph-(y/yMax)*ph;
+ let gh='',ah='';
+ for(let x=0;x<=xMax+1e-9;x+=xStep){gh+=`<line class="grid-line" x1="${sx(x)}" y1="${m.t}" x2="${sx(x)}" y2="${m.t+ph}"/>`;ah+=`<text class="tick-label" x="${sx(x)}" y="${m.t+ph+23}" text-anchor="middle">${fmt(x)}</text>`}
+ for(let y=0;y<=yMax+1e-9;y+=yStep){gh+=`<line class="grid-line" x1="${m.l}" y1="${sy(y)}" x2="${m.l+pw}" y2="${sy(y)}"/>`;ah+=`<text class="tick-label" x="${m.l-10}" y="${sy(y)+4}" text-anchor="end">${fmt(y)}</text>`}
+ ah+=`<line class="axis-line" x1="${m.l}" y1="${m.t+ph}" x2="${m.l+pw}" y2="${m.t+ph}"/><line class="axis-line" x1="${m.l}" y1="${m.t}" x2="${m.l}" y2="${m.t+ph}"/><text class="axis-label" x="${m.l+pw+5}" y="${m.t+ph+5}">${xLabel}</text><text class="axis-label" x="${m.l}" y="${m.t-7}" text-anchor="middle">${yLabel}</text>`;
+ svg.querySelector('.grid').innerHTML=gh;svg.querySelector('.axes').innerHTML=ah;
+ svg.querySelector('.graph-line').setAttribute('d',curve.map((p,i)=>`${i?'L':'M'} ${sx(p[0])} ${sy(p[1])}`).join(' '));
+ svg.querySelector('.graph-points').innerHTML=points.map(([x,y])=>`<circle class="point" cx="${sx(x)}" cy="${sy(y)}" r="5"/>`).join('');
+ const [x,y]=selected;svg.querySelector('.selected-coordinate').innerHTML=`<line class="guide" x1="${sx(x)}" y1="${sy(y)}" x2="${sx(x)}" y2="${sy(0)}"/><line class="guide" x1="${sx(0)}" y1="${sy(y)}" x2="${sx(x)}" y2="${sy(y)}"/><circle class="selected-point" cx="${sx(x)}" cy="${sy(y)}" r="7"/><text class="coordinate-label" x="${Math.min(sx(x)+10,W-100)}" y="${Math.max(sy(y)-10,16)}">(${fmt(x)}, ${fmt(y)})</text>`;
+}
+function bind(id,event,fn){const e=$(id);if(e)e.addEventListener(event,fn)}
+// Introduction
+const ih=$('#intro-hours');if(ih){const run=()=>{const x=+ih.value,y=3*x;$('#intro-hours-value').textContent=x;$('#intro-hours-card').textContent=x;$('#intro-wages-card').textContent=`$${y}`;$('#intro-direct-result').textContent=`${x} hour${x===1?'':'s'} → $${y}`};ih.addEventListener('input',run);run()}
+const iw=$('#intro-workers');if(iw){const run=()=>{const w=+iw.value,d=48/w;$('#intro-workers-value').textContent=w;$('#intro-workers-card').textContent=w;$('#intro-days-card').textContent=fmt(d);$('#intro-inverse-result').textContent=`${w} workers → ${fmt(d)} days`};iw.addEventListener('input',run);run()}
+// Direct variation: rate and selected x both change for another example
+const dh=$('#direct-hours');if(dh){let rate=3;const run=()=>{const x=+dh.value,y=rate*x;$('#direct-hours-value').textContent=x;$('#direct-x-card').textContent=x;$('#direct-y-card').textContent=`$${fmt(y)}`;$('#direct-equation').textContent=`y = ${rate}x → y = ${rate}(${x}) = ${fmt(y)}`;$('#direct-coordinate').textContent=`(${x}, ${fmt(y)})`;const vals=[1,2,3,4,5],ps=vals.map(v=>[v,rate*v]);drawGraph($('#direct-graph'),{xMax:8,yMax:40,xStep:1,yStep:5,curve:[[0,0],[8,8*rate]],points:ps,selected:[x,y],xLabel:'Hours',yLabel:'Wages'});const cells=$$('#direct-table-y td');cells.forEach((c,i)=>c.textContent=fmt(rate*(i+1)))};const $$=s=>document.querySelectorAll(s);dh.addEventListener('input',run);bind('#direct-reset','click',()=>{rate=3;dh.value=5;run()});bind('#direct-another','click',()=>{rate=rate===3?5:rate===5?2:3;run()});run()}
+// Chocolate
+const bs=$('#bars-slider');if(bs){let unit=3;const run=()=>{const n=+bs.value,c=unit*n;$('#bars-slider-value').textContent=n;$('#bars-count-card').textContent=`${n} bar${n===1?'':'s'}`;$('#bars-cost-card').textContent=`$${fmt(c)}`;$('#bars-equation').textContent=`k = ${unit}, so C = ${unit}(${n}) = $${fmt(c)}`;$('#chocolate-visual').innerHTML=Array.from({length:n},()=>'<span class="chocolate-bar" aria-hidden="true"></span>').join('');document.querySelectorAll('#bars-table-cost td').forEach((c,i)=>c.textContent=fmt(unit*(i+1)))};bs.addEventListener('input',run);bind('#bars-reset','click',()=>{unit=3;bs.value=5;run()});bind('#bars-another','click',()=>{unit=unit===3?2:unit===2?4:3;run()});run()}
+// Inverse
+const ws=$('#workers-slider');if(ws){let product=48;const run=()=>{const w=+ws.value,d=product/w;$('#workers-value').textContent=w;$('#workers-card').textContent=w;$('#days-card').textContent=fmt(d);$('#inverse-equation').textContent=`D = ${product} ÷ W → D = ${product} ÷ ${w} = ${fmt(d)}`;$('#inverse-coordinate').textContent=`(${w}, ${fmt(d)})`;const vals=[2,3,4,6,8],ps=vals.map(v=>[v,product/v]),curve=[];for(let x=2;x<=8;x+=.08)curve.push([x,product/x]);drawGraph($('#inverse-graph'),{xMax:8,yMax:32,xStep:1,yStep:4,curve,points:ps,selected:[w,d],xLabel:'Workers',yLabel:'Days'});document.querySelectorAll('#inverse-table-days td').forEach((c,i)=>c.textContent=fmt(product/vals[i]))};ws.addEventListener('input',run);bind('#inverse-reset','click',()=>{product=48;ws.value=4;run()});bind('#inverse-another','click',()=>{product=product===48?72:product===72?24:48;run()});run()}
+// Joint
+const ls=$('#length-slider'),ww=$('#width-slider');if(ls&&ww){const run=()=>{const l=+ls.value,w=+ww.value,a=l*w;$('#length-value').textContent=`${l} cm`;$('#width-value').textContent=`${w} cm`;$('#area-equation').textContent=`A = ${l} × ${w} = ${a} cm²`;$('#floor-area').textContent=`${a} cm²`;$('#length-caption').textContent=`${l} cm`;$('#width-caption').textContent=`${w} cm`;$('#joint-length-box').textContent=`${l} cm`;$('#joint-width-box').textContent=`${w} cm`;$('#joint-area-box').textContent=`${a} cm²`;const r=$('#floor-rectangle');r.style.width=`${70+l*18}px`;r.style.height=`${50+w*14}px`};ls.addEventListener('input',run);ww.addEventListener('input',run);bind('#joint-reset','click',()=>{ls.value=5;ww.value=8;run()});bind('#joint-another','click',()=>{ls.value=ls.value==='5'?7:5;ww.value=ww.value==='8'?4:8;run()});run()}
+// Partial
+const ds=$('#distance-slider');if(ds){let fixed=3,rate=.5;const run=()=>{const d=+ds.value,v=rate*d,t=fixed+v;$('#distance-value').textContent=`${d} km`;$('#distance-cost').textContent=`$${fmt(v)}`;$('#total-fare').textContent=`$${fmt(t)}`;$('#fare-equation').textContent=`F = ${fixed} + ${rate.toFixed(2)}(${d}) = $${fmt(t)}`;const vals=[0,5,10,15,20],ps=vals.map(x=>[x,fixed+rate*x]);drawGraph($('#partial-graph'),{xMax:20,yMax:20,xStep:2,yStep:2,curve:[[0,fixed],[20,fixed+20*rate]],points:ps,selected:[d,t],xLabel:'Distance',yLabel:'Fare'});document.querySelectorAll('#fare-table-row td').forEach((c,i)=>c.textContent=fmt(fixed+rate*vals[i]))};ds.addEventListener('input',run);bind('#partial-reset','click',()=>{fixed=3;rate=.5;ds.value=12;run()});bind('#partial-another','click',()=>{if(fixed===3){fixed=2;rate=.75}else{fixed=3;rate=.5}run()});run()}
+
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', startVariationInteractions, { once: true });
+  } else {
+    startVariationInteractions();
+  }
+})();
+</script>
+  <script src="../script-v3.js"></script>
+
+<script src="../studynest-3.1.js" defer></script>
+</body>
+    </html>

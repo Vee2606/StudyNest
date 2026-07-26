@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Question claims, recognise misleading displays and judge whether conclusions are justified.">
+<title>Interpreting and Critiquing Data | Statistics | StudyNest</title>
+<link rel="stylesheet" href="../styles/statistics-lessons.css">
+<link rel="stylesheet" href="../styles/statistics-interactive.css">
+  <link rel="stylesheet" href="../styles/studynest-v3.css">
+
+<link rel="stylesheet" href="../studynest-3.1.css">
+<link rel="stylesheet" href="../studynest-theme.css">
+</head>
+<body>
+
+<div class="announcement-bar">🚀 StudyNest is growing. New lessons and worksheets are added regularly.</div>
+<header class="site-header">
+    <a href="../index.html" class="logo">📚 StudyNest</a>
+    <nav class="main-navigation">
+        <a href="../index.html">🏠 Home</a>
+        <a href="../topics.html">📘 Study by Topic</a>
+        <a href="index.html">📊 Statistics</a>
+        <a href="../worksheets.html">📝 Worksheets</a>
+    </nav>
+</header>
+
+<section class="lesson-hero">
+<div>
+<p class="lesson-label">STATISTICS · LESSON 13</p>
+<h1>Interpreting and Critiquing Data</h1>
+<p class="lesson-subtitle">Question claims, recognise misleading displays and judge whether conclusions are justified.</p>
+<div class="lesson-meta">
+<span class="meta-pill">⏱️ 22–30 min</span>
+<span class="meta-pill">📘 Challenge</span>
+<span class="meta-pill">📊 Interpretation included</span>
+</div>
+</div>
+
+<div class="hero-visual" aria-hidden="true">
+    <div class="statistics-hero-visual">
+        <span class="statistics-token token-mean">x̄</span>
+        <span class="statistics-token token-percent">%</span>
+        <span class="statistics-token token-sigma">Σ</span>
+        <div class="stat-bars"><span></span><span></span><span></span><span></span></div>
+        <div class="stat-pie"></div>
+        <div class="stat-line"><i></i><i></i><i></i></div>
+    </div>
+</div>
+
+</section>
+<main class="lesson-main">
+
+<section class="lesson-section"><h2>🎯 Learning Objectives</h2><ul class="objective-list">
+<li>interpret statistical summaries in context;</li><li>recognise misleading axes and graphs;</li>
+<li>identify sampling and response bias;</li><li>distinguish association from causation;</li><li>evaluate whether evidence supports a claim.</li></ul></section>
+<section class="lesson-section"><h2>Questions to Ask</h2>
+<div class="problem-routine">
+<div class="routine-step"><strong>Who?</strong>Who was included or excluded?</div>
+<div class="routine-step"><strong>How?</strong>How was the sample selected?</div>
+<div class="routine-step"><strong>What?</strong>What exactly was measured?</div>
+<div class="routine-step"><strong>Scale?</strong>Does the graph exaggerate differences?</div>
+<div class="routine-step"><strong>Average?</strong>Was a suitable measure used?</div>
+<div class="routine-step"><strong>Claim?</strong>Does the evidence really support it?</div>
+</div></section>
+<section class="lesson-section"><h2>Misleading Graphs</h2>
+<p>A vertical axis beginning at 95 instead of 0 may make a small change from 98 to 100 look dramatic.</p>
+<div class="common-mistake">A graph can be mathematically accurate yet visually misleading.</div></section>
+<section class="lesson-section"><h2>⚠️ Spot the Misleading Graph</h2><div class="stats-lab"><p>The same values can appear dramatically different when the vertical axis is truncated.</p><div class="stats-actions"><button class="stats-btn" id="s13zero" type="button">Start axis at 0</button><button class="stats-btn secondary" id="s13cut" type="button">Start axis at 74</button></div><svg class="stats-canvas" id="s13svg" viewBox="0 0 680 360"></svg><div class="stats-output" id="s13out"></div></div></section><script>(()=>{const vals=[76,80,84],names=['A','B','C'],s=document.querySelector('#s13svg'),o=document.querySelector('#s13out');function draw(min){let max=90,base=300,scale=220/(max-min);s.innerHTML='<line x1="75" y1="300" x2="620" y2="300" stroke="currentColor" stroke-width="3"/><line x1="75" y1="60" x2="75" y2="300" stroke="currentColor" stroke-width="3"/>'+vals.map((v,i)=>{let h=(v-min)*scale,x=135+i*155;return `<rect x="${x}" y="${base-h}" width="90" height="${h}" fill="#4f8f91"/><text x="${x+45}" y="${base-h-8}" text-anchor="middle">${v}</text><text x="${x+45}" y="330" text-anchor="middle">${names[i]}</text>`}).join('')+`<text x="50" y="300">${min}</text><text x="50" y="80">${max}</text>`;o.textContent=min===0?'Starting at zero gives a fair visual comparison: the differences are real but modest.':'Starting at 74 greatly exaggerates the visual differences. The numerical values have not changed.'}document.querySelector('#s13zero').onclick=()=>draw(0);document.querySelector('#s13cut').onclick=()=>draw(74);draw(0)})();</script>
+<section class="lesson-section"><h2>Practice</h2><ol class="practice-list">
+<li>A café asks only morning customers about preferred opening hours. Identify a possible bias.</li>
+<li>A graph begins at 99 and ends at 102. Why might it mislead?</li>
+<li>Two variables rise together. What can you safely conclude?</li>
+<li>Why should the chosen average be stated?</li>
+<li>Give one sign that a claim may be unreliable.</li></ol></section>
+
+<section class="lesson-section answers-section">
+<h2>✅ Check Your Work</h2>
+<details>
+<summary>Show answers and working</summary>
+<div class="answers-content"><ol><li>Morning customers may not represent afternoon or evening customers.</li><li>The narrow scale visually exaggerates a small difference.</li><li>Only that they are associated in this data; causation has not been established.</li><li>Mean, median and mode can give different impressions, especially with outliers or skew.</li><li>For example: a tiny or biased sample, vague question, missing source, truncated axis or unsupported causal claim.</li></ol></div>
+</details>
+</section>
+<section class="lesson-section"><h2>Summary</h2><ul class="summary-list"><li>Critical thinking is part of statistics.</li><li>Always examine source, sample, scale, measure and claim.</li></ul></section>
+
+<section class="lesson-section">
+<h2>🧠 StudyNest Statistical Thinking Routine</h2>
+<div class="problem-routine">
+<div class="routine-step"><strong>1. Read</strong>What information and context have been given?</div>
+<div class="routine-step"><strong>2. Identify</strong>What type of data, table, graph or measure is involved?</div>
+<div class="routine-step"><strong>3. Choose</strong>Which method or representation answers the question best?</div>
+<div class="routine-step"><strong>4. Work</strong>Organise the calculation or construction clearly.</div>
+<div class="routine-step"><strong>5. Interpret</strong>Explain what the answer means in the original context.</div>
+<div class="routine-step"><strong>6. Check</strong>Does the result fit the data and make reasonable sense?</div>
+</div>
+</section>
+
+<nav class="lesson-navigation">
+<a class="nav-button" href="12-cumulative-frequency-and-ogives.html">← Cumulative Frequency</a>
+<a class="nav-button" href="index.html">Statistics Roadmap</a>
+<a class="nav-button primary" href="14-statistics-mixed-review.html">Mixed Review →</a>
+</nav>
+</main>
+
+<footer class="site-footer">
+    <strong>📚 StudyNest</strong>
+    <p>Helping students understand Mathematics, not memorise it.</p>
+    <p>© 2026 StudyNest</p>
+</footer>
+
+  <script src="../script-v3.js"></script>
+
+<script src="../studynest-3.1.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+window.STUDYNEST_WORKSHEET = {
+  kicker: "GRAPHS • WORKSHEET 02",
+  title: "Reading and Plotting Coordinates",
+  description: "Practise reading positions, following coordinate instructions and identifying points accurately.",
+  level: "Foundation to Core",
+  time: "25–35 minutes",
+  skills: ["Reading coordinates", "Plotting instructions", "Missing coordinates", "Horizontal and vertical movement", "Coordinate patterns"],
+  note: "Read scales carefully. The first number is x and the second number is y.",
+  questions: [
+    {section:"Graphs Batch 1",skill:"Reading coordinates",question:"A point is 4 units right and 3 units up from the origin. Write its coordinates.",answer:"(4,3)",answers:["(4,3)","4,3"],hint:"Right means positive x; up means positive y.",solution:"The point is (4, 3)."},
+    {section:"Graphs Batch 1",skill:"Reading coordinates",question:"A point is 5 units left and 2 units up from the origin. Write its coordinates.",answer:"(-5,2)",answers:["(-5,2)","-5,2"],hint:"Left means negative x.",solution:"The point is (−5, 2)."},
+    {section:"Graphs Batch 1",skill:"Reading coordinates",question:"A point is 6 units left and 4 units down from the origin. Write its coordinates.",answer:"(-6,-4)",answers:["(-6,-4)","-6,-4"],hint:"Left and down are both negative.",solution:"The point is (−6, −4)."},
+    {section:"Graphs Batch 1",skill:"Reading coordinates",question:"A point is 8 units right and 1 unit down from the origin. Write its coordinates.",answer:"(8,-1)",answers:["(8,-1)","8,-1"],hint:"Right is positive x; down is negative y.",solution:"The point is (8, −1)."},
+    {section:"Graphs Batch 1",skill:"Movement",question:"Start at (2, 3). Move 4 units right. What are the new coordinates?",answer:"(6,3)",answers:["(6,3)","6,3"],hint:"Only x changes.",solution:"2 + 4 = 6, so the new point is (6, 3)."},
+    {section:"Graphs Batch 1",skill:"Movement",question:"Start at (−1, 5). Move 7 units down. What are the new coordinates?",answer:"(-1,-2)",answers:["(-1,-2)","-1,-2"],hint:"Only y changes: 5 − 7.",solution:"5 − 7 = −2, so the new point is (−1, −2)."},
+    {section:"Graphs Batch 1",skill:"Movement",question:"Start at (4, −3). Move 9 units left. What are the new coordinates?",answer:"(-5,-3)",answers:["(-5,-3)","-5,-3"],hint:"Subtract 9 from x.",solution:"4 − 9 = −5, so the point is (−5, −3)."},
+    {section:"Graphs Batch 1",skill:"Movement",question:"Start at (−6, −2). Move 5 units up. What are the new coordinates?",answer:"(-6,3)",answers:["(-6,3)","-6,3"],hint:"Add 5 to y.",solution:"−2 + 5 = 3, so the point is (−6, 3)."},
+    {section:"Graphs Batch 1",skill:"Missing coordinate",question:"Point A is (x, 7) and lies on the y-axis. Find x.",answer:"0",hint:"Every point on the y-axis has x = 0.",solution:"x = 0."},
+    {section:"Graphs Batch 1",skill:"Missing coordinate",question:"Point B is (−5, y) and lies on the x-axis. Find y.",answer:"0",hint:"Every point on the x-axis has y = 0.",solution:"y = 0."},
+    {section:"Graphs Batch 1",skill:"Same horizontal line",question:"P = (2, 6) and Q = (−4, 6). Are P and Q on the same horizontal line?",answer:"yes",answers:["yes","y"],hint:"Compare their y-coordinates.",solution:"Yes. They both have y = 6."},
+    {section:"Graphs Batch 1",skill:"Same vertical line",question:"R = (−3, 8) and S = (−3, −1). Are R and S on the same vertical line?",answer:"yes",answers:["yes","y"],hint:"Compare their x-coordinates.",solution:"Yes. They both have x = −3."},
+    {section:"Graphs Batch 1",skill:"Midpoint intuition",question:"The points (0, 2) and (0, 8) are on a vertical line. What point is halfway between them?",answer:"(0,5)",answers:["(0,5)","0,5"],hint:"Average the y-values.",solution:"(2 + 8) ÷ 2 = 5, so the midpoint is (0, 5)."},
+    {section:"Graphs Batch 1",skill:"Midpoint intuition",question:"The points (−6, 0) and (4, 0) are on a horizontal line. What point is halfway between them?",answer:"(-1,0)",answers:["(-1,0)","-1,0"],hint:"Average the x-values.",solution:"(−6 + 4) ÷ 2 = −1, so the midpoint is (−1, 0)."},
+    {section:"Graphs Batch 1",skill:"Coordinate pattern",question:"Complete the pattern: (1, 2), (2, 4), (3, 6), (4, __).",answer:"8",hint:"The y-coordinate is twice x.",solution:"When x = 4, y = 8."},
+    {section:"Graphs Batch 1",skill:"Coordinate pattern",question:"Complete the pattern: (−2, 3), (−1, 4), (0, 5), (1, __).",answer:"6",hint:"Both coordinates increase by 1 each step.",solution:"The missing y-coordinate is 6."},
+    {section:"Graphs Batch 1",skill:"Rectangle coordinates",question:"Three corners of an axis-aligned rectangle are (1, 2), (1, 6) and (5, 2). Find the fourth corner.",answer:"(5,6)",answers:["(5,6)","5,6"],hint:"Combine the unused x- and y-values.",solution:"The fourth corner is (5, 6)."},
+    {section:"Graphs Batch 1",skill:"Reflection",question:"A point (−7, 3) is reflected in the y-axis. Write the image.",answer:"(7,3)",answers:["(7,3)","7,3"],hint:"Reverse the sign of x.",solution:"The image is (7, 3)."},
+    {section:"Graphs Batch 1",skill:"Reflection",question:"A point (4, −6) is reflected in the x-axis. Write the image.",answer:"(4,6)",answers:["(4,6)","4,6"],hint:"Reverse the sign of y.",solution:"The image is (4, 6)."},
+    {section:"Graphs Batch 1",skill:"Mastery",question:"A point starts at (−2, 5), moves 6 units right and 9 units down. Write its final coordinates.",answer:"(4,-4)",answers:["(4,-4)","4,-4"],hint:"Update x and y separately.",solution:"x = −2 + 6 = 4 and y = 5 − 9 = −4, so the point is (4, −4)."}
+  ]
+};

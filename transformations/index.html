@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+<title>
+   Transformations | StudyNest
+  </title>
+<link href="../styles/transformations.css" rel="stylesheet"/>
+
+<style id="studynest-v2-style">
+.v2-teaching{background:linear-gradient(135deg,#fffaf7,#f8fbff);border:2px solid #ead8d8;border-radius:22px;padding:24px;margin:28px 0;box-shadow:0 10px 28px rgba(36,59,83,.08)}
+.v2-teaching h2{margin-top:0}.v2-hook{font-size:1.05rem;background:#fff;border-left:6px solid #c46f72;padding:16px 18px;border-radius:12px;margin:12px 0 20px}.v2-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:16px 0}.v2-card{background:#fff;border:1px solid #eadbdb;border-radius:16px;padding:16px}.v2-card h3{margin-top:0;color:#243b53}.v2-diagram{background:#fff;border:1px solid #eadbdb;border-radius:18px;padding:14px;margin:18px 0;overflow:auto}.v2-diagram svg{display:block;max-width:100%;height:auto;margin:auto}.v2-callout{background:#fff4d8;border-left:6px solid #e3a52f;border-radius:12px;padding:14px 16px;margin:16px 0}.v2-think{background:#eef7f2;border:1px solid #b9dcc8;border-radius:16px;padding:16px;margin:18px 0}.v2-interactive{background:#f5f2ff;border:1px solid #d7c9ef;border-radius:18px;padding:18px;margin:20px 0}.v2-controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:12px 0}.v2-controls button,.v2-controls select,.v2-controls input{font:inherit}.v2-controls button{border:0;border-radius:999px;background:#243b53;color:#fff;padding:10px 15px;cursor:pointer}.v2-controls button:hover,.v2-controls button.active{background:#c46f72}.v2-output{background:white;border-radius:12px;padding:12px 14px;min-height:24px;margin-top:10px}.v2-mini-rule{font-size:1.1rem;font-weight:700;text-align:center;background:#fff;border:2px dashed #c46f72;border-radius:14px;padding:13px}.v2-label{font-weight:700;color:#c46f72}.v2-badges{display:flex;gap:8px;flex-wrap:wrap}.v2-badge{background:#edf2f7;border-radius:999px;padding:6px 10px;font-size:.92rem}.v2-move{transition:transform .8s ease}.v2-shape{transition:all .8s ease;transform-box:fill-box;transform-origin:center}.v2-answer{font-weight:700;color:#243b53}@media(max-width:650px){.v2-teaching{padding:17px}.v2-grid{grid-template-columns:1fr}.v2-controls{align-items:stretch}.v2-controls button,.v2-controls select{width:100%}}
+</style>
+<style id="topic-specific-index-animation">
+.transformation-hero-animation{display:flex;align-items:center;justify-content:center;min-height:230px;color:#243b53;padding:10px}
+.transformation-hero-animation svg{width:min(100%,360px);height:auto;overflow:visible}
+.hero-moving-shape{transform-box:fill-box;transform-origin:center;animation:transformJourney 7s ease-in-out infinite}
+.hero-motion-path{animation:pathPulse 7s ease-in-out infinite}
+@keyframes transformJourney{0%,10%{transform:translate(0,0) rotate(0deg) scale(1)}28%{transform:translate(82px,-38px) rotate(0deg) scale(1)}48%{transform:translate(82px,-38px) rotate(90deg) scale(1)}68%{transform:translate(132px,0) rotate(90deg) scale(1)}86%{transform:translate(132px,0) rotate(180deg) scale(1.25)}100%{transform:translate(0,0) rotate(360deg) scale(1)}}
+@keyframes pathPulse{0%,100%{stroke-dashoffset:0;opacity:.35}50%{stroke-dashoffset:-42;opacity:1}}
+@media(max-width:700px){.transformation-hero-animation{min-height:190px}}
+</style>
+  <link rel="stylesheet" href="../styles/studynest-v3.css">
+
+<link rel="stylesheet" href="../studynest-3.1.css">
+<link rel="stylesheet" href="../studynest-theme.css">
+</head>
+<body>
+<div class="announcement-bar">
+   🚀 StudyNest is growing. New lessons and worksheets are added regularly.
+  </div>
+<header class="site-header">
+<a class="logo" href="../index.html">
+    📚 StudyNest
+   </a>
+<nav class="main-navigation">
+<a href="../index.html">
+     🏠 Home
+    </a>
+<a href="../topics.html">
+     📘 Study by Topic
+    </a>
+<a href="index.html">
+     ▦ Transformations
+    </a>
+<a href="../worksheets.html">
+     📝 Worksheets
+    </a>
+</nav>
+</header>
+<section class="topic-hero">
+<div>
+<p class="topic-label">
+     O LEVEL MATHEMATICS · TRANSFORMATIONS
+    </p>
+<h1>
+     Transformations
+    </h1>
+<p>
+     Learn to slide, reflect, rotate, enlarge, stretch and shear figures using coordinate geometry, construction and matrices.
+    </p>
+<a class="primary-button" href="01-introduction-to-transformations.html">
+     Start Learning
+    </a>
+</div>
+<div aria-hidden="true" class="transformation-hero-animation">
+<svg viewBox="0 0 320 240" role="img" aria-label="A triangle translating, reflecting and rotating on a coordinate grid">
+<defs><pattern id="heroGrid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M 24 0 L 0 0 0 24" fill="none" stroke="currentColor" stroke-opacity=".12" stroke-width="1"/></pattern></defs>
+<rect x="16" y="16" width="288" height="208" rx="18" fill="url(#heroGrid)"/>
+<line x1="160" y1="28" x2="160" y2="212" stroke="currentColor" stroke-opacity=".35" stroke-width="2"/>
+<line x1="28" y1="120" x2="292" y2="120" stroke="currentColor" stroke-opacity=".35" stroke-width="2"/>
+<polygon class="hero-original-shape" points="72,152 112,152 88,112" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
+<polygon class="hero-moving-shape" points="72,152 112,152 88,112" fill="rgba(196,111,114,.25)" stroke="#c46f72" stroke-width="4" stroke-linejoin="round"/>
+<path class="hero-motion-path" d="M112 92 C150 58 208 62 238 100" fill="none" stroke="#c46f72" stroke-width="3" stroke-dasharray="7 7"/>
+<path d="M231 90 L240 101 L225 104" fill="none" stroke="#c46f72" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+</div>
+</section>
+<section class="page-section">
+<div class="section-heading">
+<h2>
+     Transformations Learning Roadmap
+    </h2>
+<p>
+     Move from translations and reflections to rotations, enlargements, transformation matrices, stretches, shears and invariants.
+    </p>
+</div>
+<div class="lesson-grid">
+<a class="lesson-card" href="01-introduction-to-transformations.html">
+<div class="lesson-top">
+<span class="lesson-number">
+       01
+      </span>
+<span class="lesson-status">
+       Available
+      </span>
+</div>
+<span class="lesson-icon">
+      🔄
+     </span>
+<h3>
+      Introduction to Transformations
+     </h3>
+<p>
+      Understand objects, images and the information needed for a complete description.
+     </p>
+<span class="lesson-open-text">
+      Open Lesson →
+     </span>
+</a>
+<a class="lesson-card" href="02-translations.html">
+<div class="lesson-top">
+<span class="lesson-number">
+       02
+      </span>
+<span class="lesson-status">
+       Available
+      </span>
+</div>
+<span class="lesson-icon">
+      🔄
+     </span>
+<h3>
+      Translations
+     </h3>
+<p>
+      Slide every point by the same horizontal and vertical movement.
+     </p>
+<span class="lesson-open-text">
+      Open Lesson →
+     </span>
+</a>
+<a class="lesson-card" href="03-reflections-in-standard-lines.html">
+<div class="lesson-top">
+<span class="lesson-number">
+       03
+      </span>
+<span class="lesson-status">
+       Available
+      </span>
+</div>
+<span class="lesson-icon">
+      🔄
+     </span>
+<h3>
+      Reflections in Standard Lines
+     </h3>
+<p>
+      Use mirror lines and equal perpendicular distances accurately.
+     </p>
+<span class="lesson-open-text">
+      Open Lesson →
+     </span>
+</a>
+<a class="lesson-card" href="04-reflections-in-diagonal-lines.html">
+<div class="lesson-top">
+<span class="lesson-number">
+       04
+      </span>
+<span class="lesson-status">
+       Available
+      </span>
+</div>
+<span class="lesson-icon">
+      🔄
+     </span>
+<h3>
+      Reflections in Diagonal and General Lines
+     </h3>
+<p>
+      Use coordinate rules and perpendicular geometry for non-axis reflections.
+     </p>
+<span class="lesson-open-text">
+      Open Lesson →
+     </span>
+</a>
+<a class="lesson-card" href="05-rotations.html">
+<div class="lesson-top">
+<span class="lesson-number">
+       05
+      </span>
+<span class="lesson-status">
+       Available
+      </span>
+</div>
+<span class="lesson-icon">
+      🔄
+     </span>
+<h3>
+      Rotations
+     </h3>
+<p>
+      Turn figures about a centre and describe the rotation completely.
+     </p>
+<span class="lesson-open-text">
+      Open Lesson →
+     </span>
+</a>
+<a class="lesson-card" href="06-enlargements.html">
+<div class="lesson-top">
+<span class="lesson-number">
+       06
+      </span>
+<span class="lesson-status">
+       Available
+      </span>
+</div>
+<span class="lesson-icon">
+      🔄
+     </span>
+<h3>
+      Enlargements
+     </h3>
+<p>
+      Resize figures using a centre and rational scale factor.
+     </p>
+<span class="lesson-open-text">
+      Open Lesson →
+     </span>
+</a>
+<a class="lesson-card" href="07-combined-transformations.html">
+<div class="lesson-top">
+<span class="lesson-number">
+       07
+      </span>
+<span class="lesson-status">
+       Challenge
+      </span>
+</div>
+<span class="lesson-icon">
+      🔄
+     </span>
+<h3>
+      Combined Transformations
+     </h3>
+<p>
+      Apply transformations in the stated order and track every intermediate image.
+     </p>
+<span class="lesson-open-text">
+      Open Lesson →
+     </span>
+</a>
+<a class="lesson-card" href="08-transformation-matrices.html">
+<div class="lesson-top">
+<span class="lesson-number">
+       08
+      </span>
+<span class="lesson-status">
+       Challenge
+      </span>
+</div>
+<span class="lesson-icon">
+      🔄
+     </span>
+<h3>
+      Transformation Matrices
+     </h3>
+<p>
+      Calculate images and identify transformations represented by matrices.
+     </p>
+<span class="lesson-open-text">
+      Open Lesson →
+     </span>
+</a>
+<a class="lesson-card" href="09-stretches.html">
+<div class="lesson-top">
+<span class="lesson-number">
+       09
+      </span>
+<span class="lesson-status">
+       Challenge
+      </span>
+</div>
+<span class="lesson-icon">
+      🔄
+     </span>
+<h3>
+      Stretches
+     </h3>
+<p>
+      Change dimensions independently and identify invariant lines.
+     </p>
+<span class="lesson-open-text">
+      Open Lesson →
+     </span>
+</a>
+<a class="lesson-card" href="10-shears.html">
+<div class="lesson-top">
+<span class="lesson-number">
+       10
+      </span>
+<span class="lesson-status">
+       Challenge
+      </span>
+</div>
+<span class="lesson-icon">
+      🔄
+     </span>
+<h3>
+      Shears
+     </h3>
+<p>
+      Slant figures using a shear factor and invariant line.
+     </p>
+<span class="lesson-open-text">
+      Open Lesson →
+     </span>
+</a>
+<a class="lesson-card" href="11-invariant-points-and-lines.html">
+<div class="lesson-top">
+<span class="lesson-number">
+       11
+      </span>
+<span class="lesson-status">
+       Challenge
+      </span>
+</div>
+<span class="lesson-icon">
+      🔄
+     </span>
+<h3>
+      Invariant Points and Lines
+     </h3>
+<p>
+      Use fixed features to identify and verify transformations.
+     </p>
+<span class="lesson-open-text">
+      Open Lesson →
+     </span>
+</a>
+<a class="lesson-card" href="12-transformations-mixed-review.html">
+<div class="lesson-top">
+<span class="lesson-number">
+       12
+      </span>
+<span class="lesson-status">
+       Review
+      </span>
+</div>
+<span class="lesson-icon">
+      🔄
+     </span>
+<h3>
+      Transformations Mixed Review
+     </h3>
+<p>
+      Combine coordinate rules, drawing, matrices and complete descriptions.
+     </p>
+<span class="lesson-open-text">
+      Open Lesson →
+     </span>
+</a>
+<a class="lesson-card" href="13-transformations-final-checkpoint.html">
+<div class="lesson-top">
+<span class="lesson-number">
+       13
+      </span>
+<span class="lesson-status">
+       Checkpoint
+      </span>
+</div>
+<span class="lesson-icon">
+      🔄
+     </span>
+<h3>
+      Transformations Final Checkpoint
+     </h3>
+<p>
+      Complete an exam-style assessment across the full topic.
+     </p>
+<span class="lesson-open-text">
+      Open Lesson →
+     </span>
+</a>
+</div>
+</section>
+<footer class="site-footer">
+<strong>
+    📚 StudyNest
+   </strong>
+<p>
+    Helping students understand Mathematics, not memorise it.
+   </p>
+<p>
+    © 2026 StudyNest
+   </p>
+</footer>
+  <script src="../script-v3.js"></script>
+
+<script src="../studynest-3.1.js" defer></script>
+</body>
+</html>

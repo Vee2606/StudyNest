@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Understand how one set can fit completely inside another." name="description"/>
+<title>Subsets | Sets | StudyNest</title>
+<link href="../styles/sets-lessons.css" rel="stylesheet"/>
+<link href="sets-visuals.css" rel="stylesheet"/>  <link rel="stylesheet" href="../styles/studynest-v3.css">
+
+<link rel="stylesheet" href="../studynest-3.1.css">
+<link rel="stylesheet" href="../studynest-theme.css">
+</head>
+<body>
+<div class="announcement-bar">🚀 StudyNest is growing. New lessons and worksheets are added regularly.</div>
+<header class="site-header">
+<a class="logo" href="../index.html">📚 StudyNest</a>
+<nav class="main-navigation">
+<a href="../index.html">🏠 Home</a>
+<a href="../topics.html">📘 Study by Topic</a>
+<a href="index.html">{ } Sets</a>
+<a href="../worksheets.html">📝 Worksheets</a>
+</nav>
+</header>
+<section class="lesson-hero">
+<div>
+<p class="lesson-label">SETS · LESSON 04</p>
+<h1>Subsets</h1>
+<p class="lesson-subtitle">Understand how one set can fit completely inside another.</p>
+<div class="lesson-meta">
+<span class="meta-pill">⏱️ 18–22 min</span>
+<span class="meta-pill">📘 Confidence</span>
+<span class="meta-pill">✏️ Worked examples included</span>
+</div>
+</div>
+<div aria-hidden="true" class="hero-visual">
+<div class="sets-hero-art">
+<div class="sets-universal">
+<span class="set-circle set-a">A</span>
+<span class="set-circle set-b">B</span>
+<span class="set-overlap">A ∩ B</span>
+</div>
+<span class="set-chip chip-union">A ∪ B</span>
+<span class="set-chip chip-complement">A′</span>
+<span class="set-dot dot-one"></span>
+<span class="set-dot dot-two"></span>
+<span class="set-dot dot-three"></span>
+</div>
+</div>
+</section>
+<main class="lesson-main">
+<section class="lesson-section">
+<h2>🎯 By the End of This Lesson...</h2>
+<ul class="objective-list">
+<li>explain what a subset is;</li>
+<li>use ⊆ and ⊂ correctly;</li>
+<li>distinguish subsets from proper subsets;</li>
+<li>list every subset of a small set;</li>
+<li>calculate the number of possible subsets.</li>
+</ul>
+</section><section class="lesson-section"><h2>🌍 Why This Matters</h2><div class="why-box"><p>Subsets describe how sets fit inside one another. This idea is essential when reading Venn diagrams and working with probability.</p></div></section>
+<section class="lesson-section">
+<h2>🤔 Think About This...</h2>
+<p>Let A be the students in a school and B be the Form 2 students in that school.</p>
+<div class="think-box">
+        Every student in B is also in A. How should mathematics describe this relationship?
+    </div>
+<p>B is a subset of A.</p>
+</section>
+<section class="lesson-section">
+<h2>What Is a Subset?</h2>
+<p>
+        B is a subset of A when every element of B is also an element of A.
+    </p>
+<div class="math-display">B ⊆ A</div>
+<div class="key-idea">
+<strong>Key idea:</strong> To test B ⊆ A, check every element of B.
+        One element outside A is enough to make the statement false.
+    </div>
+<div class="worked-example">
+<h3>Let A = {1, 2, 3, 4} and B = {2, 4}.</h3>
+<p>Both 2 and 4 belong to A, so B ⊆ A.</p>
+</div>
+</section><div class="visual-board"><h3>A subset sits completely inside its larger set</h3>
+<svg aria-label="Nested Venn diagram showing football players B as a subset of learners who play sport A" class="venn-svg subset-svg" role="img" viewBox="0 0 760 430">
+<rect class="venn-frame" height="335" rx="24" width="690" x="35" y="40"></rect>
+<text class="venn-label" x="58" y="78">U: all learners in the school</text>
+<ellipse class="venn-circle venn-a" cx="380" cy="225" rx="250" ry="130"></ellipse>
+<text class="venn-label" text-anchor="middle" x="380" y="125">A: learners who play sport</text>
+<ellipse class="venn-circle venn-b" cx="395" cy="245" rx="125" ry="72"></ellipse>
+<text class="venn-label" text-anchor="middle" x="395" y="235">B</text>
+<text class="venn-small" text-anchor="middle" x="395" y="267">football players</text>
+<text class="venn-small" x="185" y="205">netball</text>
+<text class="venn-small" x="505" y="205">tennis</text>
+<text class="venn-small" x="190" y="290">athletics</text>
+</svg>
+<p class="visual-caption"><strong>B ⊆ A</strong> because every football player shown in B is also a learner who plays sport in A.</p>
+</div>
+<section class="lesson-section">
+<h2>Proper Subsets</h2>
+<p>
+        B is a proper subset of A when every element of B belongs to A, but B
+        is not equal to A.
+    </p>
+<div class="math-display">B ⊂ A</div>
+<table class="example-table">
+<thead><tr><th>Statement</th><th>True?</th><th>Reason</th></tr></thead>
+<tbody>
+<tr><td>{1, 2} ⊆ {1, 2, 3}</td><td>Yes</td><td>All elements occur in the larger set</td></tr>
+<tr><td>{1, 2, 3} ⊆ {1, 2, 3}</td><td>Yes</td><td>Every set is a subset of itself</td></tr>
+<tr><td>{1, 2, 3} ⊂ {1, 2, 3}</td><td>No</td><td>A proper subset must be smaller</td></tr>
+</tbody>
+</table>
+</section>
+<section class="lesson-section">
+<h2>The Empty Set Is a Subset</h2>
+<p>
+        The empty set is a subset of every set because it contains no element
+        that can violate the subset condition.
+    </p>
+<div class="math-display">∅ ⊆ A for every set A</div>
+</section>
+<section class="lesson-section">
+<h2>Listing All Subsets</h2>
+<div class="worked-example">
+<h3>List all subsets of A = {a, b}.</h3>
+<div class="step"><span class="step-number">1</span><p>Include the empty set: ∅.</p></div>
+<div class="step"><span class="step-number">2</span><p>Include each one-element subset: {a}, {b}.</p></div>
+<div class="step"><span class="step-number">3</span><p>Include the whole set: {a, b}.</p></div>
+<div class="step"><span class="step-number">4</span><p>The subsets are ∅, {a}, {b}, {a, b}.</p></div>
+</div>
+</section>
+<section class="lesson-section">
+<h2>How Many Subsets?</h2>
+<div class="math-display">Number of subsets = 2ⁿ</div>
+<p>Here n is the number of elements in the original set.</p>
+<div class="worked-example">
+<h3>A set contains 4 elements.</h3>
+<p>Number of subsets = 2⁴ = 16.</p>
+</div>
+<div class="tip-box">
+        Each element has two choices: included or not included. That is why the
+        total is a power of 2.
+    </div>
+</section>
+<section class="lesson-section">
+<h2>⚠️ Common Mistakes</h2>
+<div class="warning-box">
+        Forgetting ∅ and the whole set when listing subsets is the most common
+        mistake. Also remember that an element and a subset are different:
+        2 ∈ A, but {2} ⊆ A.
+    </div>
+</section>
+<section class="lesson-section">
+<h2>✅ Quick Check</h2>
+<div class="quick-check">
+<div class="quick-card">Is {2, 3} a subset of {1, 2, 3, 4}?</div>
+<div class="quick-card">How many subsets does a 3-element set have?</div>
+<div class="quick-card">Is a set a proper subset of itself?</div>
+</div>
+</section>
+<section class="lesson-section"><h2>💡 Exam Tip</h2><div class="exam-tip-box"><p>Remember that every set is a subset of itself, and the empty set is a subset of every set. A proper subset must be smaller than the original set.</p></div></section><section class="lesson-section">
+<h2>Practice Questions</h2>
+<span class="level-heading">Foundation</span>
+<ol class="practice-list">
+<li>Let A = {1, 2, 3, 4}. State whether:
+            <ol type="a">
+<li>{1, 3} ⊆ A;</li>
+<li>{2, 5} ⊆ A;</li>
+<li>A ⊆ A.</li>
+</ol>
+</li>
+<li>List all subsets of {x, y}.</li>
+<li>How many subsets does a 5-element set have?</li>
+</ol>
+<span class="level-heading">Confidence</span>
+<ol class="practice-list" start="4">
+<li>List all proper subsets of {1, 2, 3}.</li>
+<li>Explain the difference between 3 ∈ A and {3} ⊆ A.</li>
+</ol>
+<span class="level-heading">Challenge</span>
+<ol class="practice-list" start="6">
+<li>A set has 64 subsets. How many elements does it have?</li>
+</ol>
+</section>
+<section class="lesson-section answers-section">
+<h2>✅ Check Your Work</h2>
+<details>
+<summary>Show practice answers</summary>
+<div class="answers-content">
+<h3>Foundation</h3>
+<ol>
+<li><ol type="a"><li>True</li><li>False</li><li>True</li></ol></li>
+<li>∅, {x}, {y}, {x, y}</li>
+<li>2⁵ = 32</li>
+</ol>
+<h3>Confidence</h3>
+<ol start="4">
+<li>∅, {1}, {2}, {3}, {1,2}, {1,3}, {2,3}</li>
+<li>3 ∈ A means 3 is an element. {3} ⊆ A means the one-element set {3} is a subset.</li>
+</ol>
+<h3>Challenge</h3>
+<ol start="6"><li>6 elements, because 2⁶ = 64.</li></ol>
+</div>
+</details>
+</section>
+<section class="lesson-section">
+<h2>One-Minute Summary</h2>
+<ul class="summary-list">
+<li>B ⊆ A means every element of B belongs to A.</li>
+<li>A proper subset is not equal to the original set.</li>
+<li>∅ and the whole set are always subsets.</li>
+<li>An n-element set has 2ⁿ subsets.</li>
+</ul>
+</section>
+<section class="lesson-section"><h2>➡️ What’s Next? </h2><div class="whats-next-box"><p>Next, you will represent sets visually using Venn diagrams.</p></div></section><nav class="lesson-navigation">
+<a class="nav-button" href="03-types-of-sets.html">← Types of Sets</a>
+<a class="nav-button" href="index.html">Sets Roadmap</a>
+<a class="nav-button primary" href="05-venn-diagrams.html">Venn Diagrams →</a>
+</nav>
+</main>
+<footer class="site-footer">
+<strong>📚 StudyNest</strong>
+<p>Helping students understand Mathematics, not memorise it.</p>
+<p>© 2026 StudyNest</p>
+</footer>
+  <script src="../script-v3.js"></script>
+
+<script src="../studynest-3.1.js" defer></script>
+</body>
+</html>

@@ -1,99 +1,258 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Study by Topic | StudyNest</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Browse all StudyNest O Level Mathematics topics." name="description"/>
+<title>Study by Topic | StudyNest</title>
+<link href="styles/topics.css" rel="stylesheet"/>
+<link href="styles/studynest-v3.css" rel="stylesheet"/>
+
+<link rel="stylesheet" href="studynest-3.1.css">
+<link rel="stylesheet" href="studynest-theme.css">
 </head>
-
-<body>
-
-<div class="announcement">
-    📘 Study by Topic • Complete revision hubs
-</div>
-
-<header>
-    <div class="logo">📚 <span>StudyNest</span></div>
-
-    <nav>
-        <a href="index.html">🏠 Home</a>
-        <a class="active" href="topics.html">📘 Study by Topic</a>
-        <a href="levels.html">🎓 Study by Level</a>
-        <a href="resources.html">📚 Resources</a>
-        <a href="past-papers.html">📂 Past Papers</a>
-    </nav>
+<body id="top">
+<div class="announcement-bar">
+        <span class="beta-badge">BETA</span>
+        StudyNest Mathematics is open for early learners and testers.
+    </div>
+<header class="site-header">
+<a class="logo" href="index.html">
+<span class="logo-icon" aria-hidden="true">⌂</span>
+<span>StudyNest</span>
+</a>
+<nav aria-label="Main navigation" class="main-navigation">
+<a href="index.html">Home</a>
+<a class="active" href="topics.html">Study by Topic</a>
+<a href="study-by-form/index.html">Study by Form</a>
+<a href="worksheets.html">Worksheets</a>
+</nav>
 </header>
-
-<section class="page-hero">
-    <p class="hero-tag">Study by Topic</p>
-    <h1>Choose a Mathematics Topic</h1>
-    <p>Each topic page gives you full revision notes, worked examples, worksheets and exam tips.</p>
+<main>
+<section class="topics-hero">
+<div class="topics-hero-content">
+<p class="eyebrow">STUDY BY TOPIC</p>
+<h1>Choose a Mathematics Topic</h1>
+<div class="gold-rule" aria-hidden="true"></div>
+<p>Learn one concept at a time through clear notes, thoughtful examples and interactive worksheets.</p>
+<div class="hero-actions">
+<a class="primary-button" href="#all-topics">Explore Topics <span aria-hidden="true">→</span></a>
+<a class="outline-button" href="study-by-form/index.html">Study by Form</a>
+</div>
+</div>
+<div class="topics-hero-visual" aria-hidden="true">
+<div class="topic-orbit orbit-one">x</div>
+<div class="topic-orbit orbit-two">π</div>
+<div class="topic-orbit orbit-three">△</div>
+<div class="topic-book">
+<div class="topic-book-page left"><span></span><span></span><span></span></div>
+<div class="topic-book-page right"><span></span><span></span><span></span></div>
+</div>
+<div class="topic-pencil"></div>
+</div>
 </section>
-
-<section class="hub-section">
-    <div class="cards">
-
-        <a class="card-link" href="topics/real-numbers.html">
-            <div class="card featured-card">
-                <span class="level beginner">Forms 1–4</span>
-                <h3>📘 Real Numbers</h3>
-                <p>Number types, factors, fractions, ratios, standard form, number bases and accuracy.</p>
-                <button>Open Topic →</button>
-            </div>
+<section class="topics-section" id="all-topics">
+<div class="topics-introduction">
+<div>
+<p class="eyebrow">ALL TOPICS</p>
+<h2>Build Your Understanding Step by Step</h2>
+<p>Choose the topic you are learning now or revisit a concept that needs more practice. Each topic keeps its own colour while following the same StudyNest learning journey.</p>
+</div>
+<a class="secondary-button" href="study-by-form/index.html">
+                    Study by Form
+                </a>
+</div>
+<div class="topic-grid">
+<article class="topic-card">
+<div class="topic-card-top">
+<span class="topic-icon">🔢</span>
+<span class="form-badge">Forms 1–4</span>
+</div>
+<h2>Real Numbers</h2>
+<p>Number types, factors, fractions, percentages, ratio, surds and accuracy.</p>
+<a class="topic-link" href="real-numbers/index.html">
+            Open Topic →
         </a>
-
-        <a class="card-link" href="topics/algebra.html">
-            <div class="card">
-                <span class="level beginner">Forms 1–4</span>
-                <h3>📗 Algebra</h3>
-                <p>Expressions, equations, factorisation, inequalities, indices and logarithms.</p>
-                <button>Open Topic →</button>
-            </div>
+</article>
+<article class="topic-card">
+<div class="topic-card-top">
+<span class="topic-icon">x</span>
+<span class="form-badge">Forms 1–4</span>
+</div>
+<h2>Algebra</h2>
+<p>Expressions, equations, inequalities, indices and logarithms.</p>
+<a class="topic-link" href="algebra/index.html">
+            Open Topic →
         </a>
-
-        <div class="card">
-            <span class="level intermediate">Forms 1–4</span>
-            <h3>📐 Geometry</h3>
-            <p>Lines, angles, polygons, bearings, constructions, loci and circle theorems.</p>
-            <button>Coming Soon</button>
-        </div>
-
-        <div class="card">
-            <span class="level beginner">Forms 1–4</span>
-            <h3>📊 Statistics</h3>
-            <p>Data collection, charts, averages, histograms, cumulative frequency and dispersion.</p>
-            <button>Coming Soon</button>
-        </div>
-
-        <div class="card">
-            <span class="level intermediate">Forms 1–4</span>
-            <h3>📏 Measures & Mensuration</h3>
-            <p>Units, perimeter, area, volume, surface area, density and similar shapes.</p>
-            <button>Coming Soon</button>
-        </div>
-
-        <div class="card">
-            <span class="level advanced">Forms 3–4</span>
-            <h3>📐 Trigonometry</h3>
-            <p>Pythagoras, sine, cosine, tangent, sine rule and cosine rule.</p>
-            <button>Coming Soon</button>
-        </div>
-
-    </div>
+</article><article class="topic-card"><div class="topic-card-top"><span class="topic-icon">aˣ</span><span class="form-badge">Forms 2–4</span></div><h2>Indices &amp; Logarithms <span class="sn-new-badge">NEW</span></h2><p>Index notation, laws of indices, fractional and negative powers, logarithms and equations.</p><a class="topic-link" href="indices-and-logarithms/index.html">Open Topic →</a></article>
+<article class="topic-card">
+<div class="topic-card-top">
+<span class="topic-icon">{ }</span>
+<span class="form-badge">Forms 1–4</span>
+</div>
+<h2>Sets</h2>
+<p>Set notation, union, intersection, complements and Venn diagrams.</p>
+<a class="topic-link" href="sets/index.html">
+            Open Topic →
+        </a>
+</article>
+<article class="topic-card">
+<div class="topic-card-top">
+<span class="topic-icon">💰</span>
+<span class="form-badge">Forms 1–4</span>
+</div>
+<h2>Money &amp; Finance</h2>
+<p>Income, expenses, profit, discounts, interest and exchange rates.</p>
+<a class="topic-link" href="money-and-finance/index.html">
+            Open Topic →
+        </a>
+</article>
+<article class="topic-card">
+<div class="topic-card-top">
+<span class="topic-icon">📏</span>
+<span class="form-badge">Forms 1–4</span>
+</div>
+<h2>Measures &amp; Mensuration</h2>
+<p>Units, perimeter, area, surface area, volume and compound measures.</p>
+<a class="topic-link" href="measures-and-mensuration/index.html">
+            Open Topic →
+        </a>
+</article>
+<article class="topic-card">
+<div class="topic-card-top">
+<span class="topic-icon">📈</span>
+<span class="form-badge">Forms 1–4</span>
+</div>
+<h2>Graphs</h2>
+<p>Coordinates, straight lines, gradient, intercepts and graph interpretation.</p>
+<a class="topic-link" href="graphs/index.html">
+            Open Topic →
+        </a>
+</article>
+<article class="topic-card">
+<div class="topic-card-top">
+<span class="topic-icon">↗</span>
+<span class="form-badge">Forms 3–4</span>
+</div>
+<h2>Variation</h2>
+<p>Direct and inverse variation, constants and real-life relationships.</p>
+<a class="topic-link" href="variation/index.html">
+            Open Topic →
+        </a>
+</article>
+<article class="topic-card">
+<div class="topic-card-top">
+<span class="topic-icon">📐</span>
+<span class="form-badge">Forms 1–4</span>
+</div>
+<h2>Geometry</h2>
+<p>Angles, triangles, polygons, constructions, loci and circle geometry.</p>
+<a class="topic-link" href="geometry/index.html">
+            Open Topic →
+        </a>
+</article>
+<article class="topic-card">
+<div class="topic-card-top">
+<span class="topic-icon">📊</span>
+<span class="form-badge">Forms 1–4</span>
+</div>
+<h2>Statistics</h2>
+<p>Data collection, charts, averages, range and comparison.</p>
+<a class="topic-link" href="statistics/index.html">
+            Open Topic →
+        </a>
+</article>
+<article class="topic-card">
+<div class="topic-card-top">
+<span class="topic-icon">△</span>
+<span class="form-badge">Forms 3–4</span>
+</div>
+<h2>Trigonometry</h2>
+<p>Sine, cosine, tangent, lengths, angles and practical problems.</p>
+<a class="topic-link" href="trigonometry/index.html">
+            Open Topic →
+        </a>
+</article>
+<article class="topic-card">
+<div class="topic-card-top">
+<span class="topic-icon">→</span>
+<span class="form-badge">Forms 3–4</span>
+</div>
+<h2>Vectors</h2>
+<p>Direction, column vectors, vector operations and geometric applications.</p>
+<a class="topic-link" href="vectors/index.html">
+            Open Topic →
+        </a>
+</article>
+<article class="topic-card">
+<div class="topic-card-top">
+<span class="topic-icon">▦</span>
+<span class="form-badge">Forms 3–4</span>
+</div>
+<h2>Matrices</h2>
+<p>Matrix order, operations, determinants and transformations.</p>
+<a class="topic-link" href="matrices/index.html">
+            Open Topic →
+        </a>
+</article>
+<article class="topic-card">
+<div class="topic-card-top">
+<span class="topic-icon">🎲</span>
+<span class="form-badge">Forms 2–4</span>
+</div>
+<h2>Probability</h2>
+<p>Outcomes, sample spaces, tree diagrams and experimental probability.</p>
+<a class="topic-link" href="probability/index.html">
+            Open Topic →
+        </a>
+</article>
+<article class="topic-card">
+<div class="topic-card-top">
+<span class="topic-icon">↻</span>
+<span class="form-badge">Forms 1–4</span>
+</div>
+<h2>Transformations</h2>
+<p>Translation, reflection, rotation, enlargement and coordinates.</p>
+<a class="topic-link" href="transformations/index.html">
+            Open Topic →
+        </a>
+</article>
+</div>
 </section>
-
-<button id="backToTop">⬆</button>
-
-<footer>
-    <div class="footer-content">
-        <h2>📚 StudyNest</h2>
-        <p>Helping Zimbabwean students understand Mathematics, not memorise it.</p>
-        <p class="copyright">© 2026 StudyNest</p>
-    </div>
+<section class="page-section">
+<div class="section-card encouragement-card">
+<div class="encouragement-icon">💡</div>
+<div>
+<h2>Not Sure Where to Begin?</h2>
+<p>
+                        Real Numbers is a strong starting point because many
+                        later topics depend on confident number skills.
+                    </p>
+<div class="yellow-callout">
+                        You can also choose the topic you currently find most
+                        difficult and begin there.
+                    </div>
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="footer-logo">
+            📚 StudyNest
+        </div>
+<p>
+            Helping students understand Mathematics, not memorise it.
+        </p>
+<div class="footer-links">
+<a href="index.html">Home</a>
+<a href="topics.html">Topics</a>
+<a href="worksheets.html">Worksheets</a>
+</div>
+<p>© 2026 StudyNest · Beta release</p>
 </footer>
+<script src="script-v3.js"></script>
 
-<script src="script.js"></script>
-
+<script src="studynest-3.1.js" defer></script>
 </body>
 </html>

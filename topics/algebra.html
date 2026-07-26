@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Algebra | StudyNest</title>
     <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../styles/studynest-v3.css">
+
+<link rel="stylesheet" href="../studynest-3.1.css">
+<link rel="stylesheet" href="../studynest-theme.css">
 </head>
 
 <body>
@@ -19,8 +23,8 @@
     <nav>
         <a href="../index.html">🏠 Home</a>
         <a class="active" href="../topics.html">📘 Study by Topic</a>
-        <a href="../levels.html">🎓 Study by Level</a>
-        <a href="../resources.html">📚 Resources</a>
+        <a href="../levels.html">🎓 Study by Form</a>
+        <a href="../worksheets.html">📚 Worksheets</a>
         <a href="../past-papers.html">📂 Past Papers</a>
     </nav>
 </header>
@@ -55,13 +59,16 @@
 
 <main class="topic-layout">
 
-    <aside class="topic-sidebar">
-        <h3>📘 Algebra</h3>
-        <a href="#overview">Overview</a>
-        <a href="#path">Learning Path</a>
-        <a href="#objectives">Objectives</a>
-        <a href="#resources">Resources</a>
-    </aside>
+    <aside id="topicSidebar" class="topic-sidebar">
+
+    <h3>📘 Algebra</h3>
+
+    <a href="#overview">Overview</a>
+    <a href="#contents">Learning Path</a>
+    <a href="#objectives">Learning Objectives</a>
+    <a href="#worksheet">Worksheet</a>
+
+</aside>
 
     <section class="topic-content">
 
@@ -289,11 +296,16 @@
 
     <div id="worksheet" class="lesson-section">
 
+    <p class="section-tag">
+        Complete Topic Practice
+    </p>
+
     <h2>📝 Comprehensive Algebra Worksheet</h2>
 
     <p class="section-note">
-        Test your understanding of the complete Algebra learning path,
-        from basic expressions to quadratic equations and algebraic fractions.
+        Bring together everything you have learnt across the 16 Algebra lessons.
+        The worksheet begins with foundation questions and progresses to
+        equations, inequalities, quadratics and algebraic fractions.
     </p>
 
     <div class="resource-feature-card">
@@ -304,24 +316,23 @@
 
         <div class="resource-feature-content">
 
-            <p class="resource-label">
-                Complete Topic Practice
-            </p>
-
             <h3>Algebra Revision Worksheet</h3>
 
             <p>
-                Work through foundation questions, equations, inequalities,
-                quadratics, algebraic fractions and mixed challenge problems.
+                Test your knowledge with approximately 70 mixed questions,
+                including exam-style and challenge problems.
             </p>
 
             <div class="resource-tags">
                 <span>70 Questions</span>
-                <span>Beginner to Advanced</span>
-                <span>Mixed Revision</span>
+                <span>16 Lessons Covered</span>
+                <span>Foundation to Advanced</span>
             </div>
 
-            <a href="algebra-revision-worksheet.html" class="completion-button">
+            <a
+                href="../algebra/algebra-revision-worksheet.html"
+                class="completion-button"
+            >
                 Open Worksheet →
             </a>
 
@@ -365,8 +376,8 @@
         <div class="footer-links">
             <a href="../index.html">Home</a>
             <a href="../topics.html">Study by Topic</a>
-            <a href="../levels.html">Study by Level</a>
-            <a href="../resources.html">Resources</a>
+            <a href="../levels.html">Study by Form</a>
+            <a href="../worksheets.html">Worksheets</a>
             <a href="../past-papers.html">Past Papers</a>
         </div>
 
@@ -376,5 +387,8 @@
 
 <script src="../script.js"></script>
 
+  <script src="../script-v3.js"></script>
+
+<script src="../studynest-3.1.js" defer></script>
 </body>
 </html>

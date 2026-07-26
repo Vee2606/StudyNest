@@ -1,0 +1,6 @@
+StudyNest Launch RC fix
+
+- Homepage hero changed to the blue-and-gold StudyNest hero style.
+- Study by Topic hero matched to the same style.
+- Matrix worksheet notation renders entries in proper rows and columns inside mathematical brackets.
+- All other page content is unchanged.

@@ -1,0 +1,45 @@
+/* StudyNest reusable mathematical matrix component */
+.math-matrix {
+  --matrix-bracket-colour: currentColor;
+  display: inline-grid;
+  grid-template-columns: auto auto auto;
+  align-items: stretch;
+  vertical-align: middle;
+  margin: 0 0.22em;
+  line-height: 1;
+  white-space: nowrap;
+}
+.math-matrix::before,
+.math-matrix::after {
+  content: "";
+  width: 0.34em;
+  min-height: 2.35em;
+  border-top: 0.12em solid var(--matrix-bracket-colour);
+  border-bottom: 0.12em solid var(--matrix-bracket-colour);
+  box-sizing: border-box;
+}
+.math-matrix::before { border-left: 0.12em solid var(--matrix-bracket-colour); }
+.math-matrix::after { border-right: 0.12em solid var(--matrix-bracket-colour); }
+.math-matrix__values {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(1.35em, auto));
+  grid-template-rows: repeat(2, 1.15em);
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+  column-gap: 0.45em;
+  padding: 0.08em 0.28em;
+  font-family: "Cambria Math", Cambria, "Times New Roman", serif;
+  font-size: 1.08em;
+}
+.matrix-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.65rem 0 0.15rem;
+  font-size: 1.18rem;
+}
+@media (max-width: 650px) {
+  .math-matrix { margin-inline: 0.14em; }
+  .math-matrix__values { column-gap: 0.28em; padding-inline: 0.2em; }
+}

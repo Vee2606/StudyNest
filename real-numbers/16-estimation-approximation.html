@@ -1,0 +1,1446 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Learn estimation and approximation, including rounding to place value, decimal places and significant figures, and estimating calculations." name="description"/>
+<title>Estimation and Approximation | StudyNest</title>
+
+
+
+<link href="../styles/real-numbers-lessons.css" rel="stylesheet"/>
+<style id="studynest-real-animation-layer">
+.sn-concept-motion{margin:1.5rem auto 2rem;padding:1.25rem;border:2px solid rgba(19,48,76,.12);border-radius:22px;background:rgba(255,255,255,.88);overflow:hidden}
+.sn-concept-motion h2{margin-top:0}.sn-motion-stage{min-height:150px;display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;padding:18px;border-radius:18px;background:linear-gradient(135deg,rgba(232,246,255,.8),rgba(255,248,220,.75))}
+.sn-chip{display:inline-flex;align-items:center;justify-content:center;min-width:58px;min-height:48px;padding:10px 14px;border:2px solid #17324d;border-radius:14px;background:#fff;font-weight:800;font-size:1.1rem;box-shadow:0 5px 0 rgba(23,50,77,.12)}
+.sn-arrow{font-size:1.8rem;font-weight:900}.sn-pulse{animation:snPulse 2.4s ease-in-out infinite}.sn-slide{animation:snSlide 3s ease-in-out infinite}.sn-pop{animation:snPop 2.8s ease-in-out infinite}.sn-delay1{animation-delay:.45s}.sn-delay2{animation-delay:.9s}.sn-delay3{animation-delay:1.35s}
+.sn-line{position:relative;width:min(560px,94%);height:8px;border-radius:999px;background:#17324d;margin:42px auto 24px}.sn-line:before,.sn-line:after{content:'';position:absolute;top:-8px;width:2px;height:24px;background:#17324d}.sn-line:before{left:8%}.sn-line:after{right:8%}.sn-dot{position:absolute;top:-11px;width:30px;height:30px;border-radius:50%;background:#f5bf42;border:3px solid #17324d;animation:snTravel 4s ease-in-out infinite}
+.sn-grid{display:grid;grid-template-columns:repeat(4,54px);gap:7px}.sn-cell{width:54px;height:42px;display:grid;place-items:center;border:2px solid #17324d;border-radius:9px;background:#fff;font-weight:800}.sn-cell.active{animation:snCell 2.4s ease-in-out infinite;background:#fff4bd}
+.sn-bar{height:24px;border:2px solid #17324d;border-radius:999px;background:#fff;overflow:hidden;width:min(480px,90%)}.sn-fill{height:100%;width:0;background:#f5bf42;animation:snFill 3.5s ease-in-out infinite}
+.sn-caption{margin:.85rem 0 0;text-align:center;font-weight:700;color:#334e68}
+@keyframes snPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+@keyframes snSlide{0%,100%{transform:translateX(-18px)}50%{transform:translateX(18px)}}
+@keyframes snPop{0%,20%,100%{transform:translateY(0);opacity:.8}50%{transform:translateY(-10px);opacity:1}}
+@keyframes snTravel{0%,100%{left:7%}50%{left:86%}}
+@keyframes snCell{0%,100%{transform:scale(1);background:#fff}50%{transform:scale(1.08);background:#fff4bd}}
+@keyframes snFill{0%{width:0}55%,100%{width:75%}}
+@media (prefers-reduced-motion:reduce){.sn-concept-motion *{animation:none!important}}
+</style>  <link rel="stylesheet" href="../styles/studynest-v3.css">
+
+<link rel="stylesheet" href="../studynest-3.1.css">
+<link rel="stylesheet" href="../studynest-theme.css">
+</head>
+<body>
+
+
+<div class="announcement-bar">🚀 StudyNest is growing. New lessons and worksheets are added regularly.</div>
+<header class="site-header">
+<a class="logo" href="../index.html">📚 StudyNest</a>
+<nav class="main-navigation">
+<a href="../index.html">🏠 Home</a>
+<a href="../topics.html">📘 Study by Topic</a>
+<a href="index.html">🔢 Real Numbers</a>
+<a href="../worksheets.html">📝 Worksheets</a>
+</nav>
+</header>
+<section class="lesson-hero">
+<div>
+<p class="lesson-label">🔢 Real Numbers • Lesson 16 of 19</p>
+<h1>Estimation and Approximation</h1>
+<p class="lesson-subtitle">Learn how to round numbers accurately, estimate calculations and decide
+        whether an answer is sensible.</p>
+<div class="lesson-meta">
+<span class="meta-pill">🔢 Real Numbers</span>
+<span class="meta-pill">✏️ Worked examples included</span>
+<span class="meta-pill">🧠 Step-by-step learning</span>
+</div>
+</div>
+<div aria-hidden="true" class="hero-visual">
+<div class="real-number-visual">
+<div class="number-bubble bubble-pi">π</div>
+<div class="number-bubble bubble-fraction">¾</div>
+<div class="number-bubble bubble-root">√2</div>
+<div class="number-bubble bubble-negative">−8</div>
+<div class="real-set-symbol">ℝ</div>
+<div class="number-line"></div>
+<span class="number-tick tick-one"></span>
+<span class="number-tick tick-two"></span>
+<span class="number-tick tick-three"></span>
+<span class="number-tick tick-four"></span>
+<span class="number-label label-one">−2</span>
+<span class="number-label label-two">−1</span>
+<span class="number-label label-three">0</span>
+<span class="number-label label-four">1</span>
+</div>
+</div>
+</section><main class="lesson-main"><section class="sn-concept-motion" aria-label="Animated concept demonstration"><h2>🎬 See an estimate form</h2><div class="sn-motion-stage" aria-hidden="true"><span class="sn-chip sn-pop">49.7</span><span class="sn-arrow">≈</span><span class="sn-chip sn-pop sn-delay1">50</span><span class="sn-arrow">and</span><span class="sn-chip sn-pop sn-delay2">19.8 ≈ 20</span><span class="sn-arrow">→</span><span class="sn-chip sn-pulse">50 × 20</span></div><p class="sn-caption">Round to convenient values before estimating.</p></section><section class="lesson-section">
+<h2>🎯 By the end of this lesson...</h2>
+<p>You should be able to:</p>
+<ul>
+<li>Explain the difference between an exact value and an approximate value.</li>
+<li>Distinguish between approximation and estimation.</li>
+<li>Round whole numbers to a given place value.</li>
+<li>Round decimals to a given number of decimal places.</li>
+<li>Identify significant figures in a number.</li>
+<li>Round numbers to a given number of significant figures.</li>
+<li>Estimate answers to calculations.</li>
+<li>Choose a sensible degree of accuracy.</li>
+<li>Use estimation to check calculator answers.</li>
+<li>Apply approximation in practical situations.</li>
+</ul>
+</section><section class="lesson-section story-card">
+<h2>🤔 Think About This...</h2>
+<div class="real-life-situation">
+<div class="situation-icon">
+            🛒
+        </div>
+<div>
+<h3>Shopping without a calculator</h3>
+<p>
+                You want to buy three items costing:
+            </p>
+<div class="shopping-estimate-grid">
+<div class="shopping-price-card">
+<span>Item 1</span>
+<strong>US$4.87</strong>
+</div>
+<div class="shopping-price-card">
+<span>Item 2</span>
+<strong>US$9.62</strong>
+</div>
+<div class="shopping-price-card">
+<span>Item 3</span>
+<strong>US$6.18</strong>
+</div>
+</div>
+<p>
+                You do not need the exact total immediately.
+            </p>
+<p>
+                You only need to know whether US$25 is enough.
+            </p>
+</div>
+</div>
+<div class="math-box">
+        US$4.87 ≈ US$5
+        <br/><br/>
+        US$9.62 ≈ US$10
+        <br/><br/>
+        US$6.18 ≈ US$6
+    </div>
+<div class="math-box">
+        Estimated total = 5 + 10 + 6 = US$21
+    </div>
+<div class="success-box">
+        US$25 should be enough. Estimation gives a quick, sensible answer
+        without requiring the exact calculation.
+    </div>
+</section><section class="lesson-section">
+<h2>1️⃣ Exact and Approximate Values</h2>
+<p>
+        An <strong>exact value</strong> gives the complete value without
+        rounding.
+    </p>
+<p>
+        An <strong>approximate value</strong> is close to the exact value but
+        has been rounded or estimated.
+    </p>
+<div class="exact-approximation-grid">
+<div class="exact-number-card">
+<h3>Exact value</h3>
+<div class="math-box">
+                23 ÷ 7 = 3.285714285714...
+            </div>
+</div>
+<div class="approximation-number-card">
+<h3>Approximate value</h3>
+<div class="math-box">
+                23 ÷ 7 ≈ 3.29
+            </div>
+</div>
+</div>
+<div class="note-box">
+        The symbol <strong>≈</strong> means “approximately equal to.”
+        <br/><br/>
+        Do not use the ordinary equals sign when the value has been rounded.
+    </div>
+</section><section class="lesson-section">
+<h2>2️⃣ Approximation and Estimation</h2>
+<div class="comparison-grid">
+<div class="comparison-card">
+<h3>Approximation</h3>
+<p>
+                Replacing a value with another value that is close to it.
+            </p>
+<div class="math-box">
+                8.763 ≈ 8.8
+            </div>
+<p>
+                The original number is known, but it is written less precisely.
+            </p>
+</div>
+<div class="comparison-card">
+<h3>Estimation</h3>
+<p>
+                Using convenient approximate numbers to predict the answer to a
+                calculation or situation.
+            </p>
+<div class="math-box">
+                49 × 21 ≈ 50 × 20
+            </div>
+<div class="math-box">
+                ≈ 1000
+            </div>
+</div>
+</div>
+<div class="success-box">
+        Approximation changes a value into a nearby, simpler value.
+        <br/><br/>
+        Estimation uses approximate values to obtain a sensible answer.
+    </div>
+</section><section class="lesson-section did-you-know-card">
+<h2>💡 Did You Know?</h2>
+<p>
+        People use estimation every day, often without realising it.
+    </p>
+<div class="estimation-use-grid">
+<div class="estimation-use-card">
+<span>⏰</span>
+<strong>Estimating travel time</strong>
+</div>
+<div class="estimation-use-card">
+<span>🛒</span>
+<strong>Estimating shopping costs</strong>
+</div>
+<div class="estimation-use-card">
+<span>🏗️</span>
+<strong>Estimating materials</strong>
+</div>
+<div class="estimation-use-card">
+<span>🌾</span>
+<strong>Estimating crop yield</strong>
+</div>
+<div class="estimation-use-card">
+<span>👥</span>
+<strong>Estimating crowd size</strong>
+</div>
+<div class="estimation-use-card">
+<span>⛽</span>
+<strong>Estimating fuel required</strong>
+</div>
+</div>
+</section><section class="lesson-section">
+<h2>3️⃣ The Basic Rounding Rule</h2>
+<p>
+        To round a number, look at the digit immediately to the right of the
+        place being rounded.
+    </p>
+<div class="rounding-rule-grid">
+<div class="rounding-rule-card round-down-card">
+<h3>0, 1, 2, 3 or 4</h3>
+<strong>Round down</strong>
+<p>
+                Keep the rounding digit unchanged.
+            </p>
+</div>
+<div class="rounding-rule-card round-up-card">
+<h3>5, 6, 7, 8 or 9</h3>
+<strong>Round up</strong>
+<p>
+                Increase the rounding digit by 1.
+            </p>
+</div>
+</div>
+<div class="rounding-decision-flow">
+<div class="rounding-flow-card">
+            Identify the rounding digit
+        </div>
+<div class="rounding-flow-arrow">
+            ↓
+        </div>
+<div class="rounding-flow-card">
+            Look at the next digit
+        </div>
+<div class="rounding-flow-arrow">
+            ↓
+        </div>
+<div class="rounding-branches">
+<div class="rounding-branch-card">
+<strong>0–4</strong>
+<span>Leave it unchanged</span>
+</div>
+<div class="rounding-branch-card">
+<strong>5–9</strong>
+<span>Add 1</span>
+</div>
+</div>
+</div>
+</section><section class="lesson-section">
+<h2>4️⃣ Rounding Whole Numbers to a Place Value</h2>
+<p>
+        A whole number may be rounded to the nearest ten, hundred, thousand or
+        another stated place value.
+    </p>
+<div class="place-value-reminder-grid">
+<div class="place-value-reminder-card">
+<span>Thousands</span>
+<strong>4</strong>
+</div>
+<div class="place-value-reminder-card">
+<span>Hundreds</span>
+<strong>7</strong>
+</div>
+<div class="place-value-reminder-card">
+<span>Tens</span>
+<strong>6</strong>
+</div>
+<div class="place-value-reminder-card">
+<span>Ones</span>
+<strong>3</strong>
+</div>
+</div>
+<div class="math-box">
+        Number: 4763
+    </div>
+</section><section class="lesson-section">
+<h2>5️⃣ Rounding to the Nearest Ten</h2>
+<div class="worked-example">
+<h3>Example 1: Round 4763 to the nearest ten</h3>
+<p>
+            The tens digit is 6.
+        </p>
+<p>
+            Look at the ones digit:
+        </p>
+<div class="rounding-digit-visual">
+<span>4</span>
+<span>7</span>
+<span class="rounding-target">6</span>
+<span class="checking-digit">3</span>
+</div>
+<p>
+            Since 3 is less than 5, keep the tens digit unchanged.
+        </p>
+<p>
+            Replace the digits after the tens place with zero.
+        </p>
+<div class="success-box">
+            4763 rounded to the nearest ten is <strong>4760</strong>.
+        </div>
+</div>
+<div class="worked-example">
+<h3>Example 2: Round 4787 to the nearest ten</h3>
+<p>
+            The ones digit is 7, so increase the tens digit by 1.
+        </p>
+<div class="success-box">
+            4787 rounded to the nearest ten is <strong>4790</strong>.
+        </div>
+</div>
+</section><section class="lesson-section">
+<h2>6️⃣ Rounding to the Nearest Hundred</h2>
+<div class="worked-example">
+<h3>Example 3: Round 6437 to the nearest hundred</h3>
+<p>
+            The hundreds digit is 4.
+        </p>
+<p>
+            The next digit is the tens digit, which is 3.
+        </p>
+<div class="math-box">
+            3 &lt; 5
+        </div>
+<p>
+            Keep the hundreds digit unchanged and replace later digits with
+            zeros.
+        </p>
+<div class="success-box">
+            6437 rounded to the nearest hundred is <strong>6400</strong>.
+        </div>
+</div>
+<div class="worked-example">
+<h3>Example 4: Round 6782 to the nearest hundred</h3>
+<p>
+            The hundreds digit is 7 and the next digit is 8.
+        </p>
+<div class="math-box">
+            8 ≥ 5
+        </div>
+<div class="success-box">
+            6782 rounded to the nearest hundred is <strong>6800</strong>.
+        </div>
+</div>
+</section><section class="lesson-section">
+<h2>7️⃣ Rounding to the Nearest Thousand</h2>
+<div class="worked-example">
+<h3>Example 5: Round 34 482 to the nearest thousand</h3>
+<p>
+            The thousands digit is 4.
+        </p>
+<p>
+            The next digit is 4, so round down.
+        </p>
+<div class="success-box">
+            34 482 rounded to the nearest thousand is
+            <strong>34 000</strong>.
+        </div>
+</div>
+<div class="worked-example">
+<h3>Example 6: Round 34 782 to the nearest thousand</h3>
+<p>
+            The next digit is 7, so round up.
+        </p>
+<div class="success-box">
+            34 782 rounded to the nearest thousand is
+            <strong>35 000</strong>.
+        </div>
+</div>
+</section><section class="lesson-section">
+<h2>🧠 StudyNest Method: Rounding to a Place Value</h2>
+<div class="tip-box">
+<strong>Step 1:</strong>
+        Locate the place value named in the question.
+
+        <br/><br/>
+<strong>Step 2:</strong>
+        Underline or identify that digit.
+
+        <br/><br/>
+<strong>Step 3:</strong>
+        Look at the digit immediately to its right.
+
+        <br/><br/>
+<strong>Step 4:</strong>
+        If the next digit is 0–4, leave the rounding digit unchanged.
+
+        <br/><br/>
+<strong>Step 5:</strong>
+        If the next digit is 5–9, increase the rounding digit by 1.
+
+        <br/><br/>
+<strong>Step 6:</strong>
+        Replace every whole-number digit to the right with zero.
+
+    </div>
+</section><section class="lesson-section">
+<h2>8️⃣ What Are Decimal Places?</h2>
+<p>
+        Decimal places count digits after the decimal point.
+    </p>
+<div class="decimal-place-visual">
+<div class="decimal-place-whole">
+            27
+        </div>
+<div class="decimal-place-point">
+            .
+        </div>
+<div class="decimal-position-card">
+<strong>4</strong>
+<span>1st decimal place</span>
+</div>
+<div class="decimal-position-card">
+<strong>8</strong>
+<span>2nd decimal place</span>
+</div>
+<div class="decimal-position-card">
+<strong>6</strong>
+<span>3rd decimal place</span>
+</div>
+<div class="decimal-position-card">
+<strong>2</strong>
+<span>4th decimal place</span>
+</div>
+</div>
+<div class="math-box">
+        Number: 27.4862
+    </div>
+</section><section class="lesson-section">
+<h2>9️⃣ Rounding to Decimal Places</h2>
+<div class="worked-example">
+<h3>Example 7: Round 27.4862 to 2 decimal places</h3>
+<p>
+            The second decimal digit is 8.
+        </p>
+<p>
+            Look at the third decimal digit, which is 6.
+        </p>
+<div class="math-box">
+            6 ≥ 5
+        </div>
+<p>
+            Increase 8 by 1.
+        </p>
+<div class="success-box">
+            27.4862 rounded to 2 decimal places is
+            <strong>27.49</strong>.
+        </div>
+</div>
+<div class="worked-example">
+<h3>Example 8: Round 3.14159 to 3 decimal places</h3>
+<p>
+            Keep 3 decimal digits:
+        </p>
+<div class="math-box">
+            3.141
+        </div>
+<p>
+            The next digit is 5, so round the third decimal digit up.
+        </p>
+<div class="success-box">
+            3.14159 rounded to 3 decimal places is
+            <strong>3.142</strong>.
+        </div>
+</div>
+<div class="worked-example">
+<h3>Example 9: Round 8.3041 to 2 decimal places</h3>
+<p>
+            The second decimal digit is 0.
+        </p>
+<p>
+            The next digit is 4, so the 0 remains unchanged.
+        </p>
+<div class="success-box">
+            The answer is <strong>8.30</strong>.
+        </div>
+<div class="note-box">
+            The final zero must be included because the question asks for
+            2 decimal places.
+        </div>
+</div>
+</section><section class="lesson-section">
+<h2>🧠 StudyNest Method: Decimal Places</h2>
+<div class="tip-box">
+<strong>Step 1:</strong>
+        Begin counting immediately after the decimal point.
+
+        <br/><br/>
+<strong>Step 2:</strong>
+        Locate the required decimal place.
+
+        <br/><br/>
+<strong>Step 3:</strong>
+        Look at the next digit.
+
+        <br/><br/>
+<strong>Step 4:</strong>
+        Apply the 0–4 or 5–9 rounding rule.
+
+        <br/><br/>
+<strong>Step 5:</strong>
+        Remove all digits after the required place.
+
+        <br/><br/>
+<strong>Step 6:</strong>
+        Keep ending zeros when they are needed to show the requested number of
+        decimal places.
+
+    </div>
+</section><section class="lesson-section">
+<h2>🔟 What Are Significant Figures?</h2>
+<p>
+        Significant figures begin at the first non-zero digit.
+    </p>
+<div class="significant-rule-box">
+        Start counting from the first digit that is not zero.
+    </div>
+<div class="significant-example-grid">
+<div class="significant-example-card">
+<div class="math-box">
+                5832
+            </div>
+<p>
+                5 is the first significant figure.
+            </p>
+</div>
+<div class="significant-example-card">
+<div class="math-box">
+                0.00472
+            </div>
+<p>
+                4 is the first significant figure.
+            </p>
+</div>
+<div class="significant-example-card">
+<div class="math-box">
+                70.3
+            </div>
+<p>
+                7 is the first significant figure.
+            </p>
+</div>
+</div>
+<div class="warning-box">
+        Significant figures do not always begin immediately after the decimal
+        point. They begin at the first non-zero digit.
+    </div>
+</section><section class="lesson-section">
+<h2>1️⃣1️⃣ Which Zeros Are Significant?</h2>
+<div class="zero-significance-grid">
+<div class="zero-significance-card non-significant-zero">
+<h3>Leading zeros</h3>
+<div class="math-box">
+                0.0047
+            </div>
+<p>
+                The zeros before 4 only locate the decimal point.
+                They are not significant.
+            </p>
+</div>
+<div class="zero-significance-card significant-zero">
+<h3>Zeros between non-zero digits</h3>
+<div class="math-box">
+                1007
+            </div>
+<p>
+                Both zeros are significant.
+            </p>
+</div>
+<div class="zero-significance-card significant-zero">
+<h3>Ending decimal zeros</h3>
+<div class="math-box">
+                4.500
+            </div>
+<p>
+                The ending zeros show precision and are significant.
+            </p>
+</div>
+<div class="zero-significance-card context-zero">
+<h3>Ending whole-number zeros</h3>
+<div class="math-box">
+                4500
+            </div>
+<p>
+                Without more information, their significance may be unclear.
+                Standard form removes the ambiguity.
+            </p>
+</div>
+</div>
+<div class="note-box">
+        For example:
+        <br/><br/>
+        4.5 × 10³ has 2 significant figures.
+        <br/><br/>
+        4.500 × 10³ has 4 significant figures.
+    </div>
+</section><section class="lesson-section">
+<h2>1️⃣2️⃣ Counting Significant Figures</h2>
+<div class="worked-example">
+<h3>Example 10: How many significant figures are in 0.00608?</h3>
+<p>
+            Ignore the leading zeros.
+        </p>
+<div class="math-box">
+            Significant digits: 6, 0 and 8
+        </div>
+<div class="success-box">
+            0.00608 has <strong>3 significant figures</strong>.
+        </div>
+</div>
+<div class="worked-example">
+<h3>Example 11: How many significant figures are in 12.040?</h3>
+<p>
+            Begin at 1. Every digit from that point is significant.
+        </p>
+<div class="math-box">
+            1, 2, 0, 4, 0
+        </div>
+<div class="success-box">
+            12.040 has <strong>5 significant figures</strong>.
+        </div>
+</div>
+</section><section class="lesson-section">
+<h2>1️⃣3️⃣ Rounding to Significant Figures</h2>
+<div class="worked-example">
+<h3>Example 12: Round 5832 to 2 significant figures</h3>
+<p>
+            The first two significant digits are 5 and 8.
+        </p>
+<p>
+            The next digit is 3, so round down.
+        </p>
+<div class="math-box">
+            5832 → 5800
+        </div>
+<div class="success-box">
+            5832 to 2 significant figures is <strong>5800</strong>.
+        </div>
+</div>
+<div class="worked-example">
+<h3>Example 13: Round 7864 to 3 significant figures</h3>
+<p>
+            The first three significant digits are 7, 8 and 6.
+        </p>
+<p>
+            The next digit is 4, so round down.
+        </p>
+<div class="success-box">
+            7864 to 3 significant figures is <strong>7860</strong>.
+        </div>
+</div>
+<div class="worked-example">
+<h3>Example 14: Round 0.004768 to 2 significant figures</h3>
+<p>
+            Start at the first non-zero digit, which is 4.
+        </p>
+<p>
+            The first two significant digits are 4 and 7.
+        </p>
+<p>
+            The next digit is 6, so increase 7 to 8.
+        </p>
+<div class="success-box">
+            0.004768 to 2 significant figures is
+            <strong>0.0048</strong>.
+        </div>
+</div>
+</section><section class="lesson-section">
+<h2>🧠 StudyNest Method: Significant Figures</h2>
+<div class="tip-box">
+<strong>Step 1:</strong>
+        Ignore leading zeros and locate the first non-zero digit.
+
+        <br/><br/>
+<strong>Step 2:</strong>
+        Count significant digits from that point.
+
+        <br/><br/>
+<strong>Step 3:</strong>
+        Stop at the number of significant figures requested.
+
+        <br/><br/>
+<strong>Step 4:</strong>
+        Look at the next digit.
+
+        <br/><br/>
+<strong>Step 5:</strong>
+        Apply the rounding rule.
+
+        <br/><br/>
+<strong>Step 6:</strong>
+        For a whole number, replace later digits with zeros.
+
+        <br/><br/>
+<strong>Step 7:</strong>
+        For a decimal, remove later digits while keeping the decimal point in
+        its correct position.
+
+    </div>
+</section><section class="lesson-section">
+<h2>1️⃣4️⃣ Decimal Places and Significant Figures Compared</h2>
+<div class="comparison-grid">
+<div class="comparison-card">
+<h3>Decimal places</h3>
+<p>
+                Count digits after the decimal point.
+            </p>
+<div class="math-box">
+                0.004768 to 2 d.p.
+            </div>
+<div class="math-box">
+                = 0.00
+            </div>
+</div>
+<div class="comparison-card">
+<h3>Significant figures</h3>
+<p>
+                Begin counting at the first non-zero digit.
+            </p>
+<div class="math-box">
+                0.004768 to 2 s.f.
+            </div>
+<div class="math-box">
+                = 0.0048
+            </div>
+</div>
+</div>
+<div class="warning-box">
+        Decimal places and significant figures are not interchangeable.
+        Read the instruction carefully.
+    </div>
+</section><section class="lesson-section">
+<h2>1️⃣5️⃣ Choosing a Suitable Degree of Accuracy</h2>
+<p>
+        The most suitable accuracy depends on how the number will be used.
+    </p>
+<div class="accuracy-choice-grid">
+<div class="accuracy-choice-card">
+<span>👥</span>
+<h3>Population</h3>
+<p>
+                A population may be reported to the nearest hundred or
+                thousand.
+            </p>
+</div>
+<div class="accuracy-choice-card">
+<span>💰</span>
+<h3>Money</h3>
+<p>
+                Money is commonly written to 2 decimal places when cents are
+                used.
+            </p>
+</div>
+<div class="accuracy-choice-card">
+<span>📏</span>
+<h3>Length</h3>
+<p>
+                A length may be measured to the nearest metre, centimetre or
+                millimetre depending on the purpose.
+            </p>
+</div>
+<div class="accuracy-choice-card">
+<span>⚖️</span>
+<h3>Mass</h3>
+<p>
+                Medicine requires greater precision than estimating the mass of
+                a bag of maize.
+            </p>
+</div>
+</div>
+<div class="success-box">
+        More decimal places or significant figures give greater precision, but
+        unnecessary precision can be misleading.
+    </div>
+</section><section class="lesson-section">
+<h2>1️⃣6️⃣ Estimating a Sum</h2>
+<div class="worked-example">
+<h3>Example 15: Estimate 48.7 + 31.6 + 19.4</h3>
+<p>
+            Round each number to 1 significant figure.
+        </p>
+<div class="math-box">
+            48.7 ≈ 50
+        </div>
+<div class="math-box">
+            31.6 ≈ 30
+        </div>
+<div class="math-box">
+            19.4 ≈ 20
+        </div>
+<div class="math-box">
+            Estimated total = 50 + 30 + 20
+        </div>
+<div class="success-box">
+            Estimated answer = <strong>100</strong>.
+        </div>
+</div>
+</section><section class="lesson-section">
+<h2>1️⃣7️⃣ Estimating a Product</h2>
+<div class="worked-example">
+<h3>Example 16: Estimate 49.2 × 20.7</h3>
+<p>
+            Round each value to 1 significant figure.
+        </p>
+<div class="math-box">
+            49.2 ≈ 50
+        </div>
+<div class="math-box">
+            20.7 ≈ 20
+        </div>
+<div class="math-box">
+            50 × 20 = 1000
+        </div>
+<div class="success-box">
+            49.2 × 20.7 is approximately <strong>1000</strong>.
+        </div>
+</div>
+</section><section class="lesson-section">
+<h2>1️⃣8️⃣ Estimating a Quotient</h2>
+<div class="worked-example">
+<h3>Example 17: Estimate 598 ÷ 19.8</h3>
+<p>
+            Choose nearby numbers that are easy to divide.
+        </p>
+<div class="math-box">
+            598 ≈ 600
+        </div>
+<div class="math-box">
+            19.8 ≈ 20
+        </div>
+<div class="math-box">
+            600 ÷ 20 = 30
+        </div>
+<div class="success-box">
+            598 ÷ 19.8 is approximately <strong>30</strong>.
+        </div>
+</div>
+</section><section class="lesson-section">
+<h2>1️⃣9️⃣ Estimating a More Complex Calculation</h2>
+<div class="worked-example">
+<h3>Example 18</h3>
+<p>Estimate:</p>
+<div class="math-box">
+            (19.7 × 4.12) ÷ 0.203
+        </div>
+<p>
+            Round each number to 1 significant figure.
+        </p>
+<div class="math-box">
+            19.7 ≈ 20
+        </div>
+<div class="math-box">
+            4.12 ≈ 4
+        </div>
+<div class="math-box">
+            0.203 ≈ 0.2
+        </div>
+<div class="math-box">
+            (20 × 4) ÷ 0.2
+        </div>
+<div class="math-box">
+            80 ÷ 0.2 = 400
+        </div>
+<div class="success-box">
+            The estimated answer is <strong>400</strong>.
+        </div>
+</div>
+</section><section class="lesson-section">
+<h2>🧠 StudyNest Method: Estimating a Calculation</h2>
+<div class="tip-box">
+<strong>Step 1:</strong>
+        Identify all the numbers in the calculation.
+
+        <br/><br/>
+<strong>Step 2:</strong>
+        Round each number to a convenient degree of accuracy, usually
+        1 significant figure unless instructed otherwise.
+
+        <br/><br/>
+<strong>Step 3:</strong>
+        Rewrite the complete calculation using the rounded values.
+
+        <br/><br/>
+<strong>Step 4:</strong>
+        Calculate mentally or using simple working.
+
+        <br/><br/>
+<strong>Step 5:</strong>
+        Use the approximately-equal symbol.
+
+        <br/><br/>
+<strong>Step 6:</strong>
+        Check that the estimated answer is of a sensible size.
+
+    </div>
+</section><section class="lesson-section">
+<h2>2️⃣0️⃣ Estimation as a Calculator Check</h2>
+<div class="worked-example">
+<h3>Example 19</h3>
+<p>
+            A learner enters:
+        </p>
+<div class="math-box">
+            39.8 × 5.12
+        </div>
+<p>
+            The calculator displays:
+        </p>
+<div class="math-box">
+            2037.76
+        </div>
+<p>
+            Estimate first:
+        </p>
+<div class="math-box">
+            39.8 ≈ 40
+        </div>
+<div class="math-box">
+            5.12 ≈ 5
+        </div>
+<div class="math-box">
+            40 × 5 = 200
+        </div>
+<div class="warning-box">
+            An answer near 200 is expected, so 2037.76 is not sensible.
+            The learner probably entered the calculation incorrectly.
+        </div>
+<div class="success-box">
+            The exact answer is 203.776, which agrees with the estimate.
+        </div>
+</div>
+</section><section class="lesson-section">
+<h2>🌍 Real-Life Example: Estimating a Journey</h2>
+<div class="worked-example">
+<h3>Example 20</h3>
+<p>
+            A journey is 287 km long.
+        </p>
+<p>
+            A driver travels at an average speed of about 58 km/h.
+        </p>
+<p>
+            Estimate the journey time.
+        </p>
+<div class="math-box">
+            287 km ≈ 300 km
+        </div>
+<div class="math-box">
+            58 km/h ≈ 60 km/h
+        </div>
+<div class="math-box">
+            Time ≈ 300 ÷ 60
+        </div>
+<div class="success-box">
+            The journey should take approximately <strong>5 hours</strong>.
+        </div>
+</div>
+</section><section class="lesson-section">
+<h2>🌍 Real-Life Example: Attendance</h2>
+<div class="worked-example">
+<h3>Example 21</h3>
+<p>
+            A stadium contains 19 684 spectators.
+        </p>
+<p>
+            Give a suitable approximate attendance for a news report.
+        </p>
+<div class="math-box">
+            19 684 ≈ 20 000
+        </div>
+<div class="success-box">
+            A reporter might say:
+            <br/><br/>
+            “Approximately <strong>20 000 spectators</strong> attended.”
+        </div>
+</div>
+</section><section class="lesson-section">
+<h2>🌍 Real-Life Example: Money</h2>
+<div class="worked-example">
+<h3>Example 22</h3>
+<p>
+            A bill is calculated as US$18.476.
+        </p>
+<p>
+            Money is normally given to the nearest cent.
+        </p>
+<p>
+            Round to 2 decimal places.
+        </p>
+<div class="success-box">
+            US$18.476 ≈ <strong>US$18.48</strong>.
+        </div>
+</div>
+</section><section class="lesson-section">
+<h2>🧠 The StudyNest Accuracy Strategy</h2>
+<div class="tip-box">
+<strong>Step 1:</strong>
+        Identify what the question requires:
+        <br/><br/>
+        place value, decimal places, significant figures or an estimate.
+
+        <br/><br/>
+<strong>Step 2:</strong>
+        Locate the correct rounding digit.
+
+        <br/><br/>
+<strong>Step 3:</strong>
+        Look at only the next digit.
+
+        <br/><br/>
+<strong>Step 4:</strong>
+        Apply the 0–4 or 5–9 rule.
+
+        <br/><br/>
+<strong>Step 5:</strong>
+        Write the answer in the format requested.
+
+        <br/><br/>
+<strong>Step 6:</strong>
+        Use ≈ when the answer is approximate.
+
+        <br/><br/>
+<strong>Step 7:</strong>
+        Ask whether the answer is sensible in its context.
+
+    </div>
+</section><section class="lesson-section">
+<h2>🎯 Exam Tips</h2>
+<div class="tip-box">
+        For decimal places, count from the decimal point.
+    </div>
+<div class="tip-box">
+        For significant figures, begin at the first non-zero digit.
+    </div>
+<div class="tip-box">
+        Look at only the digit immediately after the required rounding place.
+    </div>
+<div class="tip-box">
+        Keep ending zeros when they show the requested accuracy, such as 8.30
+        to 2 decimal places.
+    </div>
+<div class="tip-box">
+        Estimation questions commonly use 1 significant figure unless another
+        degree of accuracy is stated.
+    </div>
+<div class="tip-box">
+        Do not round numbers too early in a calculation unless the question asks
+        for an estimate.
+    </div>
+<div class="tip-box">
+        Use an estimate to check whether a calculator answer has the correct
+        size.
+    </div>
+</section><section class="lesson-section">
+<h2>⚠ Common Mistakes</h2>
+<div class="warning-box">
+<strong>Mistake 1:</strong><br/><br/>
+        Looking at several digits instead of only the next digit when rounding.
+    </div>
+<div class="warning-box">
+<strong>Mistake 2:</strong><br/><br/>
+        Counting significant figures from the decimal point instead of the
+        first non-zero digit.
+    </div>
+<div class="warning-box">
+<strong>Mistake 3:</strong><br/><br/>
+        Removing a final zero that is needed to show the requested number of
+        decimal places.
+    </div>
+<div class="warning-box">
+<strong>Mistake 4:</strong><br/><br/>
+        Using the equals sign for a rounded value instead of the approximately
+        equal sign.
+    </div>
+<div class="warning-box">
+<strong>Mistake 5:</strong><br/><br/>
+        Rounding every number to the nearest whole number even when that makes
+        the estimate unsuitable.
+    </div>
+<div class="warning-box">
+<strong>Mistake 6:</strong><br/><br/>
+        Giving an estimate with more detail than the original information
+        justifies.
+    </div>
+<div class="warning-box">
+<strong>Mistake 7:</strong><br/><br/>
+        Accepting a calculator answer without checking whether it is sensible.
+    </div>
+</section><section class="lesson-section practice-card">
+<h2>🎮 Your Turn!</h2>
+<h3>🟢 Foundation Questions</h3>
+<ol>
+<li>Round 374 to the nearest ten.</li>
+<li>Round 685 to the nearest ten.</li>
+<li>Round 4638 to the nearest hundred.</li>
+<li>Round 9752 to the nearest thousand.</li>
+<li>Round 45 381 to the nearest ten thousand.</li>
+<li>Round 7.386 to 1 decimal place.</li>
+<li>Round 12.745 to 2 decimal places.</li>
+<li>Round 9.0048 to 3 decimal places.</li>
+</ol>
+<h3>🔵 Developing Questions</h3>
+<ol start="9">
+<li>State the number of significant figures in 0.00408.</li>
+<li>State the number of significant figures in 12.030.</li>
+<li>Round 5837 to 2 significant figures.</li>
+<li>Round 76 492 to 3 significant figures.</li>
+<li>Round 0.006873 to 2 significant figures.</li>
+<li>Round 3.9951 to 3 significant figures.</li>
+<li>Estimate 62.1 + 38.7 + 19.6.</li>
+<li>Estimate 39.4 × 5.2.</li>
+<li>Estimate 804 ÷ 19.7.</li>
+<li>
+            Estimate:
+            <br/><br/>
+            (29.8 × 6.12) ÷ 0.301
+        </li>
+</ol>
+<h3>🔴 Challenge Questions</h3>
+<ol start="19">
+<li>
+            Round 0.00056789 to 3 significant figures.
+        </li>
+<li>
+            Round 987 654 to 2 significant figures.
+        </li>
+<li>
+            A calculator displays 48.675923.
+            Give the answer to 3 decimal places.
+        </li>
+<li>
+            A mass is measured as 0.008046 kg.
+            Give it to 3 significant figures.
+        </li>
+<li>
+            Estimate:
+            <br/><br/>
+            √63.7 × 19.8
+        </li>
+<li>
+            Estimate:
+            <br/><br/>
+            (402 × 0.049) ÷ 1.98
+        </li>
+<li>
+            A shop sells 198 notebooks at US$2.97 each.
+            Estimate the total value of the notebooks.
+        </li>
+<li>
+            A bus travels 452 km using 39.6 litres of fuel.
+            Estimate the distance travelled per litre.
+        </li>
+<li>
+            A learner calculates 79.6 × 3.98 and obtains 31.6808.
+            Use estimation to explain why this answer is incorrect.
+        </li>
+<li>
+            Explain the difference between rounding a number to 2 decimal
+            places and rounding it to 2 significant figures.
+        </li>
+</ol>
+<details>
+<summary>✅ Show Answers</summary>
+<ol>
+<li>
+                374 ≈ <strong>370</strong>
+</li>
+<li>
+                685 ≈ <strong>690</strong>
+</li>
+<li>
+                4638 ≈ <strong>4600</strong>
+</li>
+<li>
+                9752 ≈ <strong>10 000</strong>
+</li>
+<li>
+                45 381 ≈ <strong>50 000</strong>
+</li>
+<li>
+                7.386 ≈ <strong>7.4</strong>
+</li>
+<li>
+                12.745 ≈ <strong>12.75</strong>
+</li>
+<li>
+                9.0048 ≈ <strong>9.005</strong>
+</li>
+<li>
+                0.00408 has <strong>3 significant figures</strong>.
+            </li>
+<li>
+                12.030 has <strong>5 significant figures</strong>.
+            </li>
+<li>
+                5837 ≈ <strong>5800</strong>
+</li>
+<li>
+                76 492 ≈ <strong>76 500</strong>
+</li>
+<li>
+                0.006873 ≈ <strong>0.0069</strong>
+</li>
+<li>
+                3.9951 ≈ <strong>4.00</strong>
+<br/><br/>
+                The zeros show 3 significant figures.
+            </li>
+<li>
+                62.1 + 38.7 + 19.6
+                <br/><br/>
+                ≈ 60 + 40 + 20
+                <br/><br/>
+                = <strong>120</strong>
+</li>
+<li>
+                39.4 × 5.2
+                <br/><br/>
+                ≈ 40 × 5
+                <br/><br/>
+                = <strong>200</strong>
+</li>
+<li>
+                804 ÷ 19.7
+                <br/><br/>
+                ≈ 800 ÷ 20
+                <br/><br/>
+                = <strong>40</strong>
+</li>
+<li>
+                (29.8 × 6.12) ÷ 0.301
+                <br/><br/>
+                ≈ (30 × 6) ÷ 0.3
+                <br/><br/>
+                = 180 ÷ 0.3
+                <br/><br/>
+                = <strong>600</strong>
+</li>
+<li>
+                0.00056789 ≈ <strong>0.000568</strong>
+</li>
+<li>
+                987 654 ≈ <strong>990 000</strong>
+</li>
+<li>
+                48.675923 ≈ <strong>48.676</strong>
+</li>
+<li>
+                0.008046 ≈ <strong>0.00805 kg</strong>
+</li>
+<li>
+                √63.7 × 19.8
+                <br/><br/>
+                ≈ √64 × 20
+                <br/><br/>
+                = 8 × 20
+                <br/><br/>
+                = <strong>160</strong>
+</li>
+<li>
+                (402 × 0.049) ÷ 1.98
+                <br/><br/>
+                ≈ (400 × 0.05) ÷ 2
+                <br/><br/>
+                = 20 ÷ 2
+                <br/><br/>
+                = <strong>10</strong>
+</li>
+<li>
+                198 × 2.97
+                <br/><br/>
+                ≈ 200 × 3
+                <br/><br/>
+                = <strong>US$600</strong>
+</li>
+<li>
+                452 ÷ 39.6
+                <br/><br/>
+                ≈ 450 ÷ 40
+                <br/><br/>
+                ≈ <strong>11.25 km per litre</strong>
+<br/><br/>
+                A rougher estimate of about 11 km/L is also reasonable.
+            </li>
+<li>
+                79.6 × 3.98
+                <br/><br/>
+                ≈ 80 × 4
+                <br/><br/>
+                = 320
+                <br/><br/>
+                Therefore, 31.6808 is far too small.
+                The decimal point was probably entered or placed incorrectly.
+            </li>
+<li>
+                Decimal places count digits after the decimal point.
+                <br/><br/>
+                Significant figures begin at the first non-zero digit,
+                regardless of the decimal point’s position.
+            </li>
+</ol>
+</details>
+</section><section class="lesson-section">
+<h2>🧠 Remember This</h2>
+<div class="success-box">
+        Approximation replaces a value with a nearby simpler value.
+        <br/><br/>
+        Estimation uses approximate values to predict an answer.
+        <br/><br/>
+        For place value and decimal places, locate the requested position and
+        inspect the next digit.
+        <br/><br/>
+        For significant figures, begin at the first non-zero digit.
+        <br/><br/>
+        Digits 0–4 round down, while digits 5–9 round up.
+        <br/><br/>
+        Use ≈ for approximate values.
+        <br/><br/>
+        Estimation helps you check whether an exact answer is sensible.
+    </div>
+</section><section class="lesson-section">
+<h2>🎯 Before Moving On...</h2>
+<ul class="check-list">
+<li>✅ Can I distinguish an exact value from an approximate value?</li>
+<li>✅ Can I explain the difference between approximation and estimation?</li>
+<li>✅ Can I round whole numbers to a stated place value?</li>
+<li>✅ Can I round numbers to decimal places?</li>
+<li>✅ Can I identify significant figures?</li>
+<li>✅ Can I round numbers to significant figures?</li>
+<li>✅ Can I choose a suitable degree of accuracy?</li>
+<li>✅ Can I estimate sums, products and quotients?</li>
+<li>✅ Can I use estimation to check a calculator answer?</li>
+</ul>
+</section><section class="lesson-section success-card">
+<h2>🎉 Well Done!</h2>
+<p>
+        You can now round values accurately and use estimation to make quick,
+        sensible mathematical decisions.
+    </p>
+<div class="success-box">
+        Remember:
+        <br/><br/>
+<strong>
+            Identify the required accuracy → Locate the rounding digit →
+            Check the next digit → Round correctly → Test whether the answer is
+            sensible
+        </strong>
+</div>
+</section><section class="lesson-section">
+<h2>📈 Your Progress</h2>
+<p>
+        Lesson <strong>16 of 19</strong>
+</p>
+<div class="progress-wrap">
+<div class="progress-label">
+<span>Real Numbers Progress</span>
+<strong>84%</strong>
+</div>
+<div class="progress-bar">
+<div class="progress-fill" style="width:84%;"></div>
+</div>
+</div>
+</section><nav class="lesson-navigation">
+<a class="nav-button" href="15-standard-form.html">← 15 Standard Form</a>
+<a class="nav-button" href="index.html">Real Numbers Roadmap</a>
+<a class="nav-button primary" href="17-bounds-and-error-intervals.html">17 Bounds And Error Intervals →</a>
+</nav></main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="site-footer">
+<strong>📚 StudyNest</strong>
+<p>Helping students understand Mathematics, not memorise it.</p>
+<p>© 2026 StudyNest</p>
+</footer>  <script src="../script-v3.js"></script>
+
+<script src="../studynest-3.1.js" defer></script>
+</body>
+</html>

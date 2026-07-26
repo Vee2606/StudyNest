@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Understand interest on interest and repeated percentage growth or depreciation." name="description"/>
+<title>Compound Interest | Money &amp; Finance | StudyNest</title>
+<link href="../styles/money-finance-lessons.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="../styles/studynest-v3.css">
+
+<link rel="stylesheet" href="../studynest-3.1.css">
+<link rel="stylesheet" href="../studynest-theme.css">
+</head>
+<body>
+<div class="announcement-bar">🚀 StudyNest is growing. New lessons and worksheets are added regularly.</div>
+<header class="site-header">
+<a class="logo" href="../index.html">📚 StudyNest</a>
+<nav class="main-navigation">
+<a href="../index.html">🏠 Home</a>
+<a href="../topics.html">📘 Study by Topic</a>
+<a href="index.html">💰 Money &amp; Finance</a>
+<a href="../worksheets.html">📝 Worksheets</a>
+</nav>
+</header>
+<section class="lesson-hero">
+<div>
+<p class="lesson-label">MONEY &amp; FINANCE · LESSON 07</p>
+<h1>Compound Interest</h1>
+<p class="lesson-subtitle">Understand interest on interest and repeated percentage growth or depreciation.</p>
+<div class="lesson-meta">
+<span class="meta-pill">⏱️ 22–28 min</span>
+<span class="meta-pill">📘 Developing</span>
+<span class="meta-pill">💼 Real-life examples included</span>
+</div>
+</div>
+<div aria-hidden="true" class="finance-hero-art">
+<div class="finance-card">
+<div class="finance-card-top">
+<span class="finance-chip"></span>
+<span class="finance-contactless">)))</span>
+</div>
+<span class="finance-card-number">•••• 4826</span>
+<div class="finance-card-bottom">
+<span>STUDYNEST</span>
+<span>12/29</span>
+</div>
+</div>
+<div class="finance-badge finance-badge-percent">%</div>
+<div class="finance-badge finance-badge-up">↗</div>
+<div class="finance-coin coin-one">$</div>
+<div class="finance-coin coin-two">$</div>
+<div class="finance-coin coin-three">$</div>
+<div class="finance-calculator">
+<div class="calculator-screen">125.00</div>
+<span></span><span></span><span></span>
+<span></span><span></span><span></span>
+<span></span><span></span><span></span>
+</div>
+</div>
+</section>
+<main class="lesson-main">
+<section class="lesson-section">
+<h2>🎯 By the End of This Lesson...</h2>
+<ul class="objective-list">
+<li>explain how compound interest differs from simple interest;</li>
+<li>calculate growth year by year;</li>
+<li>use the compound-interest formula;</li>
+<li>calculate depreciation;</li>
+<li>compare simple and compound growth.</li>
+</ul>
+</section>
+<section class="lesson-section">
+<h2>📊 Interactive Growth and Depreciation Lab</h2><p>Compare simple interest, compound interest and depreciation on the same graph.</p>
+<div class="interactive-lab" data-lab="compound"><div class="lab-grid">
+<div class="control-group"><label for="ci-principal">Starting value: $<span class="live-value" data-value-for="ci-principal"></span></label><input id="ci-principal" max="5000" min="100" step="100" type="range" value="1000"/></div>
+<div class="control-group"><label for="ci-rate">Interest rate: <span class="live-value" data-value-for="ci-rate"></span>%</label><input id="ci-rate" max="25" min="1" step="0.5" type="range" value="10"/></div>
+<div class="control-group"><label for="ci-time">Time: <span class="live-value" data-value-for="ci-time"></span> years</label><input id="ci-time" max="15" min="1" type="range" value="8"/></div>
+<div class="control-group"><label for="dep-rate">Depreciation rate: <span class="live-value" data-value-for="dep-rate"></span>%</label><input id="dep-rate" max="40" min="1" type="range" value="10"/></div>
+</div><div class="result-grid"><div class="result-card"><span>Compound amount</span><strong id="ci-amount"></strong></div><div class="result-card"><span>Compound interest</span><strong id="ci-interest"></strong></div><div class="result-card"><span>Value after depreciation</span><strong id="dep-value"></strong></div></div><div class="graph-wrap"><canvas aria-label="Comparison of simple interest, compound interest and depreciation"></canvas><div class="graph-key"><span>Simple growth</span><span>Compound growth</span><span>Depreciation</span></div></div>
+<div aria-live="polite" class="money-scale-visual"><h3>Growth comparison scale</h3><div class="comparison-row"><span>Starting value</span><div class="comparison-track"><i id="ci-principal-bar"></i></div><strong id="ci-principal-scale"></strong></div><div class="comparison-row"><span>Simple growth</span><div class="comparison-track"><i id="ci-simple-bar"></i></div><strong id="ci-simple-scale"></strong></div><div class="comparison-row"><span>Compound growth</span><div class="comparison-track"><i id="ci-compound-bar"></i></div><strong id="ci-compound-scale"></strong></div><div class="scale-axis"><span>$0</span><span>$5,000</span><span>$10,000</span><span>$15,000</span><span>$20,000+</span></div></div><div class="lab-note">Simple growth forms a straight line. Compound growth curves upward because each new percentage is calculated on a larger balance.</div></div></section>
+<section class="lesson-section">
+<div class="where-used">
+<h3>🌍 Where Will You Use This?</h3>
+<p>
+            Compound growth appears in savings, investments, loans, inflation
+            and population growth. Depreciation applies the same idea in reverse.
+        </p>
+</div>
+</section>
+<section class="lesson-section">
+<h2>Why Compound Interest Grows Faster</h2>
+<p>
+        Compound interest is calculated on the current balance, including
+        interest already earned.
+    </p>
+<div class="key-idea">
+        Interest earns more interest.
+    </div>
+</section>
+<section class="lesson-section">
+<h2>Year-by-Year Example</h2>
+<table class="example-table">
+<thead><tr><th>Year</th><th>Opening balance</th><th>10% interest</th><th>Closing balance</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>US$1,000</td><td>US$100</td><td>US$1,100</td></tr>
+<tr><td>2</td><td>US$1,100</td><td>US$110</td><td>US$1,210</td></tr>
+<tr><td>3</td><td>US$1,210</td><td>US$121</td><td>US$1,331</td></tr>
+</tbody>
+</table>
+</section>
+<section class="lesson-section">
+<h2>Compound Interest Formula</h2>
+<div class="math-display">A = P(1 + r/100)ⁿ</div>
+<div class="math-display">Compound interest = A − P</div>
+<div class="worked-example">
+<h3>Invest US$2,000 at 6% per year for 4 years.</h3>
+<div class="step"><span class="step-number">1</span><p>A=2000(1.06)⁴.</p></div>
+<div class="step"><span class="step-number">2</span><p>A≈US$2,524.95.</p></div>
+<div class="step"><span class="step-number">3</span><p>Interest≈US$524.95.</p></div>
+</div>
+</section>
+<section class="lesson-section">
+<h2>Depreciation</h2>
+<p>
+        Depreciation is a repeated percentage decrease in value.
+    </p>
+<div class="math-display">Value = Original value × (1 − rate/100)ⁿ</div>
+<div class="worked-example">
+<h3>A car worth US$12,000 depreciates by 15% per year for 3 years.</h3>
+<p>Value = 12000(0.85)³ ≈ US$7,369.50.</p>
+</div>
+</section>
+<section class="lesson-section">
+<h2>Simple vs Compound Interest</h2>
+<table class="example-table">
+<thead><tr><th>Simple Interest</th><th>Compound Interest</th></tr></thead>
+<tbody>
+<tr><td>Interest based on original principal</td><td>Interest based on current balance</td></tr>
+<tr><td>Same interest each period</td><td>Interest changes each period</td></tr>
+<tr><td>Linear growth</td><td>Exponential growth</td></tr>
+</tbody>
+</table>
+</section>
+<section class="lesson-section">
+<h2>💼 Money Smart Tip</h2>
+<div class="money-smart">
+<p>
+            The longer the time period, the greater the difference between
+            simple and compound interest.
+        </p>
+</div>
+</section>
+<section class="lesson-section">
+<h2>Practice Questions</h2>
+<span class="level-heading">Foundation</span>
+<ol class="practice-list">
+<li>Find the amount on US$1,000 at 5% compound interest for 2 years.</li>
+<li>Find the compound interest on US$800 at 10% for 3 years.</li>
+<li>A machine worth US$5,000 depreciates by 8% per year for 2 years. Find its value.</li>
+</ol>
+<span class="level-heading">Developing</span>
+<ol class="practice-list" start="4">
+<li>Find the amount on US$2,500 at 7.5% for 4 years.</li>
+<li>Compare simple and compound interest on US$1,200 at 6% for 5 years.</li>
+<li>A laptop depreciates to US$648 after 2 years at 10% per year. Find its original value.</li>
+</ol>
+<span class="level-heading">Challenge</span>
+<ol class="practice-list" start="7">
+<li>
+            An investment grows from US$2,000 to US$2,662 after 3 years.
+            Determine the annual compound rate.
+        </li>
+</ol>
+</section>
+<section class="lesson-section answers-section">
+<h2>✅ Check Your Work</h2>
+<details>
+<summary>Show practice answers</summary>
+<div class="answers-content">
+<ol>
+<li>1000(1.05)² = US$1,102.50.</li>
+<li>Amount=800(1.10)³=1064.80; interest=US$264.80.</li>
+<li>5000(0.92)² = US$4,232.</li>
+<li>2500(1.075)⁴ ≈ US$3,338.67.</li>
+<li>
+                    Simple interest=1200×6×5÷100=US$360.<br/>
+                    Compound amount=1200(1.06)⁵≈US$1,605.87, so interest≈US$405.87.<br/>
+                    Compound earns about US$45.87 more.
+                </li>
+<li>Original=648÷0.9²=US$800.</li>
+<li>
+                    2662/2000=1.331=1.1³, so the annual rate is 10%.
+                </li>
+</ol>
+</div>
+</details>
+</section>
+<section class="lesson-section">
+<h2>One-Minute Summary</h2>
+<ul class="summary-list">
+<li>Compound interest uses the current balance.</li>
+<li>A=P(1+r/100)ⁿ.</li>
+<li>Compound interest = amount − principal.</li>
+<li>Depreciation uses a multiplier below 1.</li>
+</ul>
+</section>
+<nav class="lesson-navigation">
+<a class="nav-button" href="06-simple-interest.html">← Simple Interest</a>
+<a class="nav-button" href="index.html">Topic Roadmap</a>
+<a class="nav-button primary" href="08-hire-purchase-and-instalments.html">Hire Purchase and Instalments →</a>
+</nav>
+</main>
+<footer class="site-footer">
+<strong>📚 StudyNest</strong>
+<p>Helping students understand Mathematics, not memorise it.</p>
+<p>© 2026 StudyNest</p>
+</footer>
+<script src="money-finance-interactions.js"></script>
+  <script src="../script-v3.js"></script>
+
+<script src="../studynest-3.1.js" defer></script>
+</body>
+</html>

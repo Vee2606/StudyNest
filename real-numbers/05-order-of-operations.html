@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Learn how to use BODMAS to solve calculations involving brackets, powers, division, multiplication, addition and subtraction." name="description"/>
+<title>Order of Operations and BODMAS | StudyNest</title>
+
+
+
+<link href="../styles/real-numbers-lessons.css" rel="stylesheet"/>
+<style id="studynest-real-animation-layer">
+.sn-concept-motion{margin:1.5rem auto 2rem;padding:1.25rem;border:2px solid rgba(19,48,76,.12);border-radius:22px;background:rgba(255,255,255,.88);overflow:hidden}
+.sn-concept-motion h2{margin-top:0}.sn-motion-stage{min-height:150px;display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;padding:18px;border-radius:18px;background:linear-gradient(135deg,rgba(232,246,255,.8),rgba(255,248,220,.75))}
+.sn-chip{display:inline-flex;align-items:center;justify-content:center;min-width:58px;min-height:48px;padding:10px 14px;border:2px solid #17324d;border-radius:14px;background:#fff;font-weight:800;font-size:1.1rem;box-shadow:0 5px 0 rgba(23,50,77,.12)}
+.sn-arrow{font-size:1.8rem;font-weight:900}.sn-pulse{animation:snPulse 2.4s ease-in-out infinite}.sn-slide{animation:snSlide 3s ease-in-out infinite}.sn-pop{animation:snPop 2.8s ease-in-out infinite}.sn-delay1{animation-delay:.45s}.sn-delay2{animation-delay:.9s}.sn-delay3{animation-delay:1.35s}
+.sn-line{position:relative;width:min(560px,94%);height:8px;border-radius:999px;background:#17324d;margin:42px auto 24px}.sn-line:before,.sn-line:after{content:'';position:absolute;top:-8px;width:2px;height:24px;background:#17324d}.sn-line:before{left:8%}.sn-line:after{right:8%}.sn-dot{position:absolute;top:-11px;width:30px;height:30px;border-radius:50%;background:#f5bf42;border:3px solid #17324d;animation:snTravel 4s ease-in-out infinite}
+.sn-grid{display:grid;grid-template-columns:repeat(4,54px);gap:7px}.sn-cell{width:54px;height:42px;display:grid;place-items:center;border:2px solid #17324d;border-radius:9px;background:#fff;font-weight:800}.sn-cell.active{animation:snCell 2.4s ease-in-out infinite;background:#fff4bd}
+.sn-bar{height:24px;border:2px solid #17324d;border-radius:999px;background:#fff;overflow:hidden;width:min(480px,90%)}.sn-fill{height:100%;width:0;background:#f5bf42;animation:snFill 3.5s ease-in-out infinite}
+.sn-caption{margin:.85rem 0 0;text-align:center;font-weight:700;color:#334e68}
+@keyframes snPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+@keyframes snSlide{0%,100%{transform:translateX(-18px)}50%{transform:translateX(18px)}}
+@keyframes snPop{0%,20%,100%{transform:translateY(0);opacity:.8}50%{transform:translateY(-10px);opacity:1}}
+@keyframes snTravel{0%,100%{left:7%}50%{left:86%}}
+@keyframes snCell{0%,100%{transform:scale(1);background:#fff}50%{transform:scale(1.08);background:#fff4bd}}
+@keyframes snFill{0%{width:0}55%,100%{width:75%}}
+@media (prefers-reduced-motion:reduce){.sn-concept-motion *{animation:none!important}}
+</style>  <link rel="stylesheet" href="../styles/studynest-v3.css">
+
+<link rel="stylesheet" href="../studynest-3.1.css">
+<link rel="stylesheet" href="../studynest-theme.css">
+</head>
+<body>
+
+
+<div class="announcement-bar">🚀 StudyNest is growing. New lessons and worksheets are added regularly.</div>
+<header class="site-header">
+<a class="logo" href="../index.html">📚 StudyNest</a>
+<nav class="main-navigation">
+<a href="../index.html">🏠 Home</a>
+<a href="../topics.html">📘 Study by Topic</a>
+<a href="index.html">🔢 Real Numbers</a>
+<a href="../worksheets.html">📝 Worksheets</a>
+</nav>
+</header>
+<section class="lesson-hero">
+<div>
+<p class="lesson-label">🔢 Real Numbers • Lesson 5 of 17</p>
+<h1>Order of Operations</h1>
+<p class="lesson-subtitle">Learn how to solve calculations containing several operations in the
+        correct order using BODMAS.</p>
+<div class="lesson-meta">
+<span class="meta-pill">🔢 Real Numbers</span>
+<span class="meta-pill">✏️ Worked examples included</span>
+<span class="meta-pill">🧠 Step-by-step learning</span>
+</div>
+</div>
+<div aria-hidden="true" class="hero-visual">
+<div class="real-number-visual">
+<div class="number-bubble bubble-pi">π</div>
+<div class="number-bubble bubble-fraction">¾</div>
+<div class="number-bubble bubble-root">√2</div>
+<div class="number-bubble bubble-negative">−8</div>
+<div class="real-set-symbol">ℝ</div>
+<div class="number-line"></div>
+<span class="number-tick tick-one"></span>
+<span class="number-tick tick-two"></span>
+<span class="number-tick tick-three"></span>
+<span class="number-tick tick-four"></span>
+<span class="number-label label-one">−2</span>
+<span class="number-label label-two">−1</span>
+<span class="number-label label-three">0</span>
+<span class="number-label label-four">1</span>
+</div>
+</div>
+</section><main class="lesson-main"><section class="sn-concept-motion" aria-label="Animated concept demonstration"><h2>🎬 Watch the order unfold</h2><div class="sn-motion-stage" aria-hidden="true"><span class="sn-chip sn-pop">Brackets</span><span class="sn-arrow">→</span><span class="sn-chip sn-pop sn-delay1">Orders</span><span class="sn-arrow">→</span><span class="sn-chip sn-pop sn-delay2">× ÷</span><span class="sn-arrow">→</span><span class="sn-chip sn-pop sn-delay3">+ −</span></div><p class="sn-caption">BODMAS gives every calculation one agreed order.</p></section><section class="lesson-section">
+<h2>🎯 By the end of this lesson...</h2>
+<p>You should be able to:</p>
+<ul>
+<li>Explain why calculations must follow an agreed order.</li>
+<li>State what each letter in BODMAS represents.</li>
+<li>Evaluate calculations containing brackets and powers.</li>
+<li>Apply division and multiplication from left to right.</li>
+<li>Apply addition and subtraction from left to right.</li>
+<li>Use BODMAS with positive and negative numbers.</li>
+<li>Check whether an answer is reasonable.</li>
+</ul>
+</section><section class="lesson-section story-card">
+<h2>🤔 Think About This...</h2>
+<p>
+        Two students are asked to calculate:
+    </p>
+<div class="math-box">
+        4 + 3 × 2
+    </div>
+<p>
+        The first student works from left to right:
+    </p>
+<div class="math-box">
+        4 + 3 = 7
+        <br/><br/>
+        7 × 2 = 14
+    </div>
+<p>
+        The second student multiplies first:
+    </p>
+<div class="math-box">
+        3 × 2 = 6
+        <br/><br/>
+        4 + 6 = 10
+    </div>
+<p>
+        They obtained different answers from the same calculation.
+    </p>
+<div class="success-box">
+        To ensure that everyone obtains the same answer, mathematics uses an
+        agreed order called the <strong>order of operations</strong>.
+    </div>
+</section><section class="lesson-section">
+<h2>1️⃣ What Is the Order of Operations?</h2>
+<p>
+        A calculation may contain several different operations, such as:
+    </p>
+<ul>
+<li>brackets;</li>
+<li>powers;</li>
+<li>division;</li>
+<li>multiplication;</li>
+<li>addition;</li>
+<li>subtraction.</li>
+</ul>
+<p>
+        We cannot simply complete them in whichever order we prefer.
+    </p>
+<div class="info-box">
+        The order of operations tells us which part of a calculation must be
+        completed first.
+    </div>
+</section><section class="lesson-section">
+<h2>2️⃣ BODMAS</h2>
+<p>
+        The word <strong>BODMAS</strong> helps us remember the correct order.
+    </p>
+<div class="bodmas-grid">
+<div class="bodmas-card">
+<span class="bodmas-letter">B</span>
+<div>
+<h3>Brackets</h3>
+<p>Complete calculations inside brackets first.</p>
+</div>
+</div>
+<div class="bodmas-card">
+<span class="bodmas-letter">O</span>
+<div>
+<h3>Orders</h3>
+<p>Calculate powers and roots.</p>
+</div>
+</div>
+<div class="bodmas-card">
+<span class="bodmas-letter">D</span>
+<div>
+<h3>Division</h3>
+<p>Complete division from left to right.</p>
+</div>
+</div>
+<div class="bodmas-card">
+<span class="bodmas-letter">M</span>
+<div>
+<h3>Multiplication</h3>
+<p>Complete multiplication from left to right.</p>
+</div>
+</div>
+<div class="bodmas-card">
+<span class="bodmas-letter">A</span>
+<div>
+<h3>Addition</h3>
+<p>Complete addition from left to right.</p>
+</div>
+</div>
+<div class="bodmas-card">
+<span class="bodmas-letter">S</span>
+<div>
+<h3>Subtraction</h3>
+<p>Complete subtraction from left to right.</p>
+</div>
+</div>
+</div>
+<div class="note-box">
+<strong>Orders</strong> means powers and roots, such as
+        3², 2³ and √16.
+    </div>
+</section><section class="lesson-section">
+<h2>⚠ An Important BODMAS Rule</h2>
+<p>
+        Division and multiplication have the same level of importance.
+    </p>
+<p>
+        When both appear, work from <strong>left to right</strong>.
+    </p>
+<div class="math-box">
+        24 ÷ 6 × 2
+    </div>
+<p>
+        Begin with the operation that appears first from the left:
+    </p>
+<div class="math-box">
+        24 ÷ 6 = 4
+    </div>
+<div class="math-box">
+        4 × 2 = 8
+    </div>
+<div class="success-box">
+        24 ÷ 6 × 2 = <strong>8</strong>
+</div>
+<div class="warning-box">
+        Do not always complete multiplication before division merely because
+        M appears after D in BODMAS.
+        <br/><br/>
+        Division and multiplication are completed from left to right.
+    </div>
+</section><section class="lesson-section">
+<h2>➕ Addition and Subtraction</h2>
+<p>
+        Addition and subtraction also have the same level of importance.
+    </p>
+<p>
+        When both appear, work from <strong>left to right</strong>.
+    </p>
+<div class="worked-example">
+<h3>Example 1</h3>
+<p>Calculate:</p>
+<div class="math-box">
+            18 − 7 + 3
+        </div>
+<p>
+            Work from left to right:
+        </p>
+<div class="math-box">
+            18 − 7 = 11
+        </div>
+<div class="math-box">
+            11 + 3 = 14
+        </div>
+<div class="success-box">
+            18 − 7 + 3 = <strong>14</strong>
+</div>
+</div>
+</section><section class="lesson-section">
+<h2>🧠 The StudyNest BODMAS Method</h2>
+<div class="tip-box">
+<strong>Step 1: Look for brackets.</strong>
+<br/><br/>
+
+        Complete the calculation inside each pair of brackets.
+
+        <br/><br/>
+<strong>Step 2: Look for powers and roots.</strong>
+<br/><br/>
+
+        Calculate orders such as squares, cubes and square roots.
+
+        <br/><br/>
+<strong>Step 3: Look for division and multiplication.</strong>
+<br/><br/>
+
+        Complete them from left to right.
+
+        <br/><br/>
+<strong>Step 4: Look for addition and subtraction.</strong>
+<br/><br/>
+
+        Complete them from left to right.
+
+        <br/><br/>
+<strong>Step 5: Check your work.</strong>
+<br/><br/>
+
+        Make sure that you completed every step in the correct order.
+
+    </div>
+<div class="success-box">
+        Do one clear step at a time. Rewriting the calculation after every step
+        reduces careless mistakes.
+    </div>
+</section><section class="lesson-section">
+<h2>3️⃣ Multiplication Before Addition</h2>
+<div class="worked-example">
+<h3>Example 2</h3>
+<p>Calculate:</p>
+<div class="math-box">
+            6 + 4 × 5
+        </div>
+<p>
+            There are no brackets or powers.
+        </p>
+<p>
+            Multiplication comes before addition.
+        </p>
+<div class="math-box">
+            4 × 5 = 20
+        </div>
+<p>
+            Rewrite the remaining calculation:
+        </p>
+<div class="math-box">
+            6 + 20
+        </div>
+<div class="success-box">
+            6 + 4 × 5 = <strong>26</strong>
+</div>
+</div>
+<div class="warning-box">
+        Do not calculate 6 + 4 first.
+        <br/><br/>
+        The correct answer is 26, not 50.
+    </div>
+</section><section class="lesson-section">
+<h2>4️⃣ Brackets First</h2>
+<div class="worked-example">
+<h3>Example 3</h3>
+<p>Calculate:</p>
+<div class="math-box">
+            3 × (7 − 2)
+        </div>
+<p>
+            Complete the brackets first:
+        </p>
+<div class="math-box">
+            7 − 2 = 5
+        </div>
+<p>
+            The calculation becomes:
+        </p>
+<div class="math-box">
+            3 × 5
+        </div>
+<div class="success-box">
+            3 × (7 − 2) = <strong>15</strong>
+</div>
+</div>
+<div class="real-life-situation">
+<div class="situation-icon">
+            📦
+        </div>
+<div>
+<h3>Why brackets matter</h3>
+<p>
+                Suppose three learners each receive a pack containing seven
+                pencils, but two pencils from each pack are damaged.
+            </p>
+<p>
+                The usable pencils are represented by:
+            </p>
+<div class="math-box">
+                3 × (7 − 2)
+            </div>
+<p>
+                The brackets show that we must first find the number of usable
+                pencils in one pack.
+            </p>
+</div>
+</div>
+</section><section class="lesson-section">
+<h2>5️⃣ Powers Before Multiplication</h2>
+<div class="worked-example">
+<h3>Example 4</h3>
+<p>Calculate:</p>
+<div class="math-box">
+            5 + 2 × 3²
+        </div>
+<p>
+            Calculate the power first:
+        </p>
+<div class="math-box">
+            3² = 9
+        </div>
+<p>
+            The calculation becomes:
+        </p>
+<div class="math-box">
+            5 + 2 × 9
+        </div>
+<p>
+            Multiply:
+        </p>
+<div class="math-box">
+            2 × 9 = 18
+        </div>
+<p>
+            Add:
+        </p>
+<div class="math-box">
+            5 + 18 = 23
+        </div>
+<div class="success-box">
+            5 + 2 × 3² = <strong>23</strong>
+</div>
+</div>
+</section><section class="lesson-section">
+<h2>6️⃣ Roots Within Calculations</h2>
+<div class="worked-example">
+<h3>Example 5</h3>
+<p>Calculate:</p>
+<div class="math-box">
+            20 − √16 × 3
+        </div>
+<p>
+            Calculate the root first:
+        </p>
+<div class="math-box">
+            √16 = 4
+        </div>
+<p>
+            The calculation becomes:
+        </p>
+<div class="math-box">
+            20 − 4 × 3
+        </div>
+<p>
+            Multiply:
+        </p>
+<div class="math-box">
+            4 × 3 = 12
+        </div>
+<p>
+            Subtract:
+        </p>
+<div class="math-box">
+            20 − 12 = 8
+        </div>
+<div class="success-box">
+            20 − √16 × 3 = <strong>8</strong>
+</div>
+</div>
+</section><section class="lesson-section">
+<h2>7️⃣ More Than One Pair of Brackets</h2>
+<div class="worked-example">
+<h3>Example 6</h3>
+<p>Calculate:</p>
+<div class="math-box">
+            (8 − 3) × (4 + 2)
+        </div>
+<p>
+            Complete each pair of brackets:
+        </p>
+<div class="math-box">
+            8 − 3 = 5
+        </div>
+<div class="math-box">
+            4 + 2 = 6
+        </div>
+<p>
+            Multiply the results:
+        </p>
+<div class="math-box">
+            5 × 6 = 30
+        </div>
+<div class="success-box">
+            (8 − 3) × (4 + 2) = <strong>30</strong>
+</div>
+</div>
+</section><section class="lesson-section">
+<h2>8️⃣ Brackets Inside Brackets</h2>
+<p>
+        Sometimes one pair of brackets appears inside another.
+    </p>
+<div class="info-box">
+        Begin with the innermost brackets and work outwards.
+    </div>
+<div class="worked-example">
+<h3>Example 7</h3>
+<p>Calculate:</p>
+<div class="math-box">
+            2 × [5 + (7 − 3)]
+        </div>
+<p>
+            Begin with the innermost brackets:
+        </p>
+<div class="math-box">
+            7 − 3 = 4
+        </div>
+<p>
+            The calculation becomes:
+        </p>
+<div class="math-box">
+            2 × [5 + 4]
+        </div>
+<p>
+            Complete the remaining brackets:
+        </p>
+<div class="math-box">
+            5 + 4 = 9
+        </div>
+<p>
+            Multiply:
+        </p>
+<div class="math-box">
+            2 × 9 = 18
+        </div>
+<div class="success-box">
+            2 × [5 + (7 − 3)] = <strong>18</strong>
+</div>
+</div>
+<div class="note-box">
+        Square brackets and ordinary brackets both group parts of a calculation.
+        Work from the innermost grouping symbols outwards.
+    </div>
+</section><section class="lesson-section">
+<h2>9️⃣ BODMAS with Directed Numbers</h2>
+<div class="worked-example">
+<h3>Example 8</h3>
+<p>Calculate:</p>
+<div class="math-box">
+            −6 + 4 × 3
+        </div>
+<p>
+            Multiply first:
+        </p>
+<div class="math-box">
+            4 × 3 = 12
+        </div>
+<p>
+            The calculation becomes:
+        </p>
+<div class="math-box">
+            −6 + 12
+        </div>
+<div class="success-box">
+            −6 + 4 × 3 = <strong>6</strong>
+</div>
+</div>
+<div class="worked-example">
+<h3>Example 9</h3>
+<p>Calculate:</p>
+<div class="math-box">
+            5 − (−3) × 2
+        </div>
+<p>
+            Multiply first:
+        </p>
+<div class="math-box">
+            (−3) × 2 = −6
+        </div>
+<p>
+            The calculation becomes:
+        </p>
+<div class="math-box">
+            5 − (−6)
+        </div>
+<p>
+            Subtracting a negative is the same as adding:
+        </p>
+<div class="math-box">
+            5 + 6 = 11
+        </div>
+<div class="success-box">
+            5 − (−3) × 2 = <strong>11</strong>
+</div>
+</div>
+</section><section class="lesson-section">
+<h2>🌍 Real-Life Example: A Shopping Bill</h2>
+<div class="worked-example">
+<h3>Example 10</h3>
+<p>
+            A family buys:
+        </p>
+<ul>
+<li>3 loaves of bread costing US$2 each;</li>
+<li>2 cartons of milk costing US$3 each.</li>
+</ul>
+<p>
+            They use a US$4 discount voucher.
+        </p>
+<p>
+            The total cost is represented by:
+        </p>
+<div class="math-box">
+            3 × 2 + 2 × 3 − 4
+        </div>
+<p>
+            Complete the multiplications first:
+        </p>
+<div class="math-box">
+            3 × 2 = 6
+        </div>
+<div class="math-box">
+            2 × 3 = 6
+        </div>
+<p>
+            The calculation becomes:
+        </p>
+<div class="math-box">
+            6 + 6 − 4
+        </div>
+<p>
+            Work from left to right:
+        </p>
+<div class="math-box">
+            12 − 4 = 8
+        </div>
+<div class="success-box">
+            The family pays <strong>US$8</strong>.
+        </div>
+</div>
+</section><section class="lesson-section">
+<h2>🌍 Real-Life Example: Football Points</h2>
+<div class="worked-example">
+<h3>Example 11</h3>
+<p>
+            A football team receives:
+        </p>
+<ul>
+<li>3 points for each of 5 wins;</li>
+<li>1 point for each of 2 draws;</li>
+<li>a deduction of 4 points.</li>
+</ul>
+<p>
+            The total is:
+        </p>
+<div class="math-box">
+            3 × 5 + 1 × 2 − 4
+        </div>
+<p>
+            Multiply first:
+        </p>
+<div class="math-box">
+            15 + 2 − 4
+        </div>
+<p>
+            Work from left to right:
+        </p>
+<div class="math-box">
+            17 − 4 = 13
+        </div>
+<div class="success-box">
+            The team has <strong>13 points</strong>.
+        </div>
+</div>
+</section><section class="lesson-section">
+<h2>🔎 Comparing Similar Calculations</h2>
+<p>
+        Brackets can completely change an answer.
+    </p>
+<div class="comparison-grid">
+<div class="comparison-card">
+<h3>Without brackets</h3>
+<div class="math-box">
+                4 + 3 × 2
+            </div>
+<div class="math-box">
+                4 + 6 = 10
+            </div>
+</div>
+<div class="comparison-card">
+<h3>With brackets</h3>
+<div class="math-box">
+                (4 + 3) × 2
+            </div>
+<div class="math-box">
+                7 × 2 = 14
+            </div>
+</div>
+</div>
+<div class="success-box">
+        The brackets tell us that 4 + 3 must be completed before multiplying.
+    </div>
+</section><section class="lesson-section">
+<h2>🎯 Exam Tips</h2>
+<div class="tip-box">
+        Write one clear line for every stage of your calculation.
+        This makes your method easier to follow and helps you notice mistakes.
+    </div>
+<div class="tip-box">
+        Do not type the entire expression into a calculator without checking
+        that the brackets and powers have been entered correctly.
+    </div>
+<div class="tip-box">
+        When division and multiplication appear together, work from left to
+        right. Do the same for addition and subtraction.
+    </div>
+</section><section class="lesson-section">
+<h2>⚠ Common Mistakes</h2>
+<div class="warning-box">
+<strong>Mistake 1:</strong><br/><br/>
+        Working from left to right without first checking BODMAS.
+    </div>
+<div class="warning-box">
+<strong>Mistake 2:</strong><br/><br/>
+        Adding before multiplying.
+        <br/><br/>
+        In 4 + 3 × 2, multiplication must be completed first.
+    </div>
+<div class="warning-box">
+<strong>Mistake 3:</strong><br/><br/>
+        Believing multiplication must always come before division.
+        <br/><br/>
+        Complete division and multiplication from left to right.
+    </div>
+<div class="warning-box">
+<strong>Mistake 4:</strong><br/><br/>
+        Believing addition must always come before subtraction.
+        <br/><br/>
+        Complete addition and subtraction from left to right.
+    </div>
+<div class="warning-box">
+<strong>Mistake 5:</strong><br/><br/>
+        Ignoring brackets or completing only part of a bracketed calculation.
+    </div>
+<div class="warning-box">
+<strong>Mistake 6:</strong><br/><br/>
+        Treating 3² as 3 × 2.
+        <br/><br/>
+        Remember that 3² means 3 × 3.
+    </div>
+<div class="warning-box">
+<strong>Mistake 7:</strong><br/><br/>
+        Losing a negative sign while rewriting the calculation.
+    </div>
+</section><section class="lesson-section practice-card">
+<h2>🎮 Your Turn!</h2>
+<p>
+        Use the correct order of operations. Show each important step.
+    </p>
+<ol>
+<li>
+            7 + 3 × 4
+        </li>
+<li>
+            20 − 12 ÷ 3
+        </li>
+<li>
+            18 ÷ 3 × 2
+        </li>
+<li>
+            15 − 8 + 6
+        </li>
+<li>
+            4 × (9 − 3)
+        </li>
+<li>
+            (5 + 7) ÷ 3
+        </li>
+<li>
+            2 + 3² × 4
+        </li>
+<li>
+            30 − √25 × 4
+        </li>
+<li>
+            (6 − 2) × (3 + 5)
+        </li>
+<li>
+            3 × [4 + (8 − 6)]
+        </li>
+<li>
+            −5 + 4 × 3
+        </li>
+<li>
+            8 − (−2) × 5
+        </li>
+<li>
+            36 ÷ 6 × 3 − 4
+        </li>
+<li>
+            5 + 2 × (7 − 3)²
+        </li>
+<li>
+            A customer buys 4 exercise books costing US$3 each and 2 pens
+            costing US$1 each. A US$2 discount is deducted.
+            Write and evaluate an expression for the total cost.
+        </li>
+</ol>
+<details>
+<summary>✅ Show Answers</summary>
+<ol>
+<li>
+                7 + 12 = <strong>19</strong>
+</li>
+<li>
+                20 − 4 = <strong>16</strong>
+</li>
+<li>
+                6 × 2 = <strong>12</strong>
+</li>
+<li>
+                7 + 6 = <strong>13</strong>
+</li>
+<li>
+                4 × 6 = <strong>24</strong>
+</li>
+<li>
+                12 ÷ 3 = <strong>4</strong>
+</li>
+<li>
+                2 + 9 × 4 = 2 + 36 = <strong>38</strong>
+</li>
+<li>
+                30 − 5 × 4 = 30 − 20 = <strong>10</strong>
+</li>
+<li>
+                4 × 8 = <strong>32</strong>
+</li>
+<li>
+                3 × [4 + 2] = 3 × 6 = <strong>18</strong>
+</li>
+<li>
+                −5 + 12 = <strong>7</strong>
+</li>
+<li>
+                8 − (−10) = 8 + 10 = <strong>18</strong>
+</li>
+<li>
+                6 × 3 − 4 = 18 − 4 = <strong>14</strong>
+</li>
+<li>
+                5 + 2 × 4²
+                <br/><br/>
+                = 5 + 2 × 16
+                <br/><br/>
+                = 5 + 32
+                <br/><br/>
+                = <strong>37</strong>
+</li>
+<li>
+                4 × 3 + 2 × 1 − 2
+                <br/><br/>
+                = 12 + 2 − 2
+                <br/><br/>
+                = <strong>US$12</strong>
+</li>
+</ol>
+</details>
+</section><section class="lesson-section">
+<h2>🧠 Remember This</h2>
+<div class="success-box">
+        BODMAS gives everyone the same answer.
+        <br/><br/>
+        Complete brackets first.
+        <br/><br/>
+        Then calculate powers and roots.
+        <br/><br/>
+        Complete division and multiplication from left to right.
+        <br/><br/>
+        Complete addition and subtraction from left to right.
+        <br/><br/>
+        Rewrite the calculation after every important step.
+    </div>
+</section><section class="lesson-section">
+<h2>🎯 Before Moving On...</h2>
+<ul class="check-list">
+<li>✅ Can I explain why the order of operations is necessary?</li>
+<li>✅ Do I know what every letter in BODMAS represents?</li>
+<li>✅ Can I complete brackets before other operations?</li>
+<li>✅ Can I evaluate powers and roots correctly?</li>
+<li>✅ Can I apply division and multiplication from left to right?</li>
+<li>✅ Can I apply addition and subtraction from left to right?</li>
+<li>✅ Can I use BODMAS with directed numbers?</li>
+</ul>
+</section><section class="lesson-section success-card">
+<h2>🎉 Well Done!</h2>
+<p>
+        You can now evaluate calculations containing several operations in the
+        correct order.
+    </p>
+<div class="success-box">
+        Remember:
+        <br/><br/>
+<strong>
+            Brackets → Orders → Division and Multiplication →
+            Addition and Subtraction
+        </strong>
+</div>
+</section><section class="lesson-section">
+<h2>📈 Your Progress</h2>
+<p>
+        Lesson <strong>5 of 17</strong>
+</p>
+<div class="progress-wrap">
+<div class="progress-label">
+<span>Real Numbers Progress</span>
+<strong>29%</strong>
+</div>
+<div class="progress-bar">
+<div class="progress-fill" style="width:29%;"></div>
+</div>
+</div>
+</section><nav class="lesson-navigation">
+<a class="nav-button" href="04-directed-numbers.html">← 04 Directed Numbers</a>
+<a class="nav-button" href="index.html">Real Numbers Roadmap</a>
+<a class="nav-button primary" href="06-fractions.html">06 Fractions →</a>
+</nav></main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="site-footer">
+<strong>📚 StudyNest</strong>
+<p>Helping students understand Mathematics, not memorise it.</p>
+<p>© 2026 StudyNest</p>
+</footer>  <script src="../script-v3.js"></script>
+
+<script src="../studynest-3.1.js" defer></script>
+</body>
+</html>

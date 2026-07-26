@@ -1,0 +1,8 @@
+StudyNest Homepage Beta Update
+
+- Replaced the dark blue homepage hero with a light cream/white design.
+- Retained StudyNest's blue headings, gold calls to action and existing font family.
+- Removed Past Papers from the homepage navigation and footer.
+- Removed all progress-tracking references from the homepage.
+- Added only the three currently available pathways: Study by Topic, Study by Form and Worksheets.
+- Added a subtle Beta label for the soft-launch period.

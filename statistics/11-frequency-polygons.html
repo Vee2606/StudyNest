@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Plot class midpoints against frequency and compare grouped distributions.">
+<title>Frequency Polygons | Statistics | StudyNest</title>
+<link rel="stylesheet" href="../styles/statistics-lessons.css">
+<link rel="stylesheet" href="../styles/statistics-interactive.css">
+  <link rel="stylesheet" href="../styles/studynest-v3.css">
+
+<link rel="stylesheet" href="../studynest-3.1.css">
+<link rel="stylesheet" href="../studynest-theme.css">
+</head>
+<body>
+
+<div class="announcement-bar">🚀 StudyNest is growing. New lessons and worksheets are added regularly.</div>
+<header class="site-header">
+    <a href="../index.html" class="logo">📚 StudyNest</a>
+    <nav class="main-navigation">
+        <a href="../index.html">🏠 Home</a>
+        <a href="../topics.html">📘 Study by Topic</a>
+        <a href="index.html">📊 Statistics</a>
+        <a href="../worksheets.html">📝 Worksheets</a>
+    </nav>
+</header>
+
+<section class="lesson-hero">
+<div>
+<p class="lesson-label">STATISTICS · LESSON 11</p>
+<h1>Frequency Polygons</h1>
+<p class="lesson-subtitle">Plot class midpoints against frequency and compare grouped distributions.</p>
+<div class="lesson-meta">
+<span class="meta-pill">⏱️ 22–30 min</span>
+<span class="meta-pill">📘 Developing</span>
+<span class="meta-pill">📊 Interpretation included</span>
+</div>
+</div>
+
+<div class="hero-visual" aria-hidden="true">
+    <div class="statistics-hero-visual">
+        <span class="statistics-token token-mean">x̄</span>
+        <span class="statistics-token token-percent">%</span>
+        <span class="statistics-token token-sigma">Σ</span>
+        <div class="stat-bars"><span></span><span></span><span></span><span></span></div>
+        <div class="stat-pie"></div>
+        <div class="stat-line"><i></i><i></i><i></i></div>
+    </div>
+</div>
+
+</section>
+<main class="lesson-main">
+
+<section class="lesson-section"><h2>🎯 Learning Objectives</h2><ul class="objective-list">
+<li>find class midpoints;</li><li>plot frequency polygons;</li><li>join points accurately;</li>
+<li>compare two distributions on one set of axes;</li><li>interpret peaks and spread.</li></ul></section>
+<section class="lesson-section"><h2>Construction Steps</h2>
+<ol><li>Find each class midpoint.</li><li>Plot midpoint against frequency.</li><li>Join consecutive points with straight lines.</li><li>Label axes and use a suitable scale.</li></ol></section>
+<section class="lesson-section"><h2>Why Use Them?</h2>
+<p>Frequency polygons make it easier to compare two grouped distributions because two lines can be drawn on the same axes.</p></section>
+<section class="lesson-section"><h2>📍 Build a Frequency Polygon</h2><div class="stats-lab"><p>Change the frequencies. Points are plotted at class midpoints and joined with straight lines.</p><div class="stats-controls" id="s11controls"></div><svg class="stats-canvas" id="s11svg" viewBox="0 0 700 380"></svg></div></section><script>(()=>{const mid=[5,15,25,35,45,55],f=[2,6,11,9,5,2],c=document.querySelector('#s11controls');c.innerHTML=mid.map((m,i)=>`<div class="stats-control"><label>Midpoint ${m}: <span id="s11v${i}">${f[i]}</span></label><input data-i="${i}" type="range" min="0" max="15" value="${f[i]}"></div>`).join('');function u(){c.querySelectorAll('input').forEach(x=>{f[+x.dataset.i]=+x.value;document.querySelector('#s11v'+x.dataset.i).textContent=x.value});let pts=mid.map((m,i)=>[75+m/60*570,310-f[i]*15]);document.querySelector('#s11svg').innerHTML='<line x1="65" y1="310" x2="660" y2="310" stroke="currentColor" stroke-width="3"/><line x1="65" y1="55" x2="65" y2="310" stroke="currentColor" stroke-width="3"/>'+`<polyline points="${pts.map(p=>p.join(',')).join(' ')}" fill="none" stroke="#bd725f" stroke-width="4"/>`+pts.map((p,i)=>`<circle cx="${p[0]}" cy="${p[1]}" r="7" fill="#4f8f91"/><text x="${p[0]}" y="340" text-anchor="middle">${mid[i]}</text>`).join('')}c.addEventListener('input',u);u()})();</script>
+<section class="lesson-section"><h2>Practice</h2><ol class="practice-list">
+<li>Find the midpoint of 40≤x&lt;50.</li>
+<li>Which coordinates represent a class 20≤x&lt;30 with frequency 9?</li>
+<li>What does the highest point usually indicate?</li>
+<li>Why can frequency polygons be useful for comparing two groups?</li></ol></section>
+
+<section class="lesson-section answers-section">
+<h2>✅ Check Your Work</h2>
+<details>
+<summary>Show answers and working</summary>
+<div class="answers-content"><ol><li>45.</li><li>(25,9).</li><li>The class with the greatest frequency.</li><li>Both distributions can be shown on the same axes, making differences in centre, shape and spread easier to see.</li></ol></div>
+</details>
+</section>
+<section class="lesson-section"><h2>Summary</h2><ul class="summary-list"><li>Plot midpoint against frequency.</li><li>Interpret the shape, not just individual points.</li></ul></section>
+
+<section class="lesson-section">
+<h2>🧠 StudyNest Statistical Thinking Routine</h2>
+<div class="problem-routine">
+<div class="routine-step"><strong>1. Read</strong>What information and context have been given?</div>
+<div class="routine-step"><strong>2. Identify</strong>What type of data, table, graph or measure is involved?</div>
+<div class="routine-step"><strong>3. Choose</strong>Which method or representation answers the question best?</div>
+<div class="routine-step"><strong>4. Work</strong>Organise the calculation or construction clearly.</div>
+<div class="routine-step"><strong>5. Interpret</strong>Explain what the answer means in the original context.</div>
+<div class="routine-step"><strong>6. Check</strong>Does the result fit the data and make reasonable sense?</div>
+</div>
+</section>
+
+<nav class="lesson-navigation">
+<a class="nav-button" href="10-histograms-and-frequency-density.html">← Histograms</a>
+<a class="nav-button" href="index.html">Statistics Roadmap</a>
+<a class="nav-button primary" href="12-cumulative-frequency-and-ogives.html">Cumulative Frequency →</a>
+</nav>
+</main>
+
+<footer class="site-footer">
+    <strong>📚 StudyNest</strong>
+    <p>Helping students understand Mathematics, not memorise it.</p>
+    <p>© 2026 StudyNest</p>
+</footer>
+
+  <script src="../script-v3.js"></script>
+
+<script src="../studynest-3.1.js" defer></script>
+</body>
+</html>

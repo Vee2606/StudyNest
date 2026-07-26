@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Classify triangles and solve interior and exterior angle problems.">
+        <title>Triangles and Angle Properties | Geometry | StudyNest</title>
+        <link rel="stylesheet" href="../styles/geometry-lessons.css">
+      <link rel="stylesheet" href="../styles/studynest-v3.css">
+
+<link rel="stylesheet" href="../studynest-3.1.css">
+<link rel="stylesheet" href="../studynest-theme.css">
+</head>
+    <body>
+
+<div class="announcement-bar">🚀 StudyNest is growing. New lessons and worksheets are added regularly.</div>
+<header class="site-header">
+    <a href="../index.html" class="logo">📚 StudyNest</a>
+    <nav class="main-navigation">
+        <a href="../index.html">🏠 Home</a>
+        <a href="../topics.html">📘 Study by Topic</a>
+        <a href="index.html">📐 Geometry</a>
+        <a href="../worksheets.html">📝 Worksheets</a>
+    </nav>
+</header>
+
+        <section class="lesson-hero">
+            <div>
+                <p class="lesson-label">GEOMETRY · LESSON 05</p>
+                <h1>Triangles and Angle Properties</h1>
+                <p class="lesson-subtitle">Classify triangles and solve interior and exterior angle problems.</p>
+                <div class="lesson-meta">
+                    <span class="meta-pill">⏱️ 20–26 min</span>
+                    <span class="meta-pill">📘 Developing</span>
+                </div>
+            </div>
+
+<div class="hero-visual" aria-hidden="true">
+    <div class="geometry-hero-visual">
+        <span class="geometry-token token-90">90°</span>
+        <span class="geometry-token token-180">180°</span>
+        <span class="geometry-token token-theta">θ</span>
+        <div class="hero-angle"></div>
+        <div class="hero-triangle"></div>
+    </div>
+</div>
+
+        </section>
+
+        <main class="lesson-main">
+
+<section class="lesson-section">
+<h2>🎯 By the End of This Lesson...</h2>
+<ul class="objective-list">
+<li>classify triangles by sides and angles;</li>
+<li>use the triangle angle sum;</li>
+<li>use properties of isosceles and equilateral triangles;</li>
+<li>find exterior angles of triangles;</li>
+<li>solve algebraic triangle problems.</li>
+</ul>
+</section>
+
+<section class="lesson-section">
+<h2>Classifying by Sides</h2>
+<div class="geometry-grid">
+<article class="geometry-card"><h3>Equilateral</h3><p>Three equal sides and three 60° angles.</p></article>
+<article class="geometry-card"><h3>Isosceles</h3><p>Two equal sides and two equal base angles.</p></article>
+<article class="geometry-card"><h3>Scalene</h3><p>All sides have different lengths.</p></article>
+</div>
+</section>
+
+<section class="lesson-section">
+<h2>Classifying by Angles</h2>
+<div class="geometry-grid">
+<article class="geometry-card"><h3>Acute triangle</h3><p>All three angles are less than 90°.</p></article>
+<article class="geometry-card"><h3>Right triangle</h3><p>One angle is exactly 90°.</p></article>
+<article class="geometry-card"><h3>Obtuse triangle</h3><p>One angle is greater than 90°.</p></article>
+</div>
+</section>
+
+<section class="lesson-section">
+<h2>Triangle Angle Sum</h2>
+<div class="geometry-rule">The interior angles of every triangle add up to 180°.</div>
+
+<figure class="diagram-card">
+<svg viewBox="0 0 650 360" role="img" aria-label="Triangle with three interior angles labelled">
+<polygon points="100,290 550,290 360,60" fill="none" stroke="currentColor" stroke-width="5"/>
+<path d="M145 290 A45 45 0 0 1 117 248" fill="none" stroke="#bd725f" stroke-width="5"/>
+<path d="M505 290 A45 45 0 0 0 532 248" fill="none" stroke="#bd725f" stroke-width="5"/>
+<path d="M323 104 A45 45 0 0 1 397 104" fill="none" stroke="#bd725f" stroke-width="5"/>
+<text x="145" y="250" fill="currentColor" font-size="22">A</text>
+<text x="489" y="250" fill="currentColor" font-size="22">B</text>
+<text x="349" y="123" fill="currentColor" font-size="22">C</text>
+</svg>
+<figcaption>A + B + C = 180°.</figcaption>
+</figure>
+</section>
+
+<section class="lesson-section">
+<h2>Exterior Angle Rule</h2>
+<div class="geometry-rule">An exterior angle of a triangle equals the sum of the two opposite interior angles.</div>
+<div class="worked-example">
+<h3>Two opposite interior angles are 48° and 67°.</h3>
+<p>Exterior angle = 48°+67°=115°.</p>
+</div>
+</section>
+
+<section class="lesson-section">
+<h2>Worked Example: Isosceles Triangle</h2>
+<div class="worked-example">
+<h3>The vertex angle is 44°. Find each base angle.</h3>
+<p>Remaining total=180°−44°=136°.</p>
+<p>Base angles are equal, so each is 136°÷2=68°.</p>
+</div>
+</section>
+
+
+<section class="lesson-section"><h2>Try It: Complete the Triangle</h2><div class="interactive-geometry"><div class="interactive-controls"><div class="interactive-control"><label for="triA">Angle A: <span id="triAVal">50°</span></label><input id="triA" type="range" min="10" max="150" value="50"></div><div class="interactive-control"><label for="triB">Angle B: <span id="triBVal">60°</span></label><input id="triB" type="range" min="10" max="150" value="60"></div></div><div class="interactive-output" id="triOutput">50° + 60° + 70° = 180°</div><table class="interactive-table"><tr><th>A</th><th>B</th><th>C</th><th>Triangle type</th></tr><tr><td id="ta">50°</td><td id="tb">60°</td><td id="tc">70°</td><td id="tt">acute</td></tr></table></div></section>
+<script>(()=>{const a=document.querySelector('#triA'),b=document.querySelector('#triB');function u(changed){let x=+a.value,y=+b.value;if(x+y>=170){if(changed===a)y=169-x,b.value=y;else x=169-y,a.value=x}const z=180-x-y,arr=[x,y,z],type=arr.includes(90)?'right':Math.max(...arr)>90?'obtuse':'acute';document.querySelector('#triAVal').textContent=x+'°';document.querySelector('#triBVal').textContent=y+'°';document.querySelector('#triOutput').textContent=`${x}° + ${y}° + ${z}° = 180°`;document.querySelector('#ta').textContent=x+'°';document.querySelector('#tb').textContent=y+'°';document.querySelector('#tc').textContent=z+'°';document.querySelector('#tt').textContent=type;}a.addEventListener('input',()=>u(a));b.addEventListener('input',()=>u(b));u();})();</script>
+
+<section class="lesson-section">
+<h2>Practice Questions</h2>
+<span class="level-heading">Foundation</span>
+<ol class="practice-list">
+<li>Find the third angle of a triangle with angles 52° and 73°.</li>
+<li>An equilateral triangle has side length 8 cm. State all its angles.</li>
+<li>An isosceles triangle has equal base angles of 71°. Find the vertex angle.</li>
+</ol>
+<span class="level-heading">Developing</span>
+<ol class="practice-list" start="4">
+<li>The angles of a triangle are x, 2x and 3x. Find all angles.</li>
+<li>An exterior angle is 128° and one opposite interior angle is 49°. Find the other opposite angle.</li>
+</ol>
+<span class="level-heading">Challenge</span>
+<ol class="practice-list" start="6">
+<li>The vertex angle of an isosceles triangle is 20° less than each base angle. Find all three angles.</li>
+</ol>
+</section>
+
+<section class="lesson-section answers-section">
+<h2>✅ Check Your Work</h2>
+<details><summary>Show practice answers</summary>
+<div class="answers-content">
+<ol>
+<li>55°.</li>
+<li>60°, 60°, 60°.</li>
+<li>38°.</li>
+<li>6x=180, x=30. Angles: 30°, 60°, 90°.</li>
+<li>79°.</li>
+<li>Let each base angle=x, vertex=x−20. Then 3x−20=180, x=200/3=66⅔°. Vertex=46⅔°.</li>
+</ol>
+</div></details>
+</section>
+
+<section class="lesson-section">
+<h2>One-Minute Summary</h2>
+<ul class="summary-list">
+<li>Triangle angles total 180°.</li>
+<li>Base angles in an isosceles triangle are equal.</li>
+<li>Each angle of an equilateral triangle is 60°.</li>
+<li>An exterior angle equals the two opposite interior angles combined.</li>
+</ul>
+</section>
+
+            <nav class="lesson-navigation">
+                <a class="nav-button" href="04-parallel-lines-and-transversals.html">← Parallel Lines and Transversals</a>
+                <a class="nav-button" href="index.html">Geometry Roadmap</a>
+                <a class="nav-button primary" href="06-quadrilaterals.html">Quadrilaterals →</a>
+            </nav>
+        </main>
+
+<footer class="site-footer">
+    <strong>📚 StudyNest</strong>
+    <p>Helping students understand Mathematics, not memorise it.</p>
+    <p>© 2026 StudyNest</p>
+</footer>
+
+      <script src="../script-v3.js"></script>
+
+<script src="../studynest-3.1.js" defer></script>
+</body>
+    </html>

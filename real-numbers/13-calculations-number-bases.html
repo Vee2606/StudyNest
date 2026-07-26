@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Learn how to add and subtract numbers in different bases, carry and borrow correctly, check answers in Base 10 and solve simple equations involving number bases." name="description"/>
+<title>Calculations in Number Bases | StudyNest</title>
+
+
+
+<link href="../styles/real-numbers-lessons.css" rel="stylesheet"/>
+<style id="studynest-real-animation-layer">
+.sn-concept-motion{margin:1.5rem auto 2rem;padding:1.25rem;border:2px solid rgba(19,48,76,.12);border-radius:22px;background:rgba(255,255,255,.88);overflow:hidden}
+.sn-concept-motion h2{margin-top:0}.sn-motion-stage{min-height:150px;display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;padding:18px;border-radius:18px;background:linear-gradient(135deg,rgba(232,246,255,.8),rgba(255,248,220,.75))}
+.sn-chip{display:inline-flex;align-items:center;justify-content:center;min-width:58px;min-height:48px;padding:10px 14px;border:2px solid #17324d;border-radius:14px;background:#fff;font-weight:800;font-size:1.1rem;box-shadow:0 5px 0 rgba(23,50,77,.12)}
+.sn-arrow{font-size:1.8rem;font-weight:900}.sn-pulse{animation:snPulse 2.4s ease-in-out infinite}.sn-slide{animation:snSlide 3s ease-in-out infinite}.sn-pop{animation:snPop 2.8s ease-in-out infinite}.sn-delay1{animation-delay:.45s}.sn-delay2{animation-delay:.9s}.sn-delay3{animation-delay:1.35s}
+.sn-line{position:relative;width:min(560px,94%);height:8px;border-radius:999px;background:#17324d;margin:42px auto 24px}.sn-line:before,.sn-line:after{content:'';position:absolute;top:-8px;width:2px;height:24px;background:#17324d}.sn-line:before{left:8%}.sn-line:after{right:8%}.sn-dot{position:absolute;top:-11px;width:30px;height:30px;border-radius:50%;background:#f5bf42;border:3px solid #17324d;animation:snTravel 4s ease-in-out infinite}
+.sn-grid{display:grid;grid-template-columns:repeat(4,54px);gap:7px}.sn-cell{width:54px;height:42px;display:grid;place-items:center;border:2px solid #17324d;border-radius:9px;background:#fff;font-weight:800}.sn-cell.active{animation:snCell 2.4s ease-in-out infinite;background:#fff4bd}
+.sn-bar{height:24px;border:2px solid #17324d;border-radius:999px;background:#fff;overflow:hidden;width:min(480px,90%)}.sn-fill{height:100%;width:0;background:#f5bf42;animation:snFill 3.5s ease-in-out infinite}
+.sn-caption{margin:.85rem 0 0;text-align:center;font-weight:700;color:#334e68}
+@keyframes snPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+@keyframes snSlide{0%,100%{transform:translateX(-18px)}50%{transform:translateX(18px)}}
+@keyframes snPop{0%,20%,100%{transform:translateY(0);opacity:.8}50%{transform:translateY(-10px);opacity:1}}
+@keyframes snTravel{0%,100%{left:7%}50%{left:86%}}
+@keyframes snCell{0%,100%{transform:scale(1);background:#fff}50%{transform:scale(1.08);background:#fff4bd}}
+@keyframes snFill{0%{width:0}55%,100%{width:75%}}
+@media (prefers-reduced-motion:reduce){.sn-concept-motion *{animation:none!important}}
+</style>  <link rel="stylesheet" href="../styles/studynest-v3.css">
+
+<link rel="stylesheet" href="../studynest-3.1.css">
+<link rel="stylesheet" href="../studynest-theme.css">
+</head>
+<body>
+
+
+<div class="announcement-bar">🚀 StudyNest is growing. New lessons and worksheets are added regularly.</div>
+<header class="site-header">
+<a class="logo" href="../index.html">📚 StudyNest</a>
+<nav class="main-navigation">
+<a href="../index.html">🏠 Home</a>
+<a href="../topics.html">📘 Study by Topic</a>
+<a href="index.html">🔢 Real Numbers</a>
+<a href="../worksheets.html">📝 Worksheets</a>
+</nav>
+</header>
+<section class="lesson-hero">
+<div>
+<p class="lesson-label">🔢 Real Numbers • Lesson 13 of 19</p>
+<h1>Calculations in Number Bases</h1>
+<p class="lesson-subtitle">Learn how to add, subtract, carry and borrow in different number bases,
+        then check your answers using Base 10.</p>
+<div class="lesson-meta">
+<span class="meta-pill">🔢 Real Numbers</span>
+<span class="meta-pill">✏️ Worked examples included</span>
+<span class="meta-pill">🧠 Step-by-step learning</span>
+</div>
+</div>
+<div aria-hidden="true" class="hero-visual">
+<div class="real-number-visual">
+<div class="number-bubble bubble-pi">π</div>
+<div class="number-bubble bubble-fraction">¾</div>
+<div class="number-bubble bubble-root">√2</div>
+<div class="number-bubble bubble-negative">−8</div>
+<div class="real-set-symbol">ℝ</div>
+<div class="number-line"></div>
+<span class="number-tick tick-one"></span>
+<span class="number-tick tick-two"></span>
+<span class="number-tick tick-three"></span>
+<span class="number-tick tick-four"></span>
+<span class="number-label label-one">−2</span>
+<span class="number-label label-two">−1</span>
+<span class="number-label label-three">0</span>
+<span class="number-label label-four">1</span>
+</div>
+</div>
+</section><main class="lesson-main"><section class="sn-concept-motion" aria-label="Animated concept demonstration"><h2>🎬 Regroup within the chosen base</h2><div class="sn-motion-stage" aria-hidden="true"><span class="sn-chip sn-slide">11₂ + 1₂</span><span class="sn-arrow">→</span><span class="sn-chip sn-pulse">100₂</span></div><p class="sn-caption">In base two, two units regroup as one group of two.</p></section><section class="lesson-section">
+<h2>🎯 By the end of this lesson...</h2>
+<p>You should be able to:</p>
+<ul>
+<li>Add numbers written in the same base.</li>
+<li>Explain when carrying is required.</li>
+<li>Carry correctly in bases other than Base 10.</li>
+<li>Subtract numbers written in the same base.</li>
+<li>Borrow correctly in bases other than Base 10.</li>
+<li>Check calculations by converting to Base 10.</li>
+<li>Solve simple equations involving number bases.</li>
+<li>Identify invalid answers in a stated base.</li>
+<li>Apply number-base operations to practical situations.</li>
+</ul>
+</section><section class="lesson-section story-card">
+<h2>🤔 Think About This...</h2>
+<div class="real-life-situation">
+<div class="situation-icon">
+            💻
+        </div>
+<div>
+<h3>How does a computer add?</h3>
+<p>
+                In ordinary Base 10:
+            </p>
+<div class="math-box">
+                1 + 1 = 2
+            </div>
+<p>
+                But Base 2 does not contain the digit 2.
+            </p>
+<p>
+                Therefore, in Base 2:
+            </p>
+<div class="math-box">
+                1₂ + 1₂ = 10₂
+            </div>
+<p>
+                The answer looks different, but it still represents a value of
+                two in Base 10.
+            </p>
+</div>
+</div>
+<div class="success-box">
+        Carrying happens when a column total reaches the value of the base.
+    </div>
+</section><section class="lesson-section">
+<h2>1️⃣ Revisiting the Meaning of the Base</h2>
+<p>
+        The base tells us how many units make one unit in the next place-value
+        column.
+    </p>
+<div class="base-carry-grid">
+<div class="base-carry-card">
+<h3>Base 2</h3>
+<div class="math-box">
+                2 units = 1 group of 2
+            </div>
+<div class="math-box">
+                1 + 1 = 10₂
+            </div>
+</div>
+<div class="base-carry-card">
+<h3>Base 5</h3>
+<div class="math-box">
+                5 units = 1 group of 5
+            </div>
+<div class="math-box">
+                3 + 2 = 10₅
+            </div>
+</div>
+<div class="base-carry-card">
+<h3>Base 8</h3>
+<div class="math-box">
+                8 units = 1 group of 8
+            </div>
+<div class="math-box">
+                5 + 3 = 10₈
+            </div>
+</div>
+</div>
+<div class="note-box">
+        In Base 10, we carry when a column reaches 10.
+        In Base 5, we carry when a column reaches 5.
+        In Base 2, we carry when a column reaches 2.
+    </div>
+</section><section class="lesson-section did-you-know-card">
+<h2>💡 Did You Know?</h2>
+<p>
+        Binary addition is used inside computers whenever they perform
+        calculations.
+    </p>
+<div class="binary-fact-grid">
+<div class="binary-fact-card">
+<div class="math-box">
+                0 + 0 = 0
+            </div>
+</div>
+<div class="binary-fact-card">
+<div class="math-box">
+                0 + 1 = 1
+            </div>
+</div>
+<div class="binary-fact-card">
+<div class="math-box">
+                1 + 0 = 1
+            </div>
+</div>
+<div class="binary-fact-card">
+<div class="math-box">
+                1 + 1 = 10₂
+            </div>
+</div>
+</div>
+<p>
+        The last result means write 0 in the current column and carry 1 into
+        the next column.
+    </p>
+</section><section class="lesson-section">
+<h2>2️⃣ Adding Without Carrying</h2>
+<p>
+        If each column total is smaller than the base, addition works just like
+        ordinary column addition.
+    </p>
+<div class="worked-example">
+<h3>Example 1: Calculate 102₃ + 120₃</h3>
+<p>
+            Base 3 allows only the digits 0, 1 and 2.
+        </p>
+<div class="base-column-calculation">
+<div>1 0 2</div>
+<div>+ 1 2 0</div>
+<div class="base-calculation-line"></div>
+<div>2 2 2</div>
+</div>
+<p>
+            Work from right to left:
+        </p>
+<ul>
+<li>2 + 0 = 2</li>
+<li>0 + 2 = 2</li>
+<li>1 + 1 = 2</li>
+</ul>
+<div class="success-box">
+            102₃ + 120₃ = <strong>222₃</strong>
+</div>
+</div>
+</section><section class="lesson-section">
+<h2>3️⃣ Adding with Carrying</h2>
+<p>
+        Carry whenever a column total is equal to or greater than the base.
+    </p>
+<div class="worked-example">
+<h3>Example 2: Calculate 24₅ + 13₅</h3>
+<p>
+            Begin with the units column.
+        </p>
+<div class="math-box">
+            4 + 3 = 7
+        </div>
+<p>
+            But Base 5 cannot contain the digit 7.
+        </p>
+<p>
+            Rewrite 7 as:
+        </p>
+<div class="math-box">
+            7 = 1 group of 5 + 2
+        </div>
+<p>
+            Write 2 and carry 1.
+        </p>
+<div class="base-column-calculation carrying-calculation">
+<div class="carry-row"> 1</div>
+<div> 2 4</div>
+<div>+ 1 3</div>
+<div class="base-calculation-line"></div>
+<div> 4 2</div>
+</div>
+<p>
+            In the next column:
+        </p>
+<div class="math-box">
+            2 + 1 + carried 1 = 4
+        </div>
+<div class="success-box">
+            24₅ + 13₅ = <strong>42₅</strong>
+</div>
+</div>
+</section><section class="lesson-section">
+<h2>🧠 StudyNest Method: Adding in Another Base</h2>
+<div class="tip-box">
+<strong>Step 1:</strong>
+        Check that both numbers are written in the same base.
+
+        <br/><br/>
+<strong>Step 2:</strong>
+        Write the numbers vertically, lining up place values.
+
+        <br/><br/>
+<strong>Step 3:</strong>
+        Add from right to left.
+
+        <br/><br/>
+<strong>Step 4:</strong>
+        If a column total is smaller than the base, write it directly.
+
+        <br/><br/>
+<strong>Step 5:</strong>
+        If the total reaches or exceeds the base, divide it into groups of the
+        base.
+
+        <br/><br/>
+<strong>Step 6:</strong>
+        Write the remainder and carry the number of complete groups.
+
+        <br/><br/>
+<strong>Step 7:</strong>
+        Check that every digit in the answer is smaller than the base.
+
+    </div>
+</section><section class="lesson-section">
+<h2>4️⃣ Binary Addition</h2>
+<div class="worked-example">
+<h3>Example 3: Calculate 1011₂ + 110₂</h3>
+<p>
+            Align the place values.
+        </p>
+<div class="base-column-calculation binary-column">
+<div> 1 0 1 1</div>
+<div>+ 0 1 1 0</div>
+<div class="base-calculation-line"></div>
+<div>1 0 0 0 1</div>
+</div>
+<p>
+            Work carefully from the right:
+        </p>
+<ol>
+<li>
+                1 + 0 = 1
+            </li>
+<li>
+                1 + 1 = 10₂.
+                Write 0 and carry 1.
+            </li>
+<li>
+                0 + 1 + 1 carried = 10₂.
+                Write 0 and carry 1.
+            </li>
+<li>
+                1 + 0 + 1 carried = 10₂.
+                Write 0 and carry 1.
+            </li>
+<li>
+                Write the final carried 1.
+            </li>
+</ol>
+<div class="success-box">
+            1011₂ + 110₂ = <strong>10001₂</strong>
+</div>
+</div>
+<div class="check-box">
+<h3>Check in Base 10</h3>
+<div class="math-box">
+            1011₂ = 11₁₀
+        </div>
+<div class="math-box">
+            110₂ = 6₁₀
+        </div>
+<div class="math-box">
+            11 + 6 = 17
+        </div>
+<div class="math-box">
+            10001₂ = 17₁₀
+        </div>
+<div class="success-box">
+            The answer is correct.
+        </div>
+</div>
+</section><section class="lesson-section">
+<h2>5️⃣ Addition in Base 8</h2>
+<div class="worked-example">
+<h3>Example 4: Calculate 357₈ + 246₈</h3>
+<p>
+            Add the units:
+        </p>
+<div class="math-box">
+            7 + 6 = 13₁₀
+        </div>
+<p>
+            In Base 8:
+        </p>
+<div class="math-box">
+            13 = 1 group of 8 + 5
+        </div>
+<p>
+            Write 5 and carry 1.
+        </p>
+<div class="math-box">
+            5 + 4 + 1 = 10₁₀
+        </div>
+<p>
+            In Base 8:
+        </p>
+<div class="math-box">
+            10 = 1 group of 8 + 2
+        </div>
+<p>
+            Write 2 and carry 1.
+        </p>
+<div class="math-box">
+            3 + 2 + 1 = 6
+        </div>
+<div class="base-column-calculation">
+<div> 3 5 7</div>
+<div>+ 2 4 6</div>
+<div class="base-calculation-line"></div>
+<div> 6 2 5</div>
+</div>
+<div class="success-box">
+            357₈ + 246₈ = <strong>625₈</strong>
+</div>
+</div>
+</section><section class="lesson-section">
+<h2>6️⃣ Subtracting Without Borrowing</h2>
+<p>
+        If the top digit in every column is large enough, subtract normally.
+    </p>
+<div class="worked-example">
+<h3>Example 5: Calculate 432₅ − 121₅</h3>
+<div class="base-column-calculation">
+<div> 4 3 2</div>
+<div>− 1 2 1</div>
+<div class="base-calculation-line"></div>
+<div> 3 1 1</div>
+</div>
+<ul>
+<li>2 − 1 = 1</li>
+<li>3 − 2 = 1</li>
+<li>4 − 1 = 3</li>
+</ul>
+<div class="success-box">
+            432₅ − 121₅ = <strong>311₅</strong>
+</div>
+</div>
+</section><section class="lesson-section">
+<h2>7️⃣ Borrowing in Another Base</h2>
+<p>
+        When borrowing, one unit from the next column is worth the value of the
+        base in the current column.
+    </p>
+<div class="borrowing-comparison-grid">
+<div class="borrowing-card">
+<h3>Base 10</h3>
+<p>
+                Borrowing 1 ten gives:
+            </p>
+<div class="math-box">
+                10 units
+            </div>
+</div>
+<div class="borrowing-card">
+<h3>Base 5</h3>
+<p>
+                Borrowing 1 five gives:
+            </p>
+<div class="math-box">
+                5 units
+            </div>
+</div>
+<div class="borrowing-card">
+<h3>Base 2</h3>
+<p>
+                Borrowing 1 two gives:
+            </p>
+<div class="math-box">
+                2 units
+            </div>
+</div>
+</div>
+</section><section class="lesson-section">
+<h2>8️⃣ Subtracting with Borrowing</h2>
+<div class="worked-example">
+<h3>Example 6: Calculate 42₅ − 14₅</h3>
+<p>
+            In the units column, 2 − 4 cannot be done without borrowing.
+        </p>
+<p>
+            Borrow 1 from the fives column.
+        </p>
+<div class="math-box">
+            Borrowed 1 in Base 5 = 5 units
+        </div>
+<div class="math-box">
+            2 + 5 = 7
+        </div>
+<div class="math-box">
+            7 − 4 = 3
+        </div>
+<p>
+            The 4 in the fives column becomes 3.
+        </p>
+<div class="math-box">
+            3 − 1 = 2
+        </div>
+<div class="base-column-calculation borrowing-calculation">
+<div class="borrow-row"> 3 7</div>
+<div> 4 2</div>
+<div>− 1 4</div>
+<div class="base-calculation-line"></div>
+<div> 2 3</div>
+</div>
+<div class="success-box">
+            42₅ − 14₅ = <strong>23₅</strong>
+</div>
+</div>
+</section><section class="lesson-section">
+<h2>🧠 StudyNest Method: Subtracting in Another Base</h2>
+<div class="tip-box">
+<strong>Step 1:</strong>
+        Confirm that both numbers use the same base.
+
+        <br/><br/>
+<strong>Step 2:</strong>
+        Line up matching place values.
+
+        <br/><br/>
+<strong>Step 3:</strong>
+        Subtract from right to left.
+
+        <br/><br/>
+<strong>Step 4:</strong>
+        If the top digit is large enough, subtract normally.
+
+        <br/><br/>
+<strong>Step 5:</strong>
+        If the top digit is too small, borrow 1 from the next column.
+
+        <br/><br/>
+<strong>Step 6:</strong>
+        Add the value of the base to the current top digit.
+
+        <br/><br/>
+<strong>Step 7:</strong>
+        Reduce the digit from which you borrowed by 1.
+
+        <br/><br/>
+<strong>Step 8:</strong>
+        Check that every final digit is valid in the base.
+
+    </div>
+</section><section class="lesson-section">
+<h2>9️⃣ Binary Subtraction</h2>
+<div class="worked-example">
+<h3>Example 7: Calculate 1010₂ − 11₂</h3>
+<p>
+            Align the place values:
+        </p>
+<div class="math-box">
+            1010₂ − 0011₂
+        </div>
+<p>
+            In the units column, 0 − 1 requires borrowing.
+        </p>
+<p>
+            In Base 2, borrowing 1 gives 2 units.
+        </p>
+<div class="math-box">
+            10₂ − 1₂ = 1₂
+        </div>
+<p>
+            Continue through the remaining columns.
+        </p>
+<div class="base-column-calculation">
+<div> 1 0 1 0</div>
+<div>− 0 0 1 1</div>
+<div class="base-calculation-line"></div>
+<div> 0 1 1 1</div>
+</div>
+<div class="success-box">
+            1010₂ − 11₂ = <strong>111₂</strong>
+</div>
+</div>
+<div class="check-box">
+<h3>Check in Base 10</h3>
+<div class="math-box">
+            1010₂ = 10₁₀
+        </div>
+<div class="math-box">
+            11₂ = 3₁₀
+        </div>
+<div class="math-box">
+            10 − 3 = 7
+        </div>
+<div class="math-box">
+            111₂ = 7₁₀
+        </div>
+<div class="success-box">
+            The answer is correct.
+        </div>
+</div>
+</section><section class="lesson-section">
+<h2>🔟 Checking Calculations Using Base 10</h2>
+<p>
+        A useful way to verify a difficult number-base calculation is to
+        convert all values to Base 10.
+    </p>
+<div class="worked-example">
+<h3>Example 8: Check 24₅ + 13₅ = 42₅</h3>
+<div class="math-box">
+            24₅ = 2 × 5 + 4 = 14₁₀
+        </div>
+<div class="math-box">
+            13₅ = 1 × 5 + 3 = 8₁₀
+        </div>
+<div class="math-box">
+            14 + 8 = 22
+        </div>
+<div class="math-box">
+            42₅ = 4 × 5 + 2 = 22₁₀
+        </div>
+<div class="success-box">
+            Both sides equal 22₁₀, so the answer is correct.
+        </div>
+</div>
+</section><section class="lesson-section">
+<h2>1️⃣1️⃣ Adding Numbers Written in Different Bases</h2>
+<p>
+        Numbers must be converted to the same base before they can be added
+        directly.
+    </p>
+<div class="worked-example">
+<h3>Example 9: Calculate 101₂ + 12₃</h3>
+<p>
+            Convert both numbers to Base 10.
+        </p>
+<div class="math-box">
+            101₂ = 5₁₀
+        </div>
+<div class="math-box">
+            12₃ = 1 × 3 + 2 = 5₁₀
+        </div>
+<div class="math-box">
+            5 + 5 = 10
+        </div>
+<div class="success-box">
+            101₂ + 12₃ = <strong>10₁₀</strong>
+</div>
+</div>
+<div class="warning-box">
+        Do not place numbers written in different bases directly into the same
+        column calculation.
+    </div>
+</section><section class="lesson-section">
+<h2>1️⃣2️⃣ Simple Equations Involving Number Bases</h2>
+<p>
+        A letter may be used to represent an unknown base.
+    </p>
+<div class="worked-example">
+<h3>Example 10: Find b if 23<sub>b</sub> = 17₁₀</h3>
+<p>
+            Expand the place values.
+        </p>
+<div class="math-box">
+            23<sub>b</sub> = 2b + 3
+        </div>
+<p>
+            Therefore:
+        </p>
+<div class="math-box">
+            2b + 3 = 17
+        </div>
+<div class="math-box">
+            2b = 14
+        </div>
+<div class="math-box">
+            b = 7
+        </div>
+<div class="success-box">
+            The missing base is <strong>7</strong>.
+        </div>
+<div class="note-box">
+            The base must be greater than every digit used.
+            Since the number contains digit 3, Base 7 is valid.
+        </div>
+</div>
+</section><section class="lesson-section">
+<h2>1️⃣3️⃣ Equations with a Missing Digit</h2>
+<div class="worked-example">
+<h3>Example 11: Find x if 2x₅ = 13₁₀</h3>
+<p>
+            Expand the Base 5 number.
+        </p>
+<div class="math-box">
+            2x₅ = 2 × 5 + x
+        </div>
+<div class="math-box">
+            10 + x = 13
+        </div>
+<div class="math-box">
+            x = 3
+        </div>
+<div class="success-box">
+            The missing digit is <strong>3</strong>.
+        </div>
+<div class="note-box">
+            Since the number is in Base 5, x must be one of:
+            0, 1, 2, 3 or 4.
+        </div>
+</div>
+</section><section class="lesson-section">
+<h2>🧠 StudyNest Method: Solving a Base Equation</h2>
+<div class="tip-box">
+<strong>Step 1:</strong>
+        Identify whether the unknown represents a base or a digit.
+
+        <br/><br/>
+<strong>Step 2:</strong>
+        Expand the number using place value.
+
+        <br/><br/>
+<strong>Step 3:</strong>
+        Form an ordinary algebraic equation.
+
+        <br/><br/>
+<strong>Step 4:</strong>
+        Solve the equation.
+
+        <br/><br/>
+<strong>Step 5:</strong>
+        Check that the answer is valid.
+
+        <br/><br/>
+
+        A base must be greater than every digit in the number.
+
+        <br/><br/>
+
+        A missing digit must be smaller than the base.
+
+    </div>
+</section><section class="lesson-section">
+<h2>🌍 Real-Life Example: Binary Counters</h2>
+<div class="worked-example">
+<h3>Example 12</h3>
+<p>
+            A digital counter displays:
+        </p>
+<div class="math-box">
+            101₂
+        </div>
+<p>
+            It then increases by:
+        </p>
+<div class="math-box">
+            11₂
+        </div>
+<p>
+            Add the binary values:
+        </p>
+<div class="base-column-calculation">
+<div> 1 0 1</div>
+<div>+ 0 1 1</div>
+<div class="base-calculation-line"></div>
+<div>1 0 0 0</div>
+</div>
+<div class="success-box">
+            The new display is <strong>1000₂</strong>.
+        </div>
+<p>
+            In Base 10:
+        </p>
+<div class="math-box">
+            5 + 3 = 8
+        </div>
+</div>
+</section><section class="lesson-section">
+<h2>🎯 Exam Tips</h2>
+<div class="tip-box">
+        Always check that the numbers being added or subtracted use the same
+        base.
+    </div>
+<div class="tip-box">
+        Carry when the column total reaches the base—not when it reaches 10,
+        unless the calculation is in Base 10.
+    </div>
+<div class="tip-box">
+        When borrowing, add the value of the base to the current column.
+    </div>
+<div class="tip-box">
+        Every digit in the final answer must be smaller than the base.
+    </div>
+<div class="tip-box">
+        For difficult questions, convert the calculation to Base 10 to check
+        your answer.
+    </div>
+<div class="tip-box">
+        When solving for an unknown base, make sure the final base is greater
+        than every digit in the number.
+    </div>
+</section><section class="lesson-section">
+<h2>⚠ Common Mistakes</h2>
+<div class="warning-box">
+<strong>Mistake 1:</strong><br/><br/>
+        Carrying in groups of 10 regardless of the stated base.
+    </div>
+<div class="warning-box">
+<strong>Mistake 2:</strong><br/><br/>
+        Writing a digit in the answer that is equal to or greater than the
+        base.
+    </div>
+<div class="warning-box">
+<strong>Mistake 3:</strong><br/><br/>
+        Forgetting to include the carried digit in the next column.
+    </div>
+<div class="warning-box">
+<strong>Mistake 4:</strong><br/><br/>
+        Borrowing 10 units instead of borrowing the value of the base.
+    </div>
+<div class="warning-box">
+<strong>Mistake 5:</strong><br/><br/>
+        Adding numbers written in different bases without first converting
+        them to a common base.
+    </div>
+<div class="warning-box">
+<strong>Mistake 6:</strong><br/><br/>
+        Solving an equation correctly but accepting an invalid base or digit.
+    </div>
+</section><section class="lesson-section practice-card">
+<h2>🎮 Your Turn!</h2>
+<h3>🟢 Foundation Questions</h3>
+<ol>
+<li>
+            Calculate:
+            <br/><br/>
+            12₃ + 10₃
+        </li>
+<li>
+            Calculate:
+            <br/><br/>
+            21₄ + 12₄
+        </li>
+<li>
+            Calculate:
+            <br/><br/>
+            23₅ + 11₅
+        </li>
+<li>
+            Calculate:
+            <br/><br/>
+            101₂ + 10₂
+        </li>
+<li>
+            Calculate:
+            <br/><br/>
+            43₅ − 21₅
+        </li>
+<li>
+            Calculate:
+            <br/><br/>
+            322₄ − 101₄
+        </li>
+</ol>
+<h3>🔵 Developing Questions</h3>
+<ol start="7">
+<li>
+            Calculate:
+            <br/><br/>
+            24₅ + 32₅
+        </li>
+<li>
+            Calculate:
+            <br/><br/>
+            346₇ + 125₇
+        </li>
+<li>
+            Calculate:
+            <br/><br/>
+            111₂ + 101₂
+        </li>
+<li>
+            Calculate:
+            <br/><br/>
+            1011₂ + 111₂
+        </li>
+<li>
+            Calculate:
+            <br/><br/>
+            42₅ − 13₅
+        </li>
+<li>
+            Calculate:
+            <br/><br/>
+            201₃ − 22₃
+        </li>
+<li>
+            Calculate:
+            <br/><br/>
+            1100₂ − 101₂
+        </li>
+<li>
+            Check your answer to Question 8 by converting both sides to
+            Base 10.
+        </li>
+</ol>
+<h3>🔴 Challenge Questions</h3>
+<ol start="15">
+<li>
+            Calculate:
+            <br/><br/>
+            657₈ + 276₈
+        </li>
+<li>
+            Calculate:
+            <br/><br/>
+            10000₂ − 111₂
+        </li>
+<li>
+            Calculate and give your answer in Base 10:
+            <br/><br/>
+            101₂ + 12₃
+        </li>
+<li>
+            Find b:
+            <br/><br/>
+            24<sub>b</sub> = 18₁₀
+        </li>
+<li>
+            Find b:
+            <br/><br/>
+            31<sub>b</sub> = 16₁₀
+        </li>
+<li>
+            Find x:
+            <br/><br/>
+            3x₅ = 18₁₀
+        </li>
+<li>
+            Find x:
+            <br/><br/>
+            1x2₄ = 26₁₀
+        </li>
+<li>
+            A binary counter displays 1101₂ and increases by 101₂.
+            What is the new binary display?
+        </li>
+</ol>
+<details>
+<summary>✅ Show Answers</summary>
+<ol>
+<li>
+                12₃ + 10₃ = <strong>22₃</strong>
+</li>
+<li>
+                21₄ + 12₄ = <strong>33₄</strong>
+</li>
+<li>
+                23₅ + 11₅ = <strong>34₅</strong>
+</li>
+<li>
+                101₂ + 10₂ = <strong>111₂</strong>
+</li>
+<li>
+                43₅ − 21₅ = <strong>22₅</strong>
+</li>
+<li>
+                322₄ − 101₄ = <strong>221₄</strong>
+</li>
+<li>
+                24₅ + 32₅
+                <br/><br/>
+                Units: 4 + 2 = 6 = 11₅
+                <br/><br/>
+                Write 1 and carry 1.
+                <br/><br/>
+                Fives: 2 + 3 + 1 = 6 = 11₅
+                <br/><br/>
+                Answer = <strong>111₅</strong>
+</li>
+<li>
+                346₇ + 125₇
+                <br/><br/>
+                = <strong>504₇</strong>
+</li>
+<li>
+                111₂ + 101₂ = <strong>1100₂</strong>
+</li>
+<li>
+                1011₂ + 111₂ = <strong>10010₂</strong>
+</li>
+<li>
+                42₅ − 13₅ = <strong>24₅</strong>
+</li>
+<li>
+                201₃ − 22₃ = <strong>102₃</strong>
+</li>
+<li>
+                1100₂ − 101₂ = <strong>111₂</strong>
+</li>
+<li>
+                346₇ = 3 × 49 + 4 × 7 + 6
+                <br/><br/>
+                = 181₁₀
+                <br/><br/>
+                125₇ = 1 × 49 + 2 × 7 + 5
+                <br/><br/>
+                = 68₁₀
+                <br/><br/>
+                181 + 68 = 249
+                <br/><br/>
+                504₇ = 5 × 49 + 4
+                <br/><br/>
+                = 249₁₀
+            </li>
+<li>
+                657₈ + 276₈ = <strong>1155₈</strong>
+</li>
+<li>
+                10000₂ − 111₂ = <strong>1001₂</strong>
+</li>
+<li>
+                101₂ = 5₁₀
+                <br/><br/>
+                12₃ = 5₁₀
+                <br/><br/>
+                Total = <strong>10₁₀</strong>
+</li>
+<li>
+                24<sub>b</sub> = 2b + 4
+                <br/><br/>
+                2b + 4 = 18
+                <br/><br/>
+                2b = 14
+                <br/><br/>
+                b = <strong>7</strong>
+</li>
+<li>
+                31<sub>b</sub> = 3b + 1
+                <br/><br/>
+                3b + 1 = 16
+                <br/><br/>
+                3b = 15
+                <br/><br/>
+                b = <strong>5</strong>
+</li>
+<li>
+                3x₅ = 3 × 5 + x
+                <br/><br/>
+                15 + x = 18
+                <br/><br/>
+                x = <strong>3</strong>
+</li>
+<li>
+                1x2₄ = 1 × 16 + x × 4 + 2
+                <br/><br/>
+                18 + 4x = 26
+                <br/><br/>
+                4x = 8
+                <br/><br/>
+                x = <strong>2</strong>
+</li>
+<li>
+                1101₂ + 101₂
+                <br/><br/>
+                = <strong>10010₂</strong>
+</li>
+</ol>
+</details>
+</section><section class="lesson-section">
+<h2>🧠 Remember This</h2>
+<div class="success-box">
+        Add and subtract only after confirming that the bases are the same.
+        <br/><br/>
+        Carry when a column total reaches the value of the base.
+        <br/><br/>
+        When borrowing, one borrowed unit is worth the value of the base.
+        <br/><br/>
+        Every digit in the answer must be smaller than the base.
+        <br/><br/>
+        Convert to Base 10 when checking difficult calculations.
+        <br/><br/>
+        Base equations can be rewritten as ordinary algebraic equations.
+        <br/><br/>
+        Always check that a missing base or digit is valid.
+    </div>
+</section><section class="lesson-section">
+<h2>🎯 Before Moving On...</h2>
+<ul class="check-list">
+<li>✅ Can I add numbers written in the same base?</li>
+<li>✅ Do I know when to carry?</li>
+<li>✅ Can I carry correctly in Base 2, Base 5 and Base 8?</li>
+<li>✅ Can I subtract numbers written in the same base?</li>
+<li>✅ Can I borrow the correct value?</li>
+<li>✅ Can I check a calculation using Base 10?</li>
+<li>✅ Can I solve for an unknown base?</li>
+<li>✅ Can I solve for a missing digit?</li>
+<li>✅ Can I check whether my answer is valid?</li>
+</ul>
+</section><section class="lesson-section success-card">
+<h2>🎉 Well Done!</h2>
+<p>
+        You can now perform calculations in different number bases.
+    </p>
+<div class="success-box">
+        Remember:
+        <br/><br/>
+<strong>
+            Check the base → Line up place values → Carry or borrow using the
+            base → Check every digit → Verify if needed
+        </strong>
+</div>
+</section><section class="lesson-section">
+<h2>📈 Your Progress</h2>
+<p>
+        Lesson <strong>13 of 19</strong>
+</p>
+<div class="progress-wrap">
+<div class="progress-label">
+<span>Real Numbers Progress</span>
+<strong>68%</strong>
+</div>
+<div class="progress-bar">
+<div class="progress-fill" style="width:68%;"></div>
+</div>
+</div>
+</section><nav class="lesson-navigation">
+<a class="nav-button" href="12-number-bases.html">← 12 Number Bases</a>
+<a class="nav-button" href="index.html">Real Numbers Roadmap</a>
+<a class="nav-button primary" href="14-ratio-rate-proportion.html">14 Ratio Rate Proportion →</a>
+</nav></main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="site-footer">
+<strong>📚 StudyNest</strong>
+<p>Helping students understand Mathematics, not memorise it.</p>
+<p>© 2026 StudyNest</p>
+</footer>  <script src="../script-v3.js"></script>
+
+<script src="../studynest-3.1.js" defer></script>
+</body>
+</html>

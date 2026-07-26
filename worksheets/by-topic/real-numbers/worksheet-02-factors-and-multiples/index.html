@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="StudyNest interactive worksheet on factors and multiples.">
+  <title>Worksheet 02 · Factors & Multiples | StudyNest</title>
+  <style>
+:root{
+  --ink:#16333d;--muted:#627781;--deep:#174f69;--accent:#23859a;--accent-2:#45afaf;
+  --gold:#f4bd4f;--paper:#f4f8f8;--white:#fff;--line:#cfe0e3;--soft:#e8f7f7;
+  --good:#157347;--good-bg:#e9f8f0;--bad:#ad2e24;--bad-bg:#fff0ed;--hint:#fff7dc;
+  --shadow:0 18px 50px rgba(23,79,105,.13);--radius:24px;
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-rounded,"Segoe UI",Arial,sans-serif;color:var(--ink);background:radial-gradient(circle at top left,#dff5f2 0,transparent 32%),linear-gradient(180deg,#f8fbfb,var(--paper));min-height:100vh}
+button,input,textarea{font:inherit}.top-strip{padding:9px 16px;text-align:center;background:var(--deep);color:#fff;font-size:.78rem;font-weight:850;letter-spacing:.08em;text-transform:uppercase}.app-shell{width:min(960px,calc(100% - 28px));margin:28px auto 70px}.screen{display:none}.screen.active{display:block;animation:fadeIn .3s ease}@keyframes fadeIn{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:none}}
+.hero-card,.results-hero{position:relative;overflow:hidden;padding:clamp(28px,5vw,52px);border-radius:30px;background:linear-gradient(135deg,var(--deep),var(--accent) 58%,var(--accent-2));color:#fff;box-shadow:var(--shadow)}.hero-card:after,.results-hero:after{content:"";position:absolute;width:280px;height:280px;border-radius:50%;right:-95px;top:-120px;background:rgba(255,255,255,.11)}.hero-card>*{position:relative;z-index:1}.eyebrow{margin:0 0 10px;font-size:.76rem;font-weight:900;letter-spacing:.13em;color:#d7fbfb}.hero-card h1,.results-hero h1{margin:0;font-size:clamp(2.45rem,7vw,4.6rem);line-height:.98;letter-spacing:-.04em}.hero-copy{max-width:680px;margin:18px 0 0;font-size:1.06rem;line-height:1.7;color:#efffff}.level-badge{display:inline-flex;margin-top:24px;padding:10px 15px;border-radius:999px;background:#fff;color:var(--deep);font-weight:900;box-shadow:0 9px 22px rgba(0,0,0,.13)}
+.welcome-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin:16px 0 8px;padding:3px 0 14px;border-bottom:1px solid var(--line)}.info-card,.coverage-card,.question-card,.result-card,.mistakes-card{background:rgba(255,255,255,.95);border:1px solid var(--line);box-shadow:0 10px 28px rgba(30,77,89,.07)}.info-card{display:flex;gap:10px;align-items:center;padding:10px 16px;border:0;border-right:1px solid var(--line);border-radius:0;background:transparent;box-shadow:none}.info-card:last-child{border-right:0}.info-icon{display:grid;place-items:center;flex:0 0 38px;height:38px;border-radius:12px;background:var(--soft);color:var(--deep);font-size:.88rem;font-weight:950}.info-card strong{display:block;font-size:.9rem}.info-card p{display:none}.coverage-card{padding:16px 0 0;border:0;border-radius:0;background:transparent;box-shadow:none}.coverage-card h2{margin:0 0 12px;font-size:1.18rem}.topic-chips{display:flex;flex-wrap:wrap;gap:8px}.topic-chips span{padding:8px 11px;border-radius:999px;background:var(--soft);color:var(--deep);font-size:.84rem;font-weight:800}.convention-note{margin-top:14px;padding:12px 14px;border-radius:12px;background:#fff8e4;border-left:4px solid var(--gold);line-height:1.5}.start-button{display:flex!important;margin:20px auto 0;min-width:220px;justify-content:center;gap:10px}
+.primary-button,.secondary-button,.text-button{border:0;cursor:pointer;font-weight:880;transition:.18s ease}.primary-button,.secondary-button{padding:12px 17px;border-radius:13px}.primary-button{background:var(--accent);color:#fff;box-shadow:0 8px 18px rgba(35,133,154,.2)}.primary-button:hover,.secondary-button:hover{transform:translateY(-1px)}.primary-button:disabled{opacity:.5;cursor:not-allowed;transform:none}.secondary-button{background:#fff;color:var(--deep);border:1px solid var(--line)}.text-button{padding:8px;background:transparent;color:var(--deep)}
+.quiz-header{display:flex;justify-content:space-between;align-items:flex-end;gap:16px}.quiz-header .eyebrow{color:var(--accent)}.quiz-header h2{margin:0;font-size:clamp(1.55rem,4vw,2.15rem)}.score-pill{padding:9px 13px;border-radius:999px;background:#fff;border:1px solid var(--line);font-weight:850}.progress-track{height:12px;margin:16px 0 20px;border-radius:999px;background:#dce9eb;overflow:hidden}.progress-fill{height:100%;width:0;border-radius:inherit;background:linear-gradient(90deg,var(--accent),var(--gold));transition:width .35s ease}
+.question-card{min-height:465px;padding:clamp(22px,4vw,38px);border-radius:var(--radius);display:flex;flex-direction:column}.question-topline{display:flex;justify-content:space-between;align-items:center;gap:12px}.question-number{display:grid;place-items:center;width:43px;height:43px;border-radius:14px;background:var(--soft);color:var(--deep);font-weight:950}.skill-tag{padding:7px 10px;border-radius:999px;background:#f6f0df;color:#72510e;font-size:.78rem;font-weight:850}.question-card h3{margin:24px 0 7px;font-size:clamp(1.3rem,3vw,1.75rem);line-height:1.35}.question-instruction{margin:0 0 22px;color:var(--muted);line-height:1.55}.option-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.option{position:relative;display:flex;align-items:center;gap:11px;padding:15px;border:2px solid var(--line);border-radius:15px;background:#fff;cursor:pointer;font-weight:720;transition:.17s}.option:hover{border-color:var(--accent);transform:translateY(-1px)}.option.selected{border-color:var(--accent);background:var(--soft)}.option input{width:18px;height:18px;accent-color:var(--accent)}.multi-note{margin:0 0 12px;color:var(--muted);font-size:.86rem}.text-answer{width:100%;min-height:112px;padding:15px;border:2px solid var(--line);border-radius:15px;resize:vertical;color:var(--ink);background:#fff}.text-answer.short{min-height:0;height:51px}.text-answer:focus,.select-answer:focus{outline:4px solid rgba(35,133,154,.12);border-color:var(--accent)}.classification-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;align-items:center}.classification-grid .item{padding:12px 13px;border-radius:12px;background:#f7fafb;font-weight:830}.select-answer{width:100%;padding:12px;border:2px solid var(--line);border-radius:12px;background:#fff;color:var(--ink)}
+.feedback-box,.support-box{display:none;margin-top:16px;padding:14px 16px;border-radius:14px;line-height:1.55}.feedback-box.show,.support-box.show{display:block}.feedback-box.good{background:var(--good-bg);color:var(--good);border:1px solid #9ad3b6}.feedback-box.bad{background:var(--bad-bg);color:var(--bad);border:1px solid #efb2ac}.hint-box{background:var(--hint);border:1px solid #efd47f}.solution-box{background:#eaf4fb;border:1px solid #afd1e5}.question-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:auto;padding-top:22px}.question-actions .primary-button{margin-left:auto}.navigation-row{display:flex;justify-content:space-between;align-items:center;margin-top:12px;color:var(--muted);font-size:.9rem}
+.results-hero{text-align:center}.results-hero .eyebrow{color:#d7fbfb}.result-ring{position:relative;z-index:1;display:grid;place-items:center;width:148px;height:148px;margin:0 auto 20px;border-radius:50%;background:conic-gradient(var(--gold) 0deg,#ffffff33 0deg);box-shadow:inset 0 0 0 13px rgba(255,255,255,.16)}.result-ring:after{content:"";position:absolute;width:108px;height:108px;border-radius:50%;background:var(--deep)}.result-ring span{position:relative;z-index:1;font-size:2rem;font-weight:950}.results-hero h1{font-size:clamp(2rem,5vw,3.4rem)}.results-hero p{position:relative;z-index:1;max-width:620px;margin:13px auto;color:#eaffff;line-height:1.6}.result-score{position:relative;z-index:1;display:inline-block;margin-top:6px;font-size:1.3rem}.results-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin:18px 0}.result-card,.mistakes-card{padding:24px;border-radius:20px}.result-card h2,.mistakes-card h2{margin:0 0 15px}.result-list{display:grid;gap:9px}.result-item{padding:10px 12px;border-radius:12px;background:var(--good-bg);font-weight:780}.review-card .result-item{background:var(--bad-bg)}.mistakes-card ul{margin:0;padding-left:22px;line-height:1.75}.results-actions{display:flex;justify-content:center;flex-wrap:wrap;gap:11px;margin-top:20px}
+
+.review-panel{background:rgba(255,255,255,.96);border:1px solid var(--line);box-shadow:var(--shadow);border-radius:var(--radius);padding:clamp(22px,4vw,36px)}
+.review-panel h1{margin:0 0 8px;font-size:clamp(2rem,5vw,3rem)}.review-copy{margin:0 0 22px;color:var(--muted);line-height:1.6}.review-summary{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:20px}.review-summary span{padding:9px 13px;border-radius:999px;font-weight:850;background:var(--soft);color:var(--deep)}
+.review-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}.review-question{border:2px solid var(--line);border-radius:14px;background:#fff;padding:13px 8px;cursor:pointer;text-align:center;font-weight:900;color:var(--deep)}.review-question:hover{border-color:var(--accent);transform:translateY(-1px)}.review-question.answered{background:var(--good-bg);border-color:#9ad3b6;color:var(--good)}.review-question.unanswered{background:#f7fafb;color:var(--muted)}.review-actions{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-top:24px}
+.modal-backdrop{position:fixed;inset:0;z-index:1000;display:none;place-items:center;padding:18px;background:rgba(10,35,45,.62);backdrop-filter:blur(4px)}.modal-backdrop.show{display:grid}.modal-card{width:min(500px,100%);background:#fff;border-radius:22px;padding:28px;box-shadow:0 24px 70px rgba(0,0,0,.28)}.modal-card h2{margin:0 0 10px}.modal-card p{margin:0;color:var(--muted);line-height:1.6}.modal-warning{margin-top:14px!important;padding:12px 14px;border-radius:13px;background:var(--hint);color:#72510e!important}.modal-actions{display:flex;justify-content:flex-end;flex-wrap:wrap;gap:10px;margin-top:22px}
+@media(max-width:720px){.review-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.app-shell{width:min(100% - 20px,960px);margin-top:15px}.welcome-grid,.results-grid{grid-template-columns:1fr}.welcome-grid{padding-bottom:8px}.info-card{border-right:0;border-bottom:1px solid var(--line);padding:10px 4px}.info-card:last-child{border-bottom:0}.hero-card,.results-hero{border-radius:23px;padding:28px 22px}.option-grid,.classification-grid{grid-template-columns:1fr}.question-card{min-height:520px;padding:22px 17px}.question-actions>*{flex:1 1 130px}.question-actions .primary-button{margin-left:0;flex-basis:100%}.navigation-row{font-size:.8rem}.quiz-header{align-items:center}.score-pill{font-size:.8rem}}
+@media print{body{background:#fff}.top-strip,.welcome-screen,.quiz-header,.progress-track,.question-actions,.navigation-row,.results-screen{display:none!important}.app-shell{width:100%;margin:0}.quiz-screen{display:block!important}.question-card{display:block;min-height:0;box-shadow:none;border:1px solid #999;break-inside:avoid;margin:0 0 18px}.option{border:0;padding:5px}.feedback-box,.support-box{display:none!important}}
+
+</style>
+</head>
+<body>
+  <div class="top-strip">StudyNest Interactive Practice</div>
+
+  <main class="app-shell" id="worksheetApp">
+    <section class="welcome-screen screen active" id="welcomeScreen">
+      <div class="hero-card">
+        <div>
+          <p class="eyebrow">REAL NUMBERS · WORKSHEET 01</p>
+          <h1>Factors & Multiples</h1>
+          <p class="hero-copy">Build complete confidence with natural, whole, integer, rational, irrational, prime, composite, even, odd, square and cube numbers.</p>
+        </div>
+        <span class="level-badge">Foundation → Mastery</span>
+      </div>
+
+      <div class="welcome-grid">
+        <article class="info-card">
+          <span class="info-icon">20</span>
+          <div><strong>Mastery questions</strong><p>Questions increase gradually in difficulty.</p></div>
+        </article>
+        <article class="info-card">
+          <span class="info-icon">⏱</span>
+          <div><strong>20–25 minutes</strong><p>Work carefully rather than rushing.</p></div>
+        </article>
+        <article class="info-card">
+          <span class="info-icon">✓</span>
+          <div><strong>Instant marking</strong><p>Use hints and explanations when needed.</p></div>
+        </article>
+      </div>
+
+      <section class="coverage-card">
+        <h2>You will practise</h2>
+        <div class="topic-chips"><span>Factors</span><span>Multiples</span><span>Prime numbers</span><span>Composite numbers</span><span>Factor pairs</span><span>Common factors</span><span>Common multiples</span><span>Prime factorisation</span></div>
+        <div class="convention-note"><strong>StudyNest convention:</strong> natural numbers begin at 1. Whole numbers include 0.</div>
+      </section>
+
+      <button class="primary-button start-button" id="startButton">Start worksheet <span>→</span></button>
+    </section>
+
+    <section class="quiz-screen screen" id="quizScreen" aria-live="polite">
+      <header class="quiz-header">
+        <div>
+          <p class="eyebrow" id="sectionLabel">GETTING STARTED</p>
+          <h2 id="questionCounter">Question 1 of 20</h2>
+        </div>
+        <div class="score-pill"><span id="liveScore">0 correct</span></div>
+      </header>
+
+      <div class="progress-track" aria-label="Worksheet progress">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+
+      <article class="question-card" id="questionCard">
+        <div class="question-topline">
+          <span class="question-number" id="questionNumber">1</span>
+          <span class="skill-tag" id="skillTag">Number families</span>
+        </div>
+        <h3 id="questionText"></h3>
+        <p class="question-instruction" id="questionInstruction"></p>
+        <div id="answerArea"></div>
+
+        <div class="feedback-box" id="feedbackBox"></div>
+        <div class="support-box hint-box" id="hintBox"></div>
+        <div class="support-box solution-box" id="solutionBox"></div>
+
+        <div class="question-actions">
+          <button class="secondary-button" id="hintButton">Hint 1</button>
+          <button class="secondary-button" id="solutionButton">Show solution</button>
+          <button class="primary-button" id="checkButton">Check answer</button>
+        </div>
+      </article>
+
+      <div class="navigation-row">
+        <button class="text-button" id="previousButton">← Previous</button>
+        <span id="answeredCount">0 of 20 answered</span>
+        <button class="text-button" id="nextButton">Next →</button>
+      </div>
+    </section>
+
+    <section class="review-screen screen" id="reviewScreen">
+      <div class="review-panel">
+        <p class="eyebrow" style="color:var(--accent)">FINAL CHECK</p>
+        <h1>Review your answers</h1>
+        <p class="review-copy">Green questions have an answer. Grey questions are unanswered. Select any question to return and make changes before submitting.</p>
+        <div class="review-summary">
+          <span id="reviewAnswered">0 answered</span>
+          <span id="reviewUnanswered">20 unanswered</span>
+        </div>
+        <div class="review-grid" id="reviewGrid"></div>
+        <div class="review-actions">
+          <button class="secondary-button" id="returnToWorksheetButton">← Continue working</button>
+          <button class="primary-button" id="submitWorksheetButton">Submit worksheet</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="results-screen screen" id="resultsScreen">
+      <div class="results-hero">
+        <p class="eyebrow">WORKSHEET COMPLETE</p>
+        <div class="result-ring" id="resultRing"><span id="resultPercent">0%</span></div>
+        <h1 id="resultHeading">Your results</h1>
+        <p id="resultMessage"></p>
+        <strong class="result-score" id="resultScore">0 / 20</strong>
+      </div>
+
+      <div class="results-grid">
+        <article class="result-card">
+          <h2>Strong areas</h2>
+          <div id="strengthsList" class="result-list"></div>
+        </article>
+        <article class="result-card review-card">
+          <h2>Review next</h2>
+          <div id="reviewList" class="result-list"></div>
+        </article>
+      </div>
+
+      <section class="mistakes-card">
+        <h2>Common mistakes to remember</h2>
+        <ul>
+          <li>A factor divides a number exactly; a multiple is produced by multiplying.</li>
+          <li>1 is neither prime nor composite.</li>
+          <li>Prime factorisation must contain prime factors only.</li>
+          <li>Common factors divide both numbers; common multiples are divisible by both numbers.</li>
+          <li>When counting factors from prime powers, add 1 to each exponent and multiply.</li>
+        </ul>
+      </section>
+
+      <div class="results-actions">
+        <button class="secondary-button" id="retryIncorrectButton">Retry incorrect questions</button>
+        <button class="primary-button" id="retryAllButton">Retry full worksheet</button>
+        <button class="secondary-button" id="printButton">Print questions</button>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal-backdrop" id="finishModal" role="dialog" aria-modal="true" aria-labelledby="finishModalTitle">
+    <div class="modal-card">
+      <h2 id="finishModalTitle">Review and finish?</h2>
+      <p id="finishModalMessage"></p>
+      <p class="modal-warning" id="finishModalWarning"></p>
+      <div class="modal-actions">
+        <button class="secondary-button" id="cancelFinishButton">Continue working</button>
+        <button class="primary-button" id="openReviewButton">Review answers</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+(() => {
+  const questions = [{"section":"Confidence","skill":"Factors","type":"multi","question":"Select all the factors of 24.","instruction":"Choose every number that divides 24 exactly.","options":["1","2","3","4","5","6","8","12","24"],"answer":["1","2","3","4","6","8","12","24"],"hints":["A factor divides a number with no remainder.","Pair the factors: 1×24, 2×12, 3×8 and 4×6."],"solution":"The factors of 24 are 1, 2, 3, 4, 6, 8, 12 and 24."},{"section":"Confidence","skill":"Multiples","type":"single","question":"Which number is a multiple of 7?","instruction":"Choose one answer.","options":["32","35","40","45"],"answer":["35"],"hints":["Multiples of 7 are found by 7×1, 7×2, 7×3, …","7×5 = 35."],"solution":"35 is a multiple of 7 because 35 = 7 × 5."},{"section":"Confidence","skill":"Prime numbers","type":"single","question":"Which number is prime?","instruction":"A prime number has exactly two positive factors.","options":["27","31","39","49"],"answer":["31"],"hints":["Test divisibility by 2, 3, 5 and 7.","31 has only the factors 1 and 31."],"solution":"31 is prime. 27 = 3³, 39 = 3×13 and 49 = 7²."},{"section":"Confidence","skill":"Composite numbers","type":"single","question":"Which number is composite?","instruction":"Choose one answer.","options":["2","5","17","21"],"answer":["21"],"hints":["A composite number has more than two positive factors.","21 = 3 × 7."],"solution":"21 is composite because its factors include 1, 3, 7 and 21."},{"section":"Confidence","skill":"Multiples","type":"text-short","question":"Write the first five positive multiples of 6.","instruction":"Separate your answers with commas.","answer":["6 12 18 24 30","6,12,18,24,30"],"hints":["Start with 6×1 and continue.","6×1, 6×2, 6×3, 6×4, 6×5."],"solution":"The first five positive multiples are 6, 12, 18, 24 and 30."},{"section":"Understanding","skill":"Factor pairs","type":"matching","question":"Match each number to one of its factor pairs.","instruction":"Choose the correct factor pair for each row.","rows":[["18",["2 and 8","2 and 9","3 and 5","4 and 6"]],["28",["2 and 12","4 and 7","5 and 6","3 and 9"]],["45",["5 and 9","4 and 11","3 and 14","6 and 8"]],["56",["6 and 9","7 and 8","4 and 12","5 and 11"]]],"answer":["2 and 9","4 and 7","5 and 9","7 and 8"],"hints":["Multiply the two numbers in each pair.","The product must equal the number in the left column."],"solution":"18 = 2×9, 28 = 4×7, 45 = 5×9 and 56 = 7×8."},{"section":"Understanding","skill":"Common factors","type":"multi","question":"Select all the common factors of 18 and 30.","instruction":"Choose every factor shared by both numbers.","options":["1","2","3","5","6","9","10","15"],"answer":["1","2","3","6"],"hints":["List the factors of each number, then compare.","Factors of 18: 1,2,3,6,9,18. Factors of 30: 1,2,3,5,6,10,15,30."],"solution":"The common factors are 1, 2, 3 and 6."},{"section":"Understanding","skill":"Common multiples","type":"multi","question":"Which numbers are common multiples of 4 and 6?","instruction":"Select all that apply.","options":["12","18","24","30","36","42"],"answer":["12","24","36"],"hints":["A common multiple must be divisible by both 4 and 6.","Common multiples begin 12, 24, 36, …"],"solution":"12, 24 and 36 are divisible by both 4 and 6."},{"section":"Understanding","skill":"Prime factorisation","type":"single","question":"Which is the prime factorisation of 72?","instruction":"Choose the expression containing only prime factors.","options":["8 × 9","2³ × 3²","2² × 18","6 × 12"],"answer":["2³ × 3²"],"hints":["Break 72 into prime factors only.","72 = 8×9 = 2³×3²."],"solution":"72 = 2³ × 3²."},{"section":"Understanding","skill":"Prime factorisation","type":"text-short","question":"Write 90 as a product of prime factors using index notation.","instruction":"Use ^ for powers if needed, for example 2×3^2.","answer":["2×3^2×5","2 x 3^2 x 5","2*3^2*5","2 3^2 5"],"hints":["90 = 9 × 10.","9 = 3² and 10 = 2×5."],"solution":"90 = 2 × 3² × 5."},{"section":"Application","skill":"Factor trees","type":"text-short","question":"A factor tree begins 84 = 7 × __. What number completes it?","instruction":"Enter one number.","answer":["12"],"hints":["Divide 84 by 7.","84 ÷ 7 = 12."],"solution":"84 = 7 × 12, so the missing number is 12."},{"section":"Application","skill":"Divisibility","type":"text","question":"Explain why 51 is composite.","instruction":"Give a short mathematical reason.","answer":["contains:51,3,17|contains:divisible,3|contains:factors,1,3,17,51"],"hints":["Use a divisibility test.","5 + 1 = 6, which is divisible by 3."],"solution":"51 is composite because 51 = 3 × 17, so it has more than two positive factors."},{"section":"Application","skill":"Factors","type":"multi","question":"A teacher has 48 learners and wants equal-sized groups with no one left over. Which group sizes are possible?","instruction":"Select all that apply.","options":["2","3","4","5","6","8","10","12"],"answer":["2","3","4","6","8","12"],"hints":["A possible group size must be a factor of 48.","Check which numbers divide 48 exactly."],"solution":"Possible group sizes are 2, 3, 4, 6, 8 and 12."},{"section":"Application","skill":"Prime factorisation","type":"single","question":"Which factor tree conclusion is correct for 180?","instruction":"Choose the complete prime factorisation.","options":["2² × 3² × 5","2 × 3² × 10","4 × 5 × 9","2³ × 3 × 5"],"answer":["2² × 3² × 5"],"hints":["180 = 18 × 10.","18 = 2×3² and 10 = 2×5."],"solution":"180 = 2² × 3² × 5."},{"section":"Application","skill":"Common multiples","type":"text-short","question":"Write the smallest positive number that is a multiple of both 8 and 12.","instruction":"Enter one number.","answer":["24"],"hints":["List multiples of 8 and 12 until one matches.","8: 8,16,24… and 12: 12,24…"],"solution":"24 is the first common multiple of 8 and 12."},{"section":"Mastery","skill":"Reasoning","type":"single","question":"A positive number has exactly three positive factors. Which statement must be true?","instruction":"Choose one answer.","options":["It is an odd number.","It is the square of a prime number.","It is a multiple of 6.","It is itself prime."],"answer":["It is the square of a prime number."],"hints":["Try 4, 9 and 25. Count their factors.","If p is prime, p² has factors 1, p and p²."],"solution":"A number with exactly three positive factors must be the square of a prime number."},{"section":"Mastery","skill":"Common multiples","type":"text-short","question":"One bell rings every 8 minutes and another every 12 minutes. They ring together now. After how many minutes will they next ring together?","instruction":"Enter the number of minutes.","answer":["24"],"hints":["Find the first common multiple of 8 and 12.","Multiples of 8: 8,16,24; multiples of 12: 12,24."],"solution":"They next ring together after 24 minutes."},{"section":"Mastery","skill":"Reasoning","type":"text","question":"Give two different numbers greater than 6 whose greatest common factor is 6.","instruction":"Write the two numbers and briefly justify your choice.","answer":["contains:12,18|contains:12,30|contains:18,24|contains:18,30|contains:24,30"],"hints":["Both numbers must be multiples of 6.","Choose multiples whose remaining factors do not introduce a larger common factor, for example 12 and 18."],"solution":"One valid answer is 12 and 18. Their common factors are 1, 2, 3 and 6, so their greatest common factor is 6."},{"section":"Mastery","skill":"Number of factors","type":"text-short","question":"The prime factorisation of 360 is 2³ × 3² × 5. How many positive factors does 360 have?","instruction":"Enter one number.","answer":["24"],"hints":["Add 1 to each exponent, then multiply.","(3+1)(2+1)(1+1)."],"solution":"The number of factors is (3+1)(2+1)(1+1) = 4×3×2 = 24."},{"section":"Mastery","skill":"Common factors","type":"text","question":"A school packs 84 oranges and 126 apples into the greatest possible number of identical boxes. How many boxes are made, and what goes in each box?","instruction":"Give the number of boxes, oranges per box and apples per box.","answer":["contains:42,2,3"],"hints":["Find the greatest common factor of 84 and 126.","84 = 2²×3×7 and 126 = 2×3²×7, so the greatest common factor is 2×3×7."],"solution":"The greatest number of boxes is 42. Each box contains 84÷42 = 2 oranges and 126÷42 = 3 apples."}];
+
+  const state = { index: 0, answers: Array(questions.length).fill(null), marked: Array(questions.length).fill(false), correct: Array(questions.length).fill(false), hints: Array(questions.length).fill(0), retrySet: null };
+  const $ = id => document.getElementById(id);
+  const screens = {welcome:$('welcomeScreen'),quiz:$('quizScreen'),review:$('reviewScreen'),results:$('resultsScreen')};
+
+  function showScreen(name){Object.values(screens).forEach(s=>s.classList.remove('active'));screens[name].classList.add('active');window.scrollTo({top:0,behavior:'smooth'});}
+  function escapeHtml(value){return String(value).replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));}
+  function currentQuestion(){return questions[state.index];}
+  function answerKey(arr){return [...arr].map(String).sort().join('|');}
+
+  function render(){
+    const q=currentQuestion(), n=state.index;
+    $('sectionLabel').textContent=q.section.toUpperCase();$('questionCounter').textContent=`Question ${n+1} of ${questions.length}`;
+    $('questionNumber').textContent=n+1;$('skillTag').textContent=q.skill;$('questionText').textContent=q.question;$('questionInstruction').textContent=q.instruction||'';
+    $('progressFill').style.width=`${((n+1)/questions.length)*100}%`;
+    $('answeredCount').textContent=`${state.marked.filter(Boolean).length} of ${questions.length} answered`;
+    $('liveScore').textContent=`${state.correct.filter(Boolean).length} correct`;
+    $('previousButton').disabled=n===0;$('nextButton').textContent=n===questions.length-1?'Review & Finish →':'Next →';
+    $('feedbackBox').className='feedback-box';$('feedbackBox').textContent='';$('hintBox').className='support-box hint-box';$('solutionBox').className='support-box solution-box';
+    $('hintButton').textContent=state.hints[n]===0?'Hint 1':state.hints[n]===1?'Hint 2':'Hide hints';
+    renderAnswerArea(q,n);
+    if(state.marked[n]) showMarkedFeedback(n,false);
+  }
+
+  function renderAnswerArea(q,n){
+    const area=$('answerArea'), saved=state.answers[n];
+    if(q.type==='single'||q.type==='multi'){
+      area.innerHTML=(q.type==='multi'?'<p class="multi-note">Select all that apply.</p>':'')+'<div class="option-grid">'+q.options.map((o,i)=>{
+        const checked=q.type==='single'?saved===o:Array.isArray(saved)&&saved.includes(o);
+        return `<label class="option ${checked?'selected':''}"><input type="${q.type==='single'?'radio':'checkbox'}" name="answer" value="${escapeHtml(o)}" ${checked?'checked':''}><span>${escapeHtml(o)}</span></label>`;
+      }).join('')+'</div>';
+      area.querySelectorAll('input').forEach(input=>input.addEventListener('change',()=>{
+        if(q.type==='single') state.answers[n]=input.value;
+        else state.answers[n]=[...area.querySelectorAll('input:checked')].map(x=>x.value);
+        area.querySelectorAll('.option').forEach(label=>label.classList.toggle('selected',label.querySelector('input').checked));
+      }));
+    } else if(q.type==='matching'){
+      area.innerHTML='<div class="classification-grid">'+q.rows.map((row,i)=>`<div class="item">${escapeHtml(row[0])}</div><select class="select-answer" data-row="${i}"><option value="">Choose a category</option>${row[1].map(o=>`<option ${saved&&saved[i]===o?'selected':''}>${escapeHtml(o)}</option>`).join('')}</select>`).join('')+'</div>';
+      area.querySelectorAll('select').forEach(select=>select.addEventListener('change',()=>state.answers[n]=[...area.querySelectorAll('select')].map(x=>x.value)));
+    } else {
+      const cls=q.type==='text-short'?'text-answer short':'text-answer';
+      area.innerHTML=q.type==='text-short'?`<input class="${cls}" value="${escapeHtml(saved||'')}" placeholder="Type your answer">`:`<textarea class="${cls}" placeholder="Write your explanation here">${escapeHtml(saved||'')}</textarea>`;
+      area.querySelector('.text-answer').addEventListener('input',e=>state.answers[n]=e.target.value);
+    }
+  }
+
+  function hasAnswer(q,a){if(q.type==='multi'||q.type==='matching')return Array.isArray(a)&&a.length>0&&a.every(Boolean);return String(a??'').trim()!=='';}
+  function normalize(s){return String(s).toLowerCase().replace(/[.,;:()]/g,' ').replace(/\s+/g,' ').trim();}
+  function evaluate(q,a){
+    if(q.type==='single')return a===q.answer[0];
+    if(q.type==='multi'||q.type==='matching')return answerKey(a)===answerKey(q.answer);
+    const value=normalize(a);
+    return q.answer.some(rule=>{
+      if(!rule.startsWith('contains:'))return value===normalize(rule);
+      const groups=rule.slice(9).split('|');
+      return groups.some(group=>group.split(',').every(term=>value.includes(normalize(term))));
+    });
+  }
+
+  function checkCurrent(){
+    const q=currentQuestion(), n=state.index, a=state.answers[n];
+    if(!hasAnswer(q,a)){
+      const box=$('feedbackBox');box.className='feedback-box show bad';box.textContent='Please answer every part before checking.';return;
+    }
+    state.marked[n]=true;state.correct[n]=evaluate(q,a);showMarkedFeedback(n,true);updateCounts();
+  }
+  function showMarkedFeedback(n,animate){
+    const box=$('feedbackBox'),ok=state.correct[n];box.className=`feedback-box show ${ok?'good':'bad'}`;
+    box.textContent=ok?'Correct — excellent work!':'Not quite. Read the feedback, use a hint, then change your answer and check again.';
+    if(animate)box.scrollIntoView({behavior:'smooth',block:'nearest'});
+  }
+  function updateCounts(){$('answeredCount').textContent=`${state.marked.filter(Boolean).length} of ${questions.length} answered`;$('liveScore').textContent=`${state.correct.filter(Boolean).length} correct`;}
+
+  function showHint(){
+    const n=state.index,q=currentQuestion(),box=$('hintBox');
+    if(state.hints[n]>=2){state.hints[n]=0;box.className='support-box hint-box';$('hintButton').textContent='Hint 1';return;}
+    state.hints[n]++;box.className='support-box hint-box show';box.innerHTML=`<strong>Hint ${state.hints[n]}</strong><br>${escapeHtml(q.hints[state.hints[n]-1])}`;$('hintButton').textContent=state.hints[n]===1?'Hint 2':'Hide hints';
+  }
+  function showSolution(){const box=$('solutionBox');box.classList.toggle('show');box.innerHTML=`<strong>Worked solution</strong><br>${escapeHtml(currentQuestion().solution)}`;}
+  function go(delta){
+    if(delta===1&&state.index===questions.length-1){finish();return;}
+    state.index=Math.max(0,Math.min(questions.length-1,state.index+delta));render();
+  }
+  function answeredIndexes(){return questions.map((q,i)=>hasAnswer(q,state.answers[i])?i:null).filter(i=>i!==null);}
+  function finish(){
+    const answered=answeredIndexes().length, remaining=questions.length-answered;
+    $('finishModalMessage').textContent=`You have answered ${answered} of ${questions.length} questions.`;
+    $('finishModalWarning').textContent=remaining?`${remaining} question${remaining===1?' is':'s are'} still unanswered. You can review them before submitting.`:'All questions have answers. Review them once more before submitting.';
+    $('finishModal').classList.add('show');
+  }
+  function closeFinishModal(){$('finishModal').classList.remove('show');}
+  function buildReview(){
+    const answered=answeredIndexes().length, remaining=questions.length-answered;
+    $('reviewAnswered').textContent=`${answered} answered`;$('reviewUnanswered').textContent=`${remaining} unanswered`;
+    $('reviewGrid').innerHTML=questions.map((q,i)=>{
+      const done=hasAnswer(q,state.answers[i]);
+      return `<button class="review-question ${done?'answered':'unanswered'}" data-index="${i}" aria-label="Question ${i+1}: ${done?'answered':'unanswered'}">${i+1}<br><small>${done?'Answered':'Unanswered'}</small></button>`;
+    }).join('');
+    $('reviewGrid').querySelectorAll('button').forEach(btn=>btn.addEventListener('click',()=>{state.index=Number(btn.dataset.index);showScreen('quiz');render();}));
+  }
+  function openReview(){closeFinishModal();buildReview();showScreen('review');}
+  function submitWorksheet(){
+    questions.forEach((q,i)=>{state.marked[i]=hasAnswer(q,state.answers[i]);state.correct[i]=state.marked[i]&&evaluate(q,state.answers[i]);});
+    const score=state.correct.filter(Boolean).length,pct=Math.round(score/questions.length*100);
+    $('resultScore').textContent=`${score} / ${questions.length}`;$('resultPercent').textContent=`${pct}%`;$('resultRing').style.background=`conic-gradient(var(--gold) ${pct*3.6}deg,#ffffff33 0deg)`;
+    const heading=pct>=90?'🏆 Mastered':pct>=75?'🌟 Proficient':pct>=60?'👍 Developing':'📘 Needs More Practice';
+    const msg=pct>=90?'You have mastered factors and multiples and are ready for HCF and LCM.':pct>=75?'You have a strong understanding. Review the weaker skills below before moving on.':pct>=60?'You are developing well. Revisit the targeted areas, then retry.':'Use the hints and worked solutions to rebuild the foundations before retrying.';
+    $('resultHeading').textContent=heading;$('resultMessage').textContent=msg;
+    buildSkillFeedback();showScreen('results');
+  }
+  function buildSkillFeedback(){
+    const stats={};questions.forEach((q,i)=>{stats[q.skill]??={right:0,total:0};stats[q.skill].total++;if(state.correct[i])stats[q.skill].right++;});
+    const strengths=Object.entries(stats).filter(([,v])=>v.right/v.total>=.75).map(([k])=>k);
+    const reviews=Object.entries(stats).filter(([,v])=>v.right/v.total<.75).map(([k,v])=>`${k} (${v.right}/${v.total})`);
+    $('strengthsList').innerHTML=(strengths.length?strengths:['Keep practising to build a strong area']).map(x=>`<div class="result-item">✓ ${escapeHtml(x)}</div>`).join('');
+    $('reviewList').innerHTML=(reviews.length?reviews:['No weak areas identified']).map(x=>`<div class="result-item">${reviews.length?'↻':'✓'} ${escapeHtml(x)}</div>`).join('');
+  }
+  function retryIncorrect(){
+    const incorrect=state.correct.map((ok,i)=>ok?null:i).filter(i=>i!==null);
+    if(!incorrect.length){retryAll();return;}
+    incorrect.forEach(i=>{state.answers[i]=null;state.marked[i]=false;state.correct[i]=false;state.hints[i]=0;});state.index=incorrect[0];showScreen('quiz');render();
+  }
+  function retryAll(){state.index=0;state.answers.fill(null);state.marked.fill(false);state.correct.fill(false);state.hints.fill(0);showScreen('quiz');render();}
+
+  $('startButton').addEventListener('click',()=>{showScreen('quiz');render();});$('checkButton').addEventListener('click',checkCurrent);$('hintButton').addEventListener('click',showHint);$('solutionButton').addEventListener('click',showSolution);$('previousButton').addEventListener('click',()=>go(-1));$('nextButton').addEventListener('click',()=>go(1));$('cancelFinishButton').addEventListener('click',closeFinishModal);$('openReviewButton').addEventListener('click',openReview);$('returnToWorksheetButton').addEventListener('click',()=>{showScreen('quiz');render();});$('submitWorksheetButton').addEventListener('click',submitWorksheet);$('finishModal').addEventListener('click',e=>{if(e.target===$('finishModal'))closeFinishModal();});$('retryIncorrectButton').addEventListener('click',retryIncorrect);$('retryAllButton').addEventListener('click',retryAll);$('printButton').addEventListener('click',()=>window.print());
+})();
+
+</script>
+</body>
+</html>

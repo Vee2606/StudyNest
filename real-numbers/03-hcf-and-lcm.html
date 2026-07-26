@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Learn how to find the Highest Common Factor and Lowest Common Multiple using listing, prime factorisation and real-life problem-solving methods." name="description"/>
+<title>HCF and LCM Explained | StudyNest</title>
+
+
+
+<link href="../styles/real-numbers-lessons.css" rel="stylesheet"/>
+<style id="studynest-real-animation-layer">
+.sn-concept-motion{margin:1.5rem auto 2rem;padding:1.25rem;border:2px solid rgba(19,48,76,.12);border-radius:22px;background:rgba(255,255,255,.88);overflow:hidden}
+.sn-concept-motion h2{margin-top:0}.sn-motion-stage{min-height:150px;display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;padding:18px;border-radius:18px;background:linear-gradient(135deg,rgba(232,246,255,.8),rgba(255,248,220,.75))}
+.sn-chip{display:inline-flex;align-items:center;justify-content:center;min-width:58px;min-height:48px;padding:10px 14px;border:2px solid #17324d;border-radius:14px;background:#fff;font-weight:800;font-size:1.1rem;box-shadow:0 5px 0 rgba(23,50,77,.12)}
+.sn-arrow{font-size:1.8rem;font-weight:900}.sn-pulse{animation:snPulse 2.4s ease-in-out infinite}.sn-slide{animation:snSlide 3s ease-in-out infinite}.sn-pop{animation:snPop 2.8s ease-in-out infinite}.sn-delay1{animation-delay:.45s}.sn-delay2{animation-delay:.9s}.sn-delay3{animation-delay:1.35s}
+.sn-line{position:relative;width:min(560px,94%);height:8px;border-radius:999px;background:#17324d;margin:42px auto 24px}.sn-line:before,.sn-line:after{content:'';position:absolute;top:-8px;width:2px;height:24px;background:#17324d}.sn-line:before{left:8%}.sn-line:after{right:8%}.sn-dot{position:absolute;top:-11px;width:30px;height:30px;border-radius:50%;background:#f5bf42;border:3px solid #17324d;animation:snTravel 4s ease-in-out infinite}
+.sn-grid{display:grid;grid-template-columns:repeat(4,54px);gap:7px}.sn-cell{width:54px;height:42px;display:grid;place-items:center;border:2px solid #17324d;border-radius:9px;background:#fff;font-weight:800}.sn-cell.active{animation:snCell 2.4s ease-in-out infinite;background:#fff4bd}
+.sn-bar{height:24px;border:2px solid #17324d;border-radius:999px;background:#fff;overflow:hidden;width:min(480px,90%)}.sn-fill{height:100%;width:0;background:#f5bf42;animation:snFill 3.5s ease-in-out infinite}
+.sn-caption{margin:.85rem 0 0;text-align:center;font-weight:700;color:#334e68}
+@keyframes snPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+@keyframes snSlide{0%,100%{transform:translateX(-18px)}50%{transform:translateX(18px)}}
+@keyframes snPop{0%,20%,100%{transform:translateY(0);opacity:.8}50%{transform:translateY(-10px);opacity:1}}
+@keyframes snTravel{0%,100%{left:7%}50%{left:86%}}
+@keyframes snCell{0%,100%{transform:scale(1);background:#fff}50%{transform:scale(1.08);background:#fff4bd}}
+@keyframes snFill{0%{width:0}55%,100%{width:75%}}
+@media (prefers-reduced-motion:reduce){.sn-concept-motion *{animation:none!important}}
+</style>  <link rel="stylesheet" href="../styles/studynest-v3.css">
+
+<link rel="stylesheet" href="../studynest-3.1.css">
+<link rel="stylesheet" href="../studynest-theme.css">
+</head>
+<body>
+
+
+<div class="announcement-bar">🚀 StudyNest is growing. New lessons and worksheets are added regularly.</div>
+<header class="site-header">
+<a class="logo" href="../index.html">📚 StudyNest</a>
+<nav class="main-navigation">
+<a href="../index.html">🏠 Home</a>
+<a href="../topics.html">📘 Study by Topic</a>
+<a href="index.html">🔢 Real Numbers</a>
+<a href="../worksheets.html">📝 Worksheets</a>
+</nav>
+</header>
+<section class="lesson-hero">
+<div>
+<p class="lesson-label">🔢 Real Numbers • Lesson 3 of 17</p>
+<h1>Highest Common Factor and Lowest Common Multiple</h1>
+<p class="lesson-subtitle">Learn how to find the largest factor shared by numbers, the smallest
+        multiple they share, and how to decide which method a real-life problem
+        requires.</p>
+<div class="lesson-meta">
+<span class="meta-pill">🔢 Real Numbers</span>
+<span class="meta-pill">✏️ Worked examples included</span>
+<span class="meta-pill">🧠 Step-by-step learning</span>
+</div>
+</div>
+<div aria-hidden="true" class="hero-visual">
+<div class="real-number-visual">
+<div class="number-bubble bubble-pi">π</div>
+<div class="number-bubble bubble-fraction">¾</div>
+<div class="number-bubble bubble-root">√2</div>
+<div class="number-bubble bubble-negative">−8</div>
+<div class="real-set-symbol">ℝ</div>
+<div class="number-line"></div>
+<span class="number-tick tick-one"></span>
+<span class="number-tick tick-two"></span>
+<span class="number-tick tick-three"></span>
+<span class="number-tick tick-four"></span>
+<span class="number-label label-one">−2</span>
+<span class="number-label label-two">−1</span>
+<span class="number-label label-three">0</span>
+<span class="number-label label-four">1</span>
+</div>
+</div>
+</section><main class="lesson-main"><section class="sn-concept-motion" aria-label="Animated concept demonstration"><h2>🎬 See common multiples meet</h2><div class="sn-motion-stage" aria-hidden="true"><span class="sn-chip sn-slide">6, 12, 18, 24</span><span class="sn-arrow">∩</span><span class="sn-chip sn-slide sn-delay1">8, 16, 24, 32</span><span class="sn-chip sn-pulse">LCM = 24</span></div><p class="sn-caption">The first shared multiple is the lowest common multiple.</p></section><section class="lesson-section">
+<h2>🎯 By the end of this lesson...</h2>
+<p>You should be able to:</p>
+<ul>
+<li>Explain what a common factor is.</li>
+<li>Find the Highest Common Factor of two or more numbers.</li>
+<li>Explain what a common multiple is.</li>
+<li>Find the Lowest Common Multiple of two or more numbers.</li>
+<li>Use listing to find HCF and LCM.</li>
+<li>Use prime factorisation to find HCF and LCM.</li>
+<li>Choose between HCF and LCM in word problems.</li>
+<li>Check whether your answer makes sense.</li>
+</ul>
+</section><section class="lesson-section story-card">
+<h2>🤔 Think About This...</h2>
+<div class="real-life-situation">
+<div class="situation-icon">
+            🎀
+        </div>
+<div>
+<h3>Cutting ribbon</h3>
+<p>
+                A decorator has one ribbon measuring <strong>24 cm</strong>
+                and another measuring <strong>36 cm</strong>.
+            </p>
+<p>
+                She wants to cut both ribbons into equal pieces that are as
+                long as possible, without wasting any ribbon.
+            </p>
+<p>
+                What should the length of each piece be?
+            </p>
+</div>
+</div>
+<p>
+        This problem asks for the <strong>largest length</strong> that divides
+        both measurements exactly.
+    </p>
+<div class="success-box">
+        We need the <strong>Highest Common Factor</strong>.
+    </div>
+<div class="real-life-situation">
+<div class="situation-icon">
+            🚌
+        </div>
+<div>
+<h3>Bus departures</h3>
+<p>
+                One bus leaves a terminus every <strong>12 minutes</strong>.
+                Another leaves every <strong>18 minutes</strong>.
+            </p>
+<p>
+                They leave together at 8:00 a.m.
+                After how many minutes will they next leave together?
+            </p>
+</div>
+</div>
+<p>
+        This problem asks when two repeating events will
+        <strong>happen together again</strong>.
+    </p>
+<div class="success-box">
+        We need the <strong>Lowest Common Multiple</strong>.
+    </div>
+</section><section class="lesson-section">
+<h2>1️⃣ Common Factors</h2>
+<p>
+        A <strong>common factor</strong> is a number that divides two or more
+        numbers exactly.
+    </p>
+<div class="worked-example">
+<h3>Example 1: Find the common factors of 12 and 18</h3>
+<p>
+            List the factors of each number.
+        </p>
+<div class="hcf-lcm-list-grid">
+<div class="number-list-card">
+<h3>Factors of 12</h3>
+<p>
+                    1, 2, 3, 4, 6, 12
+                </p>
+</div>
+<div class="number-list-card">
+<h3>Factors of 18</h3>
+<p>
+                    1, 2, 3, 6, 9, 18
+                </p>
+</div>
+</div>
+<p>
+            Look for numbers that appear in both lists.
+        </p>
+<div class="math-box">
+            Common factors: 1, 2, 3 and 6
+        </div>
+</div>
+</section><section class="lesson-section">
+<h2>2️⃣ Highest Common Factor</h2>
+<p>
+        The <strong>Highest Common Factor</strong>, written as
+        <strong>HCF</strong>, is the largest factor shared by two or more
+        numbers.
+    </p>
+<div class="math-box">
+        Common factors of 12 and 18:
+        <br/><br/>
+        1, 2, 3, 6
+    </div>
+<p>
+        The highest number in the list is 6.
+    </p>
+<div class="success-box">
+        HCF of 12 and 18 = <strong>6</strong>
+</div>
+<div class="note-box">
+        Some books use the term <strong>Greatest Common Factor</strong>,
+        abbreviated as GCF. It means the same thing as HCF.
+    </div>
+</section><section class="lesson-section">
+<h2>🧠 Method 1: Finding HCF by Listing Factors</h2>
+<div class="tip-box">
+<strong>Follow these steps:</strong>
+<br/><br/>
+<strong>Step 1:</strong>
+        List all the factors of each number.
+
+        <br/><br/>
+<strong>Step 2:</strong>
+        Identify the factors that appear in every list.
+
+        <br/><br/>
+<strong>Step 3:</strong>
+        Choose the largest common factor.
+
+    </div>
+<div class="worked-example">
+<h3>Example 2: Find the HCF of 24 and 36</h3>
+<div class="hcf-lcm-list-grid">
+<div class="number-list-card">
+<h3>Factors of 24</h3>
+<p>
+                    1, 2, 3, 4, 6, 8, 12, 24
+                </p>
+</div>
+<div class="number-list-card">
+<h3>Factors of 36</h3>
+<p>
+                    1, 2, 3, 4, 6, 9, 12, 18, 36
+                </p>
+</div>
+</div>
+<div class="math-box">
+            Common factors:
+            <br/><br/>
+            1, 2, 3, 4, 6 and 12
+        </div>
+<div class="success-box">
+            HCF of 24 and 36 = <strong>12</strong>
+</div>
+</div>
+</section><section class="lesson-section">
+<h2>🌍 Real-Life HCF Example</h2>
+<div class="worked-example">
+<h3>Example 3: Making identical stationery packs</h3>
+<p>
+            A teacher has:
+        </p>
+<ul>
+<li>24 pencils;</li>
+<li>36 rulers.</li>
+</ul>
+<p>
+            She wants to make the greatest possible number of identical packs
+            without leaving anything over.
+        </p>
+<p>
+            How many packs can she make?
+        </p>
+<div class="tip-box">
+            The words <strong>greatest possible number of identical packs</strong>
+            tell us to use HCF.
+        </div>
+<div class="math-box">
+            HCF of 24 and 36 = 12
+        </div>
+<p>
+            Therefore, she can make 12 identical packs.
+        </p>
+<div class="math-box">
+            Pencils in each pack:
+            <br/><br/>
+            24 ÷ 12 = 2
+        </div>
+<div class="math-box">
+            Rulers in each pack:
+            <br/><br/>
+            36 ÷ 12 = 3
+        </div>
+<div class="success-box">
+            She can make <strong>12 packs</strong>, with
+            <strong>2 pencils</strong> and <strong>3 rulers</strong>
+            in each pack.
+        </div>
+</div>
+</section><section class="lesson-section">
+<h2>3️⃣ Common Multiples</h2>
+<p>
+        A <strong>common multiple</strong> is a number that appears in the
+        multiples lists of two or more numbers.
+    </p>
+<div class="worked-example">
+<h3>Example 4: Find common multiples of 4 and 6</h3>
+<div class="hcf-lcm-list-grid">
+<div class="number-list-card">
+<h3>Multiples of 4</h3>
+<p>
+                    4, 8, 12, 16, 20, 24, 28, 32, 36, …
+                </p>
+</div>
+<div class="number-list-card">
+<h3>Multiples of 6</h3>
+<p>
+                    6, 12, 18, 24, 30, 36, 42, …
+                </p>
+</div>
+</div>
+<div class="math-box">
+            Common multiples:
+            <br/><br/>
+            12, 24, 36, …
+        </div>
+</div>
+<div class="note-box">
+        Two numbers have infinitely many common multiples.
+    </div>
+</section><section class="lesson-section">
+<h2>4️⃣ Lowest Common Multiple</h2>
+<p>
+        The <strong>Lowest Common Multiple</strong>, written as
+        <strong>LCM</strong>, is the smallest positive multiple shared by two
+        or more numbers.
+    </p>
+<div class="math-box">
+        Common multiples of 4 and 6:
+        <br/><br/>
+        12, 24, 36, …
+    </div>
+<p>
+        The smallest positive common multiple is 12.
+    </p>
+<div class="success-box">
+        LCM of 4 and 6 = <strong>12</strong>
+</div>
+</section><section class="lesson-section">
+<h2>🧠 Method 1: Finding LCM by Listing Multiples</h2>
+<div class="tip-box">
+<strong>Follow these steps:</strong>
+<br/><br/>
+<strong>Step 1:</strong>
+        List positive multiples of each number.
+
+        <br/><br/>
+<strong>Step 2:</strong>
+        Continue until the same number appears in every list.
+
+        <br/><br/>
+<strong>Step 3:</strong>
+        Choose the smallest positive common multiple.
+
+    </div>
+<div class="worked-example">
+<h3>Example 5: Find the LCM of 8 and 12</h3>
+<div class="hcf-lcm-list-grid">
+<div class="number-list-card">
+<h3>Multiples of 8</h3>
+<p>
+                    8, 16, 24, 32, 40, 48, …
+                </p>
+</div>
+<div class="number-list-card">
+<h3>Multiples of 12</h3>
+<p>
+                    12, 24, 36, 48, …
+                </p>
+</div>
+</div>
+<p>
+            The first common multiple is 24.
+        </p>
+<div class="success-box">
+            LCM of 8 and 12 = <strong>24</strong>
+</div>
+</div>
+</section><section class="lesson-section">
+<h2>🌍 Real-Life LCM Example</h2>
+<div class="worked-example">
+<h3>Example 6: School bell reminders</h3>
+<p>
+            During a school event:
+        </p>
+<ul>
+<li>one reminder bell rings every 15 minutes;</li>
+<li>another reminder rings every 20 minutes.</li>
+</ul>
+<p>
+            Both bells ring together at 9:00 a.m.
+            When will they next ring together?
+        </p>
+<div class="tip-box">
+            The words <strong>next happen together</strong> tell us to use LCM.
+        </div>
+<div class="hcf-lcm-list-grid">
+<div class="number-list-card">
+<h3>Multiples of 15</h3>
+<p>
+                    15, 30, 45, 60, …
+                </p>
+</div>
+<div class="number-list-card">
+<h3>Multiples of 20</h3>
+<p>
+                    20, 40, 60, …
+                </p>
+</div>
+</div>
+<div class="math-box">
+            LCM of 15 and 20 = 60
+        </div>
+<p>
+            The bells will ring together again after 60 minutes.
+        </p>
+<div class="success-box">
+            They will next ring together at <strong>10:00 a.m.</strong>
+</div>
+</div>
+</section><section class="lesson-section">
+<h2>5️⃣ Using Prime Factorisation</h2>
+<p>
+        Listing works well for small numbers.
+    </p>
+<p>
+        For larger numbers, prime factorisation is often quicker and more
+        reliable.
+    </p>
+<div class="info-box">
+        Write each number as a product of prime factors before finding its HCF
+        or LCM.
+    </div>
+</section><section class="lesson-section">
+<h2>🧠 Finding HCF Using Prime Factors</h2>
+<div class="tip-box">
+<strong>StudyNest Method</strong>
+<br/><br/>
+<strong>Step 1:</strong>
+        Write each number as a product of prime factors.
+
+        <br/><br/>
+<strong>Step 2:</strong>
+        Identify prime factors shared by every number.
+
+        <br/><br/>
+<strong>Step 3:</strong>
+        For each shared prime, use the smallest power that appears.
+
+        <br/><br/>
+<strong>Step 4:</strong>
+        Multiply those shared prime factors.
+
+    </div>
+<div class="worked-example">
+<h3>Example 7: Find the HCF of 72 and 120</h3>
+<div class="math-box">
+            72 = 2³ × 3²
+        </div>
+<div class="math-box">
+            120 = 2³ × 3 × 5
+        </div>
+<p>
+            The shared prime factors are 2 and 3.
+        </p>
+<div class="prime-power-grid">
+<div class="prime-power-card">
+<h3>For the factor 2</h3>
+<p>
+                    Both numbers contain 2³.
+                </p>
+<strong>Use 2³</strong>
+</div>
+<div class="prime-power-card">
+<h3>For the factor 3</h3>
+<p>
+                    The powers are 3² and 3¹.
+                </p>
+<strong>Use the smaller power: 3¹</strong>
+</div>
+</div>
+<div class="math-box">
+            HCF = 2³ × 3
+        </div>
+<div class="math-box">
+            HCF = 8 × 3
+        </div>
+<div class="success-box">
+            HCF of 72 and 120 = <strong>24</strong>
+</div>
+</div>
+</section><section class="lesson-section">
+<h2>🧠 Finding LCM Using Prime Factors</h2>
+<div class="tip-box">
+<strong>StudyNest Method</strong>
+<br/><br/>
+<strong>Step 1:</strong>
+        Write each number as a product of prime factors.
+
+        <br/><br/>
+<strong>Step 2:</strong>
+        Collect every different prime factor that appears.
+
+        <br/><br/>
+<strong>Step 3:</strong>
+        For each prime, use the greatest power that appears.
+
+        <br/><br/>
+<strong>Step 4:</strong>
+        Multiply all the selected prime powers.
+
+    </div>
+<div class="worked-example">
+<h3>Example 8: Find the LCM of 72 and 120</h3>
+<div class="math-box">
+            72 = 2³ × 3²
+        </div>
+<div class="math-box">
+            120 = 2³ × 3 × 5
+        </div>
+<p>
+            We need every prime factor appearing in either number.
+        </p>
+<div class="prime-power-grid">
+<div class="prime-power-card">
+<h3>Factor 2</h3>
+<p>
+                    Greatest power: 2³
+                </p>
+</div>
+<div class="prime-power-card">
+<h3>Factor 3</h3>
+<p>
+                    Greatest power: 3²
+                </p>
+</div>
+<div class="prime-power-card">
+<h3>Factor 5</h3>
+<p>
+                    Greatest power: 5¹
+                </p>
+</div>
+</div>
+<div class="math-box">
+            LCM = 2³ × 3² × 5
+        </div>
+<div class="math-box">
+            LCM = 8 × 9 × 5
+        </div>
+<div class="success-box">
+            LCM of 72 and 120 = <strong>360</strong>
+</div>
+</div>
+</section><section class="lesson-section">
+<h2>🔑 Smallest for HCF, Greatest for LCM</h2>
+<div class="hcf-lcm-memory-grid">
+<div class="hcf-memory-card">
+<h3>HCF</h3>
+<p>
+                Use only the prime factors shared by all the numbers.
+            </p>
+<p>
+                Choose the <strong>smallest power</strong> of each shared prime.
+            </p>
+</div>
+<div class="lcm-memory-card">
+<h3>LCM</h3>
+<p>
+                Use every prime factor that appears in any of the numbers.
+            </p>
+<p>
+                Choose the <strong>greatest power</strong> of each prime.
+            </p>
+</div>
+</div>
+<div class="success-box">
+<strong>HCF:</strong> shared primes with the smallest powers.
+        <br/><br/>
+<strong>LCM:</strong> all required primes with the greatest powers.
+    </div>
+</section><section class="lesson-section">
+<h2>6️⃣ Choosing HCF or LCM</h2>
+<p>
+        Many students can calculate HCF and LCM but struggle to decide which
+        one a word problem requires.
+    </p>
+<div class="method-choice-grid">
+<div class="method-choice-card hcf-choice">
+<h3>Think HCF when...</h3>
+<ul>
+<li>cutting into the longest equal pieces;</li>
+<li>making the greatest number of identical groups;</li>
+<li>finding the largest tile or square that fits exactly;</li>
+<li>sharing everything equally with nothing left over;</li>
+<li>looking for the greatest possible size.</li>
+</ul>
+</div>
+<div class="method-choice-card lcm-choice">
+<h3>Think LCM when...</h3>
+<ul>
+<li>events must happen together again;</li>
+<li>cycles or schedules repeat;</li>
+<li>finding the smallest quantity divisible by several numbers;</li>
+<li>working with repeated bus, bell or machine intervals;</li>
+<li>looking for the earliest shared time.</li>
+</ul>
+</div>
+</div>
+</section><section class="lesson-section">
+<h2>🧠 StudyNest Word-Problem Method</h2>
+<div class="tip-box">
+<strong>Step 1:</strong>
+        Identify what the question is asking you to find.
+
+        <br/><br/>
+<strong>Step 2:</strong>
+        Look for the underlying idea, not only one keyword.
+
+        <br/><br/>
+<strong>Step 3:</strong>
+        Ask:
+        <br/><br/>
+        “Am I dividing quantities into the greatest equal groups or pieces?”
+        <br/><br/>
+        If yes, try HCF.
+
+        <br/><br/>
+<strong>Step 4:</strong>
+        Ask:
+        <br/><br/>
+        “Am I looking for the first time or quantity at which repeating patterns
+        meet?”
+        <br/><br/>
+        If yes, try LCM.
+
+        <br/><br/>
+<strong>Step 5:</strong>
+        Calculate and write the answer in the context of the question.
+
+        <br/><br/>
+<strong>Step 6:</strong>
+        Check whether the answer makes sense.
+
+    </div>
+<div class="warning-box">
+        Do not choose a method from one word alone.
+        Read the complete situation and identify what is happening.
+    </div>
+</section><section class="lesson-section">
+<h2>🌍 More Real-Life Examples</h2>
+<div class="worked-example">
+<h3>Example 9: Tiling a rectangular floor</h3>
+<p>
+            A rectangular floor measures <strong>360 cm by 240 cm</strong>.
+        </p>
+<p>
+            It must be covered using the largest possible square tiles without
+            cutting any tile.
+        </p>
+<p>
+            Find the side length of each tile.
+        </p>
+<div class="tip-box">
+            We need the largest measurement that divides both dimensions
+            exactly, so we use HCF.
+        </div>
+<div class="math-box">
+            360 = 2³ × 3² × 5
+        </div>
+<div class="math-box">
+            240 = 2⁴ × 3 × 5
+        </div>
+<div class="math-box">
+            HCF = 2³ × 3 × 5
+        </div>
+<div class="math-box">
+            HCF = 120
+        </div>
+<div class="success-box">
+            Each square tile should have a side length of
+            <strong>120 cm</strong>.
+        </div>
+</div>
+<div class="worked-example">
+<h3>Example 10: Medicine reminders</h3>
+<p>
+            A patient must take:
+        </p>
+<ul>
+<li>one medicine every 6 hours;</li>
+<li>another medicine every 8 hours.</li>
+</ul>
+<p>
+            Both medicines are taken together at 6:00 a.m.
+            After how many hours will they next be taken together?
+        </p>
+<div class="tip-box">
+            The schedules repeat and must meet again, so we use LCM.
+        </div>
+<div class="math-box">
+            Multiples of 6:
+            <br/><br/>
+            6, 12, 18, 24, …
+        </div>
+<div class="math-box">
+            Multiples of 8:
+            <br/><br/>
+            8, 16, 24, …
+        </div>
+<div class="math-box">
+            LCM of 6 and 8 = 24
+        </div>
+<div class="success-box">
+            The medicines will next be taken together after
+            <strong>24 hours</strong>, at 6:00 a.m. the following day.
+        </div>
+</div>
+<div class="worked-example">
+<h3>Example 11: Organising sports teams</h3>
+<p>
+            A school has 48 boys and 60 girls taking part in a sports programme.
+        </p>
+<p>
+            The organisers want to divide them into the greatest possible
+            number of identical mixed teams, with no learner left out.
+        </p>
+<p>
+            How many teams can be formed?
+        </p>
+<div class="math-box">
+            HCF of 48 and 60 = 12
+        </div>
+<div class="math-box">
+            Boys per team:
+            <br/><br/>
+            48 ÷ 12 = 4
+        </div>
+<div class="math-box">
+            Girls per team:
+            <br/><br/>
+            60 ÷ 12 = 5
+        </div>
+<div class="success-box">
+            The school can form <strong>12 identical teams</strong>,
+            each containing <strong>4 boys and 5 girls</strong>.
+        </div>
+</div>
+</section><section class="lesson-section">
+<h2>✅ Checking Your Answers</h2>
+<div class="definition-grid">
+<div class="definition-card">
+<h3>Check an HCF</h3>
+<p>
+                The HCF must divide every original number exactly.
+            </p>
+<div class="math-box">
+                24 ÷ 12 = 2
+            </div>
+<div class="math-box">
+                36 ÷ 12 = 3
+            </div>
+</div>
+<div class="definition-card">
+<h3>Check an LCM</h3>
+<p>
+                The LCM must be divisible by every original number.
+            </p>
+<div class="math-box">
+                24 ÷ 8 = 3
+            </div>
+<div class="math-box">
+                24 ÷ 12 = 2
+            </div>
+</div>
+</div>
+</section><section class="lesson-section">
+<h2>⚠ Common Mistakes</h2>
+<div class="warning-box">
+<strong>Mistake 1:</strong><br/><br/>
+        Choosing LCM for a problem about cutting quantities into the largest
+        equal pieces.
+        <br/><br/>
+        Greatest equal pieces normally require HCF.
+    </div>
+<div class="warning-box">
+<strong>Mistake 2:</strong><br/><br/>
+        Choosing HCF when two repeating schedules must meet again.
+        <br/><br/>
+        Repeating cycles normally require LCM.
+    </div>
+<div class="warning-box">
+<strong>Mistake 3:</strong><br/><br/>
+        Finding common factors but forgetting to choose the highest one.
+    </div>
+<div class="warning-box">
+<strong>Mistake 4:</strong><br/><br/>
+        Finding a common multiple but not checking that it is the lowest
+        positive one.
+    </div>
+<div class="warning-box">
+<strong>Mistake 5:</strong><br/><br/>
+        Using the greatest powers when calculating HCF.
+        <br/><br/>
+        HCF uses the smallest powers of the shared primes.
+    </div>
+<div class="warning-box">
+<strong>Mistake 6:</strong><br/><br/>
+        Using only the shared prime factors when calculating LCM.
+        <br/><br/>
+        LCM must include every prime factor needed by either number.
+    </div>
+<div class="warning-box">
+<strong>Mistake 7:</strong><br/><br/>
+        Giving only a number without answering the real-life question.
+        <br/><br/>
+        Always include units, time or the meaning of the answer.
+    </div>
+</section><section class="lesson-section practice-card">
+<h2>🎮 Your Turn!</h2>
+<ol>
+<li>
+            Find the HCF of 18 and 30 by listing their factors.
+        </li>
+<li>
+            Find the HCF of 28 and 42.
+        </li>
+<li>
+            Find the LCM of 6 and 9 by listing multiples.
+        </li>
+<li>
+            Find the LCM of 8 and 14.
+        </li>
+<li>
+            Given that
+            <strong>48 = 2⁴ × 3</strong> and
+            <strong>72 = 2³ × 3²</strong>,
+            find their HCF.
+        </li>
+<li>
+            Given that
+            <strong>48 = 2⁴ × 3</strong> and
+            <strong>72 = 2³ × 3²</strong>,
+            find their LCM.
+        </li>
+<li>
+            Find the HCF and LCM of 36 and 90 using prime factorisation.
+        </li>
+<li>
+            A shop has 30 bottles of water and 45 cartons of juice.
+            The owner wants to make the greatest possible number of identical
+            refreshment packs with nothing left over.
+            How many packs can be made?
+        </li>
+<li>
+            One security light flashes every 10 seconds and another flashes
+            every 15 seconds. They flash together now.
+            After how many seconds will they next flash together?
+        </li>
+<li>
+            Two pieces of fabric measure 84 cm and 126 cm.
+            They must be cut into equal pieces of the greatest possible length.
+            Find the length of each piece.
+        </li>
+<li>
+            A school club meets every 12 days and a sports club meets every
+            18 days. Both clubs meet today.
+            After how many days will they next meet on the same day?
+        </li>
+<li>
+            A rectangular board measures 150 cm by 210 cm.
+            It is to be divided into the largest possible identical square
+            sections. Find the side length of each square.
+        </li>
+</ol>
+<details>
+<summary>✅ Show Answers</summary>
+<ol>
+<li>
+                HCF = 6
+            </li>
+<li>
+                HCF = 14
+            </li>
+<li>
+                LCM = 18
+            </li>
+<li>
+                LCM = 56
+            </li>
+<li>
+                HCF = 2³ × 3 = 24
+            </li>
+<li>
+                LCM = 2⁴ × 3² = 144
+            </li>
+<li>
+                36 = 2² × 3² and 90 = 2 × 3² × 5
+                <br/><br/>
+                HCF = 2 × 3² = 18
+                <br/><br/>
+                LCM = 2² × 3² × 5 = 180
+            </li>
+<li>
+                HCF of 30 and 45 = 15.
+                Therefore, 15 identical packs can be made.
+            </li>
+<li>
+                LCM of 10 and 15 = 30.
+                They will next flash together after 30 seconds.
+            </li>
+<li>
+                HCF of 84 and 126 = 42.
+                Each piece should be 42 cm long.
+            </li>
+<li>
+                LCM of 12 and 18 = 36.
+                They will next meet on the same day after 36 days.
+            </li>
+<li>
+                HCF of 150 and 210 = 30.
+                Each square should have a side length of 30 cm.
+            </li>
+</ol>
+</details>
+</section><section class="lesson-section">
+<h2>🧠 Remember This</h2>
+<div class="success-box">
+        HCF is the greatest factor shared by the numbers.
+        <br/><br/>
+        LCM is the smallest positive multiple shared by the numbers.
+        <br/><br/>
+        HCF often appears in cutting, grouping and sharing problems.
+        <br/><br/>
+        LCM often appears in repeating schedules and cycles.
+        <br/><br/>
+        For prime factors:
+        <br/><br/>
+<strong>HCF → shared primes, smallest powers</strong>
+<br/><br/>
+<strong>LCM → all required primes, greatest powers</strong>
+</div>
+</section><section class="lesson-section">
+<h2>🎯 Before Moving On...</h2>
+<ul class="check-list">
+<li>✅ Can I explain what a common factor is?</li>
+<li>✅ Can I find HCF by listing factors?</li>
+<li>✅ Can I explain what a common multiple is?</li>
+<li>✅ Can I find LCM by listing multiples?</li>
+<li>✅ Can I find HCF using prime factorisation?</li>
+<li>✅ Can I find LCM using prime factorisation?</li>
+<li>✅ Can I decide whether a word problem requires HCF or LCM?</li>
+<li>✅ Can I write my answer in the context of the question?</li>
+</ul>
+</section><section class="lesson-section success-card">
+<h2>🎉 Well Done!</h2>
+<p>
+        You can now find HCF and LCM and apply them to practical situations.
+    </p>
+<div class="success-box">
+        Remember:
+        <br/><br/>
+<strong>
+            Greatest equal groups or pieces → HCF
+            <br/><br/>
+            First time repeating patterns meet → LCM
+        </strong>
+</div>
+</section><section class="lesson-section">
+<h2>📈 Your Progress</h2>
+<p>
+        Lesson <strong>3 of 17</strong>
+</p>
+<div class="progress-wrap">
+<div class="progress-label">
+<span>Real Numbers Progress</span>
+<strong>18%</strong>
+</div>
+<div class="progress-bar">
+<div class="progress-fill" style="width:18%;"></div>
+</div>
+</div>
+</section><nav class="lesson-navigation">
+<a class="nav-button" href="02-factors-multiples-primes.html">← 02 Factors Multiples Primes</a>
+<a class="nav-button" href="index.html">Real Numbers Roadmap</a>
+<a class="nav-button primary" href="04-directed-numbers.html">04 Directed Numbers →</a>
+</nav></main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="site-footer">
+<strong>📚 StudyNest</strong>
+<p>Helping students understand Mathematics, not memorise it.</p>
+<p>© 2026 StudyNest</p>
+</footer>  <script src="../script-v3.js"></script>
+
+<script src="../studynest-3.1.js" defer></script>
+</body>
+</html>

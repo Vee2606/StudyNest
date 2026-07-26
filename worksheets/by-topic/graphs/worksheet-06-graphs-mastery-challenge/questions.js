@@ -1,0 +1,31 @@
+window.STUDYNEST_WORKSHEET = {
+  kicker: "GRAPHS • WORKSHEET 06",
+  title: "Graphs Mastery Challenge",
+  description: "Complete mixed graph questions covering coordinates, tables, straight lines, gradient, intercepts and real-life graphs.",
+  level: "Mastery",
+  time: "35–45 minutes",
+  skills: ["Coordinates", "Tables of values", "Linear equations", "Gradient and intercepts", "Real-life interpretation"],
+  note: "Work carefully and show each algebraic step on paper where needed.",
+  questions: [
+    {section:"Bronze",skill:"Coordinates",question:"Which quadrant contains (-5, 8)?",answer:"2",answers:["2","II","quadrant 2","quadrant ii"],hint:"x is negative and y is positive.",solution:"The point lies in Quadrant II."},
+    {section:"Bronze",skill:"Coordinates",question:"Reflect (4, -3) in the x-axis.",answer:"(4,3)",answers:["(4,3)","4,3"],hint:"Change the sign of y.",solution:"The image is (4, 3)."},
+    {section:"Bronze",skill:"Coordinates",question:"A point lies on the x-axis 6 units left of the origin. Write its coordinates.",answer:"(-6,0)",answers:["(-6,0)","-6,0"],hint:"On the x-axis, y = 0.",solution:"The coordinates are (-6, 0)."},
+    {section:"Bronze",skill:"Table",question:"For y = 2x + 1, find y when x = 4.",answer:"9",hint:"Substitute x = 4.",solution:"y = 2(4) + 1 = 9."},
+    {section:"Bronze",skill:"Table",question:"For y = -3x + 5, find y when x = -2.",answer:"11",hint:"Be careful with the negative signs.",solution:"y = -3(-2) + 5 = 11."},
+    {section:"Silver",skill:"Gradient",question:"Find the gradient through (2, 1) and (6, 9).",answer:"2",hint:"Use change in y divided by change in x.",solution:"Gradient = (9 - 1)/(6 - 2) = 8/4 = 2."},
+    {section:"Silver",skill:"Gradient",question:"Find the gradient through (-3, 4) and (1, -8).",answer:"-3",hint:"Use (-8 - 4)/(1 - (-3)).",solution:"Gradient = -12/4 = -3."},
+    {section:"Silver",skill:"Intercept",question:"State the y-intercept of y = 6x - 7.",answer:"-7",hint:"Read the constant term.",solution:"The y-intercept is -7."},
+    {section:"Silver",skill:"x-intercept",question:"Find the x-intercept of y = 4x - 20.",answer:"5",hint:"Set y = 0.",solution:"0 = 4x - 20, so x = 5."},
+    {section:"Silver",skill:"Equation",question:"Write the equation of a line with gradient 3 and y-intercept 8.",answer:"y=3x+8",answers:["y=3x+8","y = 3x + 8"],hint:"Use y = mx + c.",solution:"The equation is y = 3x + 8."},
+    {section:"Silver",skill:"Equation",question:"Write the equation of the line with gradient -2 passing through (0, 5).",answer:"y=-2x+5",answers:["y=-2x+5","y = -2x + 5"],hint:"The point (0, 5) gives the y-intercept.",solution:"The equation is y = -2x + 5."},
+    {section:"Gold",skill:"Equation",question:"A line passes through (1, 4) and (3, 10). Write its equation.",answer:"y=3x+1",answers:["y=3x+1","y = 3x + 1"],hint:"Find the gradient, then substitute one point.",solution:"m = (10 - 4)/(3 - 1) = 3. Using (1, 4): 4 = 3(1) + c, so c = 1. Therefore y = 3x + 1."},
+    {section:"Gold",skill:"Parallel lines",question:"A line parallel to y = -4x + 9 has y-intercept 2. Write its equation.",answer:"y=-4x+2",answers:["y=-4x+2","y = -4x + 2"],hint:"Parallel lines have the same gradient.",solution:"The gradient is -4 and the intercept is 2, so y = -4x + 2."},
+    {section:"Gold",skill:"Missing coordinate",question:"The point (k, 13) lies on y = 2x + 5. Find k.",answer:"4",hint:"Substitute y = 13 and solve for x.",solution:"13 = 2k + 5, so 2k = 8 and k = 4."},
+    {section:"Gold",skill:"Point check",question:"Does (-2, -1) lie on y = 2x + 3? Answer yes or no.",answer:"yes",hint:"Substitute x = -2.",solution:"2(-2) + 3 = -1, so yes."},
+    {section:"Exam Challenge",skill:"Journey",question:"A car travels 84 km in 1 hour 12 minutes. Find its average speed in km/h.",answer:"70",hint:"1 hour 12 minutes = 1.2 hours.",solution:"Average speed = 84 ÷ 1.2 = 70 km/h."},
+    {section:"Exam Challenge",skill:"Journey",question:"A walker travels 9 km at 6 km/h, rests for 30 minutes, then walks 6 km at 4 km/h. Find the total journey time in hours.",answer:"3.5",hint:"Find each walking time and add the rest time.",solution:"First time = 9/6 = 1.5 h. Rest = 0.5 h. Second time = 6/4 = 1.5 h. Total = 3.5 h."},
+    {section:"Exam Challenge",skill:"Conversion",question:"A straight conversion graph shows that 8 cm represents 20 km. How many kilometres are represented by 14 cm?",answer:"35",hint:"Find kilometres per centimetre.",solution:"20/8 = 2.5 km per cm. 14 × 2.5 = 35 km."},
+    {section:"Exam Challenge",skill:"Intersection",question:"The lines y = 2x + 1 and y = -x + 10 intersect. Find the x-coordinate of the intersection.",answer:"3",hint:"Set the two expressions for y equal.",solution:"2x + 1 = -x + 10, so 3x = 9 and x = 3."},
+    {section:"Exam Challenge",skill:"Mastery",question:"Find the coordinates of the intersection of y = 2x + 1 and y = -x + 10.",answer:"(3,7)",answers:["(3,7)","3,7"],hint:"Use x = 3 from solving the equations, then find y.",solution:"When x = 3, y = 2(3) + 1 = 7. The intersection is (3, 7)."}
+  ]
+};

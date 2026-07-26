@@ -1,0 +1,7 @@
+StudyNest Beta Update
+
+This package contains two targeted changes only:
+1. Homepage and Study by Topic hero sections matched to the Study by Form visual style.
+2. Matrix worksheet notation rendered with proper row-and-column brackets, including 2 × 2 matrices displayed as two entries on the top row and two entries on the bottom row.
+
+The remaining page layouts and content were left unchanged.
