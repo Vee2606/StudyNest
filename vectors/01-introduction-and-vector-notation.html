@@ -13,6 +13,7 @@
 
 <link rel="stylesheet" href="../studynest-3.1.css">
 <link rel="stylesheet" href="../studynest-theme.css">
+<link rel="stylesheet" href="../styles/brand-refresh.css">
 </head><body>
 <div class="announcement-bar">🚀 StudyNest is growing. New lessons and worksheets are added regularly.</div>
 <header class="site-header">
@@ -105,4 +106,5 @@
 <script>document.addEventListener("DOMContentLoaded",()=>{const q=s=>document.querySelector(s), vx=q('#vx'),vy=q('#vy'),out=q('[data-vector-activity] .vector-result');function u(){let x=+vx.value,y=+vy.value,X=320+x*40,Y=220-y*40;q('#vec').setAttribute('x2',X);q('#vec').setAttribute('y2',Y);q('#vecLabel').setAttribute('x',X+10);q('#vecLabel').setAttribute('y',Y-8);let m=Math.hypot(x,y),a=(Math.atan2(y,x)*180/Math.PI+360)%360;out.textContent=`Vector v = (${x}, ${y}), magnitude = ${m.toFixed(2)} units, direction = ${a.toFixed(1)}° from the positive x-axis.`;}[vx,vy].forEach(e=>e.addEventListener('input',u));u();});</script>  <script src="../script-v3.js"></script>
 
 <script src="../studynest-3.1.js" defer></script>
+<script src="../scripts/brand-refresh.js"></script>
 </body></html>

@@ -20,6 +20,7 @@
 
 <link rel="stylesheet" href="../studynest-3.1.css">
 <link rel="stylesheet" href="../studynest-theme.css">
+<link rel="stylesheet" href="../styles/brand-refresh.css">
 </head>
 <body>
 <div class="announcement-bar">🚀 StudyNest is growing. New lessons and worksheets are added regularly.</div>
@@ -114,5 +115,6 @@
 <script id="studynest-trig-interactive-script">document.addEventListener('DOMContentLoaded',()=>{let selected=null;document.querySelectorAll('#methodQuiz .trig-choice').forEach(b=>b.addEventListener('click',()=>{selected=b;document.querySelectorAll('#methodQuiz .trig-choice').forEach(x=>x.classList.remove('active'));b.classList.add('active');document.getElementById('methodResult').textContent='Now choose the method.';}));function check(v){if(!selected)return;const ok=selected.dataset.answer===v;selected.classList.remove('correct','wrong');selected.classList.add(ok?'correct':'wrong');document.getElementById('methodResult').innerHTML=ok?'<strong>Correct.</strong>':'<strong>Try again.</strong> Look at whether an acute angle is being used.';}document.getElementById('choosePyth').addEventListener('click',()=>check('pyth'));document.getElementById('chooseTrig').addEventListener('click',()=>check('trig'));});</script>  <script src="../script-v3.js"></script>
 
 <script src="../studynest-3.1.js" defer></script>
+<script src="../scripts/brand-refresh.js"></script>
 </body>
 </html>

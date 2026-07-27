@@ -13,6 +13,7 @@
 
 <link rel="stylesheet" href="../studynest-3.1.css">
 <link rel="stylesheet" href="../studynest-theme.css">
+<link rel="stylesheet" href="../styles/brand-refresh.css">
 </head><body>
 <div class="announcement-bar">🚀 StudyNest is growing. New lessons and worksheets are added regularly.</div>
 <header class="site-header">
@@ -87,4 +88,5 @@
 <script>document.addEventListener("DOMContentLoaded",()=>{const q=s=>document.querySelector(s),out=q('[data-vector-activity] .vector-result');let answer='equal';const cases=[['equal',[160,300,320,220],[390,300,550,220]],['opposite',[160,300,320,220],[550,220,390,300]],['parallel',[160,300,320,220],[390,300,590,200]],['zero',[220,260,220,260],[390,300,550,220]]];function load(){let c=cases[Math.floor(Math.random()*cases.length)];answer=c[0];[['typeA',c[1]],['typeB',c[2]]].forEach(([id,p])=>{let e=q('#'+id);['x1','y1','x2','y2'].forEach((a,i)=>e.setAttribute(a,p[i]));});out.className='vector-result';out.textContent='Choose the relationship shown.';}q('#typeChoices').addEventListener('click',e=>{if(!e.target.dataset.answer)return;let ok=e.target.dataset.answer===answer;out.className='vector-result '+(ok?'good':'bad');out.textContent=ok?'Correct — compare both magnitude and direction.':'Not quite. Check length, parallel direction and arrow orientation.';});q('#newType').addEventListener('click',load);load();});</script>  <script src="../script-v3.js"></script>
 
 <script src="../studynest-3.1.js" defer></script>
+<script src="../scripts/brand-refresh.js"></script>
 </body></html>

@@ -20,6 +20,7 @@
 
 <link rel="stylesheet" href="../studynest-3.1.css">
 <link rel="stylesheet" href="../studynest-theme.css">
+<link rel="stylesheet" href="../styles/brand-refresh.css">
 </head>
 <body>
 <div class="announcement-bar">🚀 StudyNest is growing. New lessons and worksheets are added regularly.</div>
@@ -111,5 +112,6 @@
 <script id="studynest-trig-interactive-script">document.addEventListener('DOMContentLoaded',()=>{document.getElementById('boxCalc').addEventListener('click',()=>{const l=+document.getElementById('boxL').value,w=+document.getElementById('boxW').value,h=+document.getElementById('boxH').value,base=Math.hypot(l,w),space=Math.hypot(base,h),angle=Math.atan(h/base)*180/Math.PI;document.getElementById('boxResult').innerHTML=`Base diagonal = √(${l}² + ${w}²) = ${base.toFixed(2)}<br>Space diagonal = √(${base.toFixed(2)}² + ${h}²)<br><strong>${space.toFixed(2)} units</strong><br>Angle to base ≈ ${angle.toFixed(1)}°`;});document.getElementById('boxCalc').click();});</script>  <script src="../script-v3.js"></script>
 
 <script src="../studynest-3.1.js" defer></script>
+<script src="../scripts/brand-refresh.js"></script>
 </body>
 </html>

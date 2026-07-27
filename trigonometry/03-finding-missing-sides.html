@@ -20,6 +20,7 @@
 
 <link rel="stylesheet" href="../studynest-3.1.css">
 <link rel="stylesheet" href="../studynest-theme.css">
+<link rel="stylesheet" href="../styles/brand-refresh.css">
 </head>
 <body>
 <div class="announcement-bar">🚀 StudyNest is growing. New lessons and worksheets are added regularly.</div>
@@ -109,5 +110,6 @@
 <script id="studynest-trig-interactive-script">document.addEventListener('DOMContentLoaded',()=>{document.getElementById('sideCalc').addEventListener('click',()=>{const m=document.getElementById('sideMode').value,d=+document.getElementById('sideAngle').value,k=+document.getElementById('sideKnown').value,x=d*Math.PI/180;let ans,work;if(m==='opp'){ans=k*Math.sin(x);work=`opposite = ${k} × sin ${d}°`;}else if(m==='adj'){ans=k*Math.cos(x);work=`adjacent = ${k} × cos ${d}°`;}else{ans=k*Math.tan(x);work=`opposite = ${k} × tan ${d}°`;}document.getElementById('sideResult').innerHTML=`${work}<br><strong>Answer ≈ ${ans.toFixed(2)} units</strong>`;});document.getElementById('sideCalc').click();});</script>  <script src="../script-v3.js"></script>
 
 <script src="../studynest-3.1.js" defer></script>
+<script src="../scripts/brand-refresh.js"></script>
 </body>
 </html>

@@ -13,6 +13,7 @@
 
 <link rel="stylesheet" href="../studynest-3.1.css">
 <link rel="stylesheet" href="../studynest-theme.css">
+<link rel="stylesheet" href="../styles/brand-refresh.css">
 </head><body>
 <div class="announcement-bar">🚀 StudyNest is growing. New lessons and worksheets are added regularly.</div>
 <header class="site-header">
@@ -82,4 +83,5 @@
 <script>document.addEventListener("DOMContentLoaded",()=>{const q=s=>document.querySelector(s),out=q('[data-vector-activity] .vector-result');function u(){let x=+q('#magX').value,y=+q('#magY').value,O=[320,220],E=[O[0]+x*40,O[1]-y*40],C=[E[0],O[1]];function line(id,p1,p2){let e=q('#'+id);['x1','y1','x2','y2'].forEach((a,i)=>e.setAttribute(a,[...p1,...p2][i]));}line('magVec',O,E);line('magH',O,C);line('magV',C,E);q('#magXL').setAttribute('x',(O[0]+C[0])/2);q('#magXL').setAttribute('y',O[1]+22);q('#magXL').textContent=Math.abs(x);q('#magYL').setAttribute('x',C[0]+10);q('#magYL').setAttribute('y',(C[1]+E[1])/2);q('#magYL').textContent=Math.abs(y);out.textContent=`|v| = √(${x}² + ${y}²) = ${Math.hypot(x,y).toFixed(2)} units.`;}['magX','magY'].forEach(id=>q('#'+id).addEventListener('input',u));u();});</script>  <script src="../script-v3.js"></script>
 
 <script src="../studynest-3.1.js" defer></script>
+<script src="../scripts/brand-refresh.js"></script>
 </body></html>

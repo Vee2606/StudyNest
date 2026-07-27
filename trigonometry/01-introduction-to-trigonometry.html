@@ -20,6 +20,7 @@
 
 <link rel="stylesheet" href="../studynest-3.1.css">
 <link rel="stylesheet" href="../studynest-theme.css">
+<link rel="stylesheet" href="../styles/brand-refresh.css">
 </head>
 <body>
 <div class="announcement-bar">🚀 StudyNest is growing. New lessons and worksheets are added regularly.</div>
@@ -129,5 +130,6 @@
 <script id="studynest-trig-interactive-script">document.addEventListener('DOMContentLoaded',()=>{const a=document.getElementById('introAngle'),o=document.getElementById('introAngleOut'),r=document.getElementById('introResult');function u(){const d=+a.value,rad=d*Math.PI/180,adj=10,opp=adj*Math.tan(rad),hyp=adj/Math.cos(rad);o.textContent=d+'°';r.innerHTML=`For adjacent = 10 units:<br><strong>opposite ≈ ${opp.toFixed(2)}</strong><br><strong>hypotenuse ≈ ${hyp.toFixed(2)}</strong>`;}a.addEventListener('input',u);u();});</script>  <script src="../script-v3.js"></script>
 
 <script src="../studynest-3.1.js" defer></script>
+<script src="../scripts/brand-refresh.js"></script>
 </body>
 </html>

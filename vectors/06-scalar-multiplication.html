@@ -13,6 +13,7 @@
 
 <link rel="stylesheet" href="../studynest-3.1.css">
 <link rel="stylesheet" href="../studynest-theme.css">
+<link rel="stylesheet" href="../styles/brand-refresh.css">
 </head><body>
 <div class="announcement-bar">🚀 StudyNest is growing. New lessons and worksheets are added regularly.</div>
 <header class="site-header">
@@ -83,4 +84,5 @@
 <script>document.addEventListener("DOMContentLoaded",()=>{const q=s=>document.querySelector(s),out=q('[data-vector-activity] .vector-result'),els=['scalar','baseX','baseY'];function u(){let k=+q('#scalar').value,x=+q('#baseX').value,y=+q('#baseY').value,O=[320,220],B=[O[0]+x*35,O[1]-y*35],S=[O[0]+k*x*35,O[1]-k*y*35];[['baseVec',B],['scaledVec',S]].forEach(([id,p])=>{q('#'+id).setAttribute('x2',p[0]);q('#'+id).setAttribute('y2',p[1]);});q('#scaleLbl').setAttribute('x',S[0]+8);q('#scaleLbl').setAttribute('y',S[1]-8);q('#scaleLbl').textContent=`${k}a`;let rel=k===0?'zero length':k<0?'opposite direction':'same direction';out.textContent=`${k}a = (${k*x}, ${k*y}): ${rel}, with magnitude multiplied by ${Math.abs(k)}.`;}els.forEach(id=>q('#'+id).addEventListener('input',u));u();});</script>  <script src="../script-v3.js"></script>
 
 <script src="../studynest-3.1.js" defer></script>
+<script src="../scripts/brand-refresh.js"></script>
 </body></html>

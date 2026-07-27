@@ -1,0 +1,11 @@
+StudyNest Brand Refresh
+
+Applied to 393 HTML pages.
+- New book-nest logo lock-up across site headers
+- Logo branding in footers
+- SVG favicon on every page
+- Warm cream/gold background on Worksheets and Study by Form landing pages
+- Subtle logo watermark on hero sections
+- Branded loading screen with gold animation
+- Removed NEW badge from Indices & Logarithms
+- Added styles/brand-refresh.css and scripts/brand-refresh.js

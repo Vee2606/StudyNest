@@ -13,6 +13,7 @@
 
 <link rel="stylesheet" href="../studynest-3.1.css">
 <link rel="stylesheet" href="../studynest-theme.css">
+<link rel="stylesheet" href="../styles/brand-refresh.css">
 </head><body>
 <div class="announcement-bar">🚀 StudyNest is growing. New lessons and worksheets are added regularly.</div>
 <header class="site-header">
@@ -104,4 +105,5 @@
 <script>document.addEventListener("DOMContentLoaded",()=>{const q=s=>document.querySelector(s), ids=['sx','sy','ex','ey'],out=q('[data-vector-activity] .vector-result');function pt(x,y){return[320+x*40,220-y*40]}function u(){let [sx,sy,ex,ey]=ids.map(id=>+q('#'+id).value),A=pt(sx,sy),B=pt(ex,ey);[['moveVec','x1',A[0]],['moveVec','y1',A[1]],['moveVec','x2',B[0]],['moveVec','y2',B[1]],['startDot','cx',A[0]],['startDot','cy',A[1]],['endDot','cx',B[0]],['endDot','cy',B[1]]].forEach(([id,a,v])=>q('#'+id).setAttribute(a,v));q('#startLbl').setAttribute('x',A[0]-20);q('#startLbl').setAttribute('y',A[1]+25);q('#endLbl').setAttribute('x',B[0]+10);q('#endLbl').setAttribute('y',B[1]-10);out.textContent=`AB = (${ex-sx}, ${ey-sy}): move ${Math.abs(ex-sx)} units ${ex-sx>=0?'right':'left'} and ${Math.abs(ey-sy)} units ${ey-sy>=0?'up':'down'}.`;}ids.forEach(id=>q('#'+id).addEventListener('input',u));u();});</script>  <script src="../script-v3.js"></script>
 
 <script src="../studynest-3.1.js" defer></script>
+<script src="../scripts/brand-refresh.js"></script>
 </body></html>

@@ -13,6 +13,7 @@
 
 <link rel="stylesheet" href="../studynest-3.1.css">
 <link rel="stylesheet" href="../studynest-theme.css">
+<link rel="stylesheet" href="../styles/brand-refresh.css">
 </head><body>
 <div class="announcement-bar">🚀 StudyNest is growing. New lessons and worksheets are added regularly.</div>
 <header class="site-header">
@@ -83,4 +84,5 @@
 <script>document.addEventListener("DOMContentLoaded",()=>{const q=s=>document.querySelector(s),out=q('[data-vector-activity] .vector-result');function u(){let p=+q('#coefP').value,r=+q('#coefQ').value,a=[2,1],b=[-1,2],R=[p*a[0]+r*b[0],p*a[1]+r*b[1]],O=[320,220];function end(v,k=1){return[O[0]+v[0]*k*35,O[1]-v[1]*k*35]}let A=end(a,p),B=end(b,r),E=end(R);[['combA',A],['combB',B],['combR',E]].forEach(([id,P])=>{q('#'+id).setAttribute('x2',P[0]);q('#'+id).setAttribute('y2',P[1]);});q('#combRL').setAttribute('x',E[0]+8);q('#combRL').setAttribute('y',E[1]-8);q('#combRL').textContent=`${p}a + ${r}b`;out.textContent=`${p}a + ${r}b = (${2*p} + ${-r}, ${p} + ${2*r}) = (${R[0]}, ${R[1]}).`;}['coefP','coefQ'].forEach(id=>q('#'+id).addEventListener('input',u));u();});</script>  <script src="../script-v3.js"></script>
 
 <script src="../studynest-3.1.js" defer></script>
+<script src="../scripts/brand-refresh.js"></script>
 </body></html>

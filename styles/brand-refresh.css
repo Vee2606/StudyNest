@@ -1,0 +1,54 @@
+/* StudyNest Brand Refresh — project-wide identity layer */
+:root{
+ --sn-navy:#123f7a;--sn-navy-deep:#071f43;--sn-gold:#f4b51f;--sn-gold-deep:#d79500;
+ --sn-cream:#fff9ec;--sn-cream-2:#fffdf7;--sn-ink:#17365f;
+}
+html{background:var(--sn-cream)}
+body.sn-brand-refresh{background:linear-gradient(180deg,var(--sn-cream-2),var(--sn-cream))!important;color:var(--sn-ink)}
+body.sn-brand-refresh.sn-warm-landing{background:linear-gradient(180deg,#fffdf8 0%,#fff8e8 100%)!important}
+
+/* Unified logo lock-up */
+.sn-brand-lockup{display:inline-flex!important;align-items:center;gap:.7rem;text-decoration:none!important;color:var(--sn-navy)!important;min-width:max-content}
+.sn-brand-lockup .sn-brand-mark{width:48px;height:48px;display:block;flex:0 0 auto;filter:drop-shadow(0 5px 8px rgba(18,63,122,.14))}
+.sn-brand-lockup .sn-brand-copy{display:flex;flex-direction:column;line-height:1.05;text-align:left}
+.sn-brand-lockup .sn-brand-name{font-family:Georgia,'Times New Roman',serif;font-size:1.36rem;font-weight:800;letter-spacing:-.025em;color:var(--sn-navy)}
+.sn-brand-lockup .sn-brand-name em{font-style:normal;color:var(--sn-gold-deep)}
+.sn-brand-lockup .sn-brand-motto{font-size:.62rem;font-weight:700;letter-spacing:.02em;color:#52677e;margin-top:.22rem;white-space:nowrap}
+.site-header{background:rgba(255,253,247,.96)!important;border-bottom:1px solid rgba(18,63,122,.12)!important;backdrop-filter:blur(12px)}
+.site-header .main-navigation a{color:var(--sn-ink)!important}
+.site-header .main-navigation a:hover,.site-header .main-navigation a.active{color:var(--sn-navy)!important}
+
+/* Hero watermark */
+.sn-watermark-host{position:relative!important;overflow:hidden!important;isolation:isolate}
+.sn-watermark-host>*{position:relative;z-index:1}
+.sn-watermark-host::after{content:'';position:absolute;z-index:0;width:min(390px,48vw);aspect-ratio:1;right:clamp(-90px,-4vw,-25px);top:50%;transform:translateY(-50%);background:url('../assets/studynest-mark.svg') center/contain no-repeat;opacity:.055;pointer-events:none}
+.minimal-hero.sn-watermark-host::after{left:50%;right:auto;transform:translate(-50%,-50%);width:min(430px,58vw);opacity:.045}
+
+/* Warm landing surfaces requested for Worksheets and Study by Form */
+body.sn-warm-landing .page-section,body.sn-warm-landing main{background:transparent!important}
+body.sn-warm-landing .worksheet-hero,body.sn-warm-landing .level-hero{
+ box-shadow:0 22px 52px rgba(95,70,20,.10)!important;
+ border-color:rgba(215,149,0,.18)!important;
+}
+
+/* Footer brand */
+.sn-footer-brand{display:flex;align-items:center;justify-content:center;gap:.6rem;margin:0 auto .65rem;font-family:Georgia,'Times New Roman',serif;font-size:1.35rem;font-weight:800;color:var(--sn-navy)}
+.sn-footer-brand img{width:40px;height:40px}.sn-footer-brand em{font-style:normal;color:var(--sn-gold-deep)}
+.site-footer{background:#0b2b59!important;color:#fff!important}
+.site-footer a{color:#ffe39a!important}
+
+/* Remove temporary release ribbons */
+.sn-new-badge,.new-badge,.badge-new,[data-badge='new']{display:none!important}
+
+/* Loading screen */
+.sn-loader{position:fixed;inset:0;z-index:2147483647;display:grid;place-items:center;background:linear-gradient(145deg,#fffdf8,#fff5dc);transition:opacity .38s ease,visibility .38s ease}
+.sn-loader.sn-loader-done{opacity:0;visibility:hidden;pointer-events:none}
+.sn-loader-card{text-align:center;padding:2rem}
+.sn-loader-logo{width:112px;height:112px;animation:snNestFloat 1.25s ease-in-out infinite alternate;filter:drop-shadow(0 14px 18px rgba(18,63,122,.17))}
+.sn-loader-name{font:800 2.05rem/1 Georgia,'Times New Roman',serif;color:var(--sn-navy);margin:.9rem 0 .35rem}.sn-loader-name em{font-style:normal;color:var(--sn-gold-deep)}
+.sn-loader-motto{font-size:.78rem;font-weight:700;color:#52677e;letter-spacing:.035em}
+.sn-loader-line{width:150px;height:4px;border-radius:999px;background:#eadfca;overflow:hidden;margin:1.1rem auto 0}.sn-loader-line span{display:block;width:45%;height:100%;border-radius:inherit;background:linear-gradient(90deg,var(--sn-gold),var(--sn-gold-deep));animation:snLoad 1s ease-in-out infinite}
+@keyframes snLoad{0%{transform:translateX(-110%)}100%{transform:translateX(245%)}}
+@keyframes snNestFloat{to{transform:translateY(-6px) scale(1.02)}}
+@media (prefers-reduced-motion:reduce){.sn-loader-logo,.sn-loader-line span{animation:none}}
+@media(max-width:760px){.sn-brand-lockup .sn-brand-mark{width:40px;height:40px}.sn-brand-lockup .sn-brand-name{font-size:1.12rem}.sn-brand-lockup .sn-brand-motto{display:none}.sn-watermark-host::after{width:280px;right:-95px}.site-header{gap:.7rem}}

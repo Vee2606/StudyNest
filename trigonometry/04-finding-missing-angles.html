@@ -20,6 +20,7 @@
 
 <link rel="stylesheet" href="../studynest-3.1.css">
 <link rel="stylesheet" href="../studynest-theme.css">
+<link rel="stylesheet" href="../styles/brand-refresh.css">
 </head>
 <body>
 <div class="announcement-bar">🚀 StudyNest is growing. New lessons and worksheets are added regularly.</div>
@@ -108,5 +109,6 @@
 <script id="studynest-trig-interactive-script">document.addEventListener('DOMContentLoaded',()=>{document.getElementById('angleCalc').addEventListener('click',()=>{const m=document.getElementById('angleMode').value,a=+document.getElementById('angleA').value,b=+document.getElementById('angleB').value;let rad,fn;if(m==='oa'){rad=Math.atan(a/b);fn=`θ = tan⁻¹(${a}/${b})`;}else if(m==='oh'){rad=Math.asin(a/b);fn=`θ = sin⁻¹(${a}/${b})`;}else{rad=Math.acos(a/b);fn=`θ = cos⁻¹(${a}/${b})`;}const deg=rad*180/Math.PI;document.getElementById('angleResult').innerHTML=`${fn}<br><strong>θ ≈ ${deg.toFixed(1)}°</strong>`;});document.getElementById('angleCalc').click();});</script>  <script src="../script-v3.js"></script>
 
 <script src="../studynest-3.1.js" defer></script>
+<script src="../scripts/brand-refresh.js"></script>
 </body>
 </html>

@@ -13,6 +13,7 @@
 
 <link rel="stylesheet" href="../studynest-3.1.css">
 <link rel="stylesheet" href="../studynest-theme.css">
+<link rel="stylesheet" href="../styles/brand-refresh.css">
 </head><body>
 <div class="announcement-bar">🚀 StudyNest is growing. New lessons and worksheets are added regularly.</div>
 <header class="site-header">
@@ -82,4 +83,5 @@
 <script>document.addEventListener("DOMContentLoaded",()=>{const q=s=>document.querySelector(s),svg=q('#shapeSvg'),C=q('#dragC'),out=q('[data-vector-activity] .vector-result');let dragging=false;function setC(x,y){x=Math.max(390,Math.min(570,x));y=Math.max(70,Math.min(240,y));let B=[360,300],A=[160,300],D=[x-(B[0]-A[0]),y];q('#para').setAttribute('points',`${A} ${B} ${x},${y} ${D}`);C.setAttribute('cx',x);C.setAttribute('cy',y);q('#dragD').setAttribute('cx',D[0]);q('#dragD').setAttribute('cy',D[1]);q('#ad').setAttribute('x2',D[0]);q('#ad').setAttribute('y2',D[1]);q('#ac').setAttribute('x2',x);q('#ac').setAttribute('y2',y);q('#cLbl').setAttribute('x',x+12);q('#cLbl').setAttribute('y',y-8);q('#dLbl').setAttribute('x',D[0]-20);q('#dLbl').setAttribute('y',D[1]-12);let ab=[200,0],bc=[x-360,300-y];out.textContent=`AB = (${ab[0]/40}, 0), DC = (${ab[0]/40}, 0); BC = (${(bc[0]/40).toFixed(1)}, ${(bc[1]/40).toFixed(1)}), AD is identical; AC = AB + BC.`;}C.addEventListener('pointerdown',e=>{dragging=true;C.setPointerCapture(e.pointerId)});C.addEventListener('pointermove',e=>{if(!dragging)return;let r=svg.getBoundingClientRect();setC((e.clientX-r.left)/r.width*640,(e.clientY-r.top)/r.height*420)});C.addEventListener('pointerup',()=>dragging=false);setC(500,140);});</script>  <script src="../script-v3.js"></script>
 
 <script src="../studynest-3.1.js" defer></script>
+<script src="../scripts/brand-refresh.js"></script>
 </body></html>

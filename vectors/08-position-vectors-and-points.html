@@ -13,6 +13,7 @@
 
 <link rel="stylesheet" href="../studynest-3.1.css">
 <link rel="stylesheet" href="../studynest-theme.css">
+<link rel="stylesheet" href="../styles/brand-refresh.css">
 </head><body>
 <div class="announcement-bar">🚀 StudyNest is growing. New lessons and worksheets are added regularly.</div>
 <header class="site-header">
@@ -103,4 +104,5 @@
 <script>document.addEventListener("DOMContentLoaded",()=>{const q=s=>document.querySelector(s),svg=q('[data-vector-activity] svg'),out=q('[data-vector-activity] .vector-result');let P=[3,3];function draw(){let X=320+P[0]*40,Y=220-P[1]*40;q('#posVec').setAttribute('x2',X);q('#posVec').setAttribute('y2',Y);q('#pointP').setAttribute('cx',X);q('#pointP').setAttribute('cy',Y);q('#pointPL').setAttribute('x',X+10);q('#pointPL').setAttribute('y',Y-10);out.textContent=`OP = (${P[0]}, ${P[1]}). This is the position vector of P.`;}svg.addEventListener('click',e=>{let r=svg.getBoundingClientRect(),x=(e.clientX-r.left)/r.width*640,y=(e.clientY-r.top)/r.height*420;P=[Math.max(-6,Math.min(6,Math.round((x-320)/40))),Math.max(-4,Math.min(4,Math.round((220-y)/40)))];draw();});q('#midpointBtn').addEventListener('click',()=>{let Q=[-3,-2],M=[(P[0]+Q[0])/2,(P[1]+Q[1])/2],X=320+Q[0]*40,Y=220-Q[1]*40,MX=320+M[0]*40,MY=220-M[1]*40;q('#pointQ').setAttribute('cx',X);q('#pointQ').setAttribute('cy',Y);q('#pointQ').setAttribute('visibility','visible');q('#midDot').setAttribute('cx',MX);q('#midDot').setAttribute('cy',MY);q('#midDot').setAttribute('visibility','visible');q('#midLbl').setAttribute('x',MX+10);q('#midLbl').setAttribute('y',MY-10);q('#midLbl').setAttribute('visibility','visible');out.textContent=`P=(${P}), Q=(${Q}); midpoint M=(${M[0]}, ${M[1]}).`;});q('#clearMidpoint').addEventListener('click',()=>['pointQ','midDot','midLbl'].forEach(id=>q('#'+id).setAttribute('visibility','hidden')));draw();});</script>  <script src="../script-v3.js"></script>
 
 <script src="../studynest-3.1.js" defer></script>
+<script src="../scripts/brand-refresh.js"></script>
 </body></html>

@@ -13,6 +13,7 @@
 
 <link rel="stylesheet" href="../studynest-3.1.css">
 <link rel="stylesheet" href="../studynest-theme.css">
+<link rel="stylesheet" href="../styles/brand-refresh.css">
 </head><body>
 <div class="announcement-bar">🚀 StudyNest is growing. New lessons and worksheets are added regularly.</div>
 <header class="site-header">
@@ -82,4 +83,5 @@
 <script>document.addEventListener("DOMContentLoaded",()=>{const q=s=>document.querySelector(s),box=q('#mixedQuestions'),out=q('[data-vector-activity] .vector-result');q('#markMixed').addEventListener('click',()=>{let n=0;box.querySelectorAll('select').forEach(s=>{let ok=s.value===s.dataset.correct;n+=ok;s.parentElement.classList.toggle('correct',ok);s.parentElement.classList.toggle('wrong',!ok)});out.className='vector-result '+(n>=3?'good':'bad');out.textContent=`Score: ${n}/4. ${n===4?'Excellent — all vector skills are secure.':'Review the working for any incorrect item.'}`;});q('#resetMixed').addEventListener('click',()=>{box.querySelectorAll('select').forEach(s=>{s.value='';s.parentElement.classList.remove('correct','wrong')});out.className='vector-result vector-score';out.textContent='Score: 0/4';});});</script>  <script src="../script-v3.js"></script>
 
 <script src="../studynest-3.1.js" defer></script>
+<script src="../scripts/brand-refresh.js"></script>
 </body></html>
