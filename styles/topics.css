@@ -633,38 +633,3 @@ body { background: var(--cream); }
     .topic-pencil { width: 145px; }
     .topics-section { padding-top: 50px; }
 }
-
-/* Beta polish: align the Study by Topic hero with the Study by Form hero card. */
-.topics-hero {
-    width: min(1140px, calc(100% - 34px));
-    min-height: 0;
-    margin: 38px auto;
-    padding: clamp(32px, 5vw, 62px);
-    grid-template-columns: 1.2fr .8fr;
-    gap: 35px;
-    border: 1px solid color-mix(in srgb, #4f8f91 24%, white);
-    border-radius: 32px;
-    overflow: hidden;
-    background:
-        radial-gradient(circle at 90% 10%, color-mix(in srgb, #4f8f91 15%, transparent), transparent 32%),
-        linear-gradient(135deg, #ffffff, color-mix(in srgb, #4f8f91 10%, white));
-    box-shadow: var(--shadow, 0 18px 45px rgba(28, 53, 87, .10));
-}
-.topics-hero h1 {
-    font-size: clamp(2.7rem, 6vw, 5rem);
-    line-height: 1.03;
-}
-.topics-hero-visual {
-    min-height: 295px;
-    border: 1px solid var(--border, #e6e9ef);
-    border-radius: 28px;
-    overflow: hidden;
-    background: rgba(255,255,255,.92);
-}
-@media (max-width: 850px) {
-    .topics-hero { grid-template-columns: 1fr; }
-}
-@media (max-width: 600px) {
-    .topics-hero { width: min(100% - 20px, 1140px); margin: 18px auto 28px; padding: 30px 22px; border-radius: 24px; }
-    .topics-hero-visual { min-height: 250px; }
-}
