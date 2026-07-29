@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Classify triangles and solve interior and exterior angle problems.">
-        <title>Triangles and Angle Properties | Geometry | StudyNest</title>
+        <title>Triangle Angle Properties | Geometry | StudyNest</title>
         <link rel="stylesheet" href="../styles/geometry-lessons.css">
       <link rel="stylesheet" href="../styles/studynest-v3.css">
 
@@ -28,7 +28,7 @@
         <section class="lesson-hero">
             <div>
                 <p class="lesson-label">GEOMETRY · LESSON 05</p>
-                <h1>Triangles and Angle Properties</h1>
+                <h1>Triangle Angle Properties</h1>
                 <p class="lesson-subtitle">Classify triangles and solve interior and exterior angle problems.</p>
                 <div class="lesson-meta">
                     <span class="meta-pill">⏱️ 20–26 min</span>
@@ -51,7 +51,7 @@
         <main class="lesson-main">
 
 <section class="lesson-section">
-<h2>🎯 By the End of This Lesson...</h2>
+<h2>Learning Objectives</h2>
 <ul class="objective-list">
 <li>classify triangles by sides and angles;</li>
 <li>use the triangle angle sum;</li>
@@ -61,8 +61,11 @@
 </ul>
 </section>
 
-<section class="lesson-section">
-<h2>Classifying by Sides</h2>
+<section class="lesson-section introduction-card">
+<h2>Introduction</h2>
+<p>A triangle is a three-sided polygon. Its side markings and angle sizes tell us which properties we can use.</p>
+<p>Begin by noticing what is equal or special; the calculation comes after the geometry.</p>
+<h3>Classifying by sides</h3>
 <div class="geometry-grid">
 <article class="geometry-card"><h3>Equilateral</h3><p>Three equal sides and three 60° angles.</p></article>
 <article class="geometry-card"><h3>Isosceles</h3><p>Two equal sides and two equal base angles.</p></article>
@@ -71,7 +74,7 @@
 </section>
 
 <section class="lesson-section">
-<h2>Classifying by Angles</h2>
+<h2>Key Notes</h2>
 <div class="geometry-grid">
 <article class="geometry-card"><h3>Acute triangle</h3><p>All three angles are less than 90°.</p></article>
 <article class="geometry-card"><h3>Right triangle</h3><p>One angle is exactly 90°.</p></article>
@@ -100,7 +103,7 @@
 <section class="lesson-section">
 <h2>Exterior Angle Rule</h2>
 <div class="geometry-rule">An exterior angle of a triangle equals the sum of the two opposite interior angles.</div>
-<div class="worked-example">
+<div class="key-note">
 <h3>Two opposite interior angles are 48° and 67°.</h3>
 <p>Exterior angle = 48°+67°=115°.</p>
 </div>
@@ -108,7 +111,7 @@
 
 <section class="lesson-section">
 <h2>Worked Example: Isosceles Triangle</h2>
-<div class="worked-example">
+<div class="key-note">
 <h3>The vertex angle is 44°. Find each base angle.</h3>
 <p>Remaining total=180°−44°=136°.</p>
 <p>Base angles are equal, so each is 136°÷2=68°.</p>
@@ -119,7 +122,11 @@
 <section class="lesson-section"><h2>Try It: Complete the Triangle</h2><div class="interactive-geometry"><div class="interactive-controls"><div class="interactive-control"><label for="triA">Angle A: <span id="triAVal">50°</span></label><input id="triA" type="range" min="10" max="150" value="50"></div><div class="interactive-control"><label for="triB">Angle B: <span id="triBVal">60°</span></label><input id="triB" type="range" min="10" max="150" value="60"></div></div><div class="interactive-output" id="triOutput">50° + 60° + 70° = 180°</div><table class="interactive-table"><tr><th>A</th><th>B</th><th>C</th><th>Triangle type</th></tr><tr><td id="ta">50°</td><td id="tb">60°</td><td id="tc">70°</td><td id="tt">acute</td></tr></table></div></section>
 <script>(()=>{const a=document.querySelector('#triA'),b=document.querySelector('#triB');function u(changed){let x=+a.value,y=+b.value;if(x+y>=170){if(changed===a)y=169-x,b.value=y;else x=169-y,a.value=x}const z=180-x-y,arr=[x,y,z],type=arr.includes(90)?'right':Math.max(...arr)>90?'obtuse':'acute';document.querySelector('#triAVal').textContent=x+'°';document.querySelector('#triBVal').textContent=y+'°';document.querySelector('#triOutput').textContent=`${x}° + ${y}° + ${z}° = 180°`;document.querySelector('#ta').textContent=x+'°';document.querySelector('#tb').textContent=y+'°';document.querySelector('#tc').textContent=z+'°';document.querySelector('#tt').textContent=type;}a.addEventListener('input',()=>u(a));b.addEventListener('input',()=>u(b));u();})();</script>
 
-<section class="lesson-section">
+<section class="lesson-section think-together"><h2>🧠 Let’s Think Together</h2><p>An isosceles triangle has a vertex angle of 44°. The other two angles are equal. First remove the vertex angle from 180°: 180° − 44° = 136°. Then share 136° equally, giving two base angles of 68°.</p></section>
+
+<section class="lesson-section"><h2>Worked Examples</h2><div class="worked-example"><h3>Example 1: Find a missing interior angle</h3><p>A triangle has angles 52°, 73° and x. Since the angles total 180°, x = 180° − 52° − 73° = 55°.</p></div><div class="worked-example"><h3>Example 2: Use the exterior-angle rule</h3><p>Two opposite interior angles are 48° and 67°. The exterior angle is 48° + 67° = 115°.</p></div><div class="worked-example"><h3>Example 3: Use algebra</h3><p>The angles are x, 2x and 3x. Then 6x = 180°, so x = 30°. The angles are 30°, 60° and 90°.</p></div></section>
+
+<section class="lesson-section practice-card">
 <h2>Practice Questions</h2>
 <span class="level-heading">Foundation</span>
 <ol class="practice-list">
@@ -153,8 +160,12 @@
 </div></details>
 </section>
 
-<section class="lesson-section">
-<h2>One-Minute Summary</h2>
+<section class="lesson-section common-mistakes"><h2>Common Mistakes</h2><ul><li>Assuming a triangle is isosceles without equal-side markings or a statement.</li><li>Forgetting that all three interior angles total 180°.</li><li>Adding the exterior angle to the wrong pair of interior angles.</li></ul></section>
+
+<section class="lesson-section exam-focus"><h2>Exam Focus</h2><p>Mark equal angles before calculating and state the property used. For an exterior angle, identify the two non-adjacent interior angles clearly.</p></section>
+
+<section class="lesson-section summary-card">
+<h2>Summary</h2>
 <ul class="summary-list">
 <li>Triangle angles total 180°.</li>
 <li>Base angles in an isosceles triangle are equal.</li>

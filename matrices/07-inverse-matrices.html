@@ -30,6 +30,7 @@
 <link rel="stylesheet" href="../studynest-3.1.css">
 <link rel="stylesheet" href="../studynest-theme.css">
 <link rel="stylesheet" href="../styles/brand-refresh.css">
+<link rel="stylesheet" href="../styles/lesson-standard.css">
 </head>
 <body>
 <div class="announcement-bar">
@@ -111,7 +112,7 @@
 </div>
 </div>
 </section>
-<main class="lesson-main">
+<main class="lesson-main"><section class="lesson-section"><h2>Learning Objectives</h2><ul class="objective-list"><li>understand the main ideas in Inverse Matrices;</li><li>use correct mathematical language and notation;</li><li>apply the ideas to progressively harder problems;</li><li>check and explain each solution.</li></ul></section><section class="lesson-section standard-introduction"><h2>Introduction</h2><p>This lesson develops Inverse Matrices from meaning and patterns before moving to calculations. Look for what the quantities, shapes or symbols represent, then connect that idea to the method.</p></section><section class="lesson-section"><h2>Key Notes</h2><p>Read the definitions and key facts below carefully. Each rule is most useful when you can explain why it fits the situation, not simply recall it.</p></section>
 <section class="deep-lesson"><h2>🌱 The Meaning of an Inverse</h2><p class="concept-hook">An inverse undoes an operation. Dividing by 4 undoes multiplying by 4. For matrices, the inverse of A is written <strong>A⁻¹</strong>, and multiplying them produces the identity matrix <strong>I</strong>.</p><div class="visual-grid"><article class="visual-card"><h3>The key relationship</h3><div class="rule-reveal">AA⁻¹ = A⁻¹A = I</div><p>I is the identity matrix—the matrix version of 1.</p></article><article class="visual-card"><h3>Step 1: Check the determinant</h3><div class="arrow-row"><span class="matrix-v2 c2"><span>a</span><span>b</span><span>c</span><span>d</span></span></div><p>Calculate ad − bc. If it equals 0, stop: no inverse exists.</p></article><article class="visual-card"><h3>Step 2: Swap the diagonal</h3><div class="arrow-row"><span class="matrix-v2 c2"><span class="hi-a">a</span><span>b</span><span>c</span><span class="hi-a">d</span></span><strong>→</strong><span class="matrix-v2 c2"><span class="hi-a">d</span><span>b</span><span>c</span><span class="hi-a">a</span></span></div></article><article class="visual-card"><h3>Step 3: Change the other signs</h3><div class="arrow-row"><span class="matrix-v2 c2"><span>d</span><span class="hi-b">b</span><span class="hi-b">c</span><span>a</span></span><strong>→</strong><span class="matrix-v2 c2"><span>d</span><span class="hi-b">−b</span><span class="hi-b">−c</span><span>a</span></span></div></article><article class="visual-card"><h3>Step 4: Divide by the determinant</h3><div class="rule-reveal">A⁻¹ = 1/(ad−bc) × [ d   −b ; −c   a ]</div></article><article class="visual-card"><h3>Verify your answer</h3><p>Multiply A by your proposed A⁻¹. The result should be I, not A and not the zero matrix.</p></article></div><div class="think-box"><strong>Language Check:</strong> A⁻¹ does not mean “take the reciprocal of each entry.” It means the matrix that undoes A.</div></section><section class="lesson-section">
 <h2>
      Formula
@@ -166,9 +167,7 @@
     </p>
 </section>
 <section class="lesson-section">
-<h2>
-     Practice
-    </h2>
+<h2>Practice Questions</h2>
 <ol class="practice-list">
 <li>
       Find inverse of <span class="math-matrix" style="--cols:2" role="math" aria-label="matrix with 2 rows and 2 columns"><span class="mcell">2</span><span class="mcell">1</span><span class="mcell">1</span><span class="mcell">1</span></span>.
@@ -198,86 +197,8 @@
 </div>
 </details>
 </section>
-<section class="matrix-lab"><h2>🔁 Inverse Matrix Calculator</h2><div class="matrix-lab-grid"><div class="mx c2"><input aria-label="Matrix entry 1" id="ivA0" type="number" value="2"/><input aria-label="Matrix entry 2" id="ivA1" type="number" value="1"/><input aria-label="Matrix entry 3" id="ivA2" type="number" value="3"/><input aria-label="Matrix entry 4" id="ivA3" type="number" value="2"/></div><div><button class="matrix-btn" id="ivCalc">Find inverse</button><div aria-live="polite" class="matrix-live" id="ivOut"></div></div></div></section><section class="lesson-section">
-<h2>
-     🧭 StudyNest: How to Solve Matrix Problems
-    </h2>
-<div class="matrix-solver">
-<div class="matrix-step">
-<span>
-       1
-      </span>
-<strong>
-       Inspect
-      </strong>
-      Write down the order of each matrix and notice whether it is square.
-     </div>
-<div class="matrix-step">
-<span>
-       2
-      </span>
-<strong>
-       Identify
-      </strong>
-      Decide whether the task is addition, multiplication, determinant, inverse or an equation.
-     </div>
-<div class="matrix-step">
-<span>
-       3
-      </span>
-<strong>
-       Check
-      </strong>
-      Confirm that the operation is allowed before calculating.
-     </div>
-<div class="matrix-step">
-<span>
-       4
-      </span>
-<strong>
-       Apply
-      </strong>
-      Use the correct entry-by-entry or row-by-column rule.
-     </div>
-<div class="matrix-step">
-<span>
-       5
-      </span>
-<strong>
-       Organise
-      </strong>
-      Work one entry at a time and keep its position clear.
-     </div>
-<div class="matrix-step">
-<span>
-       6
-      </span>
-<strong>
-       Simplify
-      </strong>
-      Complete the arithmetic carefully, including negative signs.
-     </div>
-<div class="matrix-step">
-<span>
-       7
-      </span>
-<strong>
-       Verify
-      </strong>
-      Check the order of the answer and test an inverse where appropriate.
-     </div>
-<div class="matrix-step">
-<span>
-       8
-      </span>
-<strong>
-       Conclude
-      </strong>
-      Present the final matrix neatly with brackets and correct notation.
-     </div>
-</div>
-</section><section class="lesson-section"><h2>📘 Remember</h2><div class="wrap-grid"><article class="wrap-card"><h3>Key idea</h3><p>A 2×2 matrix has an inverse only when its determinant is non-zero.</p></article><article class="wrap-card"><h3>⚠️ Common Mistakes</h3><p>Do not forget to swap a and d, change the signs of b and c, and divide every entry by the determinant.</p></article><article class="wrap-card"><h3>⭐ Exam Tips</h3><p>Verify your answer by checking that AA⁻¹ gives the identity matrix.</p></article><article class="wrap-card"><h3>🌍 Did You Know?</h3><p>Inverse matrices undo matrix transformations.</p></article></div></section>
-<nav class="lesson-navigation">
+<section class="matrix-lab"><h2>🔁 Inverse Matrix Calculator</h2><div class="matrix-lab-grid"><div class="mx c2"><input aria-label="Matrix entry 1" id="ivA0" type="number" value="2"/><input aria-label="Matrix entry 2" id="ivA1" type="number" value="1"/><input aria-label="Matrix entry 3" id="ivA2" type="number" value="3"/><input aria-label="Matrix entry 4" id="ivA3" type="number" value="2"/></div><div><button class="matrix-btn" id="ivCalc">Find inverse</button><div aria-live="polite" class="matrix-live" id="ivOut"></div></div></div></section><section class="lesson-section"><h2>📘 Remember</h2><div class="wrap-grid"><article class="wrap-card"><h3>Key idea</h3><p>A 2×2 matrix has an inverse only when its determinant is non-zero.</p></article><article class="wrap-card"><h3>⚠️ Common Mistakes</h3><p>Do not forget to swap a and d, change the signs of b and c, and divide every entry by the determinant.</p></article><article class="wrap-card"><h3>⭐ Exam Tips</h3><p>Verify your answer by checking that AA⁻¹ gives the identity matrix.</p></article><article class="wrap-card"><h3>🌍 Did You Know?</h3><p>Inverse matrices undo matrix transformations.</p></article></div></section>
+<section class="lesson-section standard-mistakes"><h2>Common Mistakes</h2><ul><li>Choosing a rule before identifying what the question describes.</li><li>Skipping working or changing notation part-way through a solution.</li><li>Accepting an answer without checking its size, sign or units.</li></ul></section><section class="lesson-section standard-exam"><h2>Exam Focus</h2><p>Show the mathematical relationship you are using, keep notation consistent and give a clear final answer. Use a quick estimate, diagram or inverse operation to check that the result is reasonable.</p></section><section class="lesson-section standard-summary"><h2>Summary</h2><ul class="summary-list"><li>Understand the meaning of each idea before selecting a method.</li><li>Use definitions, properties and notation consistently.</li><li>Show working and check that the final result is sensible.</li></ul></section><nav class="lesson-navigation">
 <a class="nav-button" href="06-determinants.html">
      ← Determinants
     </a>

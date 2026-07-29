@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="../studynest-3.1.css">
 <link rel="stylesheet" href="../studynest-theme.css">
 <link rel="stylesheet" href="../styles/brand-refresh.css">
+<link rel="stylesheet" href="../styles/lesson-standard.css">
 </head>
 <body>
 
@@ -51,7 +52,7 @@
 <main class="lesson-main">
 
 <section class="lesson-section">
-<h2>🎯 By the End of This Lesson...</h2>
+<h2>Learning Objectives</h2>
 <ul class="objective-list">
 <li>define a quadrilateral;</li>
 <li>identify common types of quadrilaterals;</li>
@@ -59,7 +60,7 @@
 <li>use the 360° angle sum to solve problems;</li>
 <li>compare quadrilaterals accurately.</li>
 </ul>
-</section>
+</section><section class="lesson-section standard-introduction"><h2>Introduction</h2><p>This lesson develops Quadrilaterals from meaning and patterns before moving to calculations. Look for what the quantities, shapes or symbols represent, then connect that idea to the method.</p></section><section class="lesson-section"><h2>Key Notes</h2><p>Read the definitions and key facts below carefully. Each rule is most useful when you can explain why it fits the situation, not simply recall it.</p></section>
 
 <section class="lesson-section">
 <h2>🌍 Why This Matters</h2>
@@ -230,7 +231,7 @@
 <section class="lesson-section"><h2>Try It: Missing Angle in a Quadrilateral</h2><div class="interactive-geometry"><div class="interactive-controls"><div class="interactive-control"><label for="q1">Angle 1: <span id="q1v">80°</span></label><input id="q1" type="range" min="20" max="160" value="80"></div><div class="interactive-control"><label for="q2">Angle 2: <span id="q2v">95°</span></label><input id="q2" type="range" min="20" max="160" value="95"></div><div class="interactive-control"><label for="q3">Angle 3: <span id="q3v">105°</span></label><input id="q3" type="range" min="20" max="160" value="105"></div></div><div class="interactive-output" id="quadOut"></div></div></section>
 <script>(()=>{const rs=['q1','q2','q3'].map(id=>document.getElementById(id));function u(){let v=rs.map(r=>+r.value),m=360-v.reduce((a,b)=>a+b,0);if(m<1){rs[2].value=Math.max(20,359-v[0]-v[1]);v=rs.map(r=>+r.value);m=360-v.reduce((a,b)=>a+b,0)}v.forEach((n,i)=>document.getElementById('q'+(i+1)+'v').textContent=n+'°');document.querySelector('#quadOut').textContent=`Missing angle = 360° − (${v.join('° + ')}°) = ${m}°.`}rs.forEach(r=>r.addEventListener('input',u));u();})();</script>
 
-<section class="lesson-section">
+<section class="lesson-section standard-think"><h2>🧠 Let&#8217;s Think Together</h2><p>Before calculating, identify the information given, the result required and the mathematical relationship that connects them. Predict whether the answer should be larger, smaller or unchanged, then use that prediction to check the result.</p></section><section class="lesson-section">
 <h2>Practice Questions</h2>
 <span class="level-heading">Foundation</span>
 <ol class="practice-list">
@@ -272,8 +273,8 @@
 </details>
 </section>
 
-<section class="lesson-section">
-<h2>One-Minute Summary</h2>
+<section class="lesson-section standard-exam"><h2>Exam Focus</h2><p>Show the mathematical relationship you are using, keep notation consistent and give a clear final answer. Use a quick estimate, diagram or inverse operation to check that the result is reasonable.</p></section><section class="lesson-section">
+<h2>Summary</h2>
 <ul class="summary-list">
 <li>A quadrilateral has four sides.</li>
 <li>Its interior angles add to 360°.</li>

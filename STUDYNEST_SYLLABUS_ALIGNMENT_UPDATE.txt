@@ -1,0 +1,8 @@
+StudyNest syllabus alignment update
+- Removed Transformations from the Form 1 Study by Form topic list.
+- Removed Transformations from the Form 1 Worksheets by Form topic list.
+- Updated the Form 1 lesson pathway count from 9 to 8 topics.
+- Updated the Form 1 worksheet landing count from 9 topics / 54 worksheets to 8 topics / 48 worksheets.
+- Removed the visible 'Aligned to the official ZIMSEC Mathematics Syllabus B...' notes.
+- Replaced repetitive 'Official Form ... syllabus topic' card text with neutral descriptions.
+- No homepage, branding, colours, Study by Topic pages, lesson content, or worksheet content were changed.

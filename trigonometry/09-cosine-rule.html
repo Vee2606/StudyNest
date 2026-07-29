@@ -21,6 +21,7 @@
 <link rel="stylesheet" href="../studynest-3.1.css">
 <link rel="stylesheet" href="../studynest-theme.css">
 <link rel="stylesheet" href="../styles/brand-refresh.css">
+<link rel="stylesheet" href="../styles/lesson-standard.css">
 </head>
 <body>
 <div class="announcement-bar">🚀 StudyNest is growing. New lessons and worksheets are added regularly.</div>
@@ -58,7 +59,7 @@
 <main class="lesson-main">
 <section class="lesson-section"><h2>🎯 Learning Objectives</h2><ul class="objective-list">
 <li>recognise when the cosine rule applies;</li><li>find a side from two sides and included angle;</li>
-<li>find an angle from three sides;</li><li>label sides opposite their matching angles.</li></ul></section>
+<li>find an angle from three sides;</li><li>label sides opposite their matching angles.</li></ul></section><section class="lesson-section standard-introduction"><h2>Introduction</h2><p>This lesson develops The Cosine Rule from meaning and patterns before moving to calculations. Look for what the quantities, shapes or symbols represent, then connect that idea to the method.</p></section><section class="lesson-section"><h2>Key Notes</h2><p>Read the definitions and key facts below carefully. Each rule is most useful when you can explain why it fits the situation, not simply recall it.</p></section>
 <section class="lesson-section"><h2>The Cosine Rule</h2>
 <div class="trig-rule">a²=b²+c²−2bc cos A</div>
 <p>Use it for SAS (two sides and included angle) or SSS (three sides).</p></section>
@@ -68,7 +69,7 @@
 <section class="lesson-section"><h2>Worked Example: Find an Angle</h2>
 <p>a=8, b=6, c=5.</p>
 <div class="calc-steps"><p>cosA=(b²+c²−a²)/(2bc)</p><p>cosA=(36+25−64)/(60)=−0.05</p><p>A=cos⁻¹(−0.05)</p><p><strong>A≈92.9°</strong></p></div></section>
-<section class="lesson-section"><h2>Practice</h2><ol class="practice-list">
+<section class="lesson-section"><h2>Practice Questions</h2><ol class="practice-list">
 <li>b=8, c=11, A=50°. Find a.</li>
 <li>a=9, b=7, c=6. Find A.</li>
 <li>Why can cosine be negative when finding an obtuse angle?</li></ol></section>
@@ -81,25 +82,12 @@
 </div>
 </details>
 </section>
-<section class="lesson-section trig-lab"><h2>🧭 Interactive Lab: Cosine Rule Explorer</h2><p>Change the values or make a choice and watch the mathematics respond.</p><div class="trig-lab-grid"><svg class="trig-svg" viewbox="0 0 650 420"><polygon fill="rgba(102,115,184,.08)" points="90,340 550,340 365,90" stroke="#243b53" stroke-width="6"></polygon><text x="70" y="365">A</text><text x="560" y="365">B</text><text x="365" y="70">C</text><text x="290" y="375">c</text><text x="475" y="205">a</text><text x="195" y="205">b</text></svg><div class="trig-controls"><div class="trig-control"><label for="cosB">Side b</label><input id="cosB" type="number" value="7"/></div><div class="trig-control"><label for="cosC">Side c</label><input id="cosC" type="number" value="10"/></div><div class="trig-control"><label for="cosA">Included angle A (°)</label><input id="cosA" type="number" value="55"/></div><button class="trig-btn" id="cosCalc">Find side a</button><div class="trig-result" id="cosResult"></div></div></div></section><section class="lesson-section">
-<h2>🧭 StudyNest: How to Solve It</h2>
-<div class="solve-template">
-<div class="solve-step"><span class="step-number">1</span><strong>Inspect</strong>Look for the right angle, the given angle and the information already labelled.</div>
-<div class="solve-step"><span class="step-number">2</span><strong>Label</strong>Name the relevant sides or identify the triangle information.</div>
-<div class="solve-step"><span class="step-number">3</span><strong>Identify</strong>State exactly what is known and what must be found.</div>
-<div class="solve-step"><span class="step-number">4</span><strong>Choose</strong>Select the relationship containing the known and unknown quantities.</div>
-<div class="solve-step"><span class="step-number">5</span><strong>Write</strong>Write the formula before substituting values.</div>
-<div class="solve-step"><span class="step-number">6</span><strong>Solve</strong>Rearrange carefully and use the calculator in degree mode.</div>
-<div class="solve-step"><span class="step-number">7</span><strong>Round</strong>Use the accuracy requested and include units.</div>
-<div class="solve-step"><span class="step-number">8</span><strong>Check</strong>Confirm the side lengths and angles are reasonable.</div>
-</div>
-</section>
-<section class="lesson-section"><h2>📚 Lesson Wrap-Up</h2><div class="lesson-end-grid">
+<section class="lesson-section trig-lab"><h2>🧭 Interactive Lab: Cosine Rule Explorer</h2><p>Change the values or make a choice and watch the mathematics respond.</p><div class="trig-lab-grid"><svg class="trig-svg" viewbox="0 0 650 420"><polygon fill="rgba(102,115,184,.08)" points="90,340 550,340 365,90" stroke="#243b53" stroke-width="6"></polygon><text x="70" y="365">A</text><text x="560" y="365">B</text><text x="365" y="70">C</text><text x="290" y="375">c</text><text x="475" y="205">a</text><text x="195" y="205">b</text></svg><div class="trig-controls"><div class="trig-control"><label for="cosB">Side b</label><input id="cosB" type="number" value="7"/></div><div class="trig-control"><label for="cosC">Side c</label><input id="cosC" type="number" value="10"/></div><div class="trig-control"><label for="cosA">Included angle A (°)</label><input id="cosA" type="number" value="55"/></div><button class="trig-btn" id="cosCalc">Find side a</button><div class="trig-result" id="cosResult"></div></div></div></section><section class="lesson-section"><h2>Summary</h2><div class="lesson-end-grid">
 <article class="lesson-end-card"><h3>📘 Remember</h3><ul><li>Label the triangle before choosing a formula.</li><li>Use degree mode unless the question says otherwise.</li><li>Keep full calculator values until the final rounding step.</li></ul></article>
 <article class="lesson-end-card"><h3>⚠️ Common Mistakes</h3><ul><li>Using the wrong reference angle.</li><li>Rounding too early.</li><li>Forgetting units or the degree symbol.</li></ul></article>
 <article class="lesson-end-card"><h3>⭐ Exam Tips</h3><ul><li>Write the formula before substituting.</li><li>Sketch and label any diagram that is not already provided.</li><li>Check whether the answer is sensible for the shape.</li></ul></article>
 <article class="lesson-end-card"><h3>🌍 Did You Know?</h3><p>Surveyors, engineers, pilots and architects use trigonometry to calculate distances that are difficult or unsafe to measure directly.</p></article>
-</div></section><nav class="lesson-navigation">
+</div></section><section class="lesson-section standard-mistakes"><h2>Common Mistakes</h2><ul><li>Choosing a rule before identifying what the question describes.</li><li>Skipping working or changing notation part-way through a solution.</li><li>Accepting an answer without checking its size, sign or units.</li></ul></section><section class="lesson-section standard-exam"><h2>Exam Focus</h2><p>Show the mathematical relationship you are using, keep notation consistent and give a clear final answer. Use a quick estimate, diagram or inverse operation to check that the result is reasonable.</p></section><nav class="lesson-navigation">
 <a class="nav-button" href="08-sine-rule.html">← Sine Rule</a>
 <a class="nav-button" href="index.html">Trigonometry Roadmap</a>
 <a class="nav-button primary" href="10-obtuse-angles-and-degrees-minutes.html">Obtuse Angles and Degree–Minute Form →</a>

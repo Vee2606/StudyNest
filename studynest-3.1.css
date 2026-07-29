@@ -30,4 +30,32 @@ section{scroll-margin-top:90px}
 .sn31-toc strong{display:block;color:var(--sn-navy);margin:2px 4px 10px}.sn31-toc a{display:block;padding:8px 10px;margin:3px 0;border-radius:10px;color:#334155;text-decoration:none;font-weight:700;font-size:.9rem}.sn31-toc a:hover,.sn31-toc a.active{background:#e8f0ff;color:var(--sn-blue-2)}
 @media(min-width:801px){.sn31-toc,.sn31-toc-toggle{display:none!important}}
 @media(max-width:800px){main,.main-content,.page-content,.lesson-page,.topic-page{width:min(calc(100% - 20px),var(--sn-shell))}.card,.lesson-card,.topic-card,.feature-card,.resource-card,.practice-card,.quiz-card,.section-card,.content-card,.worksheet-card{border-radius:17px!important;box-shadow:0 10px 25px rgba(23,37,84,.14)!important}.sn31-scroll{right:12px;bottom:14px}.sn31-toc-toggle{left:12px;bottom:14px}.sn31-toc{left:12px;right:12px;top:auto;bottom:76px;width:auto;max-height:62vh}.hero,.page-hero,.topic-hero,.lesson-hero,.welcome-section{border-radius:19px!important}}
+/* Shared animation polish */
+.sn31-page-shell{opacity:1;transform:none}
+.sn31-page-shell.sn31-page-animate{opacity:0;transform:translateY(10px)}
+.sn31-page-shell.sn31-page-ready{opacity:1;transform:none;transition:opacity .45s cubic-bezier(.2,.8,.2,1),transform .45s cubic-bezier(.2,.8,.2,1);will-change:opacity,transform}
+
+.sn31-reveal{opacity:1;transform:none;transition:opacity .42s cubic-bezier(.2,.8,.2,1),transform .42s cubic-bezier(.2,.8,.2,1);will-change:opacity,transform}
+.sn31-reveal.sn31-animate{opacity:0;transform:translateY(12px)}
+.sn31-reveal.sn31-visible{opacity:1;transform:none}
+
+.card,.lesson-card,.topic-card,.feature-card,.resource-card,.practice-card,.quiz-card,.section-card,.content-card,.worksheet-card,.path-card,.learning-card{transform:translateY(0) scale(1);will-change:transform,box-shadow}
+.card:hover,.lesson-card:hover,.topic-card:hover,.feature-card:hover,.resource-card:hover,.worksheet-card:hover,.path-card:hover,.learning-card:hover,.section-card:hover,.practice-card:hover,.quiz-card:hover,.content-card:hover{transform:translateY(-4px) scale(1.01);box-shadow:0 20px 42px rgba(23,37,84,.18)!important;border-color:#93b4ed!important}
+.card:focus-visible,.lesson-card:focus-visible,.topic-card:focus-visible,.feature-card:focus-visible,.resource-card:focus-visible,.practice-card:focus-visible,.quiz-card:focus-visible,.section-card:focus-visible,.content-card:focus-visible,.worksheet-card:focus-visible,.path-card:focus-visible,.learning-card:focus-visible{transform:translateY(-2px) scale(1.01);outline:none}
+
+button,.btn,a.button,.primary-btn,.cta-button,.start-btn,.nav-button,.print-button,.path-card,.lesson-card,.topic-card{transition:transform .2s cubic-bezier(.2,.8,.2,1),filter .2s cubic-bezier(.2,.8,.2,1),box-shadow .2s cubic-bezier(.2,.8,.2,1),opacity .2s ease}
+button:hover,.btn:hover,a.button:hover,.primary-btn:hover,.cta-button:hover,.start-btn:hover,.nav-button:hover,.print-button:hover{transform:translateY(-2px) scale(1.01);filter:saturate(1.12);box-shadow:0 12px 24px rgba(37,99,235,.24)}
+
+.progress-fill,.ws-progress-fill,[role="progressbar"],[aria-valuenow]{width:0!important;transition:width .55s cubic-bezier(.2,.8,.2,1)}
+
+details > *:not(summary){transition:max-height .28s cubic-bezier(.2,.8,.2,1),opacity .28s cubic-bezier(.2,.8,.2,1),padding .28s ease,margin .28s ease}
+details > .sn31-details-panel{overflow:hidden;max-height:0;opacity:0;padding-top:0!important;padding-bottom:0!important;margin-top:0!important;margin-bottom:0!important}
+details[open] > .sn31-details-panel{max-height:1400px;opacity:1;padding-top:inherit!important;padding-bottom:inherit!important;margin-top:inherit!important;margin-bottom:inherit!important}
+
+.answers-content,.hint-box,.hint-content,.solution-box,.solution-content,.worked-solution,.accordion-panel,.collapsible{overflow:hidden;transition:max-height .28s cubic-bezier(.2,.8,.2,1),opacity .28s cubic-bezier(.2,.8,.2,1),transform .28s cubic-bezier(.2,.8,.2,1)}
+.answers-content:not(.sn31-open),.hint-box:not(.sn31-open),.hint-content:not(.sn31-open),.solution-box:not(.sn31-open),.solution-content:not(.sn31-open),.worked-solution:not(.sn31-open),.accordion-panel:not(.sn31-open),.collapsible:not(.sn31-open){max-height:0!important;opacity:0;transform:translateY(-3px)}
+.answers-content.sn31-open,.hint-box.sn31-open,.hint-content.sn31-open,.solution-box.sn31-open,.solution-content.sn31-open,.worked-solution.sn31-open,.accordion-panel.sn31-open,.collapsible.sn31-open{max-height:1400px!important;opacity:1;transform:none}
+
+@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}.sn31-page-shell.sn31-page-animate,.sn31-reveal.sn31-animate{opacity:1!important;transform:none!important}.sn31-page-shell.sn31-page-ready,.sn31-reveal.sn31-visible{transition:none!important}.progress-fill,.ws-progress-fill,[role="progressbar"],[aria-valuenow]{transition:none!important;width:auto!important}} 
+
 @media print{.sn31-progress,.sn31-scroll,.sn31-toc,.sn31-toc-toggle{display:none!important}body{background:#fff!important}body::before{display:none}.card,.worksheet-paper,.paper{box-shadow:none!important}}

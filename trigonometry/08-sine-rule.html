@@ -21,6 +21,7 @@
 <link rel="stylesheet" href="../studynest-3.1.css">
 <link rel="stylesheet" href="../studynest-theme.css">
 <link rel="stylesheet" href="../styles/brand-refresh.css">
+<link rel="stylesheet" href="../styles/lesson-standard.css">
 </head>
 <body>
 <div class="announcement-bar">🚀 StudyNest is growing. New lessons and worksheets are added regularly.</div>
@@ -58,7 +59,7 @@
 <main class="lesson-main">
 <section class="lesson-section"><h2>🎯 Learning Objectives</h2><ul class="objective-list">
 <li>recognise when the sine rule applies;</li><li>match sides with opposite angles;</li>
-<li>find missing sides and angles;</li><li>handle the ambiguous case cautiously.</li></ul></section>
+<li>find missing sides and angles;</li><li>handle the ambiguous case cautiously.</li></ul></section><section class="lesson-section standard-introduction"><h2>Introduction</h2><p>This lesson develops The Sine Rule from meaning and patterns before moving to calculations. Look for what the quantities, shapes or symbols represent, then connect that idea to the method.</p></section><section class="lesson-section"><h2>Key Notes</h2><p>Read the definitions and key facts below carefully. Each rule is most useful when you can explain why it fits the situation, not simply recall it.</p></section>
 <section class="lesson-section"><h2>The Sine Rule</h2>
 <div class="trig-rule">a/sin A = b/sin B = c/sin C</div>
 <figure class="diagram-card"><svg viewbox="0 0 700 420"><polygon fill="none" points="110,330 560,330 400,80" stroke="#243b53" stroke-width="6"></polygon><text font-size="24" x="90" y="360">A</text><text font-size="24" x="565" y="360">B</text><text font-size="24" x="395" y="65">C</text><text font-size="24" x="475" y="200">a</text><text font-size="24" x="250" y="190">b</text><text font-size="24" x="325" y="365">c</text></svg><figcaption>Each side is paired with the angle directly opposite it.</figcaption></figure></section>
@@ -67,7 +68,7 @@
 <section class="lesson-section"><h2>Worked Example</h2>
 <p>A=42°, a=9 cm and B=68°. Find b.</p>
 <div class="calc-steps"><p>b/sin68°=9/sin42°</p><p>b=9sin68°/sin42°</p><p><strong>b≈12.5 cm</strong></p></div></section>
-<section class="lesson-section"><h2>Practice</h2><ol class="practice-list">
+<section class="lesson-section"><h2>Practice Questions</h2><ol class="practice-list">
 <li>A=35°, a=8 cm, B=74°. Find b.</li>
 <li>A=48°, a=12 cm, b=9 cm. Find B.</li>
 <li>What essential matching relationship must be identified first?</li></ol></section>
@@ -80,25 +81,12 @@
 </div>
 </details>
 </section>
-<section class="lesson-section trig-lab"><h2>🧭 Interactive Lab: Sine Rule Pair Explorer</h2><p>Change the values or make a choice and watch the mathematics respond.</p><div class="trig-lab-grid"><svg class="trig-svg" viewbox="0 0 650 420"><polygon fill="rgba(102,115,184,.08)" points="90,340 550,340 380,80" stroke="#243b53" stroke-width="6"></polygon><text x="70" y="365">A</text><text x="560" y="365">B</text><text x="380" y="65">C</text><text x="290" y="375">c</text><text x="480" y="200">a</text><text x="205" y="200">b</text></svg><div class="trig-controls"><div class="trig-control"><label for="sineA">Side a</label><input id="sineA" type="number" value="8"/></div><div class="trig-control"><label for="sineAngleA">Angle A (°)</label><input id="sineAngleA" type="number" value="42"/></div><div class="trig-control"><label for="sineAngleB">Angle B (°)</label><input id="sineAngleB" type="number" value="65"/></div><button class="trig-btn" id="sineCalc">Find side b</button><div class="trig-result" id="sineResult"></div></div></div></section><section class="lesson-section">
-<h2>🧭 StudyNest: How to Solve It</h2>
-<div class="solve-template">
-<div class="solve-step"><span class="step-number">1</span><strong>Inspect</strong>Look for the right angle, the given angle and the information already labelled.</div>
-<div class="solve-step"><span class="step-number">2</span><strong>Label</strong>Name the relevant sides or identify the triangle information.</div>
-<div class="solve-step"><span class="step-number">3</span><strong>Identify</strong>State exactly what is known and what must be found.</div>
-<div class="solve-step"><span class="step-number">4</span><strong>Choose</strong>Select the relationship containing the known and unknown quantities.</div>
-<div class="solve-step"><span class="step-number">5</span><strong>Write</strong>Write the formula before substituting values.</div>
-<div class="solve-step"><span class="step-number">6</span><strong>Solve</strong>Rearrange carefully and use the calculator in degree mode.</div>
-<div class="solve-step"><span class="step-number">7</span><strong>Round</strong>Use the accuracy requested and include units.</div>
-<div class="solve-step"><span class="step-number">8</span><strong>Check</strong>Confirm the side lengths and angles are reasonable.</div>
-</div>
-</section>
-<section class="lesson-section"><h2>📚 Lesson Wrap-Up</h2><div class="lesson-end-grid">
+<section class="lesson-section trig-lab"><h2>🧭 Interactive Lab: Sine Rule Pair Explorer</h2><p>Change the values or make a choice and watch the mathematics respond.</p><div class="trig-lab-grid"><svg class="trig-svg" viewbox="0 0 650 420"><polygon fill="rgba(102,115,184,.08)" points="90,340 550,340 380,80" stroke="#243b53" stroke-width="6"></polygon><text x="70" y="365">A</text><text x="560" y="365">B</text><text x="380" y="65">C</text><text x="290" y="375">c</text><text x="480" y="200">a</text><text x="205" y="200">b</text></svg><div class="trig-controls"><div class="trig-control"><label for="sineA">Side a</label><input id="sineA" type="number" value="8"/></div><div class="trig-control"><label for="sineAngleA">Angle A (°)</label><input id="sineAngleA" type="number" value="42"/></div><div class="trig-control"><label for="sineAngleB">Angle B (°)</label><input id="sineAngleB" type="number" value="65"/></div><button class="trig-btn" id="sineCalc">Find side b</button><div class="trig-result" id="sineResult"></div></div></div></section><section class="lesson-section"><h2>Summary</h2><div class="lesson-end-grid">
 <article class="lesson-end-card"><h3>📘 Remember</h3><ul><li>Label the triangle before choosing a formula.</li><li>Use degree mode unless the question says otherwise.</li><li>Keep full calculator values until the final rounding step.</li></ul></article>
 <article class="lesson-end-card"><h3>⚠️ Common Mistakes</h3><ul><li>Using the wrong reference angle.</li><li>Rounding too early.</li><li>Forgetting units or the degree symbol.</li></ul></article>
 <article class="lesson-end-card"><h3>⭐ Exam Tips</h3><ul><li>Write the formula before substituting.</li><li>Sketch and label any diagram that is not already provided.</li><li>Check whether the answer is sensible for the shape.</li></ul></article>
 <article class="lesson-end-card"><h3>🌍 Did You Know?</h3><p>Surveyors, engineers, pilots and architects use trigonometry to calculate distances that are difficult or unsafe to measure directly.</p></article>
-</div></section><nav class="lesson-navigation">
+</div></section><section class="lesson-section standard-mistakes"><h2>Common Mistakes</h2><ul><li>Choosing a rule before identifying what the question describes.</li><li>Skipping working or changing notation part-way through a solution.</li><li>Accepting an answer without checking its size, sign or units.</li></ul></section><section class="lesson-section standard-exam"><h2>Exam Focus</h2><p>Show the mathematical relationship you are using, keep notation consistent and give a clear final answer. Use a quick estimate, diagram or inverse operation to check that the result is reasonable.</p></section><nav class="lesson-navigation">
 <a class="nav-button" href="07-elevation-and-depression.html">← Elevation and Depression</a>
 <a class="nav-button" href="index.html">Trigonometry Roadmap</a>
 <a class="nav-button primary" href="09-cosine-rule.html">Cosine Rule →</a>

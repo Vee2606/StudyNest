@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="../studynest-3.1.css">
 <link rel="stylesheet" href="../studynest-theme.css">
 <link rel="stylesheet" href="../styles/brand-refresh.css">
+<link rel="stylesheet" href="../styles/lesson-standard.css">
 </head>
 <body>
 
@@ -54,7 +55,7 @@
 
 <section class="lesson-section"><h2>🎯 Learning Objectives</h2><ul class="objective-list">
 <li>identify populations and samples;</li><li>choose suitable sampling methods;</li>
-<li>recognise biased questions;</li><li>group raw data into classes;</li><li>calculate class width.</li></ul></section>
+<li>recognise biased questions;</li><li>group raw data into classes;</li><li>calculate class width.</li></ul></section><section class="lesson-section standard-introduction"><h2>Introduction</h2><p>This lesson develops Collecting and Classifying Data from meaning and patterns before moving to calculations. Look for what the quantities, shapes or symbols represent, then connect that idea to the method.</p></section><section class="lesson-section"><h2>Key Notes</h2><p>Read the definitions and key facts below carefully. Each rule is most useful when you can explain why it fits the situation, not simply recall it.</p></section>
 <section class="lesson-section"><h2>Population and Sample</h2>
 <div class="data-grid"><article class="data-card"><h3>Population</h3><p>The entire group being investigated.</p></article>
 <article class="data-card"><h3>Sample</h3><p>A smaller group selected to represent the population.</p></article></div>
@@ -66,7 +67,7 @@
 <p>Raw values can be organised into class intervals such as 0–9, 10–19 and 20–29.</p>
 <div class="statistics-rule">Class width = upper class boundary − lower class boundary.</div></section>
 <section class="lesson-section"><h2>📝 Build a Mini Survey</h2><div class="stats-lab"><h3>Population, sample and data collection</h3><div class="stats-controls"><div class="stats-control"><label for="s2pop">Population size</label><input id="s2pop" type="range" min="20" max="500" value="120"><span id="s2popv">120 learners</span></div><div class="stats-control"><label for="s2sample">Sample size</label><input id="s2sample" type="range" min="5" max="100" value="30"><span id="s2samplev">30 learners</span></div><div class="stats-control"><label for="s2method">Sampling method</label><select id="s2method"><option>Random sample</option><option>Every 4th learner</option><option>Only the first class</option><option>Ask volunteers online</option></select></div></div><div class="stats-output" id="s2out"></div></div></section><script>(()=>{const p=document.querySelector('#s2pop'),s=document.querySelector('#s2sample'),m=document.querySelector('#s2method'),o=document.querySelector('#s2out');function u(){let pv=+p.value,sv=Math.min(+s.value,pv);s.max=pv;s.value=sv;document.querySelector('#s2popv').textContent=pv+' learners';document.querySelector('#s2samplev').textContent=sv+' learners';let msg=m.selectedIndex<2?'This method can produce a reasonably representative sample if applied fairly.':'This method risks bias because some learners are more likely to be selected than others.';o.innerHTML=`The sample is <strong>${(100*sv/pv).toFixed(1)}%</strong> of the population. ${msg}`}[p,s,m].forEach(x=>x.addEventListener('input',u));u()})();</script>
-<section class="lesson-section"><h2>Practice</h2><ol class="practice-list">
+<section class="lesson-section"><h2>Worked Examples</h2><div class="worked-example"><h3>Reason through the method</h3><ol><li>Identify the known information and what must be found.</li><li>Choose the definition, property or formula that connects them.</li><li>Substitute carefully and show each step.</li><li>Check the notation, units and whether the result is sensible.</li></ol></div></section><section class="lesson-section"><h2>Practice Questions</h2><ol class="practice-list">
 <li>Define population and sample.</li><li>Give one reason for using a sample.</li>
 <li>Explain why asking only football-team members about school sport is biased.</li>
 <li>Find the class width of 20≤x&lt;30.</li><li>Rewrite the question “Don’t you think homework is useful?” more fairly.</li></ol></section>
@@ -78,19 +79,7 @@
 <div class="answers-content"><ol><li>Population: whole group; sample: selected part of the group.</li><li>It is usually faster, cheaper and easier than studying the whole population.</li><li>The group is not representative of all learners and is likely to favour sport.</li><li>30−20=10.</li><li>For example: “How useful do you find homework: very useful, useful, not useful, or unsure?”</li></ol></div>
 </details>
 </section>
-<section class="lesson-section"><h2>Summary</h2><ul class="summary-list"><li>Fair collection comes before correct calculation.</li><li>Question wording and sampling method affect reliability.</li></ul></section>
-
-<section class="lesson-section">
-<h2>🧠 StudyNest Statistical Thinking Routine</h2>
-<div class="problem-routine">
-<div class="routine-step"><strong>1. Read</strong>What information and context have been given?</div>
-<div class="routine-step"><strong>2. Identify</strong>What type of data, table, graph or measure is involved?</div>
-<div class="routine-step"><strong>3. Choose</strong>Which method or representation answers the question best?</div>
-<div class="routine-step"><strong>4. Work</strong>Organise the calculation or construction clearly.</div>
-<div class="routine-step"><strong>5. Interpret</strong>Explain what the answer means in the original context.</div>
-<div class="routine-step"><strong>6. Check</strong>Does the result fit the data and make reasonable sense?</div>
-</div>
-</section>
+<section class="lesson-section standard-mistakes"><h2>Common Mistakes</h2><ul><li>Choosing a rule before identifying what the question describes.</li><li>Skipping working or changing notation part-way through a solution.</li><li>Accepting an answer without checking its size, sign or units.</li></ul></section><section class="lesson-section standard-exam"><h2>Exam Focus</h2><p>Show the mathematical relationship you are using, keep notation consistent and give a clear final answer. Use a quick estimate, diagram or inverse operation to check that the result is reasonable.</p></section><section class="lesson-section"><h2>Summary</h2><ul class="summary-list"><li>Fair collection comes before correct calculation.</li><li>Question wording and sampling method affect reliability.</li></ul></section>
 
 <nav class="lesson-navigation">
 <a class="nav-button" href="01-introduction-to-statistics.html">← Introduction</a>

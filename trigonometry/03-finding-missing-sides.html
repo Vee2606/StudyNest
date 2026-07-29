@@ -21,6 +21,7 @@
 <link rel="stylesheet" href="../studynest-3.1.css">
 <link rel="stylesheet" href="../studynest-theme.css">
 <link rel="stylesheet" href="../styles/brand-refresh.css">
+<link rel="stylesheet" href="../styles/lesson-standard.css">
 </head>
 <body>
 <div class="announcement-bar">🚀 StudyNest is growing. New lessons and worksheets are added regularly.</div>
@@ -58,13 +59,13 @@
 <main class="lesson-main">
 <section class="lesson-section"><h2>🎯 Learning Objectives</h2><ul class="objective-list">
 <li>find missing opposite, adjacent and hypotenuse lengths;</li><li>rearrange trigonometric equations;</li>
-<li>use degree mode correctly;</li><li>round answers appropriately;</li><li>check that the hypotenuse is longest.</li></ul></section>
+<li>use degree mode correctly;</li><li>round answers appropriately;</li><li>check that the hypotenuse is longest.</li></ul></section><section class="lesson-section standard-introduction"><h2>Introduction</h2><p>This lesson develops Finding Missing Sides from meaning and patterns before moving to calculations. Look for what the quantities, shapes or symbols represent, then connect that idea to the method.</p></section><section class="lesson-section"><h2>Key Notes</h2><p>Read the definitions and key facts below carefully. Each rule is most useful when you can explain why it fits the situation, not simply recall it.</p></section>
 <section class="lesson-section"><h2>Worked Example 1: Find the Opposite</h2>
 <figure class="diagram-card"><svg viewbox="0 0 660 380"><polygon fill="none" points="100,310 540,310 540,90" stroke="#243b53" stroke-width="6"></polygon><rect fill="none" height="30" stroke="#6673b8" stroke-width="5" width="30" x="510" y="280"></rect><text font-size="23" x="150" y="285">35°</text><text font-size="23" x="300" y="175">12 cm</text><text font-size="23" x="560" y="210">x</text></svg><figcaption>Known: hypotenuse 12 cm. Find: opposite x.</figcaption></figure>
 <div class="calc-steps"><p>sin 35° = x ÷ 12</p><p>x = 12 sin 35°</p><p>x = 6.882...</p><p><strong>x ≈ 6.88 cm</strong></p></div></section>
 <section class="lesson-section"><h2>Worked Example 2: Find the Hypotenuse</h2>
 <div class="calc-steps"><p>Adjacent=8 cm and θ=42°.</p><p>cos 42° = 8 ÷ h</p><p>h cos 42° = 8</p><p>h = 8 ÷ cos 42°</p><p><strong>h ≈ 10.8 cm</strong></p></div></section>
-<section class="lesson-section"><h2>Practice</h2><ol class="practice-list">
+<section class="lesson-section"><h2>Practice Questions</h2><ol class="practice-list">
 <li>θ=30°, hypotenuse=10 cm. Find opposite.</li>
 <li>θ=60°, hypotenuse=14 cm. Find adjacent.</li>
 <li>θ=40°, adjacent=9 cm. Find opposite.</li>
@@ -78,25 +79,12 @@
 </div>
 </details>
 </section>
-<section class="lesson-section trig-lab"><h2>🧭 Interactive Lab: Missing-Side Calculator</h2><p>Change the values or make a choice and watch the mathematics respond.</p><div class="trig-lab-grid"><svg class="trig-svg" viewbox="0 0 620 390"><polygon fill="rgba(102,115,184,.1)" points="90,320 530,320 530,90" stroke="#243b53" stroke-width="6"></polygon><text x="150" y="295">θ</text><text x="280" y="360">Adjacent</text><text x="545" y="210">Opposite</text><text x="275" y="175">Hypotenuse</text></svg><div class="trig-controls"><div class="trig-control"><label for="sideMode">Find</label><select id="sideMode"><option value="opp">Opposite from hypotenuse</option><option value="adj">Adjacent from hypotenuse</option><option value="oppTan">Opposite from adjacent</option></select></div><div class="trig-control"><label for="sideAngle">Angle (°)</label><input id="sideAngle" max="89" min="1" type="number" value="35"/></div><div class="trig-control"><label for="sideKnown">Known side</label><input id="sideKnown" min="0.1" step="0.1" type="number" value="12"/></div><button class="trig-btn" id="sideCalc">Show working</button><div aria-live="polite" class="trig-result" id="sideResult"></div></div></div></section><section class="lesson-section">
-<h2>🧭 StudyNest: How to Solve It</h2>
-<div class="solve-template">
-<div class="solve-step"><span class="step-number">1</span><strong>Inspect</strong>Look for the right angle, the given angle and the information already labelled.</div>
-<div class="solve-step"><span class="step-number">2</span><strong>Label</strong>Name the relevant sides or identify the triangle information.</div>
-<div class="solve-step"><span class="step-number">3</span><strong>Identify</strong>State exactly what is known and what must be found.</div>
-<div class="solve-step"><span class="step-number">4</span><strong>Choose</strong>Select the relationship containing the known and unknown quantities.</div>
-<div class="solve-step"><span class="step-number">5</span><strong>Write</strong>Write the formula before substituting values.</div>
-<div class="solve-step"><span class="step-number">6</span><strong>Solve</strong>Rearrange carefully and use the calculator in degree mode.</div>
-<div class="solve-step"><span class="step-number">7</span><strong>Round</strong>Use the accuracy requested and include units.</div>
-<div class="solve-step"><span class="step-number">8</span><strong>Check</strong>Confirm the side lengths and angles are reasonable.</div>
-</div>
-</section>
-<section class="lesson-section"><h2>📚 Lesson Wrap-Up</h2><div class="lesson-end-grid">
+<section class="lesson-section trig-lab"><h2>🧭 Interactive Lab: Missing-Side Calculator</h2><p>Change the values or make a choice and watch the mathematics respond.</p><div class="trig-lab-grid"><svg class="trig-svg" viewbox="0 0 620 390"><polygon fill="rgba(102,115,184,.1)" points="90,320 530,320 530,90" stroke="#243b53" stroke-width="6"></polygon><text x="150" y="295">θ</text><text x="280" y="360">Adjacent</text><text x="545" y="210">Opposite</text><text x="275" y="175">Hypotenuse</text></svg><div class="trig-controls"><div class="trig-control"><label for="sideMode">Find</label><select id="sideMode"><option value="opp">Opposite from hypotenuse</option><option value="adj">Adjacent from hypotenuse</option><option value="oppTan">Opposite from adjacent</option></select></div><div class="trig-control"><label for="sideAngle">Angle (°)</label><input id="sideAngle" max="89" min="1" type="number" value="35"/></div><div class="trig-control"><label for="sideKnown">Known side</label><input id="sideKnown" min="0.1" step="0.1" type="number" value="12"/></div><button class="trig-btn" id="sideCalc">Show working</button><div aria-live="polite" class="trig-result" id="sideResult"></div></div></div></section><section class="lesson-section"><h2>Summary</h2><div class="lesson-end-grid">
 <article class="lesson-end-card"><h3>📘 Remember</h3><ul><li>Label the triangle before choosing a formula.</li><li>Use degree mode unless the question says otherwise.</li><li>Keep full calculator values until the final rounding step.</li></ul></article>
 <article class="lesson-end-card"><h3>⚠️ Common Mistakes</h3><ul><li>Using the wrong reference angle.</li><li>Rounding too early.</li><li>Forgetting units or the degree symbol.</li></ul></article>
 <article class="lesson-end-card"><h3>⭐ Exam Tips</h3><ul><li>Write the formula before substituting.</li><li>Sketch and label any diagram that is not already provided.</li><li>Check whether the answer is sensible for the shape.</li></ul></article>
 <article class="lesson-end-card"><h3>🌍 Did You Know?</h3><p>Surveyors, engineers, pilots and architects use trigonometry to calculate distances that are difficult or unsafe to measure directly.</p></article>
-</div></section><nav class="lesson-navigation">
+</div></section><section class="lesson-section standard-mistakes"><h2>Common Mistakes</h2><ul><li>Choosing a rule before identifying what the question describes.</li><li>Skipping working or changing notation part-way through a solution.</li><li>Accepting an answer without checking its size, sign or units.</li></ul></section><section class="lesson-section standard-exam"><h2>Exam Focus</h2><p>Show the mathematical relationship you are using, keep notation consistent and give a clear final answer. Use a quick estimate, diagram or inverse operation to check that the result is reasonable.</p></section><nav class="lesson-navigation">
 <a class="nav-button" href="02-soh-cah-toa.html">← SOH CAH TOA</a>
 <a class="nav-button" href="index.html">Trigonometry Roadmap</a>
 <a class="nav-button primary" href="04-finding-missing-angles.html">Finding Missing Angles →</a>

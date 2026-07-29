@@ -1,0 +1,5 @@
+StudyNest landing page cleanup
+
+- Updated Transformations badge on Study by Topic from Forms 1–4 to Forms 2–4.
+- Removed the Start by Topic hero button from the Worksheets landing page.
+- No lesson content, branding, colours, or layouts were otherwise changed.

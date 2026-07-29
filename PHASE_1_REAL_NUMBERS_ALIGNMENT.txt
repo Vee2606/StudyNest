@@ -1,0 +1,13 @@
+StudyNest Phase 1 — Real Numbers alignment
+
+Updated the Form 1–4 Real Numbers pathways to match the Mathematics Syllabus B 2024 progression using the existing lesson pages.
+
+Form 1: types of numbers; factors and multiples; HCF and LCM; directed numbers; order of operations; fractions; decimals; percentages; rounding/approximation; ratio; introduction to number bases.
+Form 2: factors and multiples; HCF and LCM; squares, cubes and roots; significant figures/estimation; ratio and proportion; standard form; number-base conversion.
+Form 3: order of operations; rational and irrational numbers; surds; number patterns; approximation and estimation; basic limits of accuracy; ratios, rates and proportion; operations in standard form; operations in number bases.
+Form 4: limits of accuracy.
+
+Notes:
+- Existing lesson content was not rewritten in this phase.
+- Mixed review and final checkpoint remain on the complete topic page rather than being assigned to one Form.
+- Scale and map work is required by the syllabus but there is no dedicated Real Numbers lesson for it in the current project; this gap should be addressed during lesson-content development.

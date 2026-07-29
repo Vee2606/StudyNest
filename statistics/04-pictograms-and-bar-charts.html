@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="../studynest-3.1.css">
 <link rel="stylesheet" href="../studynest-theme.css">
 <link rel="stylesheet" href="../styles/brand-refresh.css">
+<link rel="stylesheet" href="../styles/lesson-standard.css">
 </head>
 <body>
 
@@ -54,7 +55,7 @@
 
 <section class="lesson-section"><h2>🎯 Learning Objectives</h2><ul class="objective-list">
 <li>interpret pictogram keys;</li><li>use partial symbols correctly;</li><li>construct bar charts;</li>
-<li>choose suitable scales;</li><li>identify misleading visual choices.</li></ul></section>
+<li>choose suitable scales;</li><li>identify misleading visual choices.</li></ul></section><section class="lesson-section standard-introduction"><h2>Introduction</h2><p>This lesson develops Pictograms and Bar Charts from meaning and patterns before moving to calculations. Look for what the quantities, shapes or symbols represent, then connect that idea to the method.</p></section><section class="lesson-section"><h2>Key Notes</h2><p>Read the definitions and key facts below carefully. Each rule is most useful when you can explain why it fits the situation, not simply recall it.</p></section>
 <section class="lesson-section"><h2>Pictograms</h2>
 <div class="statistics-rule">Always read the key before counting symbols.</div>
 <p>If one ★ represents 4 learners, then 2½ stars represent 10 learners.</p></section>
@@ -66,7 +67,7 @@
 <text x="139" y="340" font-size="18">Apple</text><text x="267" y="340" font-size="18">Mango</text><text x="400" y="340" font-size="18">Pear</text><text x="525" y="340" font-size="18">Orange</text>
 </svg><figcaption>Equal-width bars with equal gaps represent separate categories.</figcaption></figure></section>
 <section class="lesson-section"><h2>⭐ Interactive Pictogram and Bar Chart</h2><div class="stats-lab"><p>One ★ represents 2 learners. Move the sliders and compare the pictogram with the bar chart.</p><div class="stats-controls" id="s4controls"></div><div id="s4pics"></div><svg id="s4svg" class="stats-canvas" viewBox="0 0 680 370" role="img" aria-label="Interactive favourite fruit bar chart"></svg></div></section><script>(()=>{const names=['Apple','Mango','Pear','Orange'],vals=[8,12,6,10],C=document.querySelector('#s4controls'),P=document.querySelector('#s4pics'),S=document.querySelector('#s4svg');C.innerHTML=names.map((n,i)=>`<div class="stats-control"><label>${n}: <span id="s4v${i}">${vals[i]}</span></label><input data-i="${i}" type="range" min="0" max="20" step="2" value="${vals[i]}"></div>`).join('');function u(){C.querySelectorAll('input').forEach(x=>{vals[+x.dataset.i]=+x.value;document.querySelector('#s4v'+x.dataset.i).textContent=x.value});P.innerHTML=names.map((n,i)=>`<div class="pictogram-row"><strong>${n}</strong><span class="pictogram-symbols">${'★'.repeat(vals[i]/2)||'—'}</span></div>`).join('');let mx=Math.max(20,...vals),base=310,scale=240/mx;S.innerHTML=`<line x1="70" y1="${base}" x2="640" y2="${base}" stroke="currentColor" stroke-width="3"/><line x1="70" y1="45" x2="70" y2="${base}" stroke="currentColor" stroke-width="3"/>`+names.map((n,i)=>{let x=115+i*135,h=vals[i]*scale;return `<rect x="${x}" y="${base-h}" width="75" height="${h}" fill="#4f8f91"/><text x="${x+37}" y="${base-h-8}" text-anchor="middle">${vals[i]}</text><text x="${x+37}" y="340" text-anchor="middle">${n}</text>`}).join('')}C.addEventListener('input',u);u()})();</script>
-<section class="lesson-section"><h2>Practice</h2><ol class="practice-list">
+<section class="lesson-section"><h2>Worked Examples</h2><div class="worked-example"><h3>Reason through the method</h3><ol><li>Identify the known information and what must be found.</li><li>Choose the definition, property or formula that connects them.</li><li>Substitute carefully and show each step.</li><li>Check the notation, units and whether the result is sensible.</li></ol></div></section><section class="lesson-section"><h2>Practice Questions</h2><ol class="practice-list">
 <li>One symbol represents 6 books. What do 3½ symbols represent?</li>
 <li>Why should a bar-chart scale start at zero in most simple comparisons?</li>
 <li>State two differences between a bar chart and histogram.</li>
@@ -79,19 +80,7 @@
 <div class="answers-content"><ol><li>3.5×6=21 books.</li><li>A shortened scale can exaggerate small differences and mislead the reader.</li><li>Bar-chart bars are separated and represent categories; histogram bars touch and represent continuous intervals.</li><li>A title, labelled axes, a suitable scale and correctly sized bars.</li></ol></div>
 </details>
 </section>
-<section class="lesson-section"><h2>Summary</h2><ul class="summary-list"><li>Keys control pictogram values.</li><li>Bar charts compare separate categories.</li></ul></section>
-
-<section class="lesson-section">
-<h2>🧠 StudyNest Statistical Thinking Routine</h2>
-<div class="problem-routine">
-<div class="routine-step"><strong>1. Read</strong>What information and context have been given?</div>
-<div class="routine-step"><strong>2. Identify</strong>What type of data, table, graph or measure is involved?</div>
-<div class="routine-step"><strong>3. Choose</strong>Which method or representation answers the question best?</div>
-<div class="routine-step"><strong>4. Work</strong>Organise the calculation or construction clearly.</div>
-<div class="routine-step"><strong>5. Interpret</strong>Explain what the answer means in the original context.</div>
-<div class="routine-step"><strong>6. Check</strong>Does the result fit the data and make reasonable sense?</div>
-</div>
-</section>
+<section class="lesson-section standard-mistakes"><h2>Common Mistakes</h2><ul><li>Choosing a rule before identifying what the question describes.</li><li>Skipping working or changing notation part-way through a solution.</li><li>Accepting an answer without checking its size, sign or units.</li></ul></section><section class="lesson-section standard-exam"><h2>Exam Focus</h2><p>Show the mathematical relationship you are using, keep notation consistent and give a clear final answer. Use a quick estimate, diagram or inverse operation to check that the result is reasonable.</p></section><section class="lesson-section"><h2>Summary</h2><ul class="summary-list"><li>Keys control pictogram values.</li><li>Bar charts compare separate categories.</li></ul></section>
 
 <nav class="lesson-navigation">
 <a class="nav-button" href="03-tally-and-frequency-tables.html">← Frequency Tables</a>

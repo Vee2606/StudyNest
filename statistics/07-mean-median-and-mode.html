@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="../studynest-3.1.css">
 <link rel="stylesheet" href="../studynest-theme.css">
 <link rel="stylesheet" href="../styles/brand-refresh.css">
+<link rel="stylesheet" href="../styles/lesson-standard.css">
 </head>
 <body>
 
@@ -54,7 +55,7 @@
 
 <section class="lesson-section"><h2>🎯 Learning Objectives</h2><ul class="objective-list">
 <li>calculate mean, median and mode;</li><li>order data before finding the median;</li>
-<li>recognise more than one mode or no mode;</li><li>compare the three measures;</li><li>choose the most suitable average.</li></ul></section>
+<li>recognise more than one mode or no mode;</li><li>compare the three measures;</li><li>choose the most suitable average.</li></ul></section><section class="lesson-section standard-introduction"><h2>Introduction</h2><p>This lesson develops Mean, Median and Mode from meaning and patterns before moving to calculations. Look for what the quantities, shapes or symbols represent, then connect that idea to the method.</p></section><section class="lesson-section"><h2>Key Notes</h2><p>Read the definitions and key facts below carefully. Each rule is most useful when you can explain why it fits the situation, not simply recall it.</p></section>
 <section class="lesson-section"><h2>Three Measures</h2><div class="average-grid">
 <article class="average-card"><h3>Mean</h3><p>Sum of values ÷ number of values.</p></article>
 <article class="average-card"><h3>Median</h3><p>Middle value after ordering.</p></article>
@@ -63,7 +64,7 @@
 <p>Data: 2, 3, 3, 5, 12.</p><p>Mean=25÷5=5, median=3, mode=3.</p>
 <div class="common-mistake">The high value 12 pulls the mean upward. The median may describe the typical value better.</div></section>
 <section class="lesson-section"><h2>🔢 Mean, Median and Mode Calculator</h2><div class="stats-lab"><div class="stats-control"><label for="s7data">Enter numbers separated by commas</label><textarea id="s7data" rows="3">12, 15, 15, 18, 20, 25, 27</textarea></div><button class="stats-btn" id="s7go" type="button">Calculate</button><div class="stats-metrics"><div class="stats-metric">Mean<strong id="s7mean">—</strong></div><div class="stats-metric">Median<strong id="s7median">—</strong></div><div class="stats-metric">Mode<strong id="s7mode">—</strong></div><div class="stats-metric">Range<strong id="s7range">—</strong></div></div><div class="stats-output" id="s7sorted"></div></div></section><script>(()=>{document.querySelector('#s7go').addEventListener('click',()=>{let a=document.querySelector('#s7data').value.split(/[\s,]+/).map(Number).filter(Number.isFinite).sort((x,y)=>x-y);if(!a.length)return;let mean=a.reduce((x,y)=>x+y,0)/a.length,mid=a.length%2?a[(a.length-1)/2]:(a[a.length/2-1]+a[a.length/2])/2,c={};a.forEach(x=>c[x]=(c[x]||0)+1);let mx=Math.max(...Object.values(c)),modes=mx===1?'No mode':Object.keys(c).filter(x=>c[x]===mx).join(', ');document.querySelector('#s7mean').textContent=mean.toFixed(2).replace(/\.00$/,'');document.querySelector('#s7median').textContent=mid;document.querySelector('#s7mode').textContent=modes;document.querySelector('#s7range').textContent=a.at(-1)-a[0];document.querySelector('#s7sorted').innerHTML='<strong>Ordered data:</strong> '+a.join(', ')}) ;document.querySelector('#s7go').click()})();</script>
-<section class="lesson-section"><h2>Practice</h2><ol class="practice-list">
+<section class="lesson-section"><h2>Practice Questions</h2><ol class="practice-list">
 <li>Find mean, median and mode of 4,6,6,7,12.</li>
 <li>Find the median of 9,2,5,7,4,8.</li>
 <li>Data are 1,2,3,4. State the mode.</li>
@@ -77,19 +78,7 @@
 <div class="answers-content"><ol><li>Mean=35÷5=7, median=6, mode=6.</li><li>Ordered: 2,4,5,7,8,9. Median=(5+7)÷2=6.</li><li>There is no mode because no value repeats.</li><li>The mean.</li><li>Very high incomes can pull the mean upward; the median better represents the middle person.</li></ol></div>
 </details>
 </section>
-<section class="lesson-section"><h2>Summary</h2><ul class="summary-list"><li>Choose the average that answers the context fairly.</li><li>Always order data before finding the median.</li></ul></section>
-
-<section class="lesson-section">
-<h2>🧠 StudyNest Statistical Thinking Routine</h2>
-<div class="problem-routine">
-<div class="routine-step"><strong>1. Read</strong>What information and context have been given?</div>
-<div class="routine-step"><strong>2. Identify</strong>What type of data, table, graph or measure is involved?</div>
-<div class="routine-step"><strong>3. Choose</strong>Which method or representation answers the question best?</div>
-<div class="routine-step"><strong>4. Work</strong>Organise the calculation or construction clearly.</div>
-<div class="routine-step"><strong>5. Interpret</strong>Explain what the answer means in the original context.</div>
-<div class="routine-step"><strong>6. Check</strong>Does the result fit the data and make reasonable sense?</div>
-</div>
-</section>
+<section class="lesson-section standard-mistakes"><h2>Common Mistakes</h2><ul><li>Choosing a rule before identifying what the question describes.</li><li>Skipping working or changing notation part-way through a solution.</li><li>Accepting an answer without checking its size, sign or units.</li></ul></section><section class="lesson-section standard-exam"><h2>Exam Focus</h2><p>Show the mathematical relationship you are using, keep notation consistent and give a clear final answer. Use a quick estimate, diagram or inverse operation to check that the result is reasonable.</p></section><section class="lesson-section"><h2>Summary</h2><ul class="summary-list"><li>Choose the average that answers the context fairly.</li><li>Always order data before finding the median.</li></ul></section>
 
 <nav class="lesson-navigation">
 <a class="nav-button" href="06-line-graphs-and-time-series.html">← Line Graphs</a>

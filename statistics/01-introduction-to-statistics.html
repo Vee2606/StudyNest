@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="../studynest-3.1.css">
 <link rel="stylesheet" href="../studynest-theme.css">
 <link rel="stylesheet" href="../styles/brand-refresh.css">
+<link rel="stylesheet" href="../styles/lesson-standard.css">
 </head>
 <body>
 
@@ -55,7 +56,7 @@
 <section class="lesson-section"><h2>🎯 Learning Objectives</h2><ul class="objective-list">
 <li>define statistics and data;</li><li>distinguish qualitative and quantitative data;</li>
 <li>distinguish discrete and continuous data;</li><li>identify primary and secondary data;</li>
-<li>choose suitable ways to collect information.</li></ul></section>
+<li>choose suitable ways to collect information.</li></ul></section><section class="lesson-section standard-introduction"><h2>Introduction</h2><p>This lesson develops Introduction to Statistics from meaning and patterns before moving to calculations. Look for what the quantities, shapes or symbols represent, then connect that idea to the method.</p></section><section class="lesson-section"><h2>Key Notes</h2><p>Read the definitions and key facts below carefully. Each rule is most useful when you can explain why it fits the situation, not simply recall it.</p></section>
 <section class="lesson-section"><h2>What Is Statistics?</h2>
 <p>Statistics is the process of collecting, organising, presenting, analysing and interpreting data so that we can make informed decisions.</p>
 <div class="statistics-rule">Data becomes useful only when we understand what it represents and how it was collected.</div></section>
@@ -69,7 +70,7 @@
 <div class="data-grid"><article class="data-card"><h3>Primary</h3><p>Collected first-hand for the current investigation.</p></article>
 <article class="data-card"><h3>Secondary</h3><p>Already collected by another person or organisation.</p></article></div></section>
 <section class="lesson-section"><h2>🔎 Interactive Data Detective</h2><div class="stats-lab"><h3>Classify each variable</h3><p>Select a variable, then decide whether it is categorical, discrete numerical or continuous numerical.</p><div class="stats-controls"><div class="stats-control"><label for="s1var">Variable</label><select id="s1var"><option value="categorical">Favourite school subject</option><option value="discrete">Number of siblings</option><option value="continuous">Time taken to travel to school</option><option value="categorical">Type of transport used</option><option value="continuous">Height of a learner</option></select></div><div class="stats-control"><label for="s1answer">Your classification</label><select id="s1answer"><option value="">Choose…</option><option value="categorical">Categorical</option><option value="discrete">Discrete numerical</option><option value="continuous">Continuous numerical</option></select></div></div><button class="stats-btn" id="s1check" type="button">Check classification</button><div class="stats-output" id="s1out" aria-live="polite">Choose an answer, then check it.</div></div></section><script>(()=>{const v=document.querySelector('#s1var'),a=document.querySelector('#s1answer'),o=document.querySelector('#s1out');document.querySelector('#s1check').addEventListener('click',()=>{const ok=v.value===a.value;o.className='stats-output stats-feedback '+(ok?'good':'bad');o.textContent=ok?'Correct. Now explain why in words.':'Not yet. Ask whether the values are labels, whole-number counts, or measurements that may take any value in an interval.'});})();</script>
-<section class="lesson-section"><h2>Practice</h2><ol class="practice-list">
+<section class="lesson-section"><h2>Worked Examples</h2><div class="worked-example"><h3>Reason through the method</h3><ol><li>Identify the known information and what must be found.</li><li>Choose the definition, property or formula that connects them.</li><li>Substitute carefully and show each step.</li><li>Check the notation, units and whether the result is sensible.</li></ol></div></section><section class="lesson-section"><h2>Practice Questions</h2><ol class="practice-list">
 <li>Classify eye colour as qualitative or quantitative.</li><li>Classify number of books as discrete or continuous.</li>
 <li>Classify temperature as discrete or continuous.</li><li>Is census data used from a government report primary or secondary?</li>
 <li>Explain why the context of data collection matters.</li></ol></section>
@@ -81,19 +82,7 @@
 <div class="answers-content"><ol><li>Qualitative.</li><li>Discrete.</li><li>Continuous.</li><li>Secondary.</li><li>Poorly collected or biased data can lead to unreliable conclusions, even when the calculations are correct.</li></ol></div>
 </details>
 </section>
-<section class="lesson-section"><h2>Summary</h2><ul class="summary-list"><li>Statistics turns data into useful information.</li><li>Always identify the type and source of data before analysing it.</li></ul></section>
-
-<section class="lesson-section">
-<h2>🧠 StudyNest Statistical Thinking Routine</h2>
-<div class="problem-routine">
-<div class="routine-step"><strong>1. Read</strong>What information and context have been given?</div>
-<div class="routine-step"><strong>2. Identify</strong>What type of data, table, graph or measure is involved?</div>
-<div class="routine-step"><strong>3. Choose</strong>Which method or representation answers the question best?</div>
-<div class="routine-step"><strong>4. Work</strong>Organise the calculation or construction clearly.</div>
-<div class="routine-step"><strong>5. Interpret</strong>Explain what the answer means in the original context.</div>
-<div class="routine-step"><strong>6. Check</strong>Does the result fit the data and make reasonable sense?</div>
-</div>
-</section>
+<section class="lesson-section standard-mistakes"><h2>Common Mistakes</h2><ul><li>Choosing a rule before identifying what the question describes.</li><li>Skipping working or changing notation part-way through a solution.</li><li>Accepting an answer without checking its size, sign or units.</li></ul></section><section class="lesson-section standard-exam"><h2>Exam Focus</h2><p>Show the mathematical relationship you are using, keep notation consistent and give a clear final answer. Use a quick estimate, diagram or inverse operation to check that the result is reasonable.</p></section><section class="lesson-section"><h2>Summary</h2><ul class="summary-list"><li>Statistics turns data into useful information.</li><li>Always identify the type and source of data before analysing it.</li></ul></section>
 
 <nav class="lesson-navigation">
 <a class="nav-button" href="index.html">← Back to Statistics</a>

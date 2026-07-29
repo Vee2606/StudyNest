@@ -51,7 +51,7 @@
         <main class="lesson-main">
 
 <section class="lesson-section">
-<h2>🎯 By the End of This Lesson...</h2>
+<h2>Learning Objectives</h2>
 <ul class="objective-list">
 <li>identify corresponding angles;</li>
 <li>identify alternate angles;</li>
@@ -61,9 +61,10 @@
 </ul>
 </section>
 
-<section class="lesson-section">
-<h2>Parallel Lines and a Transversal</h2>
+<section class="lesson-section introduction-card">
+<h2>Introduction</h2>
 <p>A transversal is a line that crosses two or more other lines.</p>
+<p>When the crossed lines are parallel, the angles repeat in a predictable pattern. Understanding the positions comes before choosing a rule.</p>
 
 <figure class="diagram-card">
 <svg viewBox="0 0 720 430" role="img" aria-label="Two parallel lines crossed by a transversal">
@@ -86,7 +87,7 @@
 </section>
 
 <section class="lesson-section">
-<h2>Three Main Rules</h2>
+<h2>Key Notes</h2>
 <div class="geometry-grid">
 <article class="geometry-card"><h3>Corresponding</h3><p>Same relative position. They are equal.</p></article>
 <article class="geometry-card"><h3>Alternate</h3><p>Inside the parallel lines on opposite sides of the transversal. They are equal.</p></article>
@@ -95,8 +96,8 @@
 </section>
 
 <section class="lesson-section">
-<h2>Worked Example</h2>
-<div class="worked-example">
+<h2>Applying the Relationships</h2>
+<div class="key-note">
 <h3>One angle formed by a transversal is 68°.</h3>
 <p>Its corresponding angle is 68°.</p>
 <p>Its alternate angle is 68°.</p>
@@ -118,7 +119,11 @@
 <section class="lesson-section"><h2>Try It: Parallel-Line Angle Families</h2><div class="interactive-geometry"><div class="interactive-controls"><div class="interactive-control"><label for="transversalAngle">Acute angle: <span id="transversalValue">55°</span></label><input id="transversalAngle" type="range" min="15" max="85" value="55"></div><div class="interactive-control"><label for="relationship">Relationship</label><select id="relationship"><option>Corresponding</option><option>Alternate interior</option><option>Co-interior</option></select></div></div><div class="interactive-output" id="parallelOutput"></div></div></section>
 <script>(()=>{const a=document.querySelector('#transversalAngle'),s=document.querySelector('#relationship');function u(){const x=+a.value,y=180-x;document.querySelector('#transversalValue').textContent=x+'°';const type=s.value;document.querySelector('#parallelOutput').textContent=type==='Co-interior'?`Co-interior angles add to 180°: ${x}° + ${y}° = 180°.`:`${type} angles are equal, so the matching angle is ${x}°.`}a.addEventListener('input',u);s.addEventListener('change',u);u();})();</script>
 
-<section class="lesson-section">
+<section class="lesson-section think-together"><h2>🧠 Let’s Think Together</h2><p>Two parallel lines are crossed by a transversal. One acute angle is 68°. Equal-angle relationships copy 68° to the matching corresponding and alternate positions. Every neighbouring obtuse angle is 180° − 68° = 112°.</p><p>The diagram therefore contains only two angle sizes: 68° and 112°.</p></section>
+
+<section class="lesson-section"><h2>Worked Examples</h2><div class="worked-example"><h3>Example 1: Corresponding angles</h3><p>A corresponding angle to 74° is 74° because corresponding angles between parallel lines are equal.</p></div><div class="worked-example"><h3>Example 2: Co-interior angles</h3><p>If one co-interior angle is 63°, its partner is 180° − 63° = 117°.</p></div><div class="worked-example"><h3>Example 3: Algebra</h3><p>Corresponding angles are (3x + 10)° and (5x − 30)°. They are equal, so 3x + 10 = 5x − 30 and x = 20.</p></div></section>
+
+<section class="lesson-section practice-card">
 <h2>Practice Questions</h2>
 <span class="level-heading">Foundation</span>
 <ol class="practice-list">
@@ -152,8 +157,12 @@
 </div></details>
 </section>
 
-<section class="lesson-section">
-<h2>One-Minute Summary</h2>
+<section class="lesson-section common-mistakes"><h2>Common Mistakes</h2><ul><li>Using parallel-line rules when the lines are not marked or stated to be parallel.</li><li>Confusing alternate angles with co-interior angles.</li><li>Saying co-interior angles are equal instead of checking that they total 180°.</li></ul></section>
+
+<section class="lesson-section exam-focus"><h2>Exam Focus</h2><p>Name the relationship used in every step. Look first for parallel-line arrow markings, then identify the angle positions before calculating.</p></section>
+
+<section class="lesson-section summary-card">
+<h2>Summary</h2>
 <ul class="summary-list">
 <li>Corresponding angles are equal.</li>
 <li>Alternate angles are equal.</li>
@@ -165,7 +174,7 @@
             <nav class="lesson-navigation">
                 <a class="nav-button" href="03-vertically-opposite-angles.html">← Vertically Opposite Angles</a>
                 <a class="nav-button" href="index.html">Geometry Roadmap</a>
-                <a class="nav-button primary" href="05-triangles-and-angle-properties.html">Triangles and Angle Properties →</a>
+                <a class="nav-button primary" href="05-triangles-and-angle-properties.html">Triangle Angle Properties →</a>
             </nav>
         </main>
 

@@ -30,6 +30,7 @@
 <link rel="stylesheet" href="../studynest-3.1.css">
 <link rel="stylesheet" href="../studynest-theme.css">
 <link rel="stylesheet" href="../styles/brand-refresh.css">
+<link rel="stylesheet" href="../styles/lesson-standard.css">
 </head>
 <body>
 <div class="announcement-bar">
@@ -111,7 +112,7 @@
 </div>
 </div>
 </section>
-<main class="lesson-main">
+<main class="lesson-main"><section class="lesson-section"><h2>Learning Objectives</h2><ul class="objective-list"><li>understand the main ideas in Types of Matrices;</li><li>use correct mathematical language and notation;</li><li>apply the ideas to progressively harder problems;</li><li>check and explain each solution.</li></ul></section><section class="lesson-section standard-introduction"><h2>Introduction</h2><p>This lesson develops Types of Matrices from meaning and patterns before moving to calculations. Look for what the quantities, shapes or symbols represent, then connect that idea to the method.</p></section><section class="lesson-section"><h2>Key Notes</h2><p>Read the definitions and key facts below carefully. Each rule is most useful when you can explain why it fits the situation, not simply recall it.</p></section>
 <section class="deep-lesson"><h2>🌱 Build the Idea: Matrix Types</h2><p class="concept-hook">Matrices are named by their shape or by a special pattern in their entries. A matrix can belong to more than one type at the same time.</p><div class="visual-grid"><article class="visual-card"><h3>Shape names</h3><div class="arrow-row"><span class="matrix-v2 c3"><span>2</span><span>5</span><span>7</span></span><span>row matrix</span></div><div class="arrow-row"><span class="matrix-v2 c1"><span>2</span><span>5</span><span>7</span></span><span>column matrix</span></div></article><article class="visual-card"><h3>Square and rectangular</h3><p><span class="matrix-v2 c2"><span>1</span><span>4</span><span>3</span><span>2</span></span> is square because rows = columns.</p><p><span class="matrix-v2 c3"><span>1</span><span>4</span><span>3</span><span>2</span><span>6</span><span>5</span></span> is rectangular.</p></article><article class="visual-card"><h3>The identity matrix is called <em>I</em></h3><p>Matrices have their own version of the number <strong>1</strong>. It is called the <strong>identity matrix</strong> and is written with a capital <strong>I</strong>.</p><div class="arrow-row"><strong>I₂ =</strong><span class="matrix-v2 c2"><span class="diag">1</span><span>0</span><span>0</span><span class="diag">1</span></span></div><p>The 1s lie on the <strong>main diagonal</strong>; every other entry is 0.</p></article><article class="visual-card"><h3>Identity matrices grow</h3><div class="arrow-row"><strong>I₃ =</strong><span class="matrix-v2 c3"><span class="diag">1</span><span>0</span><span>0</span><span>0</span><span class="diag">1</span><span>0</span><span>0</span><span>0</span><span class="diag">1</span></span></div><p>The subscript tells you the order: I₂ is 2 × 2 and I₃ is 3 × 3.</p></article><article class="visual-card"><h3>Why “identity”?</h3><p>Multiplying a number by 1 does not change it: 7 × 1 = 7.</p><p>In the same way, multiplying a matrix by the correct identity matrix leaves it unchanged.</p><div class="rule-reveal"><strong>AI = IA = A</strong></div></article><article class="visual-card"><h3>Zero and diagonal matrices</h3><p><span class="matrix-v2 c2"><span>0</span><span>0</span><span>0</span><span>0</span></span> is a zero matrix.</p><p><span class="matrix-v2 c2"><span class="diag">4</span><span>0</span><span>0</span><span class="diag">−2</span></span> is diagonal.</p></article></div><div class="think-box"><strong>Think Like a Mathematician:</strong> Can a 2 × 3 matrix be an identity matrix? Explain using the words <em>square</em> and <em>main diagonal</em>.</div></section><section class="lesson-section">
 <h2>
      Main Types
@@ -187,9 +188,7 @@
     </div>
 </section>
 <section class="lesson-section">
-<h2>
-     Practice
-    </h2>
+<h2>Practice Questions</h2>
 <ol class="practice-list">
 <li>
       Classify [3 4 8].
@@ -225,86 +224,8 @@
 </div>
 </details>
 </section>
-<section class="matrix-lab"><h2>🔎 Matrix Type Classifier</h2><p>Choose the best description of each matrix.</p><div class="matrix-stage"><table class="matrix-table"><tr><th>Matrix</th><th>Your answer</th><th>Check</th></tr><tr><td>[ 4   −2   7 ]</td><td><select id="type1"><option>Choose</option><option>Row matrix</option><option>Column matrix</option><option>Identity matrix</option></select></td><td><button class="matrix-btn typeCheck" data-answer="Row matrix" data-id="1">Check</button></td></tr><tr><td><span class="math-matrix" style="--cols:2" role="math" aria-label="matrix with 2 rows and 2 columns"><span class="mcell">1</span><span class="mcell">0</span><span class="mcell">0</span><span class="mcell">1</span></span></td><td><select id="type2"><option>Choose</option><option>Zero matrix</option><option>Identity matrix</option><option>Rectangular matrix</option></select></td><td><button class="matrix-btn typeCheck" data-answer="Identity matrix" data-id="2">Check</button></td></tr></table><div aria-live="polite" class="matrix-live" id="typeOut"></div></div></section><section class="lesson-section">
-<h2>
-     🧭 StudyNest: How to Solve Matrix Problems
-    </h2>
-<div class="matrix-solver">
-<div class="matrix-step">
-<span>
-       1
-      </span>
-<strong>
-       Inspect
-      </strong>
-      Write down the order of each matrix and notice whether it is square.
-     </div>
-<div class="matrix-step">
-<span>
-       2
-      </span>
-<strong>
-       Identify
-      </strong>
-      Decide whether the task is addition, multiplication, determinant, inverse or an equation.
-     </div>
-<div class="matrix-step">
-<span>
-       3
-      </span>
-<strong>
-       Check
-      </strong>
-      Confirm that the operation is allowed before calculating.
-     </div>
-<div class="matrix-step">
-<span>
-       4
-      </span>
-<strong>
-       Apply
-      </strong>
-      Use the correct entry-by-entry or row-by-column rule.
-     </div>
-<div class="matrix-step">
-<span>
-       5
-      </span>
-<strong>
-       Organise
-      </strong>
-      Work one entry at a time and keep its position clear.
-     </div>
-<div class="matrix-step">
-<span>
-       6
-      </span>
-<strong>
-       Simplify
-      </strong>
-      Complete the arithmetic carefully, including negative signs.
-     </div>
-<div class="matrix-step">
-<span>
-       7
-      </span>
-<strong>
-       Verify
-      </strong>
-      Check the order of the answer and test an inverse where appropriate.
-     </div>
-<div class="matrix-step">
-<span>
-       8
-      </span>
-<strong>
-       Conclude
-      </strong>
-      Present the final matrix neatly with brackets and correct notation.
-     </div>
-</div>
-</section><section class="lesson-section"><h2>📘 Remember</h2><div class="wrap-grid"><article class="wrap-card"><h3>Key idea</h3><p>A matrix can be row, column, square, diagonal, identity, zero or rectangular. One matrix may fit more than one description.</p></article><article class="wrap-card"><h3>⚠️ Common Mistakes</h3><p>A diagonal matrix must be square; entries away from the main diagonal are zero.</p></article><article class="wrap-card"><h3>⭐ Exam Tips</h3><p>Check the order first, then inspect the entries. This prevents guessing from appearance alone.</p></article><article class="wrap-card"><h3>🌍 Did You Know?</h3><p>The identity matrix acts like the number 1 in matrix multiplication.</p></article></div></section>
-<nav class="lesson-navigation">
+<section class="matrix-lab"><h2>🔎 Matrix Type Classifier</h2><p>Choose the best description of each matrix.</p><div class="matrix-stage"><table class="matrix-table"><tr><th>Matrix</th><th>Your answer</th><th>Check</th></tr><tr><td>[ 4   −2   7 ]</td><td><select id="type1"><option>Choose</option><option>Row matrix</option><option>Column matrix</option><option>Identity matrix</option></select></td><td><button class="matrix-btn typeCheck" data-answer="Row matrix" data-id="1">Check</button></td></tr><tr><td><span class="math-matrix" style="--cols:2" role="math" aria-label="matrix with 2 rows and 2 columns"><span class="mcell">1</span><span class="mcell">0</span><span class="mcell">0</span><span class="mcell">1</span></span></td><td><select id="type2"><option>Choose</option><option>Zero matrix</option><option>Identity matrix</option><option>Rectangular matrix</option></select></td><td><button class="matrix-btn typeCheck" data-answer="Identity matrix" data-id="2">Check</button></td></tr></table><div aria-live="polite" class="matrix-live" id="typeOut"></div></div></section><section class="lesson-section"><h2>📘 Remember</h2><div class="wrap-grid"><article class="wrap-card"><h3>Key idea</h3><p>A matrix can be row, column, square, diagonal, identity, zero or rectangular. One matrix may fit more than one description.</p></article><article class="wrap-card"><h3>⚠️ Common Mistakes</h3><p>A diagonal matrix must be square; entries away from the main diagonal are zero.</p></article><article class="wrap-card"><h3>⭐ Exam Tips</h3><p>Check the order first, then inspect the entries. This prevents guessing from appearance alone.</p></article><article class="wrap-card"><h3>🌍 Did You Know?</h3><p>The identity matrix acts like the number 1 in matrix multiplication.</p></article></div></section>
+<section class="lesson-section standard-mistakes"><h2>Common Mistakes</h2><ul><li>Choosing a rule before identifying what the question describes.</li><li>Skipping working or changing notation part-way through a solution.</li><li>Accepting an answer without checking its size, sign or units.</li></ul></section><section class="lesson-section standard-exam"><h2>Exam Focus</h2><p>Show the mathematical relationship you are using, keep notation consistent and give a clear final answer. Use a quick estimate, diagram or inverse operation to check that the result is reasonable.</p></section><section class="lesson-section standard-summary"><h2>Summary</h2><ul class="summary-list"><li>Understand the meaning of each idea before selecting a method.</li><li>Use definitions, properties and notation consistently.</li><li>Show working and check that the final result is sensible.</li></ul></section><nav class="lesson-navigation">
 <a class="nav-button" href="01-introduction-to-matrices.html">
      ← Introduction
     </a>

@@ -30,6 +30,7 @@
 <link rel="stylesheet" href="../studynest-3.1.css">
 <link rel="stylesheet" href="../studynest-theme.css">
 <link rel="stylesheet" href="../styles/brand-refresh.css">
+<link rel="stylesheet" href="../styles/lesson-standard.css">
 </head>
 <body>
 <div class="announcement-bar">
@@ -111,7 +112,7 @@
 </div>
 </div>
 </section>
-<main class="lesson-main">
+<main class="lesson-main"><section class="lesson-section"><h2>Learning Objectives</h2><ul class="objective-list"><li>understand the main ideas in Matrix Equations;</li><li>use correct mathematical language and notation;</li><li>apply the ideas to progressively harder problems;</li><li>check and explain each solution.</li></ul></section><section class="lesson-section standard-introduction"><h2>Introduction</h2><p>This lesson develops Matrix Equations from meaning and patterns before moving to calculations. Look for what the quantities, shapes or symbols represent, then connect that idea to the method.</p></section><section class="lesson-section"><h2>Key Notes</h2><p>Read the definitions and key facts below carefully. Each rule is most useful when you can explain why it fits the situation, not simply recall it.</p></section>
 <section class="deep-lesson"><h2>🌱 Solving Equations with Matrices</h2><p class="concept-hook">A matrix equation follows the same idea as an ordinary equation: undo the operation while keeping the order of multiplication correct.</p><div class="visual-grid"><article class="visual-card"><h3>Compare with algebra</h3><p>For 3x = 12, multiply both sides by 1/3.</p><p>For AX = B, multiply by A⁻¹.</p></article><article class="visual-card"><h3>Order matters</h3><div class="teach-sequence"><div class="teach-step">Start: AX = B.</div><div class="teach-step">Left-multiply both sides by A⁻¹.</div><div class="teach-step">A⁻¹AX = A⁻¹B.</div><div class="teach-step">IX = A⁻¹B, so X = A⁻¹B.</div></div></article><article class="visual-card"><h3>Why the identity disappears</h3><p>Because IX = X, just as 1x = x.</p><div class="rule-reveal">X = A⁻¹B</div></article><article class="visual-card"><h3>Do not reverse the product</h3><p>A⁻¹B and BA⁻¹ are generally different. Preserve the side on which A acts.</p></article></div><div class="think-box"><strong>Before Solving:</strong> Check that A is square and det(A) ≠ 0, otherwise A⁻¹ does not exist.</div></section><section class="lesson-section">
 <h2>
      AX=B
@@ -140,9 +141,7 @@
 </div>
 </section>
 <section class="lesson-section">
-<h2>
-     Practice
-    </h2>
+<h2>Practice Questions</h2>
 <ol class="practice-list">
 <li>
       Solve AX=B for A=<span class="math-matrix" style="--cols:2" role="math" aria-label="matrix with 2 rows and 2 columns"><span class="mcell">1</span><span class="mcell">1</span><span class="mcell">2</span><span class="mcell">3</span></span>, B=<span class="math-matrix" style="--cols:1" role="math" aria-label="matrix with 2 rows and 1 columns"><span class="mcell">5</span><span class="mcell">13</span></span>.
@@ -172,86 +171,8 @@
 </div>
 </details>
 </section>
-<section class="matrix-lab"><h2>🧠 Matrix Equation Solver</h2><p>Solve AX=B for the 2×1 matrix X.</p><div class="matrix-stage"><div class="equation-line"><div class="mx c2"><input aria-label="Matrix entry 1" id="eqA0" type="number" value="2"/><input aria-label="Matrix entry 2" id="eqA1" type="number" value="1"/><input aria-label="Matrix entry 3" id="eqA2" type="number" value="1"/><input aria-label="Matrix entry 4" id="eqA3" type="number" value="1"/></div>X=<div class="mx c2" style="grid-template-columns:1fr"><input aria-label="Matrix entry 1" id="eqB0" type="number" value="7"/><input aria-label="Matrix entry 2" id="eqB1" type="number" value="4"/></div><button class="matrix-btn" id="eqCalc">Solve</button></div><div aria-live="polite" class="matrix-live" id="eqOut"></div></div></section><section class="lesson-section">
-<h2>
-     🧭 StudyNest: How to Solve Matrix Problems
-    </h2>
-<div class="matrix-solver">
-<div class="matrix-step">
-<span>
-       1
-      </span>
-<strong>
-       Inspect
-      </strong>
-      Write down the order of each matrix and notice whether it is square.
-     </div>
-<div class="matrix-step">
-<span>
-       2
-      </span>
-<strong>
-       Identify
-      </strong>
-      Decide whether the task is addition, multiplication, determinant, inverse or an equation.
-     </div>
-<div class="matrix-step">
-<span>
-       3
-      </span>
-<strong>
-       Check
-      </strong>
-      Confirm that the operation is allowed before calculating.
-     </div>
-<div class="matrix-step">
-<span>
-       4
-      </span>
-<strong>
-       Apply
-      </strong>
-      Use the correct entry-by-entry or row-by-column rule.
-     </div>
-<div class="matrix-step">
-<span>
-       5
-      </span>
-<strong>
-       Organise
-      </strong>
-      Work one entry at a time and keep its position clear.
-     </div>
-<div class="matrix-step">
-<span>
-       6
-      </span>
-<strong>
-       Simplify
-      </strong>
-      Complete the arithmetic carefully, including negative signs.
-     </div>
-<div class="matrix-step">
-<span>
-       7
-      </span>
-<strong>
-       Verify
-      </strong>
-      Check the order of the answer and test an inverse where appropriate.
-     </div>
-<div class="matrix-step">
-<span>
-       8
-      </span>
-<strong>
-       Conclude
-      </strong>
-      Present the final matrix neatly with brackets and correct notation.
-     </div>
-</div>
-</section><section class="lesson-section"><h2>📘 Remember</h2><div class="wrap-grid"><article class="wrap-card"><h3>Key idea</h3><p>To solve AX=B, multiply both sides on the left by A⁻¹, giving X=A⁻¹B.</p></article><article class="wrap-card"><h3>⚠️ Common Mistakes</h3><p>Matrix multiplication order matters. You cannot casually move a matrix across an equation like an ordinary number.</p></article><article class="wrap-card"><h3>⭐ Exam Tips</h3><p>Check that A is invertible before attempting to solve.</p></article><article class="wrap-card"><h3>🌍 Did You Know?</h3><p>Matrix equations compactly represent many linked equations at once.</p></article></div></section>
-<nav class="lesson-navigation">
+<section class="matrix-lab"><h2>🧠 Matrix Equation Solver</h2><p>Solve AX=B for the 2×1 matrix X.</p><div class="matrix-stage"><div class="equation-line"><div class="mx c2"><input aria-label="Matrix entry 1" id="eqA0" type="number" value="2"/><input aria-label="Matrix entry 2" id="eqA1" type="number" value="1"/><input aria-label="Matrix entry 3" id="eqA2" type="number" value="1"/><input aria-label="Matrix entry 4" id="eqA3" type="number" value="1"/></div>X=<div class="mx c2" style="grid-template-columns:1fr"><input aria-label="Matrix entry 1" id="eqB0" type="number" value="7"/><input aria-label="Matrix entry 2" id="eqB1" type="number" value="4"/></div><button class="matrix-btn" id="eqCalc">Solve</button></div><div aria-live="polite" class="matrix-live" id="eqOut"></div></div></section><section class="lesson-section"><h2>📘 Remember</h2><div class="wrap-grid"><article class="wrap-card"><h3>Key idea</h3><p>To solve AX=B, multiply both sides on the left by A⁻¹, giving X=A⁻¹B.</p></article><article class="wrap-card"><h3>⚠️ Common Mistakes</h3><p>Matrix multiplication order matters. You cannot casually move a matrix across an equation like an ordinary number.</p></article><article class="wrap-card"><h3>⭐ Exam Tips</h3><p>Check that A is invertible before attempting to solve.</p></article><article class="wrap-card"><h3>🌍 Did You Know?</h3><p>Matrix equations compactly represent many linked equations at once.</p></article></div></section>
+<section class="lesson-section standard-mistakes"><h2>Common Mistakes</h2><ul><li>Choosing a rule before identifying what the question describes.</li><li>Skipping working or changing notation part-way through a solution.</li><li>Accepting an answer without checking its size, sign or units.</li></ul></section><section class="lesson-section standard-exam"><h2>Exam Focus</h2><p>Show the mathematical relationship you are using, keep notation consistent and give a clear final answer. Use a quick estimate, diagram or inverse operation to check that the result is reasonable.</p></section><section class="lesson-section standard-summary"><h2>Summary</h2><ul class="summary-list"><li>Understand the meaning of each idea before selecting a method.</li><li>Use definitions, properties and notation consistently.</li><li>Show working and check that the final result is sensible.</li></ul></section><nav class="lesson-navigation">
 <a class="nav-button" href="07-inverse-matrices.html">
      ← Inverse Matrices
     </a>
